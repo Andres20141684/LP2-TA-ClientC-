@@ -27,10 +27,6 @@ namespace Producto
         public FrmProduct()
         {
             InitializeComponent();
-            //componentsState(State.Start); 
-            //p= new Product()
-            //dgvProducts.AutoGenerateColumns = false;
-            //dgvProducts.DataSource = productsData;
             updateDataGridView();
         }
 
@@ -51,20 +47,35 @@ namespace Producto
        
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            AddProductForm addForm = new AddProductForm();
-            if (addForm.ShowDialog() == DialogResult.OK)
+
+            AddProductForm addProduct = new AddProductForm();
+            if (addProduct.ShowDialog() == DialogResult.OK)
             {
-                
-
+                addProduct.ShowDialog();
+                updateDataGridView();
             }
-            //componentsState(State.Start);
-
             updateDataGridView();
 
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
+            int i = dgvProducts.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                UpdateProductForm updateForm = new UpdateProductForm();
+                updateForm.currentCustomer = new customer();
+                updateForm.currentCustomer = customers[i];
+                updateForm.ShowDialog();
+                updateDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente");
+            }
+
+
+
             UpdateProductForm updateForm = new UpdateProductForm();
             if (updateForm.ShowDialog()== DialogResult.OK)
             {
@@ -72,7 +83,6 @@ namespace Producto
 
             }
             updateDataGridView();
-            //componentsState(State.Start);
         }
 
         public void componentsState(State s)

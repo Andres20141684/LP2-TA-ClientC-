@@ -16,7 +16,8 @@ namespace Producto
     }
     public partial class UpdateProductForm : Form
     {
-        
+        //private DBControllerWSClient serviceDA;
+        //public product currentProduct;
 
         public UpdateProductForm()
         {

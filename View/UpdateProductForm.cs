@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.MateWSLocal;
 
 namespace Producto
 {
@@ -16,13 +17,14 @@ namespace Producto
     }
     public partial class UpdateProductForm : Form
     {
-        //private DBControllerWSClient serviceDA;
-        //public product currentProduct;
+        private DBControllerWSClient serviceDA;
+        public product currentProduct;
 
         public UpdateProductForm()
         {
             InitializeComponent();
             //componentsState(State3.Start);
+            setProductInformation();
         }
 
         private void UpdateProductForm_Load(object sender, EventArgs e)
@@ -30,62 +32,44 @@ namespace Producto
 
         }
 
-        public void componentsState(State3 s)
+        private void setProductInformation()
         {
-            switch (s)
-            {
-                case State3.Start:
-                    gbGeneralInformation.Enabled = false;
-                    gbTransactionInformation.Enabled = false;
-                    txtStock.Enabled = false;
-                    btnSave.Enabled = false;
-                    break;
-                case State3.Save:
-                    gbGeneralInformation.Enabled = false;
-                    gbTransactionInformation.Enabled = false;
-                    txtStock.Enabled = false;
-                    btnSave.Enabled = false;
-                    break;
-                case State3.Update:
-                    gbGeneralInformation.Enabled = true;
-                    gbTransactionInformation.Enabled = true;
-                    txtStock.Enabled = false;
-                    btnSave.Enabled = true;
-                    break;
-
-            }
-        }
-
-        public void CompleteForm()
-        {
-            //se llena la infromación de los recuadros con la infromación del producto seleccionado
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            //componentsState(State3.Update);
-
+            txtSKUCode.Text = currentProduct.SKUcode;
+            txtName.Text = currentProduct.name;
+            txtDescription.Text = currentProduct.productDescription;
+            cboBrand.Text = currentProduct.brand.name;
+            cboFamily.Text = currentProduct.family.name;
+            cboDiscount.Text = currentProduct.discount.description;
+            txtCareDescription.Text = currentProduct.productCareDescription;
+            txtSalePrice.Text = currentProduct.salePrice.ToString();
+            txtPurchasePrice.Text = currentProduct.purchasePrice.ToString();
+            txtIGV.Text = currentProduct.igv.ToString();
+            txtStock.Text = currentProduct.stock.ToString();
+            if (currentProduct.state == 1) cbActive.Checked = true;
+            else cbActive.Checked = false;
         }
 
         private void BtnSave_Click_1(object sender, EventArgs e)
         {
-            //componentsState(State3.Save);
-            try
-            {
-                String name = txtName.Text;
-                String codeSKU = txtSKUCode.Text;
-                String description = txtDescription.Text;
-                String caredescription = txtCareDescription.Text;
 
-                //se cambian los atributos producto y se modifica en la tabla
+            serviceDA = new DBControllerWSClient();
+            currentProduct.SKUcode = txtSKUCode.Text;
+            currentProduct.name = txtName.Text;
+            currentProduct.productDescription = txtDescription.Text;
+            //currentProduct.brand.name
+            //currentProduct.family = 
+            //
+            currentProduct.productCareDescription = txtCareDescription.Text;
+            currentProduct.salePrice = float.Parse(txtSalePrice.Text);
+            currentProduct.purchasePrice = float.Parse(txtPurchasePrice.Text);
+            currentProduct.igv = float.Parse(txtIGV.Text);
+            currentProduct.stock = int.Parse(txtStock.Text);
+            if (cbActive.Checked == true) currentProduct.state = 1;
+            else currentProduct.state = 0;
 
-                MessageBox.Show("Se modificó satisfactoriamente el producto.");
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("No se pudo modificar el producto.");
-            }
+            serviceDA.updateProduct(currentProduct);
+            MessageBox.Show("El producto se modificó satisfactoriamente");
+            this.Close();
         }
     }
 }

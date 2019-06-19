@@ -63,10 +63,10 @@ namespace Producto
             int i = dgvProducts.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                UpdateProductForm updateForm = new UpdateProductForm();
-                updateForm.currentCustomer = new customer();
-                updateForm.currentCustomer = customers[i];
-                updateForm.ShowDialog();
+                //UpdateProductForm updateForm = new UpdateProductForm();
+                //updateForm.currentCustomer = new customer();
+                //updateForm.currentCustomer = customers[i];
+                //updateForm.ShowDialog();
                 updateDataGridView();
             }
             else

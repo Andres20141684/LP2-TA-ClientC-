@@ -30,14 +30,12 @@
         {
             this.gbTransactionInformation = new System.Windows.Forms.GroupBox();
             this.cboDiscount = new System.Windows.Forms.ComboBox();
-            this.cbAvailability = new System.Windows.Forms.CheckBox();
             this.txtIGV = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtPurchasePrice = new System.Windows.Forms.TextBox();
             this.txtSalePrice = new System.Windows.Forms.TextBox();
             this.lblPurchasePrice = new System.Windows.Forms.Label();
             this.lblSalePrice = new System.Windows.Forms.Label();
-            this.lblAvailable = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblIGV = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
@@ -64,14 +62,12 @@
             // gbTransactionInformation
             // 
             this.gbTransactionInformation.Controls.Add(this.cboDiscount);
-            this.gbTransactionInformation.Controls.Add(this.cbAvailability);
             this.gbTransactionInformation.Controls.Add(this.txtIGV);
             this.gbTransactionInformation.Controls.Add(this.txtStock);
             this.gbTransactionInformation.Controls.Add(this.txtPurchasePrice);
             this.gbTransactionInformation.Controls.Add(this.txtSalePrice);
             this.gbTransactionInformation.Controls.Add(this.lblPurchasePrice);
             this.gbTransactionInformation.Controls.Add(this.lblSalePrice);
-            this.gbTransactionInformation.Controls.Add(this.lblAvailable);
             this.gbTransactionInformation.Controls.Add(this.lblDiscount);
             this.gbTransactionInformation.Controls.Add(this.lblIGV);
             this.gbTransactionInformation.Controls.Add(this.lblStock);
@@ -93,17 +89,6 @@
             this.cboDiscount.TabIndex = 29;
             this.cboDiscount.Text = "--Seleccione--";
             // 
-            // cbAvailability
-            // 
-            this.cbAvailability.AutoSize = true;
-            this.cbAvailability.Location = new System.Drawing.Point(151, 75);
-            this.cbAvailability.Margin = new System.Windows.Forms.Padding(2);
-            this.cbAvailability.Name = "cbAvailability";
-            this.cbAvailability.Size = new System.Drawing.Size(75, 17);
-            this.cbAvailability.TabIndex = 28;
-            this.cbAvailability.Text = "Disponible";
-            this.cbAvailability.UseVisualStyleBackColor = true;
-            // 
             // txtIGV
             // 
             this.txtIGV.Location = new System.Drawing.Point(385, 46);
@@ -114,7 +99,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(385, 73);
+            this.txtStock.Location = new System.Drawing.Point(151, 76);
             this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(108, 20);
@@ -156,20 +141,10 @@
             this.lblSalePrice.TabIndex = 6;
             this.lblSalePrice.Text = "Precio de venta";
             // 
-            // lblAvailable
-            // 
-            this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Location = new System.Drawing.Point(21, 75);
-            this.lblAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(72, 13);
-            this.lblAvailable.TabIndex = 9;
-            this.lblAvailable.Text = "Disponibilidad";
-            // 
             // lblDiscount
             // 
             this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(21, 48);
+            this.lblDiscount.Location = new System.Drawing.Point(18, 49);
             this.lblDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(59, 13);
@@ -189,7 +164,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(281, 75);
+            this.lblStock.Location = new System.Drawing.Point(18, 78);
             this.lblStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(35, 13);
@@ -395,14 +370,12 @@
 
         private System.Windows.Forms.GroupBox gbTransactionInformation;
         private System.Windows.Forms.ComboBox cboDiscount;
-        private System.Windows.Forms.CheckBox cbAvailability;
         private System.Windows.Forms.TextBox txtIGV;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPurchasePrice;
         private System.Windows.Forms.TextBox txtSalePrice;
         private System.Windows.Forms.Label lblPurchasePrice;
         private System.Windows.Forms.Label lblSalePrice;
-        private System.Windows.Forms.Label lblAvailable;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label lblIGV;
         private System.Windows.Forms.Label lblStock;

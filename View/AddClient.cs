@@ -17,7 +17,6 @@ namespace SalesClient
 
         public AgregarClienteForm()
         {
-            //rolfm
             InitializeComponent();
             cbActive.Checked = true;
         }

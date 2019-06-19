@@ -21,6 +21,9 @@ namespace Producto
         private BindingList<brand> brands;
         private BindingList<family> families;
         private BindingList<discount> discounts;
+
+
+
         public class Product { }
         private Product p;
 
@@ -29,10 +32,15 @@ namespace Producto
         public AddProductForm()
         {
             InitializeComponent();
-            p = new Product();
+            
+            //p = new Product();
             //componentsState(State2.Start);
             //hola claudia
+
             cbActive.Checked = true;
+
+
+
         }
         public Product P { get => p; set => p = value; }
 
@@ -61,35 +69,6 @@ namespace Producto
             //cboFamily.DataSource = families;
         }
 
-        public void componentsState(State2 s)
-        {
-            switch (s)
-            {
-                case State2.Start:
-                    gbGeneralInformation.Enabled = false;
-                    gbTransactionInformation.Enabled = false;
-                    txtStock.Enabled = false;
-                    cleanForm();
-                    btnSave.Enabled = false;
-                    break;
-                case State2.Save:
-                    gbGeneralInformation.Enabled = false;
-                    gbTransactionInformation.Enabled = false;
-                    txtStock.Enabled = false;
-                    btnSave.Enabled = false;
-                    cleanForm();
-                    break;
-                case State2.New:
-                    gbGeneralInformation.Enabled = true;
-                    gbTransactionInformation.Enabled = true;
-                    txtStock.Enabled = false;
-                    btnSave.Enabled = true;
-                    cleanForm();
-                    break;
-
-            }
-        }
-
         public void cleanForm()
         {
 
@@ -104,29 +83,52 @@ namespace Producto
             cboBrand.SelectedIndex = -1;
             cboFamily.SelectedIndex = -1;
             cbActive.Checked = false;
-            cbAvailability.Checked = false;
             cboDiscount.SelectedIndex = -1;
         }
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //componentsState(State2.Save);
             if (!filledValues())
             {
-
+                //MessageBox.Show("Complete la información");
             }
             else
             {
-                String name = txtName.Text;
-                String codeSKU = txtSKUCode.Text;
-                String description = txtDescription.Text;
-                String caredescription = txtCareDescription.Text;
+                //getCustomerData
+                product p = new product();
 
-                //se crea el nuevo producto y se inserta en la tabla
+                //brand b = new brand();
+                //b.name = cboBrand.Text;
+                //family f = new family();
+                //f.name = cboFamily.Text;
+                //discount d = new discount();
+                //d.description = cboDiscount.Text;
 
-                MessageBox.Show("Se guardo satisfactoriamente el producto.");
+                p.brand = brands[cboBrand.SelectedIndex];
+                p.family = families[cboFamily.SelectedIndex];
+                p.discount = discounts[cboDiscount.SelectedIndex];
+
+                p.SKUcode = txtSKUCode.Text;
+                p.name = txtName.Text;
+                p.productDescription = txtDescription.Text;
+                p.productCareDescription = txtCareDescription.Text;
+                //p.brand = b;
+                //p.family = f;
+                p.state = 1;
+                p.salePrice = float.Parse(txtSalePrice.Text);
+                p.purchasePrice = float.Parse(txtPurchasePrice.Text);
+                p.igv = float.Parse(txtIGV.Text);
+                p.stock = int.Parse(txtStock.Text);
+                //p.discount = d;
+                
+                serviceDA = new DBControllerWSClient();
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDA.insertProduct(p);
+                Cursor.Current = Cursors.Arrow;
+                MessageBox.Show("El producto se guardó satisfactoriamente");
                 this.Close();
+            
             }
         }
         private bool filledValues()

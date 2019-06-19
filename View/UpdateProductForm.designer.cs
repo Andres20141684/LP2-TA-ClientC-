@@ -91,6 +91,7 @@
             this.cboDiscount.Name = "cboDiscount";
             this.cboDiscount.Size = new System.Drawing.Size(108, 21);
             this.cboDiscount.TabIndex = 29;
+            this.cboDiscount.Text = "--Seleccione--";
             // 
             // cbAvailability
             // 
@@ -228,6 +229,7 @@
             this.cboFamily.Name = "cboFamily";
             this.cboFamily.Size = new System.Drawing.Size(153, 21);
             this.cboFamily.TabIndex = 23;
+            this.cboFamily.Text = "--Seleccione--";
             // 
             // cboBrand
             // 
@@ -237,6 +239,7 @@
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(153, 21);
             this.cboBrand.TabIndex = 22;
+            this.cboBrand.Text = "--Seleccione--";
             // 
             // txtCareDescription
             // 
@@ -375,7 +378,7 @@
             this.Controls.Add(this.gbGeneralInformation);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "UpdateProductForm";
             this.Text = "Modificar Producto";

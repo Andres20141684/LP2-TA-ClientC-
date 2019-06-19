@@ -60,6 +60,22 @@ namespace Producto
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
+            int i = dgvProducts.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                UpdateProductForm updateForm = new UpdateProductForm();
+                updateForm.currentCustomer = new customer();
+                updateForm.currentCustomer = customers[i];
+                updateForm.ShowDialog();
+                updateDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente");
+            }
+
+
+
             UpdateProductForm updateForm = new UpdateProductForm();
             if (updateForm.ShowDialog()== DialogResult.OK)
             {

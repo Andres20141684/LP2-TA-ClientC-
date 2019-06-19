@@ -95,15 +95,7 @@ namespace Producto
             }
             else
             {
-                //getCustomerData
                 product p = new product();
-
-                //brand b = new brand();
-                //b.name = cboBrand.Text;
-                //family f = new family();
-                //f.name = cboFamily.Text;
-                //discount d = new discount();
-                //d.description = cboDiscount.Text;
 
                 p.brand = brands[cboBrand.SelectedIndex];
                 p.family = families[cboFamily.SelectedIndex];
@@ -113,14 +105,11 @@ namespace Producto
                 p.name = txtName.Text;
                 p.productDescription = txtDescription.Text;
                 p.productCareDescription = txtCareDescription.Text;
-                //p.brand = b;
-                //p.family = f;
                 p.state = 1;
                 p.salePrice = float.Parse(txtSalePrice.Text);
                 p.purchasePrice = float.Parse(txtPurchasePrice.Text);
                 p.igv = float.Parse(txtIGV.Text);
                 p.stock = int.Parse(txtStock.Text);
-                //p.discount = d;
                 
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;

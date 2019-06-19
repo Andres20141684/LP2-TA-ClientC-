@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.dgvUserColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.bntModifyUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvUserColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,29 +52,6 @@
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.Size = new System.Drawing.Size(353, 253);
             this.dgvUser.TabIndex = 7;
-            // 
-            // dgvUserColumId
-            // 
-            this.dgvUserColumId.Frozen = true;
-            this.dgvUserColumId.HeaderText = "Cód.";
-            this.dgvUserColumId.Name = "dgvUserColumId";
-            this.dgvUserColumId.ReadOnly = true;
-            this.dgvUserColumId.Width = 60;
-            // 
-            // dgvColumUserName
-            // 
-            this.dgvColumUserName.Frozen = true;
-            this.dgvColumUserName.HeaderText = "Usuario";
-            this.dgvColumUserName.Name = "dgvColumUserName";
-            this.dgvColumUserName.ReadOnly = true;
-            this.dgvColumUserName.Width = 150;
-            // 
-            // dgvColumCreationDate
-            // 
-            this.dgvColumCreationDate.Frozen = true;
-            this.dgvColumCreationDate.HeaderText = "Fecha de Creación";
-            this.dgvColumCreationDate.Name = "dgvColumCreationDate";
-            this.dgvColumCreationDate.ReadOnly = true;
             // 
             // btnDeleteUser
             // 
@@ -133,6 +110,29 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Código de Usuario:";
             // 
+            // dgvUserColumId
+            // 
+            this.dgvUserColumId.Frozen = true;
+            this.dgvUserColumId.HeaderText = "Cód.";
+            this.dgvUserColumId.Name = "dgvUserColumId";
+            this.dgvUserColumId.ReadOnly = true;
+            this.dgvUserColumId.Width = 60;
+            // 
+            // dgvColumUserName
+            // 
+            this.dgvColumUserName.Frozen = true;
+            this.dgvColumUserName.HeaderText = "Usuario";
+            this.dgvColumUserName.Name = "dgvColumUserName";
+            this.dgvColumUserName.ReadOnly = true;
+            this.dgvColumUserName.Width = 150;
+            // 
+            // dgvColumCreationDate
+            // 
+            this.dgvColumCreationDate.Frozen = true;
+            this.dgvColumCreationDate.HeaderText = "Fecha de Expiración";
+            this.dgvColumCreationDate.Name = "dgvColumCreationDate";
+            this.dgvColumCreationDate.ReadOnly = true;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,15 +159,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUserColumId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumCreationDate;
         private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Button bntModifyUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUserColumId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumCreationDate;
     }
 }
 

@@ -36,6 +36,7 @@
             this.dtpUserExpirationDate = new System.Windows.Forms.DateTimePicker();
             this.btnSaveUser = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 84);
+            this.label3.Location = new System.Drawing.Point(19, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 2;
@@ -81,14 +82,14 @@
             // 
             // dtpUserExpirationDate
             // 
-            this.dtpUserExpirationDate.Location = new System.Drawing.Point(143, 80);
+            this.dtpUserExpirationDate.Location = new System.Drawing.Point(131, 129);
             this.dtpUserExpirationDate.Name = "dtpUserExpirationDate";
             this.dtpUserExpirationDate.Size = new System.Drawing.Size(212, 20);
             this.dtpUserExpirationDate.TabIndex = 6;
             // 
             // btnSaveUser
             // 
-            this.btnSaveUser.Location = new System.Drawing.Point(289, 122);
+            this.btnSaveUser.Location = new System.Drawing.Point(289, 181);
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(66, 23);
             this.btnSaveUser.TabIndex = 9;
@@ -98,9 +99,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpUserExpirationDate);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 109);
+            this.groupBox1.Size = new System.Drawing.Size(353, 166);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
@@ -109,12 +112,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 150);
+            this.ClientSize = new System.Drawing.Size(373, 216);
             this.Controls.Add(this.btnSaveUser);
-            this.Controls.Add(this.dtpUserExpirationDate);
             this.Controls.Add(this.txtUserPassword);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -122,6 +123,8 @@
             this.MaximizeBox = false;
             this.Name = "AddUserForm";
             this.Text = "Agregar Usuario";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

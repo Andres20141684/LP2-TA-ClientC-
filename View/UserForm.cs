@@ -33,6 +33,7 @@ namespace User
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.SetParent(this);
             addUserForm.ShowDialog();
+            updateDataGridView();
         }
 
         private void bntModifyUser_Click(object sender, EventArgs e)
@@ -44,42 +45,27 @@ namespace User
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            //DeleteUserForm deleteUserForm = new DeleteUserForm();
-            //deleteUserForm.SetParent(this);
-            //deleteUserForm.ShowDialog();
+            
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
             updateDataGridView();
-            /*dgvUser.Rows.Add(new String[]
-            {
-                "1","Usuario1","15-07-2005"
-            });
-            dgvUser.Rows.Add(new String[]
-            {
-                "2","Usuario2","13-05-2011"
-            });
-            dgvUser.Rows.Add(new String[]
-            {
-                "3","Usuario3","05-12-2016"
-            });*/
+            
         }
         void updateDataGridView()
         {
-            /* Cursor.Current = Cursors.WaitCursor;
-             * dgvUser.Rows.Clear();
-             * serviceDA = new DBControllerWSClient();
-             * users = new BindingList<user> (serviceDA.queryAllUsers());
-             * for (int i = 0; i < suppliers.Count; i++)
+            Cursor.Current = Cursors.WaitCursor;
+            dgvUser.Rows.Clear();
+            serviceDA = new DBControllerWSClient();
+            users = new BindingList<user> (serviceDA.queryAllUser());
+            for (int i = 0; i < users.Count; i++)
             {
                 dgvUser.Rows.Add(new String[] {
-                ""+users[i].id, "NOT NAME IMPLEMENTED" ,users[i].creationDate
+                ""+users[i].id, users[i].user1 ,users[i].expirationDate.ToString()
                 });
             }
-             * Cursor.Current = Cursors.Arrow;
-             */
-            MessageBox.Show("QueryAll not Implemented");
+            Cursor.Current = Cursors.Arrow;
 
         }
     }

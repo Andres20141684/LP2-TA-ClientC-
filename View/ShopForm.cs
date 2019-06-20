@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View;
+using View.MateWSLocal;
 
 namespace ShopsForm
 {
@@ -63,16 +65,38 @@ namespace ShopsForm
             modLocal.SetParent(this);
             modLocal.ShowDialog();
             int i = dgvLocal.CurrentCell.RowIndex;
-            if(i >=0 )
+            if (i >= 0)
             {
-                //UpdateShopForm updateShop = new UpdateShopForm();
-                //updateShop.currentShop = 
+                UpdateShopForm updateShop = new View.UpdateShopForm();
+                updateShop.currentPremise = new premises();
+                updateShop.currentPremise = shopsData[i];
+                updateShop.ShowDialog();
+                updateDataGridView();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto");
             }
         }
 
         private void btnDelLocal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha eliminado al local seleccionado");
+            int i = dgvLocal.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                premises premise_aux = new premises();
+                premise_aux = shopsData[i];
+                premise_aux.state = 0;
+                serviceDA.updatePremises(premise_aux);
+                updateDataGridView();
+                MessageBox.Show("Se ha eliminado el producto seleccionado");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto");
+            }
+            //MessageBox.Show("Se ha eliminado al local seleccionado");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

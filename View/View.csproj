@@ -415,6 +415,9 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.product.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.purchase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryAllAreaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -449,6 +452,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPurchaseByIDResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.sale.datasource">

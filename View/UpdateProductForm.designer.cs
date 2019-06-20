@@ -358,6 +358,7 @@
             this.Name = "UpdateProductForm";
             this.Text = "Modificar Producto";
             this.Load += new System.EventHandler(this.UpdateProductForm_Load);
+            this.Shown += new System.EventHandler(this.UpdateProductForm_Shown);
             this.gbTransactionInformation.ResumeLayout(false);
             this.gbTransactionInformation.PerformLayout();
             this.gbGeneralInformation.ResumeLayout(false);

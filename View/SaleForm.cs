@@ -91,20 +91,15 @@ namespace WindowsFormsApp1
                     salelane.product = p;
                     salelanes[i]=salelane;
                     //serviceDA.insertSaleLane();
-
                 }
-
                 s.saleLanes = salelanes ; 
-
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;
-                //serviceDA.insertSale(s); //NO INSERTAMOS VENTA PORQUE AÚN NO CONTAMOS CON INSERT_SALE_LANE()
+                serviceDA.insertSale(s); 
                 Cursor.Current = Cursors.Arrow;
-                MessageBox.Show("Insert_Sale_lane not implemented");
+                MessageBox.Show("Se ingresó la venta correctamente");
                 this.Close();
             }
-            MessageBox.Show("Se ha generado correctamente");
-            this.Close();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)

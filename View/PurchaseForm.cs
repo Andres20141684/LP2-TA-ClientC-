@@ -72,38 +72,36 @@ namespace View
             else
             {
                 //getCustomerData
-                purchase s = new purchase();
-                s.totalPurchase = float.Parse(txtTotal.Text);
+                purchase p = new purchase();
+                p.totalPurchase = float.Parse(txtTotal.Text);
                 supplier c = new supplier();
                 c = serviceDA.querySupplierByCode(txtRucDni.Text);
-                s.supplier = c;
+                p.supplier = c;
                 purchaseLane[] salelanes;
                 salelanes = new purchaseLane[dgvPurchaseDetails.RowCount];
                 for (int i = 0; i < dgvPurchaseDetails.RowCount - 1; i++)
                 {
-                    purchaseLane salelane = new purchaseLane();
-                    salelane.subtotal = float.Parse(dgvPurchaseDetails.Rows[i].Cells[4].Value.ToString());
-                    salelane.quantity = int.Parse(dgvPurchaseDetails.Rows[i].Cells[3].Value.ToString());
-                    salelane.purchase = s;
+                    purchaseLane purchaselane = new purchaseLane();
+                    purchaselane.subtotal = float.Parse(dgvPurchaseDetails.Rows[i].Cells[4].Value.ToString());
+                    purchaselane.quantity = int.Parse(dgvPurchaseDetails.Rows[i].Cells[3].Value.ToString());
+                    purchaselane.purchase = p;
                     product p = new product();
                     p = serviceDA.queryProductBySKUCode(dgvPurchaseDetails.Rows[i].Cells[0].Value.ToString());
-                    salelane.product = p;
-                    salelanes[i] = salelane;
-                    //serviceDA.insertSaleLane();
-
+                    purchaselane.product = p;
+                    salelanes[i] = purchaselane;
+                    //
                 }
 
-                s.purchaseLanes = salelanes;
+                p.purchaseLanes = salelanes;
 
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;
-                //serviceDA.insertPurchase(s); //NO INSERTAMOS VENTA PORQUE AÚN NO CONTAMOS CON INSERT_SALE_LANE()
+                serviceDA.insertPurchase(p); 
                 Cursor.Current = Cursors.Arrow;
-                MessageBox.Show("Insert_Sale_lane not implemented");
+                MessageBox.Show("Se guardó la compra correctamente");
                 this.Close();
             }
-            MessageBox.Show("Se ha generado correctamente");
-            this.Close();
+            
         }
         private bool filledValues()
         {

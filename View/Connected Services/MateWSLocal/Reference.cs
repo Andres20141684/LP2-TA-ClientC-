@@ -16,1282 +16,6 @@ namespace View.MateWSLocal {
     public interface DBControllerWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateUserResponse1 updateUser(View.MateWSLocal.updateUserRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> updateUserAsync(View.MateWSLocal.updateUserRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllUserResponse queryAllUser(View.MateWSLocal.queryAllUserRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateFamilyResponse1 updateFamily(View.MateWSLocal.updateFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateCustomerResponse1 updateCustomer(View.MateWSLocal.updateCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse1> updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertSupplierResponse1 insertSupplier(View.MateWSLocal.insertSupplierRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse1> insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllPremisesResponse queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateSupplierResponse1 updateSupplier(View.MateWSLocal.updateSupplierRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllDiscountResponse queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertAreaResponse1 insertArea(View.MateWSLocal.insertAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> insertAreaAsync(View.MateWSLocal.insertAreaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertPremisesResponse1 insertPremises(View.MateWSLocal.insertPremisesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateEmployeeResponse1 updateEmployee(View.MateWSLocal.updateEmployeeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertUserResponse1 insertUser(View.MateWSLocal.insertUserRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> insertUserAsync(View.MateWSLocal.insertUserRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllAreaResponse queryAllArea(View.MateWSLocal.queryAllAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierReque" +
             "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRespo" +
             "nse")]
@@ -1347,8 +71,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -1371,9 +95,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -1392,102 +116,6 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertFamilyResponse1 insertFamily(View.MateWSLocal.insertFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse1> insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllCustomerReque" +
             "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllCustomerRespo" +
             "nse")]
@@ -1543,8 +171,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -1567,9 +195,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -1588,6 +216,988 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateCustomerResponse1 updateCustomer(View.MateWSLocal.updateCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse1> updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateFamilyResponse1 updateFamily(View.MateWSLocal.updateFamilyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllEmployeeResponse queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertEmployeeResponse1 insertEmployee(View.MateWSLocal.insertEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertSupplierResponse1 insertSupplier(View.MateWSLocal.insertSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse1> insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertFamilyResponse1 insertFamily(View.MateWSLocal.insertFamilyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse1> insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertProductResponse1 insertProduct(View.MateWSLocal.insertProductRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
+            "")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> insertProductAsync(View.MateWSLocal.insertProductRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllFamilyResponse queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertUserResponse1 insertUser(View.MateWSLocal.insertUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> insertUserAsync(View.MateWSLocal.insertUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertSaleResponse1 insertSale(View.MateWSLocal.insertSaleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> insertSaleAsync(View.MateWSLocal.insertSaleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" +
             "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRespons" +
             "e")]
@@ -1643,8 +1253,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -1667,9 +1277,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -1688,6 +1298,202 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse1> deleteCustomerAsync(View.MateWSLocal.deleteCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertCustomerResponse1 insertCustomer(View.MateWSLocal.insertCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> insertCustomerAsync(View.MateWSLocal.insertCustomerRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllUserResponse queryAllUser(View.MateWSLocal.queryAllUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -1742,8 +1548,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -1766,9 +1572,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -1784,202 +1590,6 @@ namespace View.MateWSLocal {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
             "")]
         System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse1> updateProductAsync(View.MateWSLocal.updateProductRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllProductsResponse queryAllProducts(View.MateWSLocal.queryAllProductsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync(View.MateWSLocal.queryAllProductsRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertSaleResponse1 insertSale(View.MateWSLocal.insertSaleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> insertSaleAsync(View.MateWSLocal.insertSaleRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse")]
@@ -2035,8 +1645,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2059,9 +1669,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2132,8 +1742,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2156,9 +1766,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2176,8 +1786,8 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> queryAllBrandAsync(View.MateWSLocal.queryAllBrandRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
             "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
@@ -2231,8 +1841,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2255,9 +1865,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2268,16 +1878,17 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllEmployeeResponse queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request);
+        View.MateWSLocal.queryAllPremisesResponse queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
             "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
@@ -2330,8 +1941,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2354,9 +1965,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2367,11 +1978,308 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertProductResponse1 insertProduct(View.MateWSLocal.insertProductRequest request);
+        View.MateWSLocal.updateEmployeeResponse1 updateEmployee(View.MateWSLocal.updateEmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
-            "")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> insertProductAsync(View.MateWSLocal.insertProductRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertPremisesResponse1 insertPremises(View.MateWSLocal.insertPremisesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateSupplierResponse1 updateSupplier(View.MateWSLocal.updateSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllAreaResponse queryAllArea(View.MateWSLocal.queryAllAreaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" +
@@ -2429,8 +2337,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2453,9 +2361,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2474,6 +2382,206 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse1> updatePremisesAsync(View.MateWSLocal.updatePremisesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllDiscountResponse queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllProductsResponse queryAllProducts(View.MateWSLocal.queryAllProductsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync(View.MateWSLocal.queryAllProductsRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -2528,8 +2636,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -2552,9 +2660,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -2570,890 +2678,6 @@ namespace View.MateWSLocal {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
             "")]
         System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse1> queryEmployeeAsync(View.MateWSLocal.queryEmployeeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertCustomerResponse1 insertCustomer(View.MateWSLocal.insertCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> insertCustomerAsync(View.MateWSLocal.insertCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertEmployeeResponse1 insertEmployee(View.MateWSLocal.insertEmployeeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllFamilyResponse queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertBrandResponse1 insertBrand(View.MateWSLocal.insertBrandRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> insertBrandAsync(View.MateWSLocal.insertBrandRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertRefundResponse1 insertRefund(View.MateWSLocal.insertRefundRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> insertRefundAsync(View.MateWSLocal.insertRefundRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllPurchaseResponse queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateDiscountResponse1 updateDiscount(View.MateWSLocal.updateDiscountRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateAreaResponse1 updateArea(View.MateWSLocal.updateAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> updateAreaAsync(View.MateWSLocal.updateAreaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateBrandResponse1 updateBrand(View.MateWSLocal.updateBrandRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> updateBrandAsync(View.MateWSLocal.updateBrandRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPurchaseRequest" +
@@ -3511,8 +2735,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -3535,9 +2759,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -3556,6 +2780,106 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse1> insertPurchaseAsync(View.MateWSLocal.insertPurchaseRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateDiscountResponse1 updateDiscount(View.MateWSLocal.updateDiscountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" +
             "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRespons" +
             "e")]
@@ -3611,8 +2935,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -3635,9 +2959,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -3656,9 +2980,7 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse1> insertDiscountAsync(View.MateWSLocal.insertDiscountRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
@@ -3711,8 +3033,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -3735,9 +3057,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -3748,12 +3070,590 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryPurchaseBySerialCodeResponse1 queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
+        View.MateWSLocal.insertAreaResponse1 insertArea(View.MateWSLocal.insertAreaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> insertAreaAsync(View.MateWSLocal.insertAreaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertRefundResponse1 insertRefund(View.MateWSLocal.insertRefundRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> insertRefundAsync(View.MateWSLocal.insertRefundRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateBrandResponse1 updateBrand(View.MateWSLocal.updateBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> updateBrandAsync(View.MateWSLocal.updateBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateAreaResponse1 updateArea(View.MateWSLocal.updateAreaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> updateAreaAsync(View.MateWSLocal.updateAreaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllPurchaseResponse queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertBrandResponse1 insertBrand(View.MateWSLocal.insertBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> insertBrandAsync(View.MateWSLocal.insertBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateUserResponse1 updateUser(View.MateWSLocal.updateUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> updateUserAsync(View.MateWSLocal.updateUserRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
@@ -3811,8 +3711,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -3835,9 +3735,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -3856,406 +3756,6 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse1> queryProductBySKUCodeAsync(View.MateWSLocal.queryProductBySKUCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.querySaleBySerialCodeResponse1 querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Response")]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryUserByUserNameResponse1 queryUserByUserName(View.MateWSLocal.queryUserByUserNameRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> queryUserByUserNameAsync(View.MateWSLocal.queryUserByUserNameRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertDiscountProductResponse1 insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Response")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.querySupplierByCodeResponse1 querySupplierByCode(View.MateWSLocal.querySupplierByCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> querySupplierByCodeAsync(View.MateWSLocal.querySupplierByCodeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequ" +
             "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResp" +
             "onse")]
@@ -4311,8 +3811,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4335,9 +3835,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4356,6 +3856,206 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse1> queryByIdEmployeeAsync(View.MateWSLocal.queryByIdEmployeeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryByIdCustomerResponse1 queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
+            "onse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryFamilyByCodeResponse1 queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
+            "onse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
             "ptionRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
             "ptionResponse")]
@@ -4411,8 +4111,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4435,9 +4135,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4456,9 +4156,9 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse1> queryPremisesByDescriptionAsync(View.MateWSLocal.queryPremisesByDescriptionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Response")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
@@ -4511,8 +4211,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4535,9 +4235,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4548,12 +4248,12 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryByIdCustomerResponse1 queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request);
+        View.MateWSLocal.querySaleBySerialCodeResponse1 querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
-            "onse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Response")]
+        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAristSupplierRe" +
@@ -4611,8 +4311,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4635,9 +4335,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4711,8 +4411,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4735,9 +4435,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4756,9 +4456,9 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse1> queryEmployeeByDNIAsync(View.MateWSLocal.queryEmployeeByDNIRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
+            "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
@@ -4811,8 +4511,8 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
@@ -4835,9 +4535,9 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
@@ -4848,1041 +4548,316 @@ namespace View.MateWSLocal {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryFamilyByCodeResponse1 queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request);
+        View.MateWSLocal.querySupplierByCodeResponse1 querySupplierByCode(View.MateWSLocal.querySupplierByCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
-            "onse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> querySupplierByCodeAsync(View.MateWSLocal.querySupplierByCodeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertDiscountProductResponse1 insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Response")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryPurchaseBySerialCodeResponse1 queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySupplierByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefundResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertRefund))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryByIdEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAristSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryFamilyByCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNIResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryEmployeeByDNI))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(deleteCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchaseResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPurchase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updatePremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllProducts))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployeeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertEmployee))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPurchaseBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryProductBySKUCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrandResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertBrand))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplierResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSaleResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertSale))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamilyResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateFamily))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUserResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertUser))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscount))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescriptionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryPremisesByDescription))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserNameResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryUserByUserName))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomerResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateCustomer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(queryAllSupplier))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateAreaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(updateArea))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCodeResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(querySaleBySerialCode))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProductResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertDiscountProduct))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremisesResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertPremises))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryUserByUserNameResponse1 queryUserByUserName(View.MateWSLocal.queryUserByUserNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> queryUserByUserNameAsync(View.MateWSLocal.queryUserByUserNameRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class user : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private employee employeeField;
-        
-        private System.DateTime expirationDateField;
-        
-        private bool expirationDateFieldSpecified;
-        
-        private int idField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private string passwordField;
-        
-        private int stateField;
-        
-        private string user1Field;
-        
-        private user userModifierField;
-        
-        private int userTypeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public employee employee {
-            get {
-                return this.employeeField;
-            }
-            set {
-                this.employeeField = value;
-                this.RaisePropertyChanged("employee");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime expirationDate {
-            get {
-                return this.expirationDateField;
-            }
-            set {
-                this.expirationDateField = value;
-                this.RaisePropertyChanged("expirationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool expirationDateSpecified {
-            get {
-                return this.expirationDateFieldSpecified;
-            }
-            set {
-                this.expirationDateFieldSpecified = value;
-                this.RaisePropertyChanged("expirationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("user", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string user1 {
-            get {
-                return this.user1Field;
-            }
-            set {
-                this.user1Field = value;
-                this.RaisePropertyChanged("user1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public int userType {
-            get {
-                return this.userTypeField;
-            }
-            set {
-                this.userTypeField = value;
-                this.RaisePropertyChanged("userType");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class employee : person {
-        
-        private area areaField;
-        
-        private System.DateTime contractEndDateField;
-        
-        private bool contractEndDateFieldSpecified;
-        
-        private System.DateTime contractStarDateField;
-        
-        private bool contractStarDateFieldSpecified;
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private int idEmployeeField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private string roleField;
-        
-        private sale[] salesField;
-        
-        private user userField;
-        
-        private user userModifierField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public area area {
-            get {
-                return this.areaField;
-            }
-            set {
-                this.areaField = value;
-                this.RaisePropertyChanged("area");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime contractEndDate {
-            get {
-                return this.contractEndDateField;
-            }
-            set {
-                this.contractEndDateField = value;
-                this.RaisePropertyChanged("contractEndDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool contractEndDateSpecified {
-            get {
-                return this.contractEndDateFieldSpecified;
-            }
-            set {
-                this.contractEndDateFieldSpecified = value;
-                this.RaisePropertyChanged("contractEndDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime contractStarDate {
-            get {
-                return this.contractStarDateField;
-            }
-            set {
-                this.contractStarDateField = value;
-                this.RaisePropertyChanged("contractStarDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool contractStarDateSpecified {
-            get {
-                return this.contractStarDateFieldSpecified;
-            }
-            set {
-                this.contractStarDateFieldSpecified = value;
-                this.RaisePropertyChanged("contractStarDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int idEmployee {
-            get {
-                return this.idEmployeeField;
-            }
-            set {
-                this.idEmployeeField = value;
-                this.RaisePropertyChanged("idEmployee");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string role {
-            get {
-                return this.roleField;
-            }
-            set {
-                this.roleField = value;
-                this.RaisePropertyChanged("role");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("sales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
-        public sale[] sales {
-            get {
-                return this.salesField;
-            }
-            set {
-                this.salesField = value;
-                this.RaisePropertyChanged("sales");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public user user {
-            get {
-                return this.userField;
-            }
-            set {
-                this.userField = value;
-                this.RaisePropertyChanged("user");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class area : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string abbreviationField;
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private string descriptionField;
-        
-        private employee[] employeesField;
-        
-        private int idField;
-        
-        private string idAreaField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private int stateField;
-        
-        private user userModifierField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string abbreviation {
-            get {
-                return this.abbreviationField;
-            }
-            set {
-                this.abbreviationField = value;
-                this.RaisePropertyChanged("abbreviation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("employees", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public employee[] employees {
-            get {
-                return this.employeesField;
-            }
-            set {
-                this.employeesField = value;
-                this.RaisePropertyChanged("employees");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string idArea {
-            get {
-                return this.idAreaField;
-            }
-            set {
-                this.idAreaField = value;
-                this.RaisePropertyChanged("idArea");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryEmployeeResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private employee returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public employee @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryEmployee : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string infEmployeeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string infEmployee {
-            get {
-                return this.infEmployeeField;
-            }
-            set {
-                this.infEmployeeField = value;
-                this.RaisePropertyChanged("infEmployee");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryAllArea : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryByIdCustomerResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private customer returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public customer @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class customer : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string addressField;
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private string descriptionCustomerField;
-        
-        private string emailField;
-        
-        private string idField;
-        
-        private int idCustomerField;
-        
-        private string kindOfCustomerField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private string occupationField;
-        
-        private string phoneField;
-        
-        private int stateField;
-        
-        private user userModifierField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string address {
-            get {
-                return this.addressField;
-            }
-            set {
-                this.addressField = value;
-                this.RaisePropertyChanged("address");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string descriptionCustomer {
-            get {
-                return this.descriptionCustomerField;
-            }
-            set {
-                this.descriptionCustomerField = value;
-                this.RaisePropertyChanged("descriptionCustomer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int idCustomer {
-            get {
-                return this.idCustomerField;
-            }
-            set {
-                this.idCustomerField = value;
-                this.RaisePropertyChanged("idCustomer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string kindOfCustomer {
-            get {
-                return this.kindOfCustomerField;
-            }
-            set {
-                this.kindOfCustomerField = value;
-                this.RaisePropertyChanged("kindOfCustomer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string occupation {
-            get {
-                return this.occupationField;
-            }
-            set {
-                this.occupationField = value;
-                this.RaisePropertyChanged("occupation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                this.phoneField = value;
-                this.RaisePropertyChanged("phone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryByIdCustomer : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idCustomerField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idCustomer {
-            get {
-                return this.idCustomerField;
-            }
-            set {
-                this.idCustomerField = value;
-                this.RaisePropertyChanged("idCustomer");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class querySupplierByCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private supplier returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public supplier @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6152,7 +5127,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6287,140 +5262,587 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(artist))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(employee))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class person : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class user : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.DateTime birthdateField;
+        private System.DateTime creationDateField;
         
-        private bool birthdateFieldSpecified;
+        private bool creationDateFieldSpecified;
         
-        private string dniField;
+        private user creatorUserField;
         
-        private string emailField;
+        private employee employeeField;
         
-        private string lastNameField;
+        private System.DateTime expirationDateField;
         
-        private string nameField;
+        private bool expirationDateFieldSpecified;
         
-        private int personIDField;
+        private int idField;
         
-        private string phoneField;
+        private System.DateTime modificationDateField;
         
-        private string secondLastNameField;
+        private bool modificationDateFieldSpecified;
+        
+        private string passwordField;
         
         private int stateField;
         
+        private string user1Field;
+        
+        private user userModifierField;
+        
+        private int userTypeField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime birthdate {
+        public System.DateTime creationDate {
             get {
-                return this.birthdateField;
+                return this.creationDateField;
             }
             set {
-                this.birthdateField = value;
-                this.RaisePropertyChanged("birthdate");
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool birthdateSpecified {
+        public bool creationDateSpecified {
             get {
-                return this.birthdateFieldSpecified;
+                return this.creationDateFieldSpecified;
             }
             set {
-                this.birthdateFieldSpecified = value;
-                this.RaisePropertyChanged("birthdateSpecified");
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string dni {
+        public user creatorUser {
             get {
-                return this.dniField;
+                return this.creatorUserField;
             }
             set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string email {
+        public employee employee {
             get {
-                return this.emailField;
+                return this.employeeField;
             }
             set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
+                this.employeeField = value;
+                this.RaisePropertyChanged("employee");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string lastName {
+        public System.DateTime expirationDate {
             get {
-                return this.lastNameField;
+                return this.expirationDateField;
             }
             set {
-                this.lastNameField = value;
-                this.RaisePropertyChanged("lastName");
+                this.expirationDateField = value;
+                this.RaisePropertyChanged("expirationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool expirationDateSpecified {
+            get {
+                return this.expirationDateFieldSpecified;
+            }
+            set {
+                this.expirationDateFieldSpecified = value;
+                this.RaisePropertyChanged("expirationDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string name {
+        public int id {
             get {
-                return this.nameField;
+                return this.idField;
             }
             set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
+                this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int personID {
+        public System.DateTime modificationDate {
             get {
-                return this.personIDField;
+                return this.modificationDateField;
             }
             set {
-                this.personIDField = value;
-                this.RaisePropertyChanged("personID");
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string phone {
+        public string password {
             get {
-                return this.phoneField;
+                return this.passwordField;
             }
             set {
-                this.phoneField = value;
-                this.RaisePropertyChanged("phone");
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string secondLastName {
+        public int state {
             get {
-                return this.secondLastNameField;
+                return this.stateField;
             }
             set {
-                this.secondLastNameField = value;
-                this.RaisePropertyChanged("secondLastName");
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("user", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string user1 {
+            get {
+                return this.user1Field;
+            }
+            set {
+                this.user1Field = value;
+                this.RaisePropertyChanged("user1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public int userType {
+            get {
+                return this.userTypeField;
+            }
+            set {
+                this.userTypeField = value;
+                this.RaisePropertyChanged("userType");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class employee : person {
+        
+        private area areaField;
+        
+        private System.DateTime contractEndDateField;
+        
+        private bool contractEndDateFieldSpecified;
+        
+        private System.DateTime contractStarDateField;
+        
+        private bool contractStarDateFieldSpecified;
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private int idEmployeeField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private string roleField;
+        
+        private sale[] salesField;
+        
+        private user userField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public area area {
+            get {
+                return this.areaField;
+            }
+            set {
+                this.areaField = value;
+                this.RaisePropertyChanged("area");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime contractEndDate {
+            get {
+                return this.contractEndDateField;
+            }
+            set {
+                this.contractEndDateField = value;
+                this.RaisePropertyChanged("contractEndDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool contractEndDateSpecified {
+            get {
+                return this.contractEndDateFieldSpecified;
+            }
+            set {
+                this.contractEndDateFieldSpecified = value;
+                this.RaisePropertyChanged("contractEndDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime contractStarDate {
+            get {
+                return this.contractStarDateField;
+            }
+            set {
+                this.contractStarDateField = value;
+                this.RaisePropertyChanged("contractStarDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool contractStarDateSpecified {
+            get {
+                return this.contractStarDateFieldSpecified;
+            }
+            set {
+                this.contractStarDateFieldSpecified = value;
+                this.RaisePropertyChanged("contractStarDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int idEmployee {
+            get {
+                return this.idEmployeeField;
+            }
+            set {
+                this.idEmployeeField = value;
+                this.RaisePropertyChanged("idEmployee");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string role {
+            get {
+                return this.roleField;
+            }
+            set {
+                this.roleField = value;
+                this.RaisePropertyChanged("role");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("sales", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+        public sale[] sales {
+            get {
+                return this.salesField;
+            }
+            set {
+                this.salesField = value;
+                this.RaisePropertyChanged("sales");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public user user {
+            get {
+                return this.userField;
+            }
+            set {
+                this.userField = value;
+                this.RaisePropertyChanged("user");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class area : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string abbreviationField;
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private string descriptionField;
+        
+        private employee[] employeesField;
+        
+        private int idField;
+        
+        private string idAreaField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private int stateField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string abbreviation {
+            get {
+                return this.abbreviationField;
+            }
+            set {
+                this.abbreviationField = value;
+                this.RaisePropertyChanged("abbreviation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("employees", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public employee[] employees {
+            get {
+                return this.employeesField;
+            }
+            set {
+                this.employeesField = value;
+                this.RaisePropertyChanged("employees");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string idArea {
+            get {
+                return this.idAreaField;
+            }
+            set {
+                this.idAreaField = value;
+                this.RaisePropertyChanged("idArea");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
             }
         }
         
@@ -6436,6 +5858,18 @@ namespace View.MateWSLocal {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -6447,7 +5881,413 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryEmployeeResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private employee returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public employee @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryEmployee : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string infEmployeeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string infEmployee {
+            get {
+                return this.infEmployeeField;
+            }
+            set {
+                this.infEmployeeField = value;
+                this.RaisePropertyChanged("infEmployee");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryAllArea : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryByIdCustomerResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private customer returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public customer @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class customer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string addressField;
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private string descriptionCustomerField;
+        
+        private string emailField;
+        
+        private string idField;
+        
+        private int idCustomerField;
+        
+        private string kindOfCustomerField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private string occupationField;
+        
+        private string phoneField;
+        
+        private int stateField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string descriptionCustomer {
+            get {
+                return this.descriptionCustomerField;
+            }
+            set {
+                this.descriptionCustomerField = value;
+                this.RaisePropertyChanged("descriptionCustomer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int idCustomer {
+            get {
+                return this.idCustomerField;
+            }
+            set {
+                this.idCustomerField = value;
+                this.RaisePropertyChanged("idCustomer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string kindOfCustomer {
+            get {
+                return this.kindOfCustomerField;
+            }
+            set {
+                this.kindOfCustomerField = value;
+                this.RaisePropertyChanged("kindOfCustomer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string occupation {
+            get {
+                return this.occupationField;
+            }
+            set {
+                this.occupationField = value;
+                this.RaisePropertyChanged("occupation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+                this.RaisePropertyChanged("phone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryByIdCustomer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idCustomerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string idCustomer {
+            get {
+                return this.idCustomerField;
+            }
+            set {
+                this.idCustomerField = value;
+                this.RaisePropertyChanged("idCustomer");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class querySupplierByCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private supplier returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public supplier @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6479,7 +6319,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6525,7 +6365,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6557,7 +6397,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6603,7 +6443,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6635,7 +6475,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6807,7 +6647,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6853,7 +6693,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6885,7 +6725,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7085,7 +6925,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7285,7 +7125,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7597,7 +7437,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7769,7 +7609,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7927,7 +7767,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8127,7 +7967,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8299,7 +8139,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8317,7 +8157,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8335,7 +8175,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8367,7 +8207,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8413,7 +8253,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8459,7 +8299,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8533,7 +8373,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8579,7 +8419,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8611,7 +8451,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8643,7 +8483,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8675,7 +8515,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8693,7 +8533,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8725,7 +8565,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8757,7 +8597,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8803,7 +8643,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8835,7 +8675,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8881,7 +8721,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8913,7 +8753,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8959,7 +8799,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8991,7 +8831,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9037,7 +8877,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9069,7 +8909,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9087,7 +8927,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9105,7 +8945,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9151,7 +8991,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9183,7 +9023,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9383,7 +9223,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9555,7 +9395,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9601,7 +9441,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9633,7 +9473,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9679,7 +9519,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9711,7 +9551,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9911,7 +9751,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10083,7 +9923,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10283,7 +10123,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10441,7 +10281,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10459,7 +10299,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10505,7 +10345,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10537,7 +10377,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10583,7 +10423,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10615,7 +10455,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10661,7 +10501,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10693,7 +10533,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10725,7 +10565,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10757,25 +10597,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryAllCustomer : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10793,7 +10615,25 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryAllCustomer : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10825,7 +10665,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10857,7 +10697,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10903,7 +10743,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10935,7 +10775,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10953,7 +10793,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10999,7 +10839,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11031,7 +10871,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11077,7 +10917,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11109,7 +10949,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11127,7 +10967,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11173,7 +11013,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11205,7 +11045,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11251,7 +11091,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11283,7 +11123,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11329,7 +11169,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11361,7 +11201,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11407,7 +11247,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11439,7 +11279,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11471,7 +11311,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11503,7 +11343,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11535,7 +11375,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11567,25 +11407,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class queryAllSupplier : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11631,7 +11453,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11663,7 +11485,25 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class queryAllSupplier : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11709,7 +11549,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11741,7 +11581,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11773,7 +11613,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11805,7 +11645,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11851,7 +11691,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11925,7 +11765,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11971,7 +11811,7 @@ namespace View.MateWSLocal {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12002,66 +11842,190 @@ namespace View.MateWSLocal {
         }
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(artist))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(employee))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateUserRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class person : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user user;
+        private System.DateTime birthdateField;
         
-        public updateUserRequest() {
+        private bool birthdateFieldSpecified;
+        
+        private string dniField;
+        
+        private string emailField;
+        
+        private string lastNameField;
+        
+        private string nameField;
+        
+        private int personIDField;
+        
+        private string phoneField;
+        
+        private string secondLastNameField;
+        
+        private int stateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime birthdate {
+            get {
+                return this.birthdateField;
+            }
+            set {
+                this.birthdateField = value;
+                this.RaisePropertyChanged("birthdate");
+            }
         }
         
-        public updateUserRequest(View.MateWSLocal.user user) {
-            this.user = user;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool birthdateSpecified {
+            get {
+                return this.birthdateFieldSpecified;
+            }
+            set {
+                this.birthdateFieldSpecified = value;
+                this.RaisePropertyChanged("birthdateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                this.lastNameField = value;
+                this.RaisePropertyChanged("lastName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int personID {
+            get {
+                return this.personIDField;
+            }
+            set {
+                this.personIDField = value;
+                this.RaisePropertyChanged("personID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+                this.RaisePropertyChanged("phone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string secondLastName {
+            get {
+                return this.secondLastNameField;
+            }
+            set {
+                this.secondLastNameField = value;
+                this.RaisePropertyChanged("secondLastName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateUserResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateUserResponse1() {
-        }
-        
-        public updateUserResponse1(int @return) {
-            this.@return = @return;
+        public queryAllSupplierRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllUserRequest {
-        
-        public queryAllUserRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllUserResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user[] @return;
+        public View.MateWSLocal.supplier[] @return;
         
-        public queryAllUserResponse() {
+        public queryAllSupplierResponse() {
         }
         
-        public queryAllUserResponse(View.MateWSLocal.user[] @return) {
+        public queryAllSupplierResponse(View.MateWSLocal.supplier[] @return) {
             this.@return = @return;
         }
     }
@@ -12069,35 +12033,27 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateFamilyRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family family;
-        
-        public updateFamilyRequest() {
-        }
-        
-        public updateFamilyRequest(View.MateWSLocal.family family) {
-            this.family = family;
+        public queryAllCustomerRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateFamilyResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer[] @return;
         
-        public updateFamilyResponse1() {
+        public queryAllCustomerResponse() {
         }
         
-        public updateFamilyResponse1(int @return) {
+        public queryAllCustomerResponse(View.MateWSLocal.customer[] @return) {
             this.@return = @return;
         }
     }
@@ -12141,6 +12097,106 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateFamilyRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.family family;
+        
+        public updateFamilyRequest() {
+        }
+        
+        public updateFamilyRequest(View.MateWSLocal.family family) {
+            this.family = family;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateFamilyResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateFamilyResponse1() {
+        }
+        
+        public updateFamilyResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllEmployeeRequest {
+        
+        public queryAllEmployeeRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee[] @return;
+        
+        public queryAllEmployeeResponse() {
+        }
+        
+        public queryAllEmployeeResponse(View.MateWSLocal.employee[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee employee;
+        
+        public insertEmployeeRequest() {
+        }
+        
+        public insertEmployeeRequest(View.MateWSLocal.employee employee) {
+            this.employee = employee;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertEmployeeResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertEmployeeResponse1() {
+        }
+        
+        public insertEmployeeResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertSupplierRequest {
         
@@ -12170,298 +12226,6 @@ namespace View.MateWSLocal {
         }
         
         public insertSupplierResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPremisesRequest {
-        
-        public queryAllPremisesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPremisesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises[] @return;
-        
-        public queryAllPremisesResponse() {
-        }
-        
-        public queryAllPremisesResponse(View.MateWSLocal.premises[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSupplierRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier supplier;
-        
-        public updateSupplierRequest() {
-        }
-        
-        public updateSupplierRequest(View.MateWSLocal.supplier supplier) {
-            this.supplier = supplier;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSupplierResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateSupplierResponse1() {
-        }
-        
-        public updateSupplierResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllDiscountRequest {
-        
-        public queryAllDiscountRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllDiscountResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.discount[] @return;
-        
-        public queryAllDiscountResponse() {
-        }
-        
-        public queryAllDiscountResponse(View.MateWSLocal.discount[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertAreaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area area;
-        
-        public insertAreaRequest() {
-        }
-        
-        public insertAreaRequest(View.MateWSLocal.area area) {
-            this.area = area;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertAreaResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertAreaResponse1() {
-        }
-        
-        public insertAreaResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPremisesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises premises;
-        
-        public insertPremisesRequest() {
-        }
-        
-        public insertPremisesRequest(View.MateWSLocal.premises premises) {
-            this.premises = premises;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPremisesResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertPremisesResponse1() {
-        }
-        
-        public insertPremisesResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateEmployeeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee employee;
-        
-        public updateEmployeeRequest() {
-        }
-        
-        public updateEmployeeRequest(View.MateWSLocal.employee employee) {
-            this.employee = employee;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateEmployeeResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateEmployeeResponse1() {
-        }
-        
-        public updateEmployeeResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertUserRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user user;
-        
-        public insertUserRequest() {
-        }
-        
-        public insertUserRequest(View.MateWSLocal.user user) {
-            this.user = user;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertUserResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertUserResponse1() {
-        }
-        
-        public insertUserResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllAreaRequest {
-        
-        public queryAllAreaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllAreaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area[] @return;
-        
-        public queryAllAreaResponse() {
-        }
-        
-        public queryAllAreaResponse(View.MateWSLocal.area[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierRequest {
-        
-        public queryAllSupplierRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier[] @return;
-        
-        public queryAllSupplierResponse() {
-        }
-        
-        public queryAllSupplierResponse(View.MateWSLocal.supplier[] @return) {
             this.@return = @return;
         }
     }
@@ -12505,27 +12269,135 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertProductRequest {
         
-        public queryAllCustomerRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.product product;
+        
+        public insertProductRequest() {
+        }
+        
+        public insertProductRequest(View.MateWSLocal.product product) {
+            this.product = product;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertProductResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertProductResponse1() {
+        }
+        
+        public insertProductResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllFamilyRequest {
+        
+        public queryAllFamilyRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllFamilyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer[] @return;
+        public View.MateWSLocal.family[] @return;
         
-        public queryAllCustomerResponse() {
+        public queryAllFamilyResponse() {
         }
         
-        public queryAllCustomerResponse(View.MateWSLocal.customer[] @return) {
+        public queryAllFamilyResponse(View.MateWSLocal.family[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.user user;
+        
+        public insertUserRequest() {
+        }
+        
+        public insertUserRequest(View.MateWSLocal.user user) {
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertUserResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertUserResponse1() {
+        }
+        
+        public insertUserResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertSaleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.sale sale;
+        
+        public insertSaleRequest() {
+        }
+        
+        public insertSaleRequest(View.MateWSLocal.sale sale) {
+            this.sale = sale;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertSaleResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertSaleResponse1() {
+        }
+        
+        public insertSaleResponse1(int @return) {
             this.@return = @return;
         }
     }
@@ -12569,6 +12441,70 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer customer;
+        
+        public insertCustomerRequest() {
+        }
+        
+        public insertCustomerRequest(View.MateWSLocal.customer customer) {
+            this.customer = customer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertCustomerResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertCustomerResponse1() {
+        }
+        
+        public insertCustomerResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllUserRequest {
+        
+        public queryAllUserRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.user[] @return;
+        
+        public queryAllUserResponse() {
+        }
+        
+        public queryAllUserResponse(View.MateWSLocal.user[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="updateProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class updateProductRequest {
         
@@ -12598,70 +12534,6 @@ namespace View.MateWSLocal {
         }
         
         public updateProductResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllProducts", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllProductsRequest {
-        
-        public queryAllProductsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllProductsResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllProductsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.product[] @return;
-        
-        public queryAllProductsResponse() {
-        }
-        
-        public queryAllProductsResponse(View.MateWSLocal.product[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertSaleRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.sale sale;
-        
-        public insertSaleRequest() {
-        }
-        
-        public insertSaleRequest(View.MateWSLocal.sale sale) {
-            this.sale = sale;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertSaleResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertSaleResponse1() {
-        }
-        
-        public insertSaleResponse1(int @return) {
             this.@return = @return;
         }
     }
@@ -12725,27 +12597,27 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllEmployeeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPremisesRequest {
         
-        public queryAllEmployeeRequest() {
+        public queryAllPremisesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllEmployeeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPremisesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee[] @return;
+        public View.MateWSLocal.premises[] @return;
         
-        public queryAllEmployeeResponse() {
+        public queryAllPremisesResponse() {
         }
         
-        public queryAllEmployeeResponse(View.MateWSLocal.employee[] @return) {
+        public queryAllPremisesResponse(View.MateWSLocal.premises[] @return) {
             this.@return = @return;
         }
     }
@@ -12753,35 +12625,135 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertProductRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateEmployeeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.product product;
+        public View.MateWSLocal.employee employee;
         
-        public insertProductRequest() {
+        public updateEmployeeRequest() {
         }
         
-        public insertProductRequest(View.MateWSLocal.product product) {
-            this.product = product;
+        public updateEmployeeRequest(View.MateWSLocal.employee employee) {
+            this.employee = employee;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertProductResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateEmployeeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertProductResponse1() {
+        public updateEmployeeResponse1() {
         }
         
-        public insertProductResponse1(int @return) {
+        public updateEmployeeResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPremisesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.premises premises;
+        
+        public insertPremisesRequest() {
+        }
+        
+        public insertPremisesRequest(View.MateWSLocal.premises premises) {
+            this.premises = premises;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPremisesResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertPremisesResponse1() {
+        }
+        
+        public insertPremisesResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSupplierRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.supplier supplier;
+        
+        public updateSupplierRequest() {
+        }
+        
+        public updateSupplierRequest(View.MateWSLocal.supplier supplier) {
+            this.supplier = supplier;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSupplierResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateSupplierResponse1() {
+        }
+        
+        public updateSupplierResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllAreaRequest {
+        
+        public queryAllAreaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.area[] @return;
+        
+        public queryAllAreaResponse() {
+        }
+        
+        public queryAllAreaResponse(View.MateWSLocal.area[] @return) {
             this.@return = @return;
         }
     }
@@ -12825,6 +12797,62 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllDiscountRequest {
+        
+        public queryAllDiscountRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllDiscountResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.discount[] @return;
+        
+        public queryAllDiscountResponse() {
+        }
+        
+        public queryAllDiscountResponse(View.MateWSLocal.discount[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllProducts", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllProductsRequest {
+        
+        public queryAllProductsRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllProductsResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllProductsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.product[] @return;
+        
+        public queryAllProductsResponse() {
+        }
+        
+        public queryAllProductsResponse(View.MateWSLocal.product[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class queryEmployeeRequest {
         
@@ -12854,314 +12882,6 @@ namespace View.MateWSLocal {
         }
         
         public queryEmployeeResponse1(View.MateWSLocal.employee @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertCustomerRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer customer;
-        
-        public insertCustomerRequest() {
-        }
-        
-        public insertCustomerRequest(View.MateWSLocal.customer customer) {
-            this.customer = customer;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertCustomerResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertCustomerResponse1() {
-        }
-        
-        public insertCustomerResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertEmployeeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee employee;
-        
-        public insertEmployeeRequest() {
-        }
-        
-        public insertEmployeeRequest(View.MateWSLocal.employee employee) {
-            this.employee = employee;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertEmployeeResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertEmployeeResponse1() {
-        }
-        
-        public insertEmployeeResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllFamilyRequest {
-        
-        public queryAllFamilyRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllFamilyResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family[] @return;
-        
-        public queryAllFamilyResponse() {
-        }
-        
-        public queryAllFamilyResponse(View.MateWSLocal.family[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.brand brand;
-        
-        public insertBrandRequest() {
-        }
-        
-        public insertBrandRequest(View.MateWSLocal.brand brand) {
-            this.brand = brand;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertBrandResponse1() {
-        }
-        
-        public insertBrandResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefund", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertRefundRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.refund refund;
-        
-        public insertRefundRequest() {
-        }
-        
-        public insertRefundRequest(View.MateWSLocal.refund refund) {
-            this.refund = refund;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefundResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertRefundResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertRefundResponse1() {
-        }
-        
-        public insertRefundResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPurchaseRequest {
-        
-        public queryAllPurchaseRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPurchaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public object[] @return;
-        
-        public queryAllPurchaseResponse() {
-        }
-        
-        public queryAllPurchaseResponse(object[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateDiscountRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.discount discount;
-        
-        public updateDiscountRequest() {
-        }
-        
-        public updateDiscountRequest(View.MateWSLocal.discount discount) {
-            this.discount = discount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateDiscountResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateDiscountResponse1() {
-        }
-        
-        public updateDiscountResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateAreaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area area;
-        
-        public updateAreaRequest() {
-        }
-        
-        public updateAreaRequest(View.MateWSLocal.area area) {
-            this.area = area;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateAreaResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateAreaResponse1() {
-        }
-        
-        public updateAreaResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateBrandRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.brand brand;
-        
-        public updateBrandRequest() {
-        }
-        
-        public updateBrandRequest(View.MateWSLocal.brand brand) {
-            this.brand = brand;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateBrandResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateBrandResponse1() {
-        }
-        
-        public updateBrandResponse1(int @return) {
             this.@return = @return;
         }
     }
@@ -13205,6 +12925,42 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateDiscountRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.discount discount;
+        
+        public updateDiscountRequest() {
+        }
+        
+        public updateDiscountRequest(View.MateWSLocal.discount discount) {
+            this.discount = discount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateDiscountResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateDiscountResponse1() {
+        }
+        
+        public updateDiscountResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertDiscountRequest {
         
@@ -13241,35 +12997,243 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPurchaseBySerialCodeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertAreaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serialCode;
+        public View.MateWSLocal.area area;
         
-        public queryPurchaseBySerialCodeRequest() {
+        public insertAreaRequest() {
         }
         
-        public queryPurchaseBySerialCodeRequest(string serialCode) {
-            this.serialCode = serialCode;
+        public insertAreaRequest(View.MateWSLocal.area area) {
+            this.area = area;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPurchaseBySerialCodeResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertAreaResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.purchase @return;
+        public int @return;
         
-        public queryPurchaseBySerialCodeResponse1() {
+        public insertAreaResponse1() {
         }
         
-        public queryPurchaseBySerialCodeResponse1(View.MateWSLocal.purchase @return) {
+        public insertAreaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefund", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertRefundRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.refund refund;
+        
+        public insertRefundRequest() {
+        }
+        
+        public insertRefundRequest(View.MateWSLocal.refund refund) {
+            this.refund = refund;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefundResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertRefundResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertRefundResponse1() {
+        }
+        
+        public insertRefundResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.brand brand;
+        
+        public updateBrandRequest() {
+        }
+        
+        public updateBrandRequest(View.MateWSLocal.brand brand) {
+            this.brand = brand;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateBrandResponse1() {
+        }
+        
+        public updateBrandResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateAreaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.area area;
+        
+        public updateAreaRequest() {
+        }
+        
+        public updateAreaRequest(View.MateWSLocal.area area) {
+            this.area = area;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateAreaResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateAreaResponse1() {
+        }
+        
+        public updateAreaResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPurchaseRequest {
+        
+        public queryAllPurchaseRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPurchaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public object[] @return;
+        
+        public queryAllPurchaseResponse() {
+        }
+        
+        public queryAllPurchaseResponse(object[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.brand brand;
+        
+        public insertBrandRequest() {
+        }
+        
+        public insertBrandRequest(View.MateWSLocal.brand brand) {
+            this.brand = brand;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertBrandResponse1() {
+        }
+        
+        public insertBrandResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.user user;
+        
+        public updateUserRequest() {
+        }
+        
+        public updateUserRequest(View.MateWSLocal.user user) {
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateUserResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateUserResponse1() {
+        }
+        
+        public updateUserResponse1(int @return) {
             this.@return = @return;
         }
     }
@@ -13313,155 +13277,6 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySaleBySerialCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serialCode;
-        
-        public querySaleBySerialCodeRequest() {
-        }
-        
-        public querySaleBySerialCodeRequest(string serialCode) {
-            this.serialCode = serialCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySaleBySerialCodeResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.sale @return;
-        
-        public querySaleBySerialCodeResponse1() {
-        }
-        
-        public querySaleBySerialCodeResponse1(View.MateWSLocal.sale @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserByUserName", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryUserByUserNameRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string user;
-        
-        public queryUserByUserNameRequest() {
-        }
-        
-        public queryUserByUserNameRequest(string user) {
-            this.user = user;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserByUserNameResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryUserByUserNameResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user @return;
-        
-        public queryUserByUserNameResponse1() {
-        }
-        
-        public queryUserByUserNameResponse1(View.MateWSLocal.user @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountProductRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idDiscount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProduct;
-        
-        public insertDiscountProductRequest() {
-        }
-        
-        public insertDiscountProductRequest(int idDiscount, int idProduct) {
-            this.idDiscount = idDiscount;
-            this.idProduct = idProduct;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountProductResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertDiscountProductResponse1() {
-        }
-        
-        public insertDiscountProductResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySupplierByCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string supplierCode;
-        
-        public querySupplierByCodeRequest() {
-        }
-        
-        public querySupplierByCodeRequest(string supplierCode) {
-            this.supplierCode = supplierCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySupplierByCodeResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier @return;
-        
-        public querySupplierByCodeResponse1() {
-        }
-        
-        public querySupplierByCodeResponse1(View.MateWSLocal.supplier @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class queryByIdEmployeeRequest {
         
@@ -13491,6 +13306,78 @@ namespace View.MateWSLocal {
         }
         
         public queryByIdEmployeeResponse1(View.MateWSLocal.employee @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idCustomer;
+        
+        public queryByIdCustomerRequest() {
+        }
+        
+        public queryByIdCustomerRequest(string idCustomer) {
+            this.idCustomer = idCustomer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdCustomerResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer @return;
+        
+        public queryByIdCustomerResponse1() {
+        }
+        
+        public queryByIdCustomerResponse1(View.MateWSLocal.customer @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryFamilyByCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string familyID;
+        
+        public queryFamilyByCodeRequest() {
+        }
+        
+        public queryFamilyByCodeRequest(string familyID) {
+            this.familyID = familyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryFamilyByCodeResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.family @return;
+        
+        public queryFamilyByCodeResponse1() {
+        }
+        
+        public queryFamilyByCodeResponse1(View.MateWSLocal.family @return) {
             this.@return = @return;
         }
     }
@@ -13534,35 +13421,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdCustomerRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySaleBySerialCodeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idCustomer;
+        public string serialCode;
         
-        public queryByIdCustomerRequest() {
+        public querySaleBySerialCodeRequest() {
         }
         
-        public queryByIdCustomerRequest(string idCustomer) {
-            this.idCustomer = idCustomer;
+        public querySaleBySerialCodeRequest(string serialCode) {
+            this.serialCode = serialCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdCustomerResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySaleBySerialCodeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer @return;
+        public View.MateWSLocal.sale @return;
         
-        public queryByIdCustomerResponse1() {
+        public querySaleBySerialCodeResponse1() {
         }
         
-        public queryByIdCustomerResponse1(View.MateWSLocal.customer @return) {
+        public querySaleBySerialCodeResponse1(View.MateWSLocal.sale @return) {
             this.@return = @return;
         }
     }
@@ -13647,35 +13534,148 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryFamilyByCodeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySupplierByCodeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string familyID;
+        public string supplierCode;
         
-        public queryFamilyByCodeRequest() {
+        public querySupplierByCodeRequest() {
         }
         
-        public queryFamilyByCodeRequest(string familyID) {
-            this.familyID = familyID;
+        public querySupplierByCodeRequest(string supplierCode) {
+            this.supplierCode = supplierCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryFamilyByCodeResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySupplierByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySupplierByCodeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family @return;
+        public View.MateWSLocal.supplier @return;
         
-        public queryFamilyByCodeResponse1() {
+        public querySupplierByCodeResponse1() {
         }
         
-        public queryFamilyByCodeResponse1(View.MateWSLocal.family @return) {
+        public querySupplierByCodeResponse1(View.MateWSLocal.supplier @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountProductRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idDiscount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProduct;
+        
+        public insertDiscountProductRequest() {
+        }
+        
+        public insertDiscountProductRequest(int idDiscount, int idProduct) {
+            this.idDiscount = idDiscount;
+            this.idProduct = idProduct;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountProductResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertDiscountProductResponse1() {
+        }
+        
+        public insertDiscountProductResponse1(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPurchaseBySerialCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string serialCode;
+        
+        public queryPurchaseBySerialCodeRequest() {
+        }
+        
+        public queryPurchaseBySerialCodeRequest(string serialCode) {
+            this.serialCode = serialCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPurchaseBySerialCodeResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.purchase @return;
+        
+        public queryPurchaseBySerialCodeResponse1() {
+        }
+        
+        public queryPurchaseBySerialCodeResponse1(View.MateWSLocal.purchase @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserByUserName", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryUserByUserNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string user;
+        
+        public queryUserByUserNameRequest() {
+        }
+        
+        public queryUserByUserNameRequest(string user) {
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserByUserNameResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryUserByUserNameResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.user @return;
+        
+        public queryUserByUserNameResponse1() {
+        }
+        
+        public queryUserByUserNameResponse1(View.MateWSLocal.user @return) {
             this.@return = @return;
         }
     }
@@ -13708,70 +13708,45 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateUserResponse1 View.MateWSLocal.DBControllerWS.updateUser(View.MateWSLocal.updateUserRequest request) {
-            return base.Channel.updateUser(request);
+        View.MateWSLocal.queryAllSupplierResponse View.MateWSLocal.DBControllerWS.queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplier(request);
         }
         
-        public int updateUser(View.MateWSLocal.user user) {
-            View.MateWSLocal.updateUserRequest inValue = new View.MateWSLocal.updateUserRequest();
-            inValue.user = user;
-            View.MateWSLocal.updateUserResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateUser(inValue);
+        public View.MateWSLocal.supplier[] queryAllSupplier() {
+            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
+            View.MateWSLocal.queryAllSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplier(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> View.MateWSLocal.DBControllerWS.updateUserAsync(View.MateWSLocal.updateUserRequest request) {
-            return base.Channel.updateUserAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> View.MateWSLocal.DBControllerWS.queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplierAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> updateUserAsync(View.MateWSLocal.user user) {
-            View.MateWSLocal.updateUserRequest inValue = new View.MateWSLocal.updateUserRequest();
-            inValue.user = user;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateUserAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync() {
+            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllUserResponse View.MateWSLocal.DBControllerWS.queryAllUser(View.MateWSLocal.queryAllUserRequest request) {
-            return base.Channel.queryAllUser(request);
+        View.MateWSLocal.queryAllCustomerResponse View.MateWSLocal.DBControllerWS.queryAllCustomer(View.MateWSLocal.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomer(request);
         }
         
-        public View.MateWSLocal.user[] queryAllUser() {
-            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
-            View.MateWSLocal.queryAllUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllUser(inValue);
+        public View.MateWSLocal.customer[] queryAllCustomer() {
+            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
+            View.MateWSLocal.queryAllCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> View.MateWSLocal.DBControllerWS.queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request) {
-            return base.Channel.queryAllUserAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> View.MateWSLocal.DBControllerWS.queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomerAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync() {
-            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllUserAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateFamilyResponse1 View.MateWSLocal.DBControllerWS.updateFamily(View.MateWSLocal.updateFamilyRequest request) {
-            return base.Channel.updateFamily(request);
-        }
-        
-        public int updateFamily(View.MateWSLocal.family family) {
-            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
-            inValue.family = family;
-            View.MateWSLocal.updateFamilyResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateFamily(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> View.MateWSLocal.DBControllerWS.updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request) {
-            return base.Channel.updateFamilyAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> updateFamilyAsync(View.MateWSLocal.family family) {
-            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
-            inValue.family = family;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateFamilyAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync() {
+            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -13798,6 +13773,73 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateFamilyResponse1 View.MateWSLocal.DBControllerWS.updateFamily(View.MateWSLocal.updateFamilyRequest request) {
+            return base.Channel.updateFamily(request);
+        }
+        
+        public int updateFamily(View.MateWSLocal.family family) {
+            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
+            inValue.family = family;
+            View.MateWSLocal.updateFamilyResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateFamily(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> View.MateWSLocal.DBControllerWS.updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request) {
+            return base.Channel.updateFamilyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse1> updateFamilyAsync(View.MateWSLocal.family family) {
+            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
+            inValue.family = family;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateFamilyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllEmployeeResponse View.MateWSLocal.DBControllerWS.queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request) {
+            return base.Channel.queryAllEmployee(request);
+        }
+        
+        public View.MateWSLocal.employee[] queryAllEmployee() {
+            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
+            View.MateWSLocal.queryAllEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> View.MateWSLocal.DBControllerWS.queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request) {
+            return base.Channel.queryAllEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync() {
+            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertEmployeeResponse1 View.MateWSLocal.DBControllerWS.insertEmployee(View.MateWSLocal.insertEmployeeRequest request) {
+            return base.Channel.insertEmployee(request);
+        }
+        
+        public int insertEmployee(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.insertEmployeeRequest inValue = new View.MateWSLocal.insertEmployeeRequest();
+            inValue.employee = employee;
+            View.MateWSLocal.insertEmployeeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> View.MateWSLocal.DBControllerWS.insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request) {
+            return base.Channel.insertEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> insertEmployeeAsync(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.insertEmployeeRequest inValue = new View.MateWSLocal.insertEmployeeRequest();
+            inValue.employee = employee;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.insertSupplierResponse1 View.MateWSLocal.DBControllerWS.insertSupplier(View.MateWSLocal.insertSupplierRequest request) {
             return base.Channel.insertSupplier(request);
         }
@@ -13818,205 +13860,6 @@ namespace View.MateWSLocal {
             View.MateWSLocal.insertSupplierRequest inValue = new View.MateWSLocal.insertSupplierRequest();
             inValue.supplier = supplier;
             return ((View.MateWSLocal.DBControllerWS)(this)).insertSupplierAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllPremisesResponse View.MateWSLocal.DBControllerWS.queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request) {
-            return base.Channel.queryAllPremises(request);
-        }
-        
-        public View.MateWSLocal.premises[] queryAllPremises() {
-            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
-            View.MateWSLocal.queryAllPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremises(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> View.MateWSLocal.DBControllerWS.queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request) {
-            return base.Channel.queryAllPremisesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync() {
-            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremisesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateSupplierResponse1 View.MateWSLocal.DBControllerWS.updateSupplier(View.MateWSLocal.updateSupplierRequest request) {
-            return base.Channel.updateSupplier(request);
-        }
-        
-        public int updateSupplier(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
-            inValue.supplier = supplier;
-            View.MateWSLocal.updateSupplierResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSupplier(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> View.MateWSLocal.DBControllerWS.updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request) {
-            return base.Channel.updateSupplierAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> updateSupplierAsync(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
-            inValue.supplier = supplier;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateSupplierAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllDiscountResponse View.MateWSLocal.DBControllerWS.queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request) {
-            return base.Channel.queryAllDiscount(request);
-        }
-        
-        public View.MateWSLocal.discount[] queryAllDiscount() {
-            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
-            View.MateWSLocal.queryAllDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscount(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> View.MateWSLocal.DBControllerWS.queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request) {
-            return base.Channel.queryAllDiscountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync() {
-            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscountAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertAreaResponse1 View.MateWSLocal.DBControllerWS.insertArea(View.MateWSLocal.insertAreaRequest request) {
-            return base.Channel.insertArea(request);
-        }
-        
-        public int insertArea(View.MateWSLocal.area area) {
-            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
-            inValue.area = area;
-            View.MateWSLocal.insertAreaResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> View.MateWSLocal.DBControllerWS.insertAreaAsync(View.MateWSLocal.insertAreaRequest request) {
-            return base.Channel.insertAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> insertAreaAsync(View.MateWSLocal.area area) {
-            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
-            inValue.area = area;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertAreaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertPremisesResponse1 View.MateWSLocal.DBControllerWS.insertPremises(View.MateWSLocal.insertPremisesRequest request) {
-            return base.Channel.insertPremises(request);
-        }
-        
-        public int insertPremises(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
-            inValue.premises = premises;
-            View.MateWSLocal.insertPremisesResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPremises(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> View.MateWSLocal.DBControllerWS.insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request) {
-            return base.Channel.insertPremisesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> insertPremisesAsync(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
-            inValue.premises = premises;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertPremisesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateEmployeeResponse1 View.MateWSLocal.DBControllerWS.updateEmployee(View.MateWSLocal.updateEmployeeRequest request) {
-            return base.Channel.updateEmployee(request);
-        }
-        
-        public int updateEmployee(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
-            inValue.employee = employee;
-            View.MateWSLocal.updateEmployeeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateEmployee(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> View.MateWSLocal.DBControllerWS.updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request) {
-            return base.Channel.updateEmployeeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> updateEmployeeAsync(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
-            inValue.employee = employee;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateEmployeeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertUserResponse1 View.MateWSLocal.DBControllerWS.insertUser(View.MateWSLocal.insertUserRequest request) {
-            return base.Channel.insertUser(request);
-        }
-        
-        public int insertUser(View.MateWSLocal.user user) {
-            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
-            inValue.user = user;
-            View.MateWSLocal.insertUserResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertUser(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> View.MateWSLocal.DBControllerWS.insertUserAsync(View.MateWSLocal.insertUserRequest request) {
-            return base.Channel.insertUserAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> insertUserAsync(View.MateWSLocal.user user) {
-            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
-            inValue.user = user;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertUserAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllAreaResponse View.MateWSLocal.DBControllerWS.queryAllArea(View.MateWSLocal.queryAllAreaRequest request) {
-            return base.Channel.queryAllArea(request);
-        }
-        
-        public View.MateWSLocal.area[] queryAllArea() {
-            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
-            View.MateWSLocal.queryAllAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> View.MateWSLocal.DBControllerWS.queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request) {
-            return base.Channel.queryAllAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync() {
-            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllAreaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllSupplierResponse View.MateWSLocal.DBControllerWS.queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplier(request);
-        }
-        
-        public View.MateWSLocal.supplier[] queryAllSupplier() {
-            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
-            View.MateWSLocal.queryAllSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplier(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> View.MateWSLocal.DBControllerWS.queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplierAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync() {
-            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14043,24 +13886,93 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllCustomerResponse View.MateWSLocal.DBControllerWS.queryAllCustomer(View.MateWSLocal.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomer(request);
+        View.MateWSLocal.insertProductResponse1 View.MateWSLocal.DBControllerWS.insertProduct(View.MateWSLocal.insertProductRequest request) {
+            return base.Channel.insertProduct(request);
         }
         
-        public View.MateWSLocal.customer[] queryAllCustomer() {
-            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
-            View.MateWSLocal.queryAllCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomer(inValue);
+        public int insertProduct(View.MateWSLocal.product product) {
+            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
+            inValue.product = product;
+            View.MateWSLocal.insertProductResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertProduct(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> View.MateWSLocal.DBControllerWS.queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomerAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> View.MateWSLocal.DBControllerWS.insertProductAsync(View.MateWSLocal.insertProductRequest request) {
+            return base.Channel.insertProductAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync() {
-            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> insertProductAsync(View.MateWSLocal.product product) {
+            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
+            inValue.product = product;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertProductAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllFamilyResponse View.MateWSLocal.DBControllerWS.queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request) {
+            return base.Channel.queryAllFamily(request);
+        }
+        
+        public View.MateWSLocal.family[] queryAllFamily() {
+            View.MateWSLocal.queryAllFamilyRequest inValue = new View.MateWSLocal.queryAllFamilyRequest();
+            View.MateWSLocal.queryAllFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllFamily(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> View.MateWSLocal.DBControllerWS.queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request) {
+            return base.Channel.queryAllFamilyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync() {
+            View.MateWSLocal.queryAllFamilyRequest inValue = new View.MateWSLocal.queryAllFamilyRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllFamilyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertUserResponse1 View.MateWSLocal.DBControllerWS.insertUser(View.MateWSLocal.insertUserRequest request) {
+            return base.Channel.insertUser(request);
+        }
+        
+        public int insertUser(View.MateWSLocal.user user) {
+            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
+            inValue.user = user;
+            View.MateWSLocal.insertUserResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertUser(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> View.MateWSLocal.DBControllerWS.insertUserAsync(View.MateWSLocal.insertUserRequest request) {
+            return base.Channel.insertUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse1> insertUserAsync(View.MateWSLocal.user user) {
+            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
+            inValue.user = user;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertSaleResponse1 View.MateWSLocal.DBControllerWS.insertSale(View.MateWSLocal.insertSaleRequest request) {
+            return base.Channel.insertSale(request);
+        }
+        
+        public int insertSale(View.MateWSLocal.sale sale) {
+            View.MateWSLocal.insertSaleRequest inValue = new View.MateWSLocal.insertSaleRequest();
+            inValue.sale = sale;
+            View.MateWSLocal.insertSaleResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertSale(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> View.MateWSLocal.DBControllerWS.insertSaleAsync(View.MateWSLocal.insertSaleRequest request) {
+            return base.Channel.insertSaleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> insertSaleAsync(View.MateWSLocal.sale sale) {
+            View.MateWSLocal.insertSaleRequest inValue = new View.MateWSLocal.insertSaleRequest();
+            inValue.sale = sale;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertSaleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14087,6 +13999,50 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertCustomerResponse1 View.MateWSLocal.DBControllerWS.insertCustomer(View.MateWSLocal.insertCustomerRequest request) {
+            return base.Channel.insertCustomer(request);
+        }
+        
+        public int insertCustomer(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.insertCustomerRequest inValue = new View.MateWSLocal.insertCustomerRequest();
+            inValue.customer = customer;
+            View.MateWSLocal.insertCustomerResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> View.MateWSLocal.DBControllerWS.insertCustomerAsync(View.MateWSLocal.insertCustomerRequest request) {
+            return base.Channel.insertCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> insertCustomerAsync(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.insertCustomerRequest inValue = new View.MateWSLocal.insertCustomerRequest();
+            inValue.customer = customer;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllUserResponse View.MateWSLocal.DBControllerWS.queryAllUser(View.MateWSLocal.queryAllUserRequest request) {
+            return base.Channel.queryAllUser(request);
+        }
+        
+        public View.MateWSLocal.user[] queryAllUser() {
+            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
+            View.MateWSLocal.queryAllUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllUser(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> View.MateWSLocal.DBControllerWS.queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request) {
+            return base.Channel.queryAllUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync() {
+            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.updateProductResponse1 View.MateWSLocal.DBControllerWS.updateProduct(View.MateWSLocal.updateProductRequest request) {
             return base.Channel.updateProduct(request);
         }
@@ -14107,50 +14063,6 @@ namespace View.MateWSLocal {
             View.MateWSLocal.updateProductRequest inValue = new View.MateWSLocal.updateProductRequest();
             inValue.product = product;
             return ((View.MateWSLocal.DBControllerWS)(this)).updateProductAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllProductsResponse View.MateWSLocal.DBControllerWS.queryAllProducts(View.MateWSLocal.queryAllProductsRequest request) {
-            return base.Channel.queryAllProducts(request);
-        }
-        
-        public View.MateWSLocal.product[] queryAllProducts() {
-            View.MateWSLocal.queryAllProductsRequest inValue = new View.MateWSLocal.queryAllProductsRequest();
-            View.MateWSLocal.queryAllProductsResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllProducts(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> View.MateWSLocal.DBControllerWS.queryAllProductsAsync(View.MateWSLocal.queryAllProductsRequest request) {
-            return base.Channel.queryAllProductsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync() {
-            View.MateWSLocal.queryAllProductsRequest inValue = new View.MateWSLocal.queryAllProductsRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllProductsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertSaleResponse1 View.MateWSLocal.DBControllerWS.insertSale(View.MateWSLocal.insertSaleRequest request) {
-            return base.Channel.insertSale(request);
-        }
-        
-        public int insertSale(View.MateWSLocal.sale sale) {
-            View.MateWSLocal.insertSaleRequest inValue = new View.MateWSLocal.insertSaleRequest();
-            inValue.sale = sale;
-            View.MateWSLocal.insertSaleResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertSale(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> View.MateWSLocal.DBControllerWS.insertSaleAsync(View.MateWSLocal.insertSaleRequest request) {
-            return base.Channel.insertSaleAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse1> insertSaleAsync(View.MateWSLocal.sale sale) {
-            View.MateWSLocal.insertSaleRequest inValue = new View.MateWSLocal.insertSaleRequest();
-            inValue.sale = sale;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertSaleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14196,47 +14108,114 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllEmployeeResponse View.MateWSLocal.DBControllerWS.queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request) {
-            return base.Channel.queryAllEmployee(request);
+        View.MateWSLocal.queryAllPremisesResponse View.MateWSLocal.DBControllerWS.queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request) {
+            return base.Channel.queryAllPremises(request);
         }
         
-        public View.MateWSLocal.employee[] queryAllEmployee() {
-            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
-            View.MateWSLocal.queryAllEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployee(inValue);
+        public View.MateWSLocal.premises[] queryAllPremises() {
+            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
+            View.MateWSLocal.queryAllPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremises(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> View.MateWSLocal.DBControllerWS.queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request) {
-            return base.Channel.queryAllEmployeeAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> View.MateWSLocal.DBControllerWS.queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request) {
+            return base.Channel.queryAllPremisesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync() {
-            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync() {
+            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremisesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertProductResponse1 View.MateWSLocal.DBControllerWS.insertProduct(View.MateWSLocal.insertProductRequest request) {
-            return base.Channel.insertProduct(request);
+        View.MateWSLocal.updateEmployeeResponse1 View.MateWSLocal.DBControllerWS.updateEmployee(View.MateWSLocal.updateEmployeeRequest request) {
+            return base.Channel.updateEmployee(request);
         }
         
-        public int insertProduct(View.MateWSLocal.product product) {
-            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
-            inValue.product = product;
-            View.MateWSLocal.insertProductResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertProduct(inValue);
+        public int updateEmployee(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
+            inValue.employee = employee;
+            View.MateWSLocal.updateEmployeeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateEmployee(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> View.MateWSLocal.DBControllerWS.insertProductAsync(View.MateWSLocal.insertProductRequest request) {
-            return base.Channel.insertProductAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> View.MateWSLocal.DBControllerWS.updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request) {
+            return base.Channel.updateEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse1> insertProductAsync(View.MateWSLocal.product product) {
-            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
-            inValue.product = product;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertProductAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse1> updateEmployeeAsync(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
+            inValue.employee = employee;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertPremisesResponse1 View.MateWSLocal.DBControllerWS.insertPremises(View.MateWSLocal.insertPremisesRequest request) {
+            return base.Channel.insertPremises(request);
+        }
+        
+        public int insertPremises(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
+            inValue.premises = premises;
+            View.MateWSLocal.insertPremisesResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPremises(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> View.MateWSLocal.DBControllerWS.insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request) {
+            return base.Channel.insertPremisesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse1> insertPremisesAsync(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
+            inValue.premises = premises;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertPremisesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateSupplierResponse1 View.MateWSLocal.DBControllerWS.updateSupplier(View.MateWSLocal.updateSupplierRequest request) {
+            return base.Channel.updateSupplier(request);
+        }
+        
+        public int updateSupplier(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
+            inValue.supplier = supplier;
+            View.MateWSLocal.updateSupplierResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSupplier(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> View.MateWSLocal.DBControllerWS.updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request) {
+            return base.Channel.updateSupplierAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse1> updateSupplierAsync(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
+            inValue.supplier = supplier;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateSupplierAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllAreaResponse View.MateWSLocal.DBControllerWS.queryAllArea(View.MateWSLocal.queryAllAreaRequest request) {
+            return base.Channel.queryAllArea(request);
+        }
+        
+        public View.MateWSLocal.area[] queryAllArea() {
+            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
+            View.MateWSLocal.queryAllAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> View.MateWSLocal.DBControllerWS.queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request) {
+            return base.Channel.queryAllAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync() {
+            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllAreaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14263,6 +14242,48 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllDiscountResponse View.MateWSLocal.DBControllerWS.queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request) {
+            return base.Channel.queryAllDiscount(request);
+        }
+        
+        public View.MateWSLocal.discount[] queryAllDiscount() {
+            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
+            View.MateWSLocal.queryAllDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscount(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> View.MateWSLocal.DBControllerWS.queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request) {
+            return base.Channel.queryAllDiscountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync() {
+            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllProductsResponse View.MateWSLocal.DBControllerWS.queryAllProducts(View.MateWSLocal.queryAllProductsRequest request) {
+            return base.Channel.queryAllProducts(request);
+        }
+        
+        public View.MateWSLocal.product[] queryAllProducts() {
+            View.MateWSLocal.queryAllProductsRequest inValue = new View.MateWSLocal.queryAllProductsRequest();
+            View.MateWSLocal.queryAllProductsResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllProducts(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> View.MateWSLocal.DBControllerWS.queryAllProductsAsync(View.MateWSLocal.queryAllProductsRequest request) {
+            return base.Channel.queryAllProductsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync() {
+            View.MateWSLocal.queryAllProductsRequest inValue = new View.MateWSLocal.queryAllProductsRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllProductsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.queryEmployeeResponse1 View.MateWSLocal.DBControllerWS.queryEmployee(View.MateWSLocal.queryEmployeeRequest request) {
             return base.Channel.queryEmployee(request);
         }
@@ -14283,209 +14304,6 @@ namespace View.MateWSLocal {
             View.MateWSLocal.queryEmployeeRequest inValue = new View.MateWSLocal.queryEmployeeRequest();
             inValue.infEmployee = infEmployee;
             return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertCustomerResponse1 View.MateWSLocal.DBControllerWS.insertCustomer(View.MateWSLocal.insertCustomerRequest request) {
-            return base.Channel.insertCustomer(request);
-        }
-        
-        public int insertCustomer(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.insertCustomerRequest inValue = new View.MateWSLocal.insertCustomerRequest();
-            inValue.customer = customer;
-            View.MateWSLocal.insertCustomerResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertCustomer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> View.MateWSLocal.DBControllerWS.insertCustomerAsync(View.MateWSLocal.insertCustomerRequest request) {
-            return base.Channel.insertCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse1> insertCustomerAsync(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.insertCustomerRequest inValue = new View.MateWSLocal.insertCustomerRequest();
-            inValue.customer = customer;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertCustomerAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertEmployeeResponse1 View.MateWSLocal.DBControllerWS.insertEmployee(View.MateWSLocal.insertEmployeeRequest request) {
-            return base.Channel.insertEmployee(request);
-        }
-        
-        public int insertEmployee(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.insertEmployeeRequest inValue = new View.MateWSLocal.insertEmployeeRequest();
-            inValue.employee = employee;
-            View.MateWSLocal.insertEmployeeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertEmployee(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> View.MateWSLocal.DBControllerWS.insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request) {
-            return base.Channel.insertEmployeeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse1> insertEmployeeAsync(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.insertEmployeeRequest inValue = new View.MateWSLocal.insertEmployeeRequest();
-            inValue.employee = employee;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertEmployeeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllFamilyResponse View.MateWSLocal.DBControllerWS.queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request) {
-            return base.Channel.queryAllFamily(request);
-        }
-        
-        public View.MateWSLocal.family[] queryAllFamily() {
-            View.MateWSLocal.queryAllFamilyRequest inValue = new View.MateWSLocal.queryAllFamilyRequest();
-            View.MateWSLocal.queryAllFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllFamily(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> View.MateWSLocal.DBControllerWS.queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request) {
-            return base.Channel.queryAllFamilyAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync() {
-            View.MateWSLocal.queryAllFamilyRequest inValue = new View.MateWSLocal.queryAllFamilyRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllFamilyAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertBrandResponse1 View.MateWSLocal.DBControllerWS.insertBrand(View.MateWSLocal.insertBrandRequest request) {
-            return base.Channel.insertBrand(request);
-        }
-        
-        public int insertBrand(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
-            inValue.brand = brand;
-            View.MateWSLocal.insertBrandResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertBrand(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> View.MateWSLocal.DBControllerWS.insertBrandAsync(View.MateWSLocal.insertBrandRequest request) {
-            return base.Channel.insertBrandAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> insertBrandAsync(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
-            inValue.brand = brand;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertBrandAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertRefundResponse1 View.MateWSLocal.DBControllerWS.insertRefund(View.MateWSLocal.insertRefundRequest request) {
-            return base.Channel.insertRefund(request);
-        }
-        
-        public int insertRefund(View.MateWSLocal.refund refund) {
-            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
-            inValue.refund = refund;
-            View.MateWSLocal.insertRefundResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertRefund(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> View.MateWSLocal.DBControllerWS.insertRefundAsync(View.MateWSLocal.insertRefundRequest request) {
-            return base.Channel.insertRefundAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> insertRefundAsync(View.MateWSLocal.refund refund) {
-            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
-            inValue.refund = refund;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertRefundAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllPurchaseResponse View.MateWSLocal.DBControllerWS.queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request) {
-            return base.Channel.queryAllPurchase(request);
-        }
-        
-        public object[] queryAllPurchase() {
-            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
-            View.MateWSLocal.queryAllPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchase(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> View.MateWSLocal.DBControllerWS.queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request) {
-            return base.Channel.queryAllPurchaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync() {
-            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateDiscountResponse1 View.MateWSLocal.DBControllerWS.updateDiscount(View.MateWSLocal.updateDiscountRequest request) {
-            return base.Channel.updateDiscount(request);
-        }
-        
-        public int updateDiscount(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
-            inValue.discount = discount;
-            View.MateWSLocal.updateDiscountResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateDiscount(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> View.MateWSLocal.DBControllerWS.updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request) {
-            return base.Channel.updateDiscountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> updateDiscountAsync(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
-            inValue.discount = discount;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateDiscountAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateAreaResponse1 View.MateWSLocal.DBControllerWS.updateArea(View.MateWSLocal.updateAreaRequest request) {
-            return base.Channel.updateArea(request);
-        }
-        
-        public int updateArea(View.MateWSLocal.area area) {
-            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
-            inValue.area = area;
-            View.MateWSLocal.updateAreaResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> View.MateWSLocal.DBControllerWS.updateAreaAsync(View.MateWSLocal.updateAreaRequest request) {
-            return base.Channel.updateAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> updateAreaAsync(View.MateWSLocal.area area) {
-            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
-            inValue.area = area;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateAreaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateBrandResponse1 View.MateWSLocal.DBControllerWS.updateBrand(View.MateWSLocal.updateBrandRequest request) {
-            return base.Channel.updateBrand(request);
-        }
-        
-        public int updateBrand(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
-            inValue.brand = brand;
-            View.MateWSLocal.updateBrandResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateBrand(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> View.MateWSLocal.DBControllerWS.updateBrandAsync(View.MateWSLocal.updateBrandRequest request) {
-            return base.Channel.updateBrandAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> updateBrandAsync(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
-            inValue.brand = brand;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateBrandAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14512,6 +14330,29 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateDiscountResponse1 View.MateWSLocal.DBControllerWS.updateDiscount(View.MateWSLocal.updateDiscountRequest request) {
+            return base.Channel.updateDiscount(request);
+        }
+        
+        public int updateDiscount(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
+            inValue.discount = discount;
+            View.MateWSLocal.updateDiscountResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateDiscount(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> View.MateWSLocal.DBControllerWS.updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request) {
+            return base.Channel.updateDiscountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse1> updateDiscountAsync(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
+            inValue.discount = discount;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateDiscountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.insertDiscountResponse1 View.MateWSLocal.DBControllerWS.insertDiscount(View.MateWSLocal.insertDiscountRequest request) {
             return base.Channel.insertDiscount(request);
         }
@@ -14535,26 +14376,162 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryPurchaseBySerialCodeResponse1 View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
-            return base.Channel.queryPurchaseBySerialCode(request);
+        View.MateWSLocal.insertAreaResponse1 View.MateWSLocal.DBControllerWS.insertArea(View.MateWSLocal.insertAreaRequest request) {
+            return base.Channel.insertArea(request);
         }
         
-        public View.MateWSLocal.purchase queryPurchaseBySerialCode(string serialCode) {
-            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            View.MateWSLocal.queryPurchaseBySerialCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCode(inValue);
+        public int insertArea(View.MateWSLocal.area area) {
+            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
+            inValue.area = area;
+            View.MateWSLocal.insertAreaResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertArea(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
-            return base.Channel.queryPurchaseBySerialCodeAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> View.MateWSLocal.DBControllerWS.insertAreaAsync(View.MateWSLocal.insertAreaRequest request) {
+            return base.Channel.insertAreaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> queryPurchaseBySerialCodeAsync(string serialCode) {
-            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCodeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse1> insertAreaAsync(View.MateWSLocal.area area) {
+            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
+            inValue.area = area;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertRefundResponse1 View.MateWSLocal.DBControllerWS.insertRefund(View.MateWSLocal.insertRefundRequest request) {
+            return base.Channel.insertRefund(request);
+        }
+        
+        public int insertRefund(View.MateWSLocal.refund refund) {
+            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
+            inValue.refund = refund;
+            View.MateWSLocal.insertRefundResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertRefund(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> View.MateWSLocal.DBControllerWS.insertRefundAsync(View.MateWSLocal.insertRefundRequest request) {
+            return base.Channel.insertRefundAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse1> insertRefundAsync(View.MateWSLocal.refund refund) {
+            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
+            inValue.refund = refund;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertRefundAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateBrandResponse1 View.MateWSLocal.DBControllerWS.updateBrand(View.MateWSLocal.updateBrandRequest request) {
+            return base.Channel.updateBrand(request);
+        }
+        
+        public int updateBrand(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
+            inValue.brand = brand;
+            View.MateWSLocal.updateBrandResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateBrand(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> View.MateWSLocal.DBControllerWS.updateBrandAsync(View.MateWSLocal.updateBrandRequest request) {
+            return base.Channel.updateBrandAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse1> updateBrandAsync(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
+            inValue.brand = brand;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateAreaResponse1 View.MateWSLocal.DBControllerWS.updateArea(View.MateWSLocal.updateAreaRequest request) {
+            return base.Channel.updateArea(request);
+        }
+        
+        public int updateArea(View.MateWSLocal.area area) {
+            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
+            inValue.area = area;
+            View.MateWSLocal.updateAreaResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> View.MateWSLocal.DBControllerWS.updateAreaAsync(View.MateWSLocal.updateAreaRequest request) {
+            return base.Channel.updateAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse1> updateAreaAsync(View.MateWSLocal.area area) {
+            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
+            inValue.area = area;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllPurchaseResponse View.MateWSLocal.DBControllerWS.queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request) {
+            return base.Channel.queryAllPurchase(request);
+        }
+        
+        public object[] queryAllPurchase() {
+            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
+            View.MateWSLocal.queryAllPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchase(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> View.MateWSLocal.DBControllerWS.queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request) {
+            return base.Channel.queryAllPurchaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync() {
+            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertBrandResponse1 View.MateWSLocal.DBControllerWS.insertBrand(View.MateWSLocal.insertBrandRequest request) {
+            return base.Channel.insertBrand(request);
+        }
+        
+        public int insertBrand(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+            inValue.brand = brand;
+            View.MateWSLocal.insertBrandResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertBrand(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> View.MateWSLocal.DBControllerWS.insertBrandAsync(View.MateWSLocal.insertBrandRequest request) {
+            return base.Channel.insertBrandAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse1> insertBrandAsync(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+            inValue.brand = brand;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateUserResponse1 View.MateWSLocal.DBControllerWS.updateUser(View.MateWSLocal.updateUserRequest request) {
+            return base.Channel.updateUser(request);
+        }
+        
+        public int updateUser(View.MateWSLocal.user user) {
+            View.MateWSLocal.updateUserRequest inValue = new View.MateWSLocal.updateUserRequest();
+            inValue.user = user;
+            View.MateWSLocal.updateUserResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateUser(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> View.MateWSLocal.DBControllerWS.updateUserAsync(View.MateWSLocal.updateUserRequest request) {
+            return base.Channel.updateUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse1> updateUserAsync(View.MateWSLocal.user user) {
+            View.MateWSLocal.updateUserRequest inValue = new View.MateWSLocal.updateUserRequest();
+            inValue.user = user;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14581,100 +14558,6 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.querySaleBySerialCodeResponse1 View.MateWSLocal.DBControllerWS.querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request) {
-            return base.Channel.querySaleBySerialCode(request);
-        }
-        
-        public View.MateWSLocal.sale querySaleBySerialCode(string serialCode) {
-            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            View.MateWSLocal.querySaleBySerialCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> View.MateWSLocal.DBControllerWS.querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request) {
-            return base.Channel.querySaleBySerialCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> querySaleBySerialCodeAsync(string serialCode) {
-            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryUserByUserNameResponse1 View.MateWSLocal.DBControllerWS.queryUserByUserName(View.MateWSLocal.queryUserByUserNameRequest request) {
-            return base.Channel.queryUserByUserName(request);
-        }
-        
-        public View.MateWSLocal.user queryUserByUserName(string user) {
-            View.MateWSLocal.queryUserByUserNameRequest inValue = new View.MateWSLocal.queryUserByUserNameRequest();
-            inValue.user = user;
-            View.MateWSLocal.queryUserByUserNameResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryUserByUserName(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> View.MateWSLocal.DBControllerWS.queryUserByUserNameAsync(View.MateWSLocal.queryUserByUserNameRequest request) {
-            return base.Channel.queryUserByUserNameAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> queryUserByUserNameAsync(string user) {
-            View.MateWSLocal.queryUserByUserNameRequest inValue = new View.MateWSLocal.queryUserByUserNameRequest();
-            inValue.user = user;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryUserByUserNameAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertDiscountProductResponse1 View.MateWSLocal.DBControllerWS.insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request) {
-            return base.Channel.insertDiscountProduct(request);
-        }
-        
-        public int insertDiscountProduct(int idDiscount, int idProduct) {
-            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
-            inValue.idDiscount = idDiscount;
-            inValue.idProduct = idProduct;
-            View.MateWSLocal.insertDiscountProductResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProduct(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> View.MateWSLocal.DBControllerWS.insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request) {
-            return base.Channel.insertDiscountProductAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> insertDiscountProductAsync(int idDiscount, int idProduct) {
-            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
-            inValue.idDiscount = idDiscount;
-            inValue.idProduct = idProduct;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProductAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.querySupplierByCodeResponse1 View.MateWSLocal.DBControllerWS.querySupplierByCode(View.MateWSLocal.querySupplierByCodeRequest request) {
-            return base.Channel.querySupplierByCode(request);
-        }
-        
-        public View.MateWSLocal.supplier querySupplierByCode(string supplierCode) {
-            View.MateWSLocal.querySupplierByCodeRequest inValue = new View.MateWSLocal.querySupplierByCodeRequest();
-            inValue.supplierCode = supplierCode;
-            View.MateWSLocal.querySupplierByCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySupplierByCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> View.MateWSLocal.DBControllerWS.querySupplierByCodeAsync(View.MateWSLocal.querySupplierByCodeRequest request) {
-            return base.Channel.querySupplierByCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> querySupplierByCodeAsync(string supplierCode) {
-            View.MateWSLocal.querySupplierByCodeRequest inValue = new View.MateWSLocal.querySupplierByCodeRequest();
-            inValue.supplierCode = supplierCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).querySupplierByCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.queryByIdEmployeeResponse1 View.MateWSLocal.DBControllerWS.queryByIdEmployee(View.MateWSLocal.queryByIdEmployeeRequest request) {
             return base.Channel.queryByIdEmployee(request);
         }
@@ -14695,6 +14578,52 @@ namespace View.MateWSLocal {
             View.MateWSLocal.queryByIdEmployeeRequest inValue = new View.MateWSLocal.queryByIdEmployeeRequest();
             inValue.idEmployee = idEmployee;
             return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryByIdCustomerResponse1 View.MateWSLocal.DBControllerWS.queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request) {
+            return base.Channel.queryByIdCustomer(request);
+        }
+        
+        public View.MateWSLocal.customer queryByIdCustomer(string idCustomer) {
+            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
+            inValue.idCustomer = idCustomer;
+            View.MateWSLocal.queryByIdCustomerResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> View.MateWSLocal.DBControllerWS.queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request) {
+            return base.Channel.queryByIdCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> queryByIdCustomerAsync(string idCustomer) {
+            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
+            inValue.idCustomer = idCustomer;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryFamilyByCodeResponse1 View.MateWSLocal.DBControllerWS.queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request) {
+            return base.Channel.queryFamilyByCode(request);
+        }
+        
+        public View.MateWSLocal.family queryFamilyByCode(string familyID) {
+            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
+            inValue.familyID = familyID;
+            View.MateWSLocal.queryFamilyByCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> View.MateWSLocal.DBControllerWS.queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request) {
+            return base.Channel.queryFamilyByCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> queryFamilyByCodeAsync(string familyID) {
+            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
+            inValue.familyID = familyID;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14721,26 +14650,26 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryByIdCustomerResponse1 View.MateWSLocal.DBControllerWS.queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request) {
-            return base.Channel.queryByIdCustomer(request);
+        View.MateWSLocal.querySaleBySerialCodeResponse1 View.MateWSLocal.DBControllerWS.querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request) {
+            return base.Channel.querySaleBySerialCode(request);
         }
         
-        public View.MateWSLocal.customer queryByIdCustomer(string idCustomer) {
-            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
-            inValue.idCustomer = idCustomer;
-            View.MateWSLocal.queryByIdCustomerResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomer(inValue);
+        public View.MateWSLocal.sale querySaleBySerialCode(string serialCode) {
+            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            View.MateWSLocal.querySaleBySerialCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCode(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> View.MateWSLocal.DBControllerWS.queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request) {
-            return base.Channel.queryByIdCustomerAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> View.MateWSLocal.DBControllerWS.querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request) {
+            return base.Channel.querySaleBySerialCodeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse1> queryByIdCustomerAsync(string idCustomer) {
-            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
-            inValue.idCustomer = idCustomer;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomerAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse1> querySaleBySerialCodeAsync(string serialCode) {
+            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -14792,26 +14721,97 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryFamilyByCodeResponse1 View.MateWSLocal.DBControllerWS.queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request) {
-            return base.Channel.queryFamilyByCode(request);
+        View.MateWSLocal.querySupplierByCodeResponse1 View.MateWSLocal.DBControllerWS.querySupplierByCode(View.MateWSLocal.querySupplierByCodeRequest request) {
+            return base.Channel.querySupplierByCode(request);
         }
         
-        public View.MateWSLocal.family queryFamilyByCode(string familyID) {
-            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
-            inValue.familyID = familyID;
-            View.MateWSLocal.queryFamilyByCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCode(inValue);
+        public View.MateWSLocal.supplier querySupplierByCode(string supplierCode) {
+            View.MateWSLocal.querySupplierByCodeRequest inValue = new View.MateWSLocal.querySupplierByCodeRequest();
+            inValue.supplierCode = supplierCode;
+            View.MateWSLocal.querySupplierByCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySupplierByCode(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> View.MateWSLocal.DBControllerWS.queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request) {
-            return base.Channel.queryFamilyByCodeAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> View.MateWSLocal.DBControllerWS.querySupplierByCodeAsync(View.MateWSLocal.querySupplierByCodeRequest request) {
+            return base.Channel.querySupplierByCodeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse1> queryFamilyByCodeAsync(string familyID) {
-            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
-            inValue.familyID = familyID;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCodeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse1> querySupplierByCodeAsync(string supplierCode) {
+            View.MateWSLocal.querySupplierByCodeRequest inValue = new View.MateWSLocal.querySupplierByCodeRequest();
+            inValue.supplierCode = supplierCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).querySupplierByCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertDiscountProductResponse1 View.MateWSLocal.DBControllerWS.insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request) {
+            return base.Channel.insertDiscountProduct(request);
+        }
+        
+        public int insertDiscountProduct(int idDiscount, int idProduct) {
+            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
+            inValue.idDiscount = idDiscount;
+            inValue.idProduct = idProduct;
+            View.MateWSLocal.insertDiscountProductResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProduct(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> View.MateWSLocal.DBControllerWS.insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request) {
+            return base.Channel.insertDiscountProductAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse1> insertDiscountProductAsync(int idDiscount, int idProduct) {
+            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
+            inValue.idDiscount = idDiscount;
+            inValue.idProduct = idProduct;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProductAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryPurchaseBySerialCodeResponse1 View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
+            return base.Channel.queryPurchaseBySerialCode(request);
+        }
+        
+        public View.MateWSLocal.purchase queryPurchaseBySerialCode(string serialCode) {
+            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            View.MateWSLocal.queryPurchaseBySerialCodeResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
+            return base.Channel.queryPurchaseBySerialCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse1> queryPurchaseBySerialCodeAsync(string serialCode) {
+            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryUserByUserNameResponse1 View.MateWSLocal.DBControllerWS.queryUserByUserName(View.MateWSLocal.queryUserByUserNameRequest request) {
+            return base.Channel.queryUserByUserName(request);
+        }
+        
+        public View.MateWSLocal.user queryUserByUserName(string user) {
+            View.MateWSLocal.queryUserByUserNameRequest inValue = new View.MateWSLocal.queryUserByUserNameRequest();
+            inValue.user = user;
+            View.MateWSLocal.queryUserByUserNameResponse1 retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryUserByUserName(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> View.MateWSLocal.DBControllerWS.queryUserByUserNameAsync(View.MateWSLocal.queryUserByUserNameRequest request) {
+            return base.Channel.queryUserByUserNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryUserByUserNameResponse1> queryUserByUserNameAsync(string user) {
+            View.MateWSLocal.queryUserByUserNameRequest inValue = new View.MateWSLocal.queryUserByUserNameRequest();
+            inValue.user = user;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryUserByUserNameAsync(inValue);
         }
     }
 }

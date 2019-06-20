@@ -73,9 +73,10 @@ namespace WindowsFormsApp1
             else
             {
                 //getCustomerData
-                sale s = new sale();
+                View.MateWSLocal.sale s = new View.MateWSLocal.sale();
                 s.totalSale = float.Parse(txtTotal.Text);
                 customer c = new customer();
+                serviceDA = new DBControllerWSClient();
                 c = serviceDA.queryByIdCustomer(txtDniRuc.Text);
                 s.customer = c;
                 saleLane[] salelanes;

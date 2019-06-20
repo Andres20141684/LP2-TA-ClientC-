@@ -361,16 +361,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="updateCustomer">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="customer" type="tns:customer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateCustomerResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryAllSupplier">
     <xs:sequence />
   </xs:complexType>
@@ -413,6 +403,16 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="customer" type="tns:customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryUserByUserName">
     <xs:sequence>
@@ -530,20 +530,20 @@
       <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllUser">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllUserResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryAllCustomer">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllCustomerResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllUser">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryPurchaseBySerialCode">

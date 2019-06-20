@@ -71,6 +71,7 @@ namespace View
             }
             else
             {
+                serviceDA = new DBControllerWSClient();
                 //getCustomerData
                 purchase p = new purchase();
                 p.totalPurchase = float.Parse(txtTotal.Text);
@@ -85,9 +86,9 @@ namespace View
                     purchaselane.subtotal = float.Parse(dgvPurchaseDetails.Rows[i].Cells[4].Value.ToString());
                     purchaselane.quantity = int.Parse(dgvPurchaseDetails.Rows[i].Cells[3].Value.ToString());
                     purchaselane.purchase = p;
-                    product p = new product();
-                    p = serviceDA.queryProductBySKUCode(dgvPurchaseDetails.Rows[i].Cells[0].Value.ToString());
-                    purchaselane.product = p;
+                    product pr = new product();
+                    pr = serviceDA.queryProductBySKUCode(dgvPurchaseDetails.Rows[i].Cells[0].Value.ToString());
+                    purchaselane.product = pr;
                     salelanes[i] = purchaselane;
                     //
                 }

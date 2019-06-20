@@ -160,6 +160,8 @@
             this.MaximizeBox = false;
             this.Name = "UpdateFamilyForm";
             this.Text = "Modificar Familia";
+            this.Load += new System.EventHandler(this.UpdateFamilyForm_Load);
+            this.Shown += new System.EventHandler(this.UpdateFamilyForm_Shown);
             this.gbGeneralInformation.ResumeLayout(false);
             this.gbGeneralInformation.PerformLayout();
             this.ResumeLayout(false);

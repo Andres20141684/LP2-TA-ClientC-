@@ -22,10 +22,10 @@ namespace Producto
         private Family f;
         private View.MateWSLocal.DBControllerWSClient serviceDA;
         private BindingList<View.MateWSLocal.family> families;
+
         public FamilyProductForm()
         {
             InitializeComponent();
-            componentsState(StateF.Start);
             updateDataGridView();
             f = new Family();            
             dgvFamilies.AutoGenerateColumns = false;
@@ -50,31 +50,7 @@ namespace Producto
         {
             refParent = form;
         }
-        public void componentsState(StateF s)
-        {
-            switch (s)
-            {
-                case StateF.Start:
-                    txtFamily.Enabled = true;
-                    btnSearch.Enabled = true;
-                    btnAddFamily.Enabled = true;
-                    btnUpdateFamily.Enabled = false;
-                    btnDeleteFamily.Enabled = false;
-                    dgvFamilies.Enabled = true;
-                    cleanForm();
-                    break;
-                case StateF.SelectedRow:
-                    txtFamily.Enabled = true;
-                    btnSearch.Enabled = true;
-                    btnAddFamily.Enabled = true;
-                    btnUpdateFamily.Enabled = true;
-                    btnDeleteFamily.Enabled = true;
-                    dgvFamilies.Enabled = true;
-                    break;
-
-            }
-        }
-
+        
         public void cleanForm()
         {
             txtFamily.Text = "";
@@ -83,25 +59,29 @@ namespace Producto
 
         private void btnAddFamily_Click(object sender, EventArgs e)
         {
-            AddFamilyForm addForm = new AddFamilyForm();
-            if (addForm.ShowDialog() == DialogResult.OK)
-            {
-
-
-            }
-            componentsState(StateF.Start);
+            AddFamilyForm addFamily = new AddFamilyForm();
+            addFamily.ShowDialog();
+            updateDataGridView();
 
         }
 
         private void btnUpdateFamily_Click(object sender, EventArgs e)
         {
-            UpdateFamilyForm updateForm = new UpdateFamilyForm();
-            if (updateForm.ShowDialog() == DialogResult.OK)
+            int i = dgvFamilies.CurrentCell.RowIndex;
+            if (i >= 0)
             {
-
-
+                UpdateFamilyForm updateFamily = new UpdateFamilyForm();
+                updateFamily.currentFamily = new family();
+                updateFamily.currentFamily = families[i];
+                updateFamily.ShowDialog();
+                updateDataGridView();
             }
-            componentsState(StateF.Start);
+            else
+            {
+                MessageBox.Show("Seleccione una familia");
+            }
+
+
         }
 
         private void btnDeleteFamily_Click(object sender, EventArgs e)
@@ -130,7 +110,6 @@ namespace Producto
 
             if (dgv.CurrentRow.Selected)
             {
-                componentsState(StateF.SelectedRow);
                 f = (Family)dgvFamilies.CurrentRow.DataBoundItem;
             }
         }

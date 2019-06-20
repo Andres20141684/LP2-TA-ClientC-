@@ -7,75 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using View.MateWSLocal;
 namespace Producto
 {
-    public enum StateFM
-    {
-        Start, Save, Update
-    }
     public partial class UpdateFamilyForm : Form
     {
+        private DBControllerWSClient serviceDAA;
+        public family currentFamily;
+
         public UpdateFamilyForm()
         {
             InitializeComponent();
-
-            componentsState(StateFM.Start);
         }
 
-        public void componentsState(StateFM s)
+        private void UpdateFamilyForm_Shown(object sender, EventArgs e)
         {
-            switch (s)
-            {
-                case StateFM.Start:
-                    gbGeneralInformation.Enabled = false;
-                    btnSave.Enabled = false;
-                    break;
-                case StateFM.Save:
-                    gbGeneralInformation.Enabled = false;
-                    btnSave.Enabled = false;
-                    break;
-                case StateFM.Update:
-                    gbGeneralInformation.Enabled = true;
-                    btnSave.Enabled = true;
-                    break;
-
-            }
+            
         }
 
-        public void CompleteForm()
+        private void setFamilyInformation()
         {
-            //se llena la infromación de los recuadros con la infromación del producto seleccionado
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            componentsState(StateFM.Update);
+            txtFamilyCode.Text = currentFamily.idFamily;
+            txtName.Text = currentFamily.name;
+            txtDescription.Text = currentFamily.description;
+            if (currentFamily.state == 1) cbActive.Checked = true;
+            else cbActive.Checked = false;
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            componentsState(StateFM.Save);
-            try
-            {
-                String name = txtName.Text;
-                String code = txtFamilyCode.Text;
-                String description = txtDescription.Text;
-                int state;
-                if (cbActive.Checked == true) state = 1;
-                else state = 0;
+            serviceDAA = new DBControllerWSClient();
+            currentFamily.idFamily = txtFamilyCode.Text;
+            currentFamily.name = txtName.Text;
+            currentFamily.description = txtDescription.Text;
+            currentFamily.state = cbActive.Checked ? 1 : 0;
+            serviceDAA.updateFamily(currentFamily);
+            MessageBox.Show("La familia se modificó satisfactoriamente");
+            this.Close();
 
-                //se cambian los atributos de familia y se modifica en la tabla
+        }
 
-                MessageBox.Show("Se modificó satisfactoriamente la familia.");
-            }
-            catch
-            {
-                MessageBox.Show("No se pudo modificar la familia.");
-            }
-
-
+        private void UpdateFamilyForm_Load(object sender, EventArgs e)
+        {
+            setFamilyInformation();
         }
     }
 }

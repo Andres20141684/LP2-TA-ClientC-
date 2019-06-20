@@ -39,10 +39,10 @@
             this.boletaRadioButton = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.ClientLabel = new System.Windows.Forms.Label();
-            this.ClientTextBox = new System.Windows.Forms.TextBox();
-            this.NameClientTextBox = new System.Windows.Forms.TextBox();
+            this.txtDniRuc = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.PayMethodComboBox = new System.Windows.Forms.ComboBox();
+            this.cbMetodoPago = new System.Windows.Forms.ComboBox();
             this.dgvSaleDetails = new System.Windows.Forms.DataGridView();
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,21 +155,21 @@
             this.ClientLabel.TabIndex = 5;
             this.ClientLabel.Text = "Cliente:";
             // 
-            // ClientTextBox
+            // txtDniRuc
             // 
-            this.ClientTextBox.Location = new System.Drawing.Point(98, 130);
-            this.ClientTextBox.Name = "ClientTextBox";
-            this.ClientTextBox.Size = new System.Drawing.Size(159, 20);
-            this.ClientTextBox.TabIndex = 6;
-            this.ClientTextBox.Text = "Ingrese DNI o RUC";
+            this.txtDniRuc.Location = new System.Drawing.Point(98, 130);
+            this.txtDniRuc.Name = "txtDniRuc";
+            this.txtDniRuc.Size = new System.Drawing.Size(159, 20);
+            this.txtDniRuc.TabIndex = 6;
+            this.txtDniRuc.Text = "Ingrese DNI o RUC";
             // 
-            // NameClientTextBox
+            // txtDescripcion
             // 
-            this.NameClientTextBox.Location = new System.Drawing.Point(264, 129);
-            this.NameClientTextBox.Name = "NameClientTextBox";
-            this.NameClientTextBox.Size = new System.Drawing.Size(273, 20);
-            this.NameClientTextBox.TabIndex = 7;
-            this.NameClientTextBox.Text = "Descripción";
+            this.txtDescripcion.Location = new System.Drawing.Point(264, 129);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(273, 20);
+            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.Text = "Descripción";
             // 
             // label4
             // 
@@ -180,17 +180,18 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Método de pago:";
             // 
-            // PayMethodComboBox
+            // cbMetodoPago
             // 
-            this.PayMethodComboBox.FormattingEnabled = true;
-            this.PayMethodComboBox.Items.AddRange(new object[] {
+            this.cbMetodoPago.FormattingEnabled = true;
+            this.cbMetodoPago.Items.AddRange(new object[] {
             "Visa",
             "Mastercard",
             "Efectivo"});
-            this.PayMethodComboBox.Location = new System.Drawing.Point(98, 163);
-            this.PayMethodComboBox.Name = "PayMethodComboBox";
-            this.PayMethodComboBox.Size = new System.Drawing.Size(121, 21);
-            this.PayMethodComboBox.TabIndex = 9;
+            this.cbMetodoPago.Location = new System.Drawing.Point(98, 163);
+            this.cbMetodoPago.Name = "cbMetodoPago";
+            this.cbMetodoPago.Size = new System.Drawing.Size(121, 21);
+            this.cbMetodoPago.TabIndex = 9;
+            this.cbMetodoPago.Text = "Visa";
             // 
             // dgvSaleDetails
             // 
@@ -291,10 +292,10 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.AddProductSale);
             this.Controls.Add(this.dgvSaleDetails);
-            this.Controls.Add(this.PayMethodComboBox);
+            this.Controls.Add(this.cbMetodoPago);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.NameClientTextBox);
-            this.Controls.Add(this.ClientTextBox);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtDniRuc);
             this.Controls.Add(this.ClientLabel);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.boletaRadioButton);
@@ -327,10 +328,10 @@
         private System.Windows.Forms.RadioButton boletaRadioButton;
         private System.Windows.Forms.RadioButton radioButton1;
         public System.Windows.Forms.Label ClientLabel;
-        public System.Windows.Forms.TextBox ClientTextBox;
-        private System.Windows.Forms.TextBox NameClientTextBox;
+        public System.Windows.Forms.TextBox txtDniRuc;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox PayMethodComboBox;
+        private System.Windows.Forms.ComboBox cbMetodoPago;
         private System.Windows.Forms.DataGridView dgvSaleDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn productId;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;

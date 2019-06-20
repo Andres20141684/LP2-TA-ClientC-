@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using View.MateWSLocal;
 namespace WindowsFormsApp1
 {
     public partial class SaleForm : Form
     {
         int type;
-
+        private DBControllerWSClient serviceDA;
         public int Type { get => type; set => type = value; }
 
         public SaleForm()
@@ -66,6 +66,43 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                //getCustomerData
+                sale s = new sale();
+                s.totalSale = float.Parse(txtTotal.Text);
+                customer c = new customer();
+                c = serviceDA.queryByIdCustomer(txtDniRuc.Text);
+                s.customer = c;
+                saleLane[] salelanes;
+                salelanes = new saleLane[dgvSaleDetails.RowCount];
+                for (int i = 0; i < dgvSaleDetails.RowCount - 1; i++)
+                {
+                    saleLane salelane = new saleLane();
+                    salelane.subtotal = float.Parse(dgvSaleDetails.Rows[i].Cells[4].Value.ToString());
+                    salelane.quantity = int.Parse(dgvSaleDetails.Rows[i].Cells[3].Value.ToString());
+                    salelane.sale = s;
+                    product p = new product();
+                    p = serviceDA.queryProductBySKUCode(dgvSaleDetails.Rows[i].Cells[0].Value.ToString());
+                    salelane.product = p;
+                    salelanes[i]=salelane;
+                    //serviceDA.insertSaleLane();
+
+                }
+
+                s.saleLanes = salelanes ; 
+
+                serviceDA = new DBControllerWSClient();
+                Cursor.Current = Cursors.WaitCursor;
+                //serviceDA.insertSale(s); //NO INSERTAMOS VENTA PORQUE AÚN NO CONTAMOS CON INSERT_SALE_LANE()
+                Cursor.Current = Cursors.Arrow;
+                MessageBox.Show("Insert_Sale_lane not implemented");
+                this.Close();
+            }
             MessageBox.Show("Se ha generado correctamente");
             this.Close();
         }
@@ -95,6 +132,28 @@ namespace WindowsFormsApp1
             searchTransaction.Text = "Buscar venta";
             searchTransaction.IsRefund = true;
             searchTransaction.Show();
+        }
+        private bool filledValues()
+        {
+            if (txtDniRuc.Text == "")
+            {
+                MessageBox.Show("Complete el DNI o RUC del cliente");
+                return false;
+            }
+            else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Descripción!");
+                return false;
+            }
+
+            else if (dgvSaleDetails.RowCount < 1)
+            {
+                MessageBox.Show("No hay productos suficientes");
+                return false;
+            }
+            else return true;
+            
+
         }
     }
 }

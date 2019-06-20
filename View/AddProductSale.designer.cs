@@ -95,7 +95,7 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(100, 19);
+            this.txtProductName.Location = new System.Drawing.Point(60, 19);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(260, 20);
             this.txtProductName.TabIndex = 5;
@@ -103,11 +103,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 22);
+            this.label1.Location = new System.Drawing.Point(22, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "SKU:";
             // 
             // AddProductSale
             // 
@@ -121,7 +121,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             //this.Name = "AddProductSale";
-            this.Text = "AddProductSale";
+            //this.Text = "AddProductSale";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

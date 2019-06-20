@@ -302,6 +302,7 @@
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(144, 21);
             this.cbArea.TabIndex = 20;
+            this.cbArea.Text = "--Seleccione--";
             // 
             // AddEmployeeForm
             // 

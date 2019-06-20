@@ -65,6 +65,7 @@
             this.btnSaveEmployee.TabIndex = 22;
             this.btnSaveEmployee.Text = "Guardar";
             this.btnSaveEmployee.UseVisualStyleBackColor = true;
+            this.btnSaveEmployee.Click += new System.EventHandler(this.btnSaveEmployee_Click);
             // 
             // groupBox1
             // 
@@ -309,6 +310,7 @@
             this.MaximizeBox = false;
             this.Name = "ModifyEmployeeForm";
             this.Text = "Modificar Empleado";
+            this.Load += new System.EventHandler(this.ModifyEmployeeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

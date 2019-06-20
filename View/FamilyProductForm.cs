@@ -29,7 +29,6 @@ namespace Producto
             updateDataGridView();
             f = new Family();            
             dgvFamilies.AutoGenerateColumns = false;
-            //dgvFamilies.DataSource = families;
         }
         View.MainWindow refParent;
         void updateDataGridView()

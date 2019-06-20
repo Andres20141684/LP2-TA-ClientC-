@@ -32,7 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.AddProductSale = new System.Windows.Forms.Button();
-            this.dgvSaleDetails = new System.Windows.Forms.DataGridView();
+            this.dgvPurchaseDetails = new System.Windows.Forms.DataGridView();
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +40,8 @@
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PayMethodComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.NameClientTextBox = new System.Windows.Forms.TextBox();
-            this.ClientTextBox = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtRucDni = new System.Windows.Forms.TextBox();
             this.ClientLabel = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.boletaRadioButton = new System.Windows.Forms.RadioButton();
@@ -49,10 +49,10 @@
             this.userLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.SaveButton.TabIndex = 28;
             this.SaveButton.Text = "Guardar venta";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // label5
             // 
@@ -89,20 +90,21 @@
             this.AddProductSale.TabIndex = 25;
             this.AddProductSale.Text = "Agregar producto";
             this.AddProductSale.UseVisualStyleBackColor = true;
+            this.AddProductSale.Click += new System.EventHandler(this.AddProductSale_Click);
             // 
-            // dgvSaleDetails
+            // dgvPurchaseDetails
             // 
-            this.dgvSaleDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSaleDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPurchaseDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPurchaseDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productId,
             this.productName,
             this.productPrice,
             this.quantity,
             this.subTotal});
-            this.dgvSaleDetails.Location = new System.Drawing.Point(40, 191);
-            this.dgvSaleDetails.Name = "dgvSaleDetails";
-            this.dgvSaleDetails.Size = new System.Drawing.Size(502, 189);
-            this.dgvSaleDetails.TabIndex = 24;
+            this.dgvPurchaseDetails.Location = new System.Drawing.Point(40, 191);
+            this.dgvPurchaseDetails.Name = "dgvPurchaseDetails";
+            this.dgvPurchaseDetails.Size = new System.Drawing.Size(502, 189);
+            this.dgvPurchaseDetails.TabIndex = 24;
             // 
             // productId
             // 
@@ -154,6 +156,7 @@
             this.PayMethodComboBox.Name = "PayMethodComboBox";
             this.PayMethodComboBox.Size = new System.Drawing.Size(121, 21);
             this.PayMethodComboBox.TabIndex = 23;
+            this.PayMethodComboBox.Text = "Visa";
             // 
             // label4
             // 
@@ -164,21 +167,21 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Método de pago:";
             // 
-            // NameClientTextBox
+            // txtDescripcion
             // 
-            this.NameClientTextBox.Location = new System.Drawing.Point(269, 130);
-            this.NameClientTextBox.Name = "NameClientTextBox";
-            this.NameClientTextBox.Size = new System.Drawing.Size(273, 20);
-            this.NameClientTextBox.TabIndex = 21;
-            this.NameClientTextBox.Text = "Descripción";
+            this.txtDescripcion.Location = new System.Drawing.Point(269, 130);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(273, 20);
+            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.Text = "Descripción";
             // 
-            // ClientTextBox
+            // txtRucDni
             // 
-            this.ClientTextBox.Location = new System.Drawing.Point(103, 131);
-            this.ClientTextBox.Name = "ClientTextBox";
-            this.ClientTextBox.Size = new System.Drawing.Size(159, 20);
-            this.ClientTextBox.TabIndex = 20;
-            this.ClientTextBox.Text = "Ingrese DNI o RUC";
+            this.txtRucDni.Location = new System.Drawing.Point(103, 131);
+            this.txtRucDni.Name = "txtRucDni";
+            this.txtRucDni.Size = new System.Drawing.Size(159, 20);
+            this.txtRucDni.TabIndex = 20;
+            this.txtRucDni.Text = "Ingrese DNI o RUC";
             // 
             // ClientLabel
             // 
@@ -248,6 +251,13 @@
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click_1);
+            // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -259,16 +269,9 @@
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.ModificarToolStripMenuItem_Click_1);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click_1);
             // 
             // PurchaseForm
             // 
@@ -279,11 +282,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.AddProductSale);
-            this.Controls.Add(this.dgvSaleDetails);
+            this.Controls.Add(this.dgvPurchaseDetails);
             this.Controls.Add(this.PayMethodComboBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.NameClientTextBox);
-            this.Controls.Add(this.ClientTextBox);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtRucDni);
             this.Controls.Add(this.ClientLabel);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.boletaRadioButton);
@@ -293,7 +296,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PurchaseForm";
             this.Text = "Gestionar compras";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -307,7 +310,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button AddProductSale;
-        private System.Windows.Forms.DataGridView dgvSaleDetails;
+        private System.Windows.Forms.DataGridView dgvPurchaseDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn productId;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
@@ -315,8 +318,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.ComboBox PayMethodComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox NameClientTextBox;
-        public System.Windows.Forms.TextBox ClientTextBox;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.TextBox txtRucDni;
         public System.Windows.Forms.Label ClientLabel;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton boletaRadioButton;

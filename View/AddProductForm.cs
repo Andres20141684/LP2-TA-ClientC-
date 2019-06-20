@@ -10,10 +10,6 @@ using System.Windows.Forms;
 using View.MateWSLocal;
 namespace Producto
 {
-    public enum State2
-    {
-        Start, Save, New
-    }
 
     public partial class AddProductForm : Form
     {

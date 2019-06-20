@@ -63,26 +63,16 @@ namespace Producto
             int i = dgvProducts.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                //UpdateProductForm updateForm = new UpdateProductForm();
-                //updateForm.currentCustomer = new customer();
-                //updateForm.currentCustomer = customers[i];
-                //updateForm.ShowDialog();
+                UpdateProductForm updateForm1 = new UpdateProductForm();
+                updateForm1.currentProduct = new product();
+                updateForm1.currentProduct = productsData[i];
+                updateForm1.ShowDialog();
                 updateDataGridView();
             }
             else
             {
-                MessageBox.Show("Seleccione un cliente");
+                MessageBox.Show("Seleccione un producto");
             }
-
-
-
-            UpdateProductForm updateForm = new UpdateProductForm();
-            if (updateForm.ShowDialog()== DialogResult.OK)
-            {
-                
-
-            }
-            updateDataGridView();
         }
 
         public void componentsState(State s)

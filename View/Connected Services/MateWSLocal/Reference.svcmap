@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0979e54-b1a8-4e95-810c-3e26bc66c6b6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>

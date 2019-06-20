@@ -11,25 +11,27 @@ using View.MateWSLocal;
 
 namespace Producto
 {
-    public enum State3
-    {
-        Start, Save, Update
-    }
     public partial class UpdateProductForm : Form
     {
         private DBControllerWSClient serviceDA;
         public product currentProduct;
+        private BindingList<brand> brands;
+        private BindingList<family> families;
+        private BindingList<discount> discounts;
 
         public UpdateProductForm()
         {
             InitializeComponent();
-            //componentsState(State3.Start);
+        }
+
+        private void UpdateProductForm_Shown(object sender, EventArgs e)
+        {
             setProductInformation();
         }
 
         private void UpdateProductForm_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void setProductInformation()
@@ -50,26 +52,28 @@ namespace Producto
         }
 
         private void BtnSave_Click_1(object sender, EventArgs e)
-        {
+        {         
+           serviceDA = new DBControllerWSClient();
+           currentProduct.SKUcode = txtSKUCode.Text;
+           currentProduct.name = txtName.Text;
+           currentProduct.productDescription = txtDescription.Text;
+           currentProduct.brand = brands[cboBrand.SelectedIndex];
+           currentProduct.family = families[cboFamily.SelectedIndex];
+           currentProduct.discount = discounts[cboDiscount.SelectedIndex];
+           currentProduct.productCareDescription = txtCareDescription.Text;
+           currentProduct.salePrice = float.Parse(txtSalePrice.Text);
+           currentProduct.purchasePrice = float.Parse(txtPurchasePrice.Text);
+           currentProduct.igv = float.Parse(txtIGV.Text);
+           currentProduct.stock = int.Parse(txtStock.Text);
+           if (cbActive.Checked == true) currentProduct.state = 1;
+           else currentProduct.state = 0;
 
-            serviceDA = new DBControllerWSClient();
-            currentProduct.SKUcode = txtSKUCode.Text;
-            currentProduct.name = txtName.Text;
-            currentProduct.productDescription = txtDescription.Text;
-            //currentProduct.brand.name
-            //currentProduct.family = 
-            //
-            currentProduct.productCareDescription = txtCareDescription.Text;
-            currentProduct.salePrice = float.Parse(txtSalePrice.Text);
-            currentProduct.purchasePrice = float.Parse(txtPurchasePrice.Text);
-            currentProduct.igv = float.Parse(txtIGV.Text);
-            currentProduct.stock = int.Parse(txtStock.Text);
-            if (cbActive.Checked == true) currentProduct.state = 1;
-            else currentProduct.state = 0;
-
-            serviceDA.updateProduct(currentProduct);
-            MessageBox.Show("El producto se modificó satisfactoriamente");
-            this.Close();
+           serviceDA.updateProduct(currentProduct);
+           MessageBox.Show("El producto se modificó satisfactoriamente");
+           this.Close();
+            
         }
+
+        
     }
 }

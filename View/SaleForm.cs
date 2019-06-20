@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
                 s.saleLanes = salelanes ; 
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;
-                serviceDA.insertSale(s); 
+                //serviceDA.insertSale(s); 
                 Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("Se ingresó la venta correctamente");
                 this.Close();

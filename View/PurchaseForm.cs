@@ -97,7 +97,7 @@ namespace View
 
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;
-                serviceDA.insertPurchase(p); 
+                //serviceDA.insertPurchase(p); 
                 Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("Se guardó la compra correctamente");
                 this.Close();

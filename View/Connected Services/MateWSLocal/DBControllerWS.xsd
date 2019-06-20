@@ -361,6 +361,16 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="updateCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="customer" type="tns:customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryAllSupplier">
     <xs:sequence />
   </xs:complexType>
@@ -403,16 +413,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="updateCustomer">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="customer" type="tns:customer" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateCustomerResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryUserByUserName">
     <xs:sequence>
@@ -482,22 +482,22 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sale" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="updateDiscount">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="discount" type="tns:discount" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateDiscountResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="updateSupplier">
     <xs:sequence>
       <xs:element minOccurs="0" name="supplier" type="tns:supplier" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="updateSupplierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="discount" type="tns:discount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateDiscountResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
@@ -530,20 +530,20 @@
       <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllCustomer">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllCustomerResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryAllUser">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllUserResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllCustomer">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryPurchaseBySerialCode">
@@ -632,22 +632,22 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertPurchase">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="purchase" type="tns:purchase" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertPurchaseResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertSupplier">
     <xs:sequence>
       <xs:element minOccurs="0" name="supplier" type="tns:supplier" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertSupplierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPurchase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="purchase" type="tns:purchase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPurchaseResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>

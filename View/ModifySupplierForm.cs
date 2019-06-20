@@ -36,20 +36,22 @@ namespace WindowsFormsApp1
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            /*
+            
             serviceDA = new DBControllerWSClient();
-            currentCustomer.id = txtClienteID.Text;
-            currentCustomer.descriptionCustomer = txtDesc.Text;
-            currentCustomer.address = txtAddress.Text;
-            currentCustomer.occupation = txtOccupation.Text;
-            currentCustomer.email = txtEmail.Text;
-            currentCustomer.phone = txtPhone.Text;
-            currentCustomer.kindOfCustomer = cbTipoCliente.Text;
-            currentCustomer.state = cbActive.Checked ? 1 : 0;
+            currentSupplier.RUC = txtRuc.Text;
+            currentSupplier.name = txtNombre.Text;
+            currentSupplier.address = txtDireccion.Text;
+            currentSupplier.bankData = txtCuenta.Text;
+            currentSupplier.contactPhone = txtTelefono.Text;
+            currentSupplier.contactEmail = txtEmail.Text;
+            currentSupplier.contactPerson = txtPersonaContacto.Text;
+            currentSupplier.supplierCode = txtCodProv.Text;
+            currentSupplier.termOfSale = txtTerminoVenta.Text;
+            currentSupplier.state = cbActive.Checked ? 1 : 0;
 
-            serviceDA.updateCustomer(currentCustomer);
+            serviceDA.updateSupplier(currentSupplier);
             MessageBox.Show("El proveedor se modificó satisfactoriamente");
-            this.Close();*/
+            this.Close();
         }
 
         private void ModifySupplierForm_Shown(object sender, EventArgs e)

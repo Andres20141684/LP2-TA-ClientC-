@@ -47,21 +47,21 @@ namespace WindowsFormsApp1
             int i = dgvSupplier.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                /*
+                
                 ModifySupplierForm modifySup = new ModifySupplierForm();
-                modifySup.currentSupplier = new customer();
+                modifySup.currentSupplier = new supplier();
                 modifySup.currentSupplier = suppliers[i];
                 modifySup.ShowDialog();
-                updateDataGridView();*/
+                updateDataGridView();
             }
             else
             {
                 MessageBox.Show("Seleccione un cliente");
             }
 
-
+            /*
             ModifySupplierForm modifySupForm = new ModifySupplierForm();
-            modifySupForm.ShowDialog();
+            modifySupForm.ShowDialog();*/
         }
 
         View.MainWindow refParent;

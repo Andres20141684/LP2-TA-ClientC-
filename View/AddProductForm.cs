@@ -28,17 +28,13 @@ namespace Producto
         public AddProductForm()
         {
             InitializeComponent();
-            
-            //p = new Product();
-            //componentsState(State2.Start);
-            //hola claudia
 
             cbActive.Checked = true;
 
 
 
         }
-        public Product P { get => p; set => p = value; }
+        //public Product P { get => p; set => p = value; }
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {

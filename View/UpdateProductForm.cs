@@ -14,6 +14,7 @@ namespace Producto
     public partial class UpdateProductForm : Form
     {
         private DBControllerWSClient serviceDA;
+        private DBControllerWSClient serviceDAA;
         public product currentProduct;
         private BindingList<brand> brands;
         private BindingList<family> families;
@@ -31,7 +32,25 @@ namespace Producto
 
         private void UpdateProductForm_Load(object sender, EventArgs e)
         {
-           
+            serviceDAA = new DBControllerWSClient();
+            brands = new BindingList<brand>(serviceDAA.queryAllBrand());
+            for (int i = 0; i < brands.Count; i++)
+            {
+                cboBrand.Items.Add("" + brands[i].name);
+            }
+
+            //cboBrand.DataSource = brands;
+            families = new BindingList<family>(serviceDAA.queryAllFamily());
+            for (int i = 0; i < families.Count; i++)
+            {
+                cboFamily.Items.Add("" + families[i].name);
+            }
+
+            discounts = new BindingList<discount>(serviceDAA.queryAllDiscount());
+            for (int i = 0; i < discounts.Count; i++)
+            {
+                cboDiscount.Items.Add("" + discounts[i].description);
+            }
         }
 
         private void setProductInformation()
@@ -41,7 +60,8 @@ namespace Producto
             txtDescription.Text = currentProduct.productDescription;
             cboBrand.Text = currentProduct.brand.name;
             cboFamily.Text = currentProduct.family.name;
-            cboDiscount.Text = currentProduct.discount.description;
+            cboDiscount.Text = "--Seleccione--";
+            //cboDiscount.Text = currentProduct.discount.description;
             txtCareDescription.Text = currentProduct.productCareDescription;
             txtSalePrice.Text = currentProduct.salePrice.ToString();
             txtPurchasePrice.Text = currentProduct.purchasePrice.ToString();
@@ -53,24 +73,31 @@ namespace Producto
 
         private void BtnSave_Click_1(object sender, EventArgs e)
         {         
-           serviceDA = new DBControllerWSClient();
-           currentProduct.SKUcode = txtSKUCode.Text;
-           currentProduct.name = txtName.Text;
-           currentProduct.productDescription = txtDescription.Text;
-           currentProduct.brand = brands[cboBrand.SelectedIndex];
-           currentProduct.family = families[cboFamily.SelectedIndex];
-           currentProduct.discount = discounts[cboDiscount.SelectedIndex];
-           currentProduct.productCareDescription = txtCareDescription.Text;
-           currentProduct.salePrice = float.Parse(txtSalePrice.Text);
-           currentProduct.purchasePrice = float.Parse(txtPurchasePrice.Text);
-           currentProduct.igv = float.Parse(txtIGV.Text);
-           currentProduct.stock = int.Parse(txtStock.Text);
-           if (cbActive.Checked == true) currentProduct.state = 1;
-           else currentProduct.state = 0;
+            if (cboDiscount.Text == "--Seleccione--"){
+                MessageBox.Show("Elija un descuento");
+            }
+            else
+            {
+                serviceDA = new DBControllerWSClient();
+                currentProduct.SKUcode = txtSKUCode.Text;
+                currentProduct.name = txtName.Text;
+                currentProduct.productDescription = txtDescription.Text;
+                currentProduct.brand = brands[cboBrand.SelectedIndex];
+                currentProduct.family = families[cboFamily.SelectedIndex];
+                currentProduct.discount = discounts[cboDiscount.SelectedIndex];
+                currentProduct.productCareDescription = txtCareDescription.Text;
+                currentProduct.salePrice = float.Parse(txtSalePrice.Text);
+                currentProduct.purchasePrice = float.Parse(txtPurchasePrice.Text);
+                currentProduct.igv = float.Parse(txtIGV.Text);
+                currentProduct.stock = int.Parse(txtStock.Text);
+                if (cbActive.Checked == true) currentProduct.state = 1;
+                else currentProduct.state = 0;
 
-           serviceDA.updateProduct(currentProduct);
-           MessageBox.Show("El producto se modificó satisfactoriamente");
-           this.Close();
+                serviceDA.updateProduct(currentProduct);
+                MessageBox.Show("El producto se modificó satisfactoriamente");
+                this.Close();
+            }
+           
             
         }
 

@@ -85,7 +85,21 @@ namespace Producto
 
         private void btnDeleteFamily_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha eliminado la familia seleccionada");
+            int i = dgvFamilies.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                family familia_aux = new family();
+                familia_aux = families[i];
+                familia_aux.state = 0;
+                serviceDA.updateFamily(familia_aux);
+                updateDataGridView();
+                MessageBox.Show("Se ha eliminado la familia seleccionada");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una familia");
+            }
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

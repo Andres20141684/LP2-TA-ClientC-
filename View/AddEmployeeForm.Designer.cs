@@ -45,15 +45,15 @@
             this.dtpEmployeeBorn = new System.Windows.Forms.DateTimePicker();
             this.btnSaveEmployee = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpEmployeeEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEmployeeStartDate = new System.Windows.Forms.DateTimePicker();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lblState = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbArea = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtpEmployeeStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpEmployeeEndDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,6 +221,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
             // 
+            // dtpEmployeeEndDate
+            // 
+            this.dtpEmployeeEndDate.Location = new System.Drawing.Point(167, 233);
+            this.dtpEmployeeEndDate.Name = "dtpEmployeeEndDate";
+            this.dtpEmployeeEndDate.Size = new System.Drawing.Size(214, 20);
+            this.dtpEmployeeEndDate.TabIndex = 28;
+            // 
+            // dtpEmployeeStartDate
+            // 
+            this.dtpEmployeeStartDate.Location = new System.Drawing.Point(167, 202);
+            this.dtpEmployeeStartDate.Name = "dtpEmployeeStartDate";
+            this.dtpEmployeeStartDate.Size = new System.Drawing.Size(214, 20);
+            this.dtpEmployeeStartDate.TabIndex = 27;
+            // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
@@ -242,13 +256,35 @@
             this.lblState.TabIndex = 24;
             this.lblState.Text = "Estado";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 240);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Fecha de fin de contrato:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 209);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Fecha de inicio de contrato:";
+            // 
             // cbRole
             // 
             this.cbRole.FormattingEnabled = true;
+            this.cbRole.Items.AddRange(new object[] {
+            "Vendedor",
+            "Supervisor"});
             this.cbRole.Location = new System.Drawing.Point(167, 301);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(144, 21);
             this.cbRole.TabIndex = 22;
+            this.cbRole.Text = "--Seleccione--";
             // 
             // label7
             // 
@@ -266,38 +302,6 @@
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(144, 21);
             this.cbArea.TabIndex = 20;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 209);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Fecha de inicio de contrato:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 240);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 13);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Fecha de fin de contrato:";
-            // 
-            // dtpEmployeeStartDate
-            // 
-            this.dtpEmployeeStartDate.Location = new System.Drawing.Point(167, 202);
-            this.dtpEmployeeStartDate.Name = "dtpEmployeeStartDate";
-            this.dtpEmployeeStartDate.Size = new System.Drawing.Size(214, 20);
-            this.dtpEmployeeStartDate.TabIndex = 27;
-            // 
-            // dtpEmployeeEndDate
-            // 
-            this.dtpEmployeeEndDate.Location = new System.Drawing.Point(167, 233);
-            this.dtpEmployeeEndDate.Name = "dtpEmployeeEndDate";
-            this.dtpEmployeeEndDate.Size = new System.Drawing.Size(214, 20);
-            this.dtpEmployeeEndDate.TabIndex = 28;
             // 
             // AddEmployeeForm
             // 

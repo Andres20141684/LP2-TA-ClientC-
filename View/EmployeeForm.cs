@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.MateWSLocal;
 
 namespace entregable
 {
     public partial class EmployeeForm : Form
     {
         View.MainWindow refParent;
+        private DBControllerWSClient serviceDA;
+        private BindingList<employee> employees;
         public EmployeeForm()
         {
             InitializeComponent();
@@ -23,6 +26,7 @@ namespace entregable
             AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
             addEmployeeForm.SetParent(this);
             addEmployeeForm.ShowDialog();
+            updateDataGridView();
         }
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)
@@ -57,18 +61,7 @@ namespace entregable
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            dgvEmployee.Rows.Add(new String[]
-            {
-                "15348265","Jorge","Diaz","Suarez","52347895","micorreo@gmail.com","Jefe"
-            });
-            dgvEmployee.Rows.Add(new String[]
-            {
-                "46523576","José","Perez","Campos","4123578","uncorreo@gmail.com","Vendedor"
-            });
-            dgvEmployee.Rows.Add(new String[]
-            {
-                "53214786","Roberto","Gomez","Ramos","632514","rgomez@gmail.com","Gerente"
-            });
+            updateDataGridView();
         }
         public void SetParent(View.MainWindow form)
         {
@@ -92,6 +85,20 @@ namespace entregable
                 "53214786","Roberto","Gomez","Ramos","632514","rgomez@gmail.com","Gerente"
                 });
             }
+        }
+        private void updateDataGridView()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            employees = new BindingList<employee>(serviceDA.queryAllEmployee());
+            dgvEmployee.Rows.Clear();
+            for (int i = 0; i < employees.Count; i++)
+            {
+                dgvEmployee.Rows.Add(new String[] {
+                ""+employees[i].dni, employees[i].name,employees[i].lastName,employees[i].secondLastName,""+employees[i].phone, employees[i].email,employees[i].role
+                });
+            }
+            Cursor.Current = Cursors.Arrow;
         }
     }
 }

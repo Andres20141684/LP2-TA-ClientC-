@@ -18,7 +18,7 @@ namespace Producto
         private BindingList<family> families;
         private BindingList<discount> discounts;
 
-
+        //sd
 
         public class Product { }
         private Product p;

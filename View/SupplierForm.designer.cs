@@ -32,7 +32,7 @@
             this.txtRUC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
-            this.dgvEmployee = new System.Windows.Forms.DataGridView();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearchEmployee
@@ -81,10 +81,10 @@
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
             this.btnDeleteEmployee.Click += new System.EventHandler(this.BtnDeleteEmployee_Click);
             // 
-            // dgvEmployee
+            // dgvSupplier
             // 
-            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColumId,
             this.dgvColumName,
             this.dgvColumFistLastName,
@@ -92,10 +92,10 @@
             this.dgvColumPhone,
             this.dgvColumEmail,
             this.Column1});
-            this.dgvEmployee.Location = new System.Drawing.Point(12, 162);
-            this.dgvEmployee.Name = "dgvEmployee";
-            this.dgvEmployee.Size = new System.Drawing.Size(903, 300);
-            this.dgvEmployee.TabIndex = 9;
+            this.dgvSupplier.Location = new System.Drawing.Point(12, 162);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.Size = new System.Drawing.Size(903, 300);
+            this.dgvSupplier.TabIndex = 9;
             // 
             // dgvColumId
             // 
@@ -182,14 +182,14 @@
             this.Controls.Add(this.txtRUC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeleteEmployee);
-            this.Controls.Add(this.dgvEmployee);
+            this.Controls.Add(this.dgvSupplier);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.btnAddEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SupplierForm";
             this.Text = "Proveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +201,7 @@
         private System.Windows.Forms.TextBox txtRUC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDeleteEmployee;
-        private System.Windows.Forms.DataGridView dgvEmployee;
+        private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.Button btnModifyEmployee;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;

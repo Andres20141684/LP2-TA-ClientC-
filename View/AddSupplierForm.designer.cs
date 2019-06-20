@@ -44,12 +44,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPersonaContacto = new System.Windows.Forms.TextBox();
-            this.txtCodProv = new System.Windows.Forms.TextBox();
             this.txtTerminoVenta = new System.Windows.Forms.TextBox();
+            this.txtCodProv = new System.Windows.Forms.TextBox();
+            this.txtPersonaContacto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,6 +176,7 @@
             // cbActive
             // 
             this.cbActive.AutoSize = true;
+            this.cbActive.Enabled = false;
             this.cbActive.Location = new System.Drawing.Point(148, 324);
             this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
@@ -212,23 +213,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
             // 
-            // label2
+            // txtTerminoVenta
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 100;
-            this.label2.Text = "Persona contacto:";
+            this.txtTerminoVenta.Location = new System.Drawing.Point(148, 289);
+            this.txtTerminoVenta.Name = "txtTerminoVenta";
+            this.txtTerminoVenta.Size = new System.Drawing.Size(150, 20);
+            this.txtTerminoVenta.TabIndex = 105;
             // 
-            // label7
+            // txtCodProv
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 262);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 13);
-            this.label7.TabIndex = 101;
-            this.label7.Text = "Código del proveedor:";
+            this.txtCodProv.Location = new System.Drawing.Point(148, 259);
+            this.txtCodProv.Name = "txtCodProv";
+            this.txtCodProv.Size = new System.Drawing.Size(150, 20);
+            this.txtCodProv.TabIndex = 104;
+            // 
+            // txtPersonaContacto
+            // 
+            this.txtPersonaContacto.Location = new System.Drawing.Point(148, 226);
+            this.txtPersonaContacto.Name = "txtPersonaContacto";
+            this.txtPersonaContacto.Size = new System.Drawing.Size(150, 20);
+            this.txtPersonaContacto.TabIndex = 103;
             // 
             // label8
             // 
@@ -239,26 +243,23 @@
             this.label8.TabIndex = 102;
             this.label8.Text = "Término de venta:";
             // 
-            // txtPersonaContacto
+            // label7
             // 
-            this.txtPersonaContacto.Location = new System.Drawing.Point(148, 226);
-            this.txtPersonaContacto.Name = "txtPersonaContacto";
-            this.txtPersonaContacto.Size = new System.Drawing.Size(150, 20);
-            this.txtPersonaContacto.TabIndex = 103;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 262);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.TabIndex = 101;
+            this.label7.Text = "Código del proveedor:";
             // 
-            // txtCodProv
+            // label2
             // 
-            this.txtCodProv.Location = new System.Drawing.Point(148, 259);
-            this.txtCodProv.Name = "txtCodProv";
-            this.txtCodProv.Size = new System.Drawing.Size(150, 20);
-            this.txtCodProv.TabIndex = 104;
-            // 
-            // txtTerminoVenta
-            // 
-            this.txtTerminoVenta.Location = new System.Drawing.Point(148, 289);
-            this.txtTerminoVenta.Name = "txtTerminoVenta";
-            this.txtTerminoVenta.Size = new System.Drawing.Size(150, 20);
-            this.txtTerminoVenta.TabIndex = 105;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 229);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 100;
+            this.label2.Text = "Persona contacto:";
             // 
             // AddSupplierForm
             // 

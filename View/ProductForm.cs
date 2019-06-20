@@ -75,40 +75,22 @@ namespace Producto
             }
         }
 
-        public void componentsState(State s)
-        {
-            /*switch (s)
-            {
-                case State.Start:
-                    txtProduct.Enabled = true;
-                    btnSearch.Enabled = true;
-                    btnAddProduct.Enabled = true;
-                    btnUpdateProduct.Enabled = false;
-                    btnDeleteProduct.Enabled = false;
-                    dgvProducts.Enabled = true;
-                    cleanForm();
-                    break;
-                case State.ProductSelected:
-                    txtProduct.Enabled = true;
-                    btnSearch.Enabled = true;
-                    btnAddProduct.Enabled = true;
-                    btnUpdateProduct.Enabled = true;
-                    btnDeleteProduct.Enabled = true;
-                    dgvProducts.Enabled = true;
-                    break;
-              
-            }*/
-        }
-
-        public void cleanForm()
-        {
-            txtProduct.Text = "";
-        }
-
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha eliminado el producto seleccionado");
-            updateDataGridView();
+            int i = dgvProducts.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                product product_aux = new product();
+                product_aux = productsData[i];
+                product_aux.state = 0;
+                serviceDA.updateProduct(product_aux);
+                updateDataGridView();
+                MessageBox.Show("Se ha eliminado el producto seleccionado");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto");
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

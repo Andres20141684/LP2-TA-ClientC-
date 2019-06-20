@@ -12,11 +12,29 @@ namespace ShopsForm
 {
     public partial class ShopForm : Form
     {
+        private BindingList<View.MateWSLocal.premises> shopsData;
+        private View.MateWSLocal.DBControllerWSClient serviceDA;
         public ShopForm()
         {
             InitializeComponent();
+            updateDataGridView();
         }
         View.MainWindow refParent;
+        void updateDataGridView()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            dgvLocal.Rows.Clear();
+            serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            shopsData = new BindingList<View.MateWSLocal.premises>(serviceDA.queryAllPremises());
+            for (int i=0;i<shopsData.Count;i++)
+            {
+                dgvLocal.Rows.Add(new String[]{
+                    shopsData[i].id.ToString(), shopsData[i].description, shopsData[i].creationDate.ToString(), shopsData[i].address
+                });
+                Cursor.Current = Cursors.Arrow;
+
+            }
+        }
         public void SetParent(View.MainWindow form)
         {
             refParent = form;
@@ -30,8 +48,13 @@ namespace ShopsForm
         private void btnAddLocal_Click(object sender, EventArgs e)
         {
             Agregar_Local addLocal = new Agregar_Local();
-            addLocal.SetParent(this);
-            addLocal.ShowDialog();
+            if (addLocal.ShowDialog() == DialogResult.OK)
+            {
+                //addLocal.SetParent(this);
+                addLocal.ShowDialog();
+                updateDataGridView();
+            }
+            updateDataGridView();
         }
 
         private void btnModLocal_Click(object sender, EventArgs e)
@@ -39,6 +62,12 @@ namespace ShopsForm
             Modificar_Local modLocal = new Modificar_Local();
             modLocal.SetParent(this);
             modLocal.ShowDialog();
+            int i = dgvLocal.CurrentCell.RowIndex;
+            if(i >=0 )
+            {
+                //UpdateShopForm updateShop = new UpdateShopForm();
+                //updateShop.currentShop = 
+            }
         }
 
         private void btnDelLocal_Click(object sender, EventArgs e)

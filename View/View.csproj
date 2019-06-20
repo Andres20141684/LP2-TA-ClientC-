@@ -246,6 +246,12 @@
     <Compile Include="UpdateProductForm.designer.cs">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateShopForm.Designer.cs">
+      <DependentUpon>UpdateShopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProductForm.resx">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateShopForm.resx">
+      <DependentUpon>UpdateShopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

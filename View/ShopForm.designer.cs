@@ -94,7 +94,7 @@
             this.dgvColDesc,
             this.dgvColFecha,
             this.dgvColAdress});
-            this.dgvLocal.Location = new System.Drawing.Point(15, 170);
+            this.dgvLocal.Location = new System.Drawing.Point(29, 174);
             this.dgvLocal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLocal.Name = "dgvLocal";
             this.dgvLocal.RowTemplate.Height = 24;

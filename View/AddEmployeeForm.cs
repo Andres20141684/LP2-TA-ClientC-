@@ -26,9 +26,12 @@ namespace entregable
 
         private void btnSaveEmployee_Click(object sender, EventArgs e)
         {
+            if (filledValues())
+            {
+                MessageBox.Show("El empleado se agregó satisfactoriamente.");
+                this.Close();
+            }
             
-            MessageBox.Show("El empleado se agregó satisfactoriamente.");
-            this.Close();
         }
 
         private void AddEmployeeForm_Load(object sender, EventArgs e)

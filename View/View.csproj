@@ -370,7 +370,7 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.deleteCustomerResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.deleteCustomerResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.discount.datasource">
@@ -382,31 +382,46 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.family.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertCustomerResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertAreaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertDiscountProductResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertBrandResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertEmployeeResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertCustomerResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertFamilyResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertDiscountProductResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertPremisesResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertDiscountResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertProductResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertEmployeeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertSaleResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertFamilyResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertSupplierResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertPremisesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertUserResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertProductResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertPurchaseResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertRefundResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertSaleResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertSupplierResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.insertUserResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.premises.datasource">
@@ -442,6 +457,9 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryAllProductsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryAllPurchaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryAllSaleResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -451,13 +469,37 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryAllUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdEmployeeResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdCustomerResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdEmployeeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPurchaseByIDResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeByDNIResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryFamilyByCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPremisesByDescriptionResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryProductBySKUCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPurchaseBySerialCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.querySaleBySerialCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.querySupplierByCodeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryUserByUserNameResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.sale.datasource">
@@ -466,25 +508,37 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.supplier.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateCustomerResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateAreaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateEmployeeResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateAristSupplierResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateFamilyResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateBrandResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updatePremisesResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateCustomerResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateProductResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateDiscountResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSupplierResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateEmployeeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateUserResponse.datasource">
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateFamilyResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updatePremisesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateProductResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSupplierResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateUserResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.user.datasource">

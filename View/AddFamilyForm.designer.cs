@@ -89,6 +89,7 @@
             // cbActive
             // 
             this.cbActive.AutoSize = true;
+            this.cbActive.Enabled = false;
             this.cbActive.Location = new System.Drawing.Point(116, 160);
             this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";

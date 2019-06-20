@@ -31,9 +31,20 @@ namespace entregable
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)
         {
-            ModifyEmployeeForm modifyEmployeeForm = new ModifyEmployeeForm();
-            modifyEmployeeForm.SetParent(this);
-            modifyEmployeeForm.ShowDialog();
+            int i = dgvEmployee.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                ModifyEmployeeForm modifyEmployeeForm = new ModifyEmployeeForm();
+                modifyEmployeeForm.currentEmployee = new employee();
+                modifyEmployeeForm.currentEmployee = employees[i];
+                modifyEmployeeForm.SetParent(this);
+                modifyEmployeeForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un empleado para modificar");
+            }
+            
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
@@ -43,20 +54,7 @@ namespace entregable
 
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
-            if (txtDNI.Text == "")
-            {
-                MessageBox.Show("Inserte un DNI");
-            }
-            else
-            {
-                for (int i = 0; i < dgvEmployee.RowCount; i++)
-                {
-                    if (dgvEmployee.Rows[i].Cells[0].Value.ToString() != txtDNI.ToString())
-                    {
-                        dgvEmployee.Rows.RemoveAt(i);
-                    }
-                }
-            }
+            MessageBox.Show("SEARCH NOT IMPLEMENTED");
         }
 
         private void EmployeeForm_Load(object sender, EventArgs e)
@@ -69,22 +67,7 @@ namespace entregable
         }
         private void txtDNI_TextChanged(object sender, EventArgs e)
         {
-            if (txtDNI.Text == "")
-            {
-                dgvEmployee.Rows.Clear();
-                dgvEmployee.Rows.Add(new String[]
-                {
-                "15348265","Jorge","Diaz","Suarez","52347895","micorreo@gmail.com","Jefe"
-                    });
-                dgvEmployee.Rows.Add(new String[]
-                {
-                "46523576","José","Perez","Campos","4123578","uncorreo@gmail.com","Vendedor"
-                });
-                dgvEmployee.Rows.Add(new String[]
-                {
-                "53214786","Roberto","Gomez","Ramos","632514","rgomez@gmail.com","Gerente"
-                });
-            }
+            
         }
         private void updateDataGridView()
         {

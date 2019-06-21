@@ -53,6 +53,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.SuspendLayout();
@@ -282,11 +283,19 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtSerialCode
+            // 
+            this.txtSerialCode.Location = new System.Drawing.Point(264, 83);
+            this.txtSerialCode.Name = "txtSerialCode";
+            this.txtSerialCode.Size = new System.Drawing.Size(100, 20);
+            this.txtSerialCode.TabIndex = 15;
+            // 
             // SaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 450);
+            this.Controls.Add(this.txtSerialCode);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTotal);
@@ -343,5 +352,6 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtSerialCode;
     }
 }

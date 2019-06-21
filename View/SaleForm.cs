@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
         int type;
         private DBControllerWSClient serviceDA;
+        private DBControllerWSClient serviceDA2;
         public int Type { get => type; set => type = value; }
 
         public SaleForm()
@@ -72,13 +73,22 @@ namespace WindowsFormsApp1
             }
             else
             {
-                //getCustomerData
+                
                 View.MateWSLocal.sale s = new View.MateWSLocal.sale();
+                s.state = 1;
+                s.serialCode = txtSerialCode.Text;
                 s.totalSale = float.Parse(txtTotal.Text);
+                //getCustomerData
                 customer c = new customer();
                 serviceDA = new DBControllerWSClient();
                 c = serviceDA.queryByIdCustomer(txtDniRuc.Text);
                 s.customer = c;
+                //getEmployeeData
+                employee empp = new employee();
+                empp = serviceDA.queryByIdEmployee(4);//test employee_id =4 PORQUE NO TENEMOS TODAVIA EL LOGIN XDXDDD :'v
+                s.employee = empp;
+
+                //para los salelanes
                 saleLane[] salelanes;
                 salelanes = new saleLane[dgvSaleDetails.RowCount];
                 for (int i = 0; i < dgvSaleDetails.RowCount - 1; i++)
@@ -90,13 +100,13 @@ namespace WindowsFormsApp1
                     product p = new product();
                     p = serviceDA.queryProductBySKUCode(dgvSaleDetails.Rows[i].Cells[0].Value.ToString());
                     salelane.product = p;
-                    salelanes[i]=salelane;
+                    salelanes[i] = salelane;
                     //serviceDA.insertSaleLane();
                 }
                 s.saleLanes = salelanes ; 
-                serviceDA = new DBControllerWSClient();
+                serviceDA2 = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;
-                //serviceDA.insertSale(s); 
+                //int salio = serviceDA2.insertSale(s); 
                 Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("Se ingresó la venta correctamente");
                 this.Close();

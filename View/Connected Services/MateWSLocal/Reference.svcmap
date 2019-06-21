@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b4aad0df-f856-4c87-a28b-901d3003d403" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9cc2203d-7831-42b2-bc93-d6511b7aeebd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/MATEWeb/DBControllerWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:44100/MATEWeb/DBControllerWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="f0dfa717-6e8a-43e2-9d89-1664d6d3526d" SourceId="1" SourceUrl="http://localhost:8080/MATEWeb/DBControllerWS?wsdl" />
-    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="37a9b4b8-7fdc-487c-ad88-7a481a77b8a5" SourceId="1" SourceUrl="http://localhost:8080/MATEWeb/DBControllerWS?xsd=1" />
+    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="bdfb2295-71ef-48c0-98ef-ae723f7e881a" SourceId="1" SourceUrl="http://localhost:44100/MATEWeb/DBControllerWS?xsd=1" />
+    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="91ddc750-4575-4bd4-b14c-75e65c6bd1d4" SourceId="1" SourceUrl="http://localhost:44100/MATEWeb/DBControllerWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

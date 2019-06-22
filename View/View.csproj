@@ -553,6 +553,12 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateProductResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updatePurchaseResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSaleResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSupplierResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -568,19 +574,26 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\MateWSLocal\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MateWSLocal\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MateWSLocal\configuration.svcinfo" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\MateWSLocal\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\MateWSLocal\configuration.svcinfo" />
+    <None Include="Connected Services\MateWSLocal\configuration91.svcinfo" />
+    <Content Include="Resources\guardar.png" />
+    <None Include="Resources\iconoModificar.png" />
+    <None Include="Resources\iconoAgregar.png" />
+    <None Include="Resources\icono buscar1.png" />
+    <None Include="Resources\guardar1.png" />
+    <Content Include="Resources\icono buscar.png" />
+    <Content Include="Resources\icono.png" />
+    <None Include="Resources\icono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MateWSLocal\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,9 +45,13 @@
             this.localesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,7 +82,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
             this.salirToolStripMenuItem.Text = "Cerrar sesión";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
@@ -97,19 +101,21 @@
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+
+            //this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
             this.comprasToolStripMenuItem.Text = "Compras";
             this.comprasToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(119, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(165, 6);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(168, 30);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.VentasToolStripMenuItem_Click);
             // 
@@ -188,13 +194,28 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Location = new System.Drawing.Point(148, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.username);
+            this.panel1.Location = new System.Drawing.Point(222, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(636, 355);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.username.Location = new System.Drawing.Point(794, 0);
+            this.username.Name = "username";
+            this.username.Padding = new System.Windows.Forms.Padding(6);
+            this.username.Size = new System.Drawing.Size(160, 34);
+            this.username.TabIndex = 0;
+            this.username.Text = "Nombre de Usuario";
+            this.username.Click += new System.EventHandler(this.username_Click);
             // 
             // pictureBox1
             // 
@@ -206,6 +227,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::View.Properties.Resources.icono;
+            this.pictureBox2.Location = new System.Drawing.Point(743, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // MainWindow
             // 
@@ -227,7 +258,10 @@
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +287,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label username;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

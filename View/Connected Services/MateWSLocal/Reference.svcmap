@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:44100/MATEWeb/DBControllerWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.1.154:8080/MATEWeb/DBControllerWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DBControllerWS.xsd" MetadataType="Schema" ID="bdfb2295-71ef-48c0-98ef-ae723f7e881a" SourceId="1" SourceUrl="http://localhost:44100/MATEWeb/DBControllerWS?xsd=1" />
-    <MetadataFile FileName="DBControllerWS.wsdl" MetadataType="Wsdl" ID="91ddc750-4575-4bd4-b14c-75e65c6bd1d4" SourceId="1" SourceUrl="http://localhost:44100/MATEWeb/DBControllerWS?wsdl" />
+    <MetadataFile FileName="DBControllerWS1.wsdl" MetadataType="Wsdl" ID="7a64ed2e-60c7-4e0a-a8f4-0ce010dae165" SourceId="1" SourceUrl="http://192.168.1.154:8080/MATEWeb/DBControllerWS?wsdl" />
+    <MetadataFile FileName="DBControllerWS1.xsd" MetadataType="Schema" ID="9dcb3c60-81e3-438f-ab20-a234428d652d" SourceId="1" SourceUrl="http://192.168.1.154:8080/MATEWeb/DBControllerWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

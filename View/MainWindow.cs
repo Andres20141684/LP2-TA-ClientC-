@@ -86,6 +86,7 @@ namespace View
             Producto.FrmProduct productForm = new Producto.FrmProduct();
             productForm.SetParent(this);
             productForm.MdiParent = this;
+            //productForm.ShowDialog();
             productForm.Show();
 
         }
@@ -142,6 +143,8 @@ namespace View
             SalesClient.ClientesForms clientForm = new SalesClient.ClientesForms();
             clientForm.SetParent(this);
             clientForm.MdiParent = this;
+            //clientForm.ShowDialog();
+            clientForm.BringToFront();
             clientForm.Show();
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

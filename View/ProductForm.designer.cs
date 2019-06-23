@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.clmSKUCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,13 +40,10 @@
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,17 +59,17 @@
             this.clmStock,
             this.clmAvailability});
             this.dgvProducts.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvProducts.Location = new System.Drawing.Point(44, 210);
+            this.dgvProducts.Location = new System.Drawing.Point(54, 212);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducts.RowTemplate.Height = 28;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(944, 389);
@@ -122,7 +119,7 @@
             // txtProduct
             // 
             this.txtProduct.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtProduct.Location = new System.Drawing.Point(213, 62);
+            this.txtProduct.Location = new System.Drawing.Point(217, 58);
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(349, 26);
             this.txtProduct.TabIndex = 2;
@@ -132,7 +129,7 @@
             this.btnUpdateProduct.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnUpdateProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.Location = new System.Drawing.Point(873, 178);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(882, 178);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(115, 31);
             this.btnUpdateProduct.TabIndex = 4;
@@ -151,36 +148,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Código de Producto:";
             // 
-            // username
-            // 
-            this.username.AutoSize = true;
-            this.username.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.username.Location = new System.Drawing.Point(887, -1);
-            this.username.Name = "username";
-            this.username.Padding = new System.Windows.Forms.Padding(6);
-            this.username.Size = new System.Drawing.Size(160, 34);
-            this.username.TabIndex = 7;
-            this.username.Text = "Nombre de Usuario";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::View.Properties.Resources.icono;
-            this.pictureBox2.Location = new System.Drawing.Point(837, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnAddProduct
             // 
             this.btnAddProduct.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnAddProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddProduct.Location = new System.Drawing.Point(744, 178);
+            this.btnAddProduct.Location = new System.Drawing.Point(750, 178);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(130, 31);
             this.btnAddProduct.TabIndex = 3;
@@ -195,7 +169,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnSearch.Image = global::View.Properties.Resources.icono_buscar;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(581, 55);
+            this.btnSearch.Location = new System.Drawing.Point(586, 55);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(48, 40);
             this.btnSearch.TabIndex = 1;
@@ -208,8 +182,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1046, 639);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.btnAddProduct);
@@ -221,7 +193,6 @@
             this.Name = "FrmProduct";
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,8 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFamily;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAvailability;
-        private System.Windows.Forms.Label username;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

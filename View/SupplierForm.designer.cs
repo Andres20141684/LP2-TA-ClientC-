@@ -47,35 +47,42 @@
             // 
             // btnSearchEmployee
             // 
-            this.btnSearchEmployee.Location = new System.Drawing.Point(273, 27);
+            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(586, 55);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchEmployee.Size = new System.Drawing.Size(48, 40);
             this.btnSearchEmployee.TabIndex = 13;
-            this.btnSearchEmployee.Text = "Buscar";
             this.btnSearchEmployee.UseVisualStyleBackColor = true;
             this.btnSearchEmployee.Click += new System.EventHandler(this.BtnSearchEmployee_Click);
             // 
             // txtRUC
             // 
-            this.txtRUC.Location = new System.Drawing.Point(86, 29);
+            this.txtRUC.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtRUC.Location = new System.Drawing.Point(217, 58);
+            this.txtRUC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRUC.Name = "txtRUC";
-            this.txtRUC.Size = new System.Drawing.Size(140, 20);
+            this.txtRUC.Size = new System.Drawing.Size(349, 26);
             this.txtRUC.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "RUC:";
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(751, 109);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(1126, 168);
+            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(90, 23);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(135, 35);
             this.btnDeleteEmployee.TabIndex = 10;
             this.btnDeleteEmployee.Text = "Eliminar";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
@@ -83,6 +90,7 @@
             // 
             // dgvSupplier
             // 
+            this.dgvSupplier.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColumId,
@@ -92,9 +100,10 @@
             this.dgvColumPhone,
             this.dgvColumEmail,
             this.Column1});
-            this.dgvSupplier.Location = new System.Drawing.Point(12, 162);
+            this.dgvSupplier.Location = new System.Drawing.Point(54, 212);
+            this.dgvSupplier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.Size = new System.Drawing.Size(903, 300);
+            this.dgvSupplier.Size = new System.Drawing.Size(944, 397);
             this.dgvSupplier.TabIndex = 9;
             // 
             // dgvColumId
@@ -155,29 +164,36 @@
             // 
             // btnModifyEmployee
             // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(427, 109);
+            this.btnModifyEmployee.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModifyEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyEmployee.Location = new System.Drawing.Point(882, 178);
+            this.btnModifyEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(140, 23);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(115, 31);
             this.btnModifyEmployee.TabIndex = 8;
-            this.btnModifyEmployee.Text = "Modificar Proveedor";
-            this.btnModifyEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.Text = "Modificar ";
+            this.btnModifyEmployee.UseVisualStyleBackColor = false;
             this.btnModifyEmployee.Click += new System.EventHandler(this.BtnModifyEmployee_Click);
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(127, 109);
+            this.btnAddEmployee.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Location = new System.Drawing.Point(767, 178);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(140, 23);
+            this.btnAddEmployee.Size = new System.Drawing.Size(115, 31);
             this.btnAddEmployee.TabIndex = 7;
             this.btnAddEmployee.Text = "Agregar Proveedor";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.BtnAddEmployee_Click);
             // 
             // SupplierForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 484);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1046, 639);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.txtRUC);
             this.Controls.Add(this.label1);
@@ -186,6 +202,7 @@
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.btnAddEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "SupplierForm";
             this.Text = "Proveedores";

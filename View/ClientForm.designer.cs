@@ -32,7 +32,6 @@
             this.textDniRuc = new System.Windows.Forms.TextBox();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.btnEditClient = new System.Windows.Forms.Button();
-            this.btnDelClient = new System.Windows.Forms.Button();
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.dgvColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,57 +45,48 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI / RUC";
             // 
             // textDniRuc
             // 
-            this.textDniRuc.Location = new System.Drawing.Point(97, 35);
-            this.textDniRuc.Margin = new System.Windows.Forms.Padding(2);
+            this.textDniRuc.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.textDniRuc.Location = new System.Drawing.Point(217, 58);
             this.textDniRuc.Name = "textDniRuc";
-            this.textDniRuc.Size = new System.Drawing.Size(336, 20);
+            this.textDniRuc.Size = new System.Drawing.Size(349, 26);
             this.textDniRuc.TabIndex = 1;
             // 
             // btnAddClient
             // 
-            this.btnAddClient.Location = new System.Drawing.Point(102, 101);
-            this.btnAddClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddClient.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.Location = new System.Drawing.Point(767, 178);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(90, 21);
+            this.btnAddClient.Size = new System.Drawing.Size(115, 31);
             this.btnAddClient.TabIndex = 2;
             this.btnAddClient.Text = "Agregar Cliente";
-            this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // btnEditClient
             // 
-            this.btnEditClient.Location = new System.Drawing.Point(282, 101);
-            this.btnEditClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditClient.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEditClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClient.Location = new System.Drawing.Point(882, 178);
             this.btnEditClient.Name = "btnEditClient";
-            this.btnEditClient.Size = new System.Drawing.Size(100, 23);
+            this.btnEditClient.Size = new System.Drawing.Size(115, 31);
             this.btnEditClient.TabIndex = 3;
             this.btnEditClient.Text = "Modificar Cliente";
-            this.btnEditClient.UseVisualStyleBackColor = true;
+            this.btnEditClient.UseVisualStyleBackColor = false;
             this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
-            // 
-            // btnDelClient
-            // 
-            this.btnDelClient.Enabled = false;
-            this.btnDelClient.Location = new System.Drawing.Point(478, 101);
-            this.btnDelClient.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelClient.Name = "btnDelClient";
-            this.btnDelClient.Size = new System.Drawing.Size(93, 25);
-            this.btnDelClient.TabIndex = 4;
-            this.btnDelClient.Text = "Eliminar";
-            this.btnDelClient.UseVisualStyleBackColor = true;
-            this.btnDelClient.Click += new System.EventHandler(this.btnDelClient_Click);
             // 
             // dgvClients
             // 
+            this.dgvClients.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColCod,
@@ -104,11 +94,10 @@
             this.dgvColEmail,
             this.dgvColTel,
             this.dvgColTypeClient});
-            this.dgvClients.Location = new System.Drawing.Point(51, 148);
-            this.dgvClients.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvClients.Location = new System.Drawing.Point(54, 212);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowTemplate.Height = 24;
-            this.dgvClients.Size = new System.Drawing.Size(556, 203);
+            this.dgvClients.Size = new System.Drawing.Size(944, 397);
             this.dgvClients.TabIndex = 5;
             // 
             // dgvColCod
@@ -140,29 +129,28 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(478, 35);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(586, 55);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(56, 20);
+            this.btnSearch.Size = new System.Drawing.Size(48, 40);
             this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClientesForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 373);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1046, 639);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvClients);
-            this.Controls.Add(this.btnDelClient);
             this.Controls.Add(this.btnEditClient);
             this.Controls.Add(this.btnAddClient);
             this.Controls.Add(this.textDniRuc);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ClientesForms";
             this.Text = "Clientes";
@@ -179,7 +167,6 @@
         private System.Windows.Forms.TextBox textDniRuc;
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Button btnEditClient;
-        private System.Windows.Forms.Button btnDelClient;
         private System.Windows.Forms.DataGridView dgvClients;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCod;

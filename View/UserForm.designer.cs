@@ -29,86 +29,30 @@
         private void InitializeComponent()
         {
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.dgvUserColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bntModifyUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvUserColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUser
             // 
+            this.dgvUser.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvUserColumId,
             this.dgvColumUserName,
             this.dgvColumCreationDate});
-            this.dgvUser.Location = new System.Drawing.Point(52, 132);
+            this.dgvUser.Location = new System.Drawing.Point(54, 212);
+            this.dgvUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvUser.Name = "dgvUser";
-            this.dgvUser.Size = new System.Drawing.Size(353, 253);
+            this.dgvUser.Size = new System.Drawing.Size(944, 397);
             this.dgvUser.TabIndex = 7;
-            // 
-            // btnDeleteUser
-            // 
-            this.btnDeleteUser.Location = new System.Drawing.Point(329, 83);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(76, 23);
-            this.btnDeleteUser.TabIndex = 6;
-            this.btnDeleteUser.Text = "Eliminar";
-            this.btnDeleteUser.UseVisualStyleBackColor = true;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
-            // 
-            // bntModifyUser
-            // 
-            this.bntModifyUser.Location = new System.Drawing.Point(189, 83);
-            this.bntModifyUser.Name = "bntModifyUser";
-            this.bntModifyUser.Size = new System.Drawing.Size(102, 23);
-            this.bntModifyUser.TabIndex = 5;
-            this.bntModifyUser.Text = "Modificar Usuario";
-            this.bntModifyUser.UseVisualStyleBackColor = true;
-            this.bntModifyUser.Click += new System.EventHandler(this.bntModifyUser_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Location = new System.Drawing.Point(52, 83);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(100, 23);
-            this.btnAddUser.TabIndex = 4;
-            this.btnAddUser.Text = "Agregar Usuario";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // txtProduct
-            // 
-            this.txtProduct.Location = new System.Drawing.Point(124, 31);
-            this.txtProduct.Margin = new System.Windows.Forms.Padding(2);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(234, 20);
-            this.txtProduct.TabIndex = 8;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(388, 28);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(50, 24);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Buscar";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Código de Usuario:";
             // 
             // dgvUserColumId
             // 
@@ -133,19 +77,75 @@
             this.dgvColumCreationDate.Name = "dgvColumCreationDate";
             this.dgvColumCreationDate.ReadOnly = true;
             // 
+            // bntModifyUser
+            // 
+            this.bntModifyUser.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.bntModifyUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntModifyUser.Location = new System.Drawing.Point(882, 178);
+            this.bntModifyUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bntModifyUser.Name = "bntModifyUser";
+            this.bntModifyUser.Size = new System.Drawing.Size(115, 31);
+            this.bntModifyUser.TabIndex = 5;
+            this.bntModifyUser.Text = "Modificar";
+            this.bntModifyUser.UseVisualStyleBackColor = false;
+            this.bntModifyUser.Click += new System.EventHandler(this.bntModifyUser_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.Location = new System.Drawing.Point(767, 178);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(115, 31);
+            this.btnAddUser.TabIndex = 4;
+            this.btnAddUser.Text = "Agregar ";
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // txtProduct
+            // 
+            this.txtProduct.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtProduct.Location = new System.Drawing.Point(217, 58);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(349, 26);
+            this.txtProduct.TabIndex = 8;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(586, 55);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(48, 40);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Código de Usuario:";
+            // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 398);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1046, 639);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtProduct);
             this.Controls.Add(this.dgvUser);
-            this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.bntModifyUser);
             this.Controls.Add(this.btnAddUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "UserForm";
             this.Text = "Usuarios";
@@ -159,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUser;
-        private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Button bntModifyUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.TextBox txtProduct;

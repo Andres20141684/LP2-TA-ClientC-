@@ -55,12 +55,15 @@
             this.lblFamilia = new System.Windows.Forms.Label();
             this.lblDescriptionCare = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbTransactionInformation.SuspendLayout();
             this.gbGeneralInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbTransactionInformation
             // 
+            this.gbTransactionInformation.BackColor = System.Drawing.Color.White;
             this.gbTransactionInformation.Controls.Add(this.cboDiscount);
             this.gbTransactionInformation.Controls.Add(this.txtIGV);
             this.gbTransactionInformation.Controls.Add(this.txtStock);
@@ -71,7 +74,8 @@
             this.gbTransactionInformation.Controls.Add(this.lblDiscount);
             this.gbTransactionInformation.Controls.Add(this.lblIGV);
             this.gbTransactionInformation.Controls.Add(this.lblStock);
-            this.gbTransactionInformation.Location = new System.Drawing.Point(24, 422);
+            this.gbTransactionInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTransactionInformation.Location = new System.Drawing.Point(24, 426);
             this.gbTransactionInformation.Name = "gbTransactionInformation";
             this.gbTransactionInformation.Size = new System.Drawing.Size(760, 157);
             this.gbTransactionInformation.TabIndex = 19;
@@ -121,7 +125,7 @@
             this.lblPurchasePrice.AutoSize = true;
             this.lblPurchasePrice.Location = new System.Drawing.Point(422, 35);
             this.lblPurchasePrice.Name = "lblPurchasePrice";
-            this.lblPurchasePrice.Size = new System.Drawing.Size(132, 20);
+            this.lblPurchasePrice.Size = new System.Drawing.Size(148, 20);
             this.lblPurchasePrice.TabIndex = 5;
             this.lblPurchasePrice.Text = "Precio de compra";
             // 
@@ -130,7 +134,7 @@
             this.lblSalePrice.AutoSize = true;
             this.lblSalePrice.Location = new System.Drawing.Point(28, 32);
             this.lblSalePrice.Name = "lblSalePrice";
-            this.lblSalePrice.Size = new System.Drawing.Size(118, 20);
+            this.lblSalePrice.Size = new System.Drawing.Size(133, 20);
             this.lblSalePrice.TabIndex = 6;
             this.lblSalePrice.Text = "Precio de venta";
             // 
@@ -139,7 +143,7 @@
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Location = new System.Drawing.Point(27, 75);
             this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(87, 20);
+            this.lblDiscount.Size = new System.Drawing.Size(96, 20);
             this.lblDiscount.TabIndex = 14;
             this.lblDiscount.Text = "Descuento";
             // 
@@ -148,7 +152,7 @@
             this.lblIGV.AutoSize = true;
             this.lblIGV.Location = new System.Drawing.Point(422, 74);
             this.lblIGV.Name = "lblIGV";
-            this.lblIGV.Size = new System.Drawing.Size(38, 20);
+            this.lblIGV.Size = new System.Drawing.Size(41, 20);
             this.lblIGV.TabIndex = 7;
             this.lblIGV.Text = "IGV";
             // 
@@ -157,12 +161,13 @@
             this.lblStock.AutoSize = true;
             this.lblStock.Location = new System.Drawing.Point(27, 120);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(50, 20);
+            this.lblStock.Size = new System.Drawing.Size(55, 20);
             this.lblStock.TabIndex = 8;
             this.lblStock.Text = "Stock";
             // 
             // gbGeneralInformation
             // 
+            this.gbGeneralInformation.BackColor = System.Drawing.Color.White;
             this.gbGeneralInformation.Controls.Add(this.cboFamily);
             this.gbGeneralInformation.Controls.Add(this.cboBrand);
             this.gbGeneralInformation.Controls.Add(this.txtCareDescription);
@@ -177,6 +182,7 @@
             this.gbGeneralInformation.Controls.Add(this.lblDescription);
             this.gbGeneralInformation.Controls.Add(this.lblFamilia);
             this.gbGeneralInformation.Controls.Add(this.lblDescriptionCare);
+            this.gbGeneralInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGeneralInformation.Location = new System.Drawing.Point(24, 23);
             this.gbGeneralInformation.Name = "gbGeneralInformation";
             this.gbGeneralInformation.Size = new System.Drawing.Size(760, 392);
@@ -232,7 +238,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(28, 78);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(65, 20);
+            this.lblName.Size = new System.Drawing.Size(71, 20);
             this.lblName.TabIndex = 17;
             this.lblName.Text = "Nombre";
             // 
@@ -241,7 +247,7 @@
             this.cbActive.AutoSize = true;
             this.cbActive.Location = new System.Drawing.Point(226, 357);
             this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(78, 24);
+            this.cbActive.Size = new System.Drawing.Size(84, 24);
             this.cbActive.TabIndex = 16;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;
@@ -258,7 +264,7 @@
             this.lblCodeSKU.AutoSize = true;
             this.lblCodeSKU.Location = new System.Drawing.Point(28, 42);
             this.lblCodeSKU.Name = "lblCodeSKU";
-            this.lblCodeSKU.Size = new System.Drawing.Size(96, 20);
+            this.lblCodeSKU.Size = new System.Drawing.Size(106, 20);
             this.lblCodeSKU.TabIndex = 0;
             this.lblCodeSKU.Text = "Código SKU";
             // 
@@ -267,7 +273,7 @@
             this.lblState.AutoSize = true;
             this.lblState.Location = new System.Drawing.Point(32, 357);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(60, 20);
+            this.lblState.Size = new System.Drawing.Size(66, 20);
             this.lblState.TabIndex = 11;
             this.lblState.Text = "Estado";
             // 
@@ -276,7 +282,7 @@
             this.lblBrand.AutoSize = true;
             this.lblBrand.Location = new System.Drawing.Point(446, 43);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(53, 20);
+            this.lblBrand.Size = new System.Drawing.Size(58, 20);
             this.lblBrand.TabIndex = 13;
             this.lblBrand.Text = "Marca";
             // 
@@ -285,7 +291,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(27, 115);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(92, 20);
+            this.lblDescription.Size = new System.Drawing.Size(103, 20);
             this.lblDescription.TabIndex = 3;
             this.lblDescription.Text = "Descripción";
             // 
@@ -294,7 +300,7 @@
             this.lblFamilia.AutoSize = true;
             this.lblFamilia.Location = new System.Drawing.Point(446, 83);
             this.lblFamilia.Name = "lblFamilia";
-            this.lblFamilia.Size = new System.Drawing.Size(59, 20);
+            this.lblFamilia.Size = new System.Drawing.Size(66, 20);
             this.lblFamilia.TabIndex = 12;
             this.lblFamilia.Text = "Familia";
             // 
@@ -303,25 +309,40 @@
             this.lblDescriptionCare.AutoSize = true;
             this.lblDescriptionCare.Location = new System.Drawing.Point(28, 252);
             this.lblDescriptionCare.Name = "lblDescriptionCare";
-            this.lblDescriptionCare.Size = new System.Drawing.Size(177, 20);
+            this.lblDescriptionCare.Size = new System.Drawing.Size(200, 20);
             this.lblDescriptionCare.TabIndex = 4;
             this.lblDescriptionCare.Text = "Descripción del cuidado";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(690, 591);
+            this.btnSave.BackColor = System.Drawing.Color.White;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(690, 589);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 35);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::View.Properties.Resources.guardar;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
+            this.pictureBox1.Location = new System.Drawing.Point(644, 589);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // UpdateProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(810, 648);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbTransactionInformation);
             this.Controls.Add(this.gbGeneralInformation);
             this.Controls.Add(this.btnSave);
@@ -329,12 +350,14 @@
             this.MaximizeBox = false;
             this.Name = "UpdateProductForm";
             this.Text = "Modificar Producto";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.UpdateProductForm_Load);
             this.Shown += new System.EventHandler(this.UpdateProductForm_Shown);
             this.gbTransactionInformation.ResumeLayout(false);
             this.gbTransactionInformation.PerformLayout();
             this.gbGeneralInformation.ResumeLayout(false);
             this.gbGeneralInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,5 +391,6 @@
         private System.Windows.Forms.Label lblFamilia;
         private System.Windows.Forms.Label lblDescriptionCare;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

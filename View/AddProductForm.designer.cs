@@ -83,7 +83,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(644, 591);
+            this.btnSave.Location = new System.Drawing.Point(690, 590);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 35);
             this.btnSave.TabIndex = 2;
@@ -335,7 +335,7 @@
             this.pictureBox1.BackgroundImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureBox1.Location = new System.Drawing.Point(744, 591);
+            this.pictureBox1.Location = new System.Drawing.Point(644, 590);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 35);
             this.pictureBox1.TabIndex = 17;

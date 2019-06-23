@@ -132,6 +132,7 @@
             // txtEmployeeName
             // 
             this.txtEmployeeName.Location = new System.Drawing.Point(167, 44);
+            this.txtEmployeeName.MaxLength = 100;
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(340, 20);
             this.txtEmployeeName.TabIndex = 2;
@@ -139,6 +140,7 @@
             // txtEmployeeFirstLastName
             // 
             this.txtEmployeeFirstLastName.Location = new System.Drawing.Point(167, 70);
+            this.txtEmployeeFirstLastName.MaxLength = 100;
             this.txtEmployeeFirstLastName.Name = "txtEmployeeFirstLastName";
             this.txtEmployeeFirstLastName.Size = new System.Drawing.Size(340, 20);
             this.txtEmployeeFirstLastName.TabIndex = 3;
@@ -146,14 +148,15 @@
             // txtEmployeeSecondLastName
             // 
             this.txtEmployeeSecondLastName.Location = new System.Drawing.Point(167, 96);
+            this.txtEmployeeSecondLastName.MaxLength = 100;
             this.txtEmployeeSecondLastName.Name = "txtEmployeeSecondLastName";
             this.txtEmployeeSecondLastName.Size = new System.Drawing.Size(340, 20);
-            this.txtEmployeeSecondLastName.TabIndex = 12;
-            this.txtEmployeeSecondLastName.TextChanged += new System.EventHandler(this.TxtEmployeeSecondLastName_TextChanged);
+            this.txtEmployeeSecondLastName.TabIndex = 4;
             // 
             // txtEmployeeDNI
             // 
             this.txtEmployeeDNI.Location = new System.Drawing.Point(167, 16);
+            this.txtEmployeeDNI.MaxLength = 8;
             this.txtEmployeeDNI.Name = "txtEmployeeDNI";
             this.txtEmployeeDNI.Size = new System.Drawing.Size(340, 20);
             this.txtEmployeeDNI.TabIndex = 1;
@@ -161,23 +164,27 @@
             // txtEmployeePhone
             // 
             this.txtEmployeePhone.Location = new System.Drawing.Point(167, 124);
+            this.txtEmployeePhone.MaxLength = 15;
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(340, 20);
-            this.txtEmployeePhone.TabIndex = 14;
+            this.txtEmployeePhone.TabIndex = 5;
             // 
             // txtEmployeeEmail
             // 
             this.txtEmployeeEmail.Location = new System.Drawing.Point(167, 150);
+            this.txtEmployeeEmail.MaxLength = 254;
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(340, 20);
-            this.txtEmployeeEmail.TabIndex = 15;
+            this.txtEmployeeEmail.TabIndex = 6;
             // 
             // dtpEmployeeBorn
             // 
             this.dtpEmployeeBorn.Location = new System.Drawing.Point(167, 176);
+            this.dtpEmployeeBorn.MaxDate = new System.DateTime(2200, 12, 25, 0, 0, 0, 0);
+            this.dtpEmployeeBorn.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpEmployeeBorn.Name = "dtpEmployeeBorn";
             this.dtpEmployeeBorn.Size = new System.Drawing.Size(340, 20);
-            this.dtpEmployeeBorn.TabIndex = 16;
+            this.dtpEmployeeBorn.TabIndex = 7;
             // 
             // btnSaveEmployee
             // 
@@ -226,22 +233,25 @@
             // dtpEmployeeEndDate
             // 
             this.dtpEmployeeEndDate.Location = new System.Drawing.Point(167, 233);
+            this.dtpEmployeeEndDate.MaxDate = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
             this.dtpEmployeeEndDate.Name = "dtpEmployeeEndDate";
             this.dtpEmployeeEndDate.Size = new System.Drawing.Size(340, 20);
-            this.dtpEmployeeEndDate.TabIndex = 28;
+            this.dtpEmployeeEndDate.TabIndex = 9;
             // 
             // dtpEmployeeStartDate
             // 
             this.dtpEmployeeStartDate.Location = new System.Drawing.Point(167, 202);
+            this.dtpEmployeeStartDate.MaxDate = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
+            this.dtpEmployeeStartDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpEmployeeStartDate.Name = "dtpEmployeeStartDate";
             this.dtpEmployeeStartDate.Size = new System.Drawing.Size(340, 20);
-            this.dtpEmployeeStartDate.TabIndex = 27;
+            this.dtpEmployeeStartDate.TabIndex = 8;
             // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
             this.cbActive.Location = new System.Drawing.Point(167, 340);
-            this.cbActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
             this.cbActive.TabIndex = 23;
@@ -278,6 +288,7 @@
             // 
             // cbRole
             // 
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Items.AddRange(new object[] {
             "Vendedor",
@@ -285,8 +296,7 @@
             this.cbRole.Location = new System.Drawing.Point(167, 301);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(340, 21);
-            this.cbRole.TabIndex = 22;
-            this.cbRole.Text = "--Seleccione--";
+            this.cbRole.TabIndex = 1;
             // 
             // label7
             // 
@@ -299,12 +309,12 @@
             // 
             // cbArea
             // 
+            this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbArea.FormattingEnabled = true;
             this.cbArea.Location = new System.Drawing.Point(167, 266);
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(340, 21);
-            this.cbArea.TabIndex = 20;
-            this.cbArea.Text = "--Seleccione--";
+            this.cbArea.TabIndex = 10;
             // 
             // AddEmployeeForm
             // 

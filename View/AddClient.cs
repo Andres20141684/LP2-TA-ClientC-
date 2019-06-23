@@ -61,9 +61,9 @@ namespace SalesClient
         }
         private bool filledValues()
         {
-            if(txtClienteID.Text == "")
+            if(txtClienteID.Text == "" || (txtClienteID.Text.Length!=8 && txtClienteID.Text.Length!=11))
             {
-                MessageBox.Show("Complete el DNI o RUC del cliente");
+                MessageBox.Show("Ingrese un DNI o RUC válido");
                 return false;
             }
             else if (txtDesc.Text == "")
@@ -81,14 +81,14 @@ namespace SalesClient
                 MessageBox.Show("Complete la ocupación del cliente");
                 return false;
             }
-            else if (txtEmail.Text == "")
+            else if (txtEmail.Text == "" || !txtEmail.Text.Contains("@"))
             {
-                MessageBox.Show("Complete el correo del cliente");
+                MessageBox.Show("Ingrese un correo válido");
                 return false;
             }
-            else if (txtPhone.Text == "")
+            else if (txtPhone.Text == "" || txtPhone.Text.Length<3)
             {
-                MessageBox.Show("Complete el teléfono del cliente");
+                MessageBox.Show("Ingrese un teléfono válido");
                 return false;
             }
             else if (cbTipoCliente.Text == "")

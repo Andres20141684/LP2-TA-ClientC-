@@ -33,9 +33,8 @@ namespace ShopsForm
                 dgvLocal.Rows.Add(new String[]{
                     shopsData[i].id.ToString(), shopsData[i].description, shopsData[i].creationDate.ToString(), shopsData[i].address
                 });
-                Cursor.Current = Cursors.Arrow;
-
             }
+            Cursor.Current = Cursors.Arrow;
         }
         public void SetParent(View.MainWindow form)
         {

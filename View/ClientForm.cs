@@ -14,7 +14,7 @@ namespace SalesClient
     public partial class ClientesForms : Form
     {
         private DBControllerWSClient serviceDA;
-        private BindingList<customer> customers = new BindingList<customer>();
+        private BindingList<customer> customers;
         public ClientesForms()
         {
             InitializeComponent();
@@ -118,8 +118,8 @@ namespace SalesClient
         {
             Cursor.Current = Cursors.WaitCursor;
             dgvClients.Rows.Clear();
-            //serviceDA = new DBControllerWSClient();
-            //customers = new BindingList<customer>(serviceDA.queryAllCustomer());
+            serviceDA = new DBControllerWSClient();
+            customers = new BindingList<customer>(serviceDA.queryAllCustomer());
             for (int i = 0; i < customers.Count; i++)
             {
                 dgvClients.Rows.Add(new String[] {

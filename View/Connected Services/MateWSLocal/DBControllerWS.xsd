@@ -496,22 +496,22 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertSale">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="sale" type="tns:sale" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertSaleResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="updateFamily">
     <xs:sequence>
       <xs:element minOccurs="0" name="family" type="tns:family" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="updateFamilyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sale" type="tns:sale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
@@ -552,16 +552,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:premises" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryProductBySKUCode">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryProductBySKUCodeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:product" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertBrand">
     <xs:sequence>
       <xs:element minOccurs="0" name="brand" type="tns:brand" />
@@ -572,12 +562,14 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllUser">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllUserResponse">
+  <xs:complexType name="queryProductBySKUCode">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
+      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllCustomer">
@@ -586,6 +578,14 @@
   <xs:complexType name="queryAllCustomerResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllUser">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryPurchaseBySerialCode">
@@ -742,6 +742,14 @@
       <xs:element minOccurs="0" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllEmployee">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllEmployeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryFamilyByCode">
     <xs:sequence>
       <xs:element minOccurs="0" name="familyID" type="xs:string" />
@@ -750,14 +758,6 @@
   <xs:complexType name="queryFamilyByCodeResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:family" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployee">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployeeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertProduct">

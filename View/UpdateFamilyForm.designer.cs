@@ -64,33 +64,37 @@
             // 
             // txtFamilyCode
             // 
+            this.txtFamilyCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFamilyCode.Location = new System.Drawing.Point(174, 40);
             this.txtFamilyCode.Name = "txtFamilyCode";
-            this.txtFamilyCode.Size = new System.Drawing.Size(547, 26);
+            this.txtFamilyCode.Size = new System.Drawing.Size(564, 26);
             this.txtFamilyCode.TabIndex = 24;
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(174, 88);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(547, 26);
+            this.txtName.Size = new System.Drawing.Size(564, 26);
             this.txtName.TabIndex = 23;
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(174, 142);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(529, 296);
+            this.txtDescription.Size = new System.Drawing.Size(564, 296);
             this.txtDescription.TabIndex = 22;
             // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
+            this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(174, 474);
             this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(84, 24);
+            this.cbActive.Size = new System.Drawing.Size(78, 24);
             this.cbActive.TabIndex = 17;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;
@@ -100,36 +104,36 @@
             this.lblFamilyCode.AutoSize = true;
             this.lblFamilyCode.Location = new System.Drawing.Point(28, 43);
             this.lblFamilyCode.Name = "lblFamilyCode";
-            this.lblFamilyCode.Size = new System.Drawing.Size(70, 20);
+            this.lblFamilyCode.Size = new System.Drawing.Size(65, 20);
             this.lblFamilyCode.TabIndex = 21;
-            this.lblFamilyCode.Text = "Código:";
+            this.lblFamilyCode.Text = "Código";
             // 
             // lblState
             // 
             this.lblState.AutoSize = true;
             this.lblState.Location = new System.Drawing.Point(33, 474);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(71, 20);
+            this.lblState.Size = new System.Drawing.Size(66, 20);
             this.lblState.TabIndex = 20;
-            this.lblState.Text = "Estado:";
+            this.lblState.Text = "Estado";
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(28, 145);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(108, 20);
+            this.lblDescription.Size = new System.Drawing.Size(103, 20);
             this.lblDescription.TabIndex = 19;
-            this.lblDescription.Text = "Descripción:";
+            this.lblDescription.Text = "Descripción";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(28, 91);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(76, 20);
+            this.lblName.Size = new System.Drawing.Size(71, 20);
             this.lblName.TabIndex = 18;
-            this.lblName.Text = "Nombre:";
+            this.lblName.Text = "Nombre";
             // 
             // btnSave
             // 

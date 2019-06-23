@@ -28,113 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthenticationForm));
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.pbIconPassword = new System.Windows.Forms.PictureBox();
+            this.pbIconMate = new System.Windows.Forms.PictureBox();
+            this.pbIconUser = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconMate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(106, 26);
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.Location = new System.Drawing.Point(125, 184);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(197, 20);
+            this.txtUsername.Size = new System.Drawing.Size(381, 26);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "gerente";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(106, 53);
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(125, 249);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(197, 20);
+            this.txtPassword.Size = new System.Drawing.Size(381, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "gerente";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(33, 90);
+            this.btnOK.BackColor = System.Drawing.Color.White;
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOK.FlatAppearance.BorderSize = 3;
+            this.btnOK.Location = new System.Drawing.Point(220, 303);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(118, 23);
+            this.btnOK.Size = new System.Drawing.Size(177, 35);
             this.btnOK.TabIndex = 4;
-            this.btnOK.Text = "Aceptar";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Text = "Ingresar";
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(185, 90);
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderSize = 3;
+            this.btnCancel.Location = new System.Drawing.Point(220, 348);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(118, 23);
+            this.btnCancel.Size = new System.Drawing.Size(177, 35);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // groupBox1
+            // pbIconPassword
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 79);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos";
+            this.pbIconPassword.BackgroundImage = global::View.Properties.Resources.password;
+            this.pbIconPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbIconPassword.Location = new System.Drawing.Point(63, 239);
+            this.pbIconPassword.Name = "pbIconPassword";
+            this.pbIconPassword.Size = new System.Drawing.Size(44, 36);
+            this.pbIconPassword.TabIndex = 5;
+            this.pbIconPassword.TabStop = false;
+            // 
+            // pbIconMate
+            // 
+            this.pbIconMate.BackColor = System.Drawing.Color.White;
+            this.pbIconMate.BackgroundImage = global::View.Properties.Resources.mate_logo_smaller1;
+            this.pbIconMate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbIconMate.Location = new System.Drawing.Point(225, 12);
+            this.pbIconMate.Name = "pbIconMate";
+            this.pbIconMate.Size = new System.Drawing.Size(172, 140);
+            this.pbIconMate.TabIndex = 7;
+            this.pbIconMate.TabStop = false;
+            // 
+            // pbIconUser
+            // 
+            this.pbIconUser.BackgroundImage = global::View.Properties.Resources.user;
+            this.pbIconUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbIconUser.Location = new System.Drawing.Point(63, 174);
+            this.pbIconUser.Name = "pbIconUser";
+            this.pbIconUser.Size = new System.Drawing.Size(44, 36);
+            this.pbIconUser.TabIndex = 4;
+            this.pbIconUser.TabStop = false;
             // 
             // AuthenticationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 119);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOK);
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.ClientSize = new System.Drawing.Size(611, 405);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pbIconPassword);
+            this.Controls.Add(this.pbIconMate);
+            this.Controls.Add(this.pbIconUser);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "AuthenticationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Autenticación de Usuario";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Text = "Iniciar Sesión";
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconMate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pbIconMate;
+        private System.Windows.Forms.PictureBox pbIconPassword;
+        private System.Windows.Forms.PictureBox pbIconUser;
     }
 }

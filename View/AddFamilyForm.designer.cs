@@ -64,34 +64,38 @@
             // 
             // txtFamilyCode
             // 
+            this.txtFamilyCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFamilyCode.Location = new System.Drawing.Point(174, 40);
             this.txtFamilyCode.Name = "txtFamilyCode";
-            this.txtFamilyCode.Size = new System.Drawing.Size(529, 26);
+            this.txtFamilyCode.Size = new System.Drawing.Size(543, 26);
             this.txtFamilyCode.TabIndex = 24;
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(174, 88);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(529, 26);
+            this.txtName.Size = new System.Drawing.Size(543, 26);
             this.txtName.TabIndex = 23;
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(174, 142);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(529, 296);
+            this.txtDescription.Size = new System.Drawing.Size(543, 296);
             this.txtDescription.TabIndex = 22;
             // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
             this.cbActive.Enabled = false;
+            this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(183, 467);
             this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(84, 24);
+            this.cbActive.Size = new System.Drawing.Size(78, 24);
             this.cbActive.TabIndex = 17;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;

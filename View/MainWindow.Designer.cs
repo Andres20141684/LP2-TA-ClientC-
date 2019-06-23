@@ -45,16 +45,16 @@
             this.localesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.lblNameUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.lblNameUser = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,6 +75,7 @@
             // 
             // archivoToolStripMenuItem
             // 
+            this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.DarkTurquoise;
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -85,6 +86,8 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.salirToolStripMenuItem.Text = "Cerrar sesión";
@@ -105,6 +108,7 @@
             // 
             // comprasToolStripMenuItem
             // 
+            this.comprasToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -112,11 +116,14 @@
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(249, 6);
             // 
             // ventasToolStripMenuItem
             // 
+            this.ventasToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -141,6 +148,7 @@
             // 
             // productosToolStripMenuItem1
             // 
+            this.productosToolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
             this.productosToolStripMenuItem1.Size = new System.Drawing.Size(272, 30);
             this.productosToolStripMenuItem1.Text = "Productos";
@@ -148,6 +156,7 @@
             // 
             // familiaDeProductosToolStripMenuItem
             // 
+            this.familiaDeProductosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.familiaDeProductosToolStripMenuItem.Name = "familiaDeProductosToolStripMenuItem";
             this.familiaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.familiaDeProductosToolStripMenuItem.Text = "Familia de Productos";
@@ -155,6 +164,7 @@
             // 
             // usuariosToolStripMenuItem
             // 
+            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
@@ -162,6 +172,7 @@
             // 
             // empleadosToolStripMenuItem
             // 
+            this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.empleadosToolStripMenuItem.Text = "Empleados";
@@ -169,6 +180,7 @@
             // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -176,6 +188,7 @@
             // 
             // proovedoresToolStripMenuItem
             // 
+            this.proovedoresToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.proovedoresToolStripMenuItem.Name = "proovedoresToolStripMenuItem";
             this.proovedoresToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.proovedoresToolStripMenuItem.Text = "Proveedores";
@@ -183,6 +196,7 @@
             // 
             // localesToolStripMenuItem
             // 
+            this.localesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.localesToolStripMenuItem.Name = "localesToolStripMenuItem";
             this.localesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.localesToolStripMenuItem.Text = "Locales";
@@ -190,6 +204,7 @@
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -209,42 +224,6 @@
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::View.Properties.Resources.icono;
-            this.pictureBox2.Location = new System.Drawing.Point(1114, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 52);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // username
-            // 
-            this.username.AutoSize = true;
-            this.username.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.username.Location = new System.Drawing.Point(1191, 0);
-            this.username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.username.Name = "username";
-            this.username.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.username.Size = new System.Drawing.Size(166, 40);
-            this.username.TabIndex = 0;
-            this.username.Text = "Nombre de Usuario";
-            this.username.Click += new System.EventHandler(this.username_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::View.Properties.Resources.mate_logo_smaller;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureUser
             // 
@@ -269,6 +248,42 @@
             this.lblNameUser.TabIndex = 9;
             this.lblNameUser.Text = "Nombre de Usuario";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::View.Properties.Resources.icono;
+            this.pictureBox2.Location = new System.Drawing.Point(1114, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(78, 52);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.username.Location = new System.Drawing.Point(1191, 0);
+            this.username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.username.Name = "username";
+            this.username.Padding = new System.Windows.Forms.Padding(9);
+            this.username.Size = new System.Drawing.Size(166, 40);
+            this.username.TabIndex = 0;
+            this.username.Text = "Nombre de Usuario";
+            this.username.Click += new System.EventHandler(this.username_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::View.Properties.Resources.mate_logo_smaller;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -286,15 +301,15 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "Sistema de Gestión MATE";
+            this.Text = "Sistema de Bodega MATE";
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

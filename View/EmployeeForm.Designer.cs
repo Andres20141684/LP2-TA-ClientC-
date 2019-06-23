@@ -47,26 +47,33 @@
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(81, 123);
+            this.btnAddEmployee.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Location = new System.Drawing.Point(767, 168);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(140, 23);
+            this.btnAddEmployee.Size = new System.Drawing.Size(115, 31);
             this.btnAddEmployee.TabIndex = 0;
             this.btnAddEmployee.Text = "Agregar Empleado";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnModifyEmployee
             // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(407, 123);
+            this.btnModifyEmployee.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModifyEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyEmployee.Location = new System.Drawing.Point(881, 168);
+            this.btnModifyEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(140, 23);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(118, 31);
             this.btnModifyEmployee.TabIndex = 1;
             this.btnModifyEmployee.Text = "Modificar Empleado";
-            this.btnModifyEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.UseVisualStyleBackColor = false;
             this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
             // dgvEmployee
             // 
+            this.dgvEmployee.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColumId,
@@ -76,9 +83,10 @@
             this.dgvColumPhone,
             this.dgvColumEmail,
             this.dgvColumRole});
-            this.dgvEmployee.Location = new System.Drawing.Point(12, 172);
+            this.dgvEmployee.Location = new System.Drawing.Point(55, 201);
+            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvEmployee.Name = "dgvEmployee";
-            this.dgvEmployee.Size = new System.Drawing.Size(903, 300);
+            this.dgvEmployee.Size = new System.Drawing.Size(944, 405);
             this.dgvEmployee.TabIndex = 2;
             // 
             // dgvColumId
@@ -138,9 +146,10 @@
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(740, 123);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(1110, 189);
+            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(140, 23);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(210, 35);
             this.btnDeleteEmployee.TabIndex = 3;
             this.btnDeleteEmployee.Text = "Eliminar";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
@@ -149,35 +158,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 37);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(63, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "DNI:";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(105, 34);
+            this.txtDNI.Location = new System.Drawing.Point(217, 58);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(140, 20);
+            this.txtDNI.Size = new System.Drawing.Size(349, 26);
             this.txtDNI.TabIndex = 5;
             this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // btnSearchEmployee
             // 
-            this.btnSearchEmployee.Location = new System.Drawing.Point(287, 32);
+            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(588, 54);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchEmployee.Size = new System.Drawing.Size(56, 35);
             this.btnSearchEmployee.TabIndex = 6;
-            this.btnSearchEmployee.Text = "Buscar";
             this.btnSearchEmployee.UseVisualStyleBackColor = true;
             this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
             // 
             // EmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 484);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1046, 639);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.label1);
@@ -186,6 +201,7 @@
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.btnAddEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "EmployeeForm";
             this.Text = "Empleados";

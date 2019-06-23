@@ -52,48 +52,65 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbGeneralInf = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.gbGeneralInf.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(451, 395);
+            this.SaveButton.BackColor = System.Drawing.Color.White;
+            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(723, 675);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(91, 23);
+            this.SaveButton.Size = new System.Drawing.Size(97, 28);
             this.SaveButton.TabIndex = 28;
-            this.SaveButton.Text = "Guardar venta";
-            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Text = "Guardar ";
+            this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(284, 404);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(551, 351);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Total:";
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(325, 398);
+            this.txtTotal.Location = new System.Drawing.Point(622, 345);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.Size = new System.Drawing.Size(148, 26);
             this.txtTotal.TabIndex = 26;
             // 
             // AddProductSale
             // 
-            this.AddProductSale.Location = new System.Drawing.Point(430, 164);
+            this.AddProductSale.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.AddProductSale.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.AddProductSale.FlatAppearance.BorderSize = 3;
+            this.AddProductSale.Location = new System.Drawing.Point(602, 39);
+            this.AddProductSale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddProductSale.Name = "AddProductSale";
-            this.AddProductSale.Size = new System.Drawing.Size(112, 23);
+            this.AddProductSale.Size = new System.Drawing.Size(168, 29);
             this.AddProductSale.TabIndex = 25;
             this.AddProductSale.Text = "Agregar producto";
-            this.AddProductSale.UseVisualStyleBackColor = true;
+            this.AddProductSale.UseVisualStyleBackColor = false;
             this.AddProductSale.Click += new System.EventHandler(this.AddProductSale_Click);
             // 
             // dgvPurchaseDetails
             // 
+            this.dgvPurchaseDetails.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvPurchaseDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPurchaseDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productId,
@@ -101,9 +118,10 @@
             this.productPrice,
             this.quantity,
             this.subTotal});
-            this.dgvPurchaseDetails.Location = new System.Drawing.Point(40, 191);
+            this.dgvPurchaseDetails.Location = new System.Drawing.Point(26, 72);
+            this.dgvPurchaseDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPurchaseDetails.Name = "dgvPurchaseDetails";
-            this.dgvPurchaseDetails.Size = new System.Drawing.Size(502, 189);
+            this.dgvPurchaseDetails.Size = new System.Drawing.Size(744, 252);
             this.dgvPurchaseDetails.TabIndex = 24;
             // 
             // productId
@@ -147,57 +165,67 @@
             // 
             // PayMethodComboBox
             // 
+            this.PayMethodComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayMethodComboBox.FormattingEnabled = true;
             this.PayMethodComboBox.Items.AddRange(new object[] {
             "Visa",
             "Mastercard",
             "Efectivo"});
-            this.PayMethodComboBox.Location = new System.Drawing.Point(103, 164);
+            this.PayMethodComboBox.Location = new System.Drawing.Point(226, 147);
+            this.PayMethodComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PayMethodComboBox.Name = "PayMethodComboBox";
-            this.PayMethodComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PayMethodComboBox.Size = new System.Drawing.Size(191, 28);
             this.PayMethodComboBox.TabIndex = 23;
             this.PayMethodComboBox.Text = "Visa";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 164);
+            this.label4.Location = new System.Drawing.Point(25, 150);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Método de pago:";
+            this.label4.Text = "Método de pago";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(269, 130);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(446, 106);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(273, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(312, 26);
             this.txtDescripcion.TabIndex = 21;
             this.txtDescripcion.Text = "Descripción";
             // 
             // txtRucDni
             // 
-            this.txtRucDni.Location = new System.Drawing.Point(103, 131);
+            this.txtRucDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRucDni.Location = new System.Drawing.Point(228, 106);
+            this.txtRucDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRucDni.Name = "txtRucDni";
-            this.txtRucDni.Size = new System.Drawing.Size(159, 20);
+            this.txtRucDni.Size = new System.Drawing.Size(189, 26);
             this.txtRucDni.TabIndex = 20;
             this.txtRucDni.Text = "Ingrese DNI o RUC";
             // 
             // ClientLabel
             // 
             this.ClientLabel.AutoSize = true;
-            this.ClientLabel.Location = new System.Drawing.Point(40, 131);
+            this.ClientLabel.Location = new System.Drawing.Point(25, 111);
+            this.ClientLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ClientLabel.Name = "ClientLabel";
-            this.ClientLabel.Size = new System.Drawing.Size(42, 13);
+            this.ClientLabel.Size = new System.Drawing.Size(65, 20);
             this.ClientLabel.TabIndex = 19;
-            this.ClientLabel.Text = "Cliente:";
+            this.ClientLabel.Text = "Cliente";
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(40, 98);
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(446, 70);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 17);
+            this.radioButton1.Size = new System.Drawing.Size(89, 24);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Factura";
@@ -206,9 +234,11 @@
             // boletaRadioButton
             // 
             this.boletaRadioButton.AutoSize = true;
-            this.boletaRadioButton.Location = new System.Drawing.Point(40, 74);
+            this.boletaRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boletaRadioButton.Location = new System.Drawing.Point(228, 72);
+            this.boletaRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.boletaRadioButton.Name = "boletaRadioButton";
-            this.boletaRadioButton.Size = new System.Drawing.Size(55, 17);
+            this.boletaRadioButton.Size = new System.Drawing.Size(80, 24);
             this.boletaRadioButton.TabIndex = 17;
             this.boletaRadioButton.TabStop = true;
             this.boletaRadioButton.Text = "Boleta";
@@ -217,29 +247,36 @@
             // userLabelContent
             // 
             this.userLabelContent.AutoSize = true;
-            this.userLabelContent.Location = new System.Drawing.Point(100, 44);
+            this.userLabelContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabelContent.Location = new System.Drawing.Point(224, 36);
+            this.userLabelContent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLabelContent.Name = "userLabelContent";
-            this.userLabelContent.Size = new System.Drawing.Size(85, 13);
+            this.userLabelContent.Size = new System.Drawing.Size(127, 20);
             this.userLabelContent.TabIndex = 16;
             this.userLabelContent.Text = "ID_VENDEDOR";
             // 
             // userLabel
             // 
             this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(37, 44);
+            this.userLabel.Location = new System.Drawing.Point(25, 36);
+            this.userLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(56, 13);
+            this.userLabel.Size = new System.Drawing.Size(87, 20);
             this.userLabel.TabIndex = 15;
-            this.userLabel.Text = "Vendedor:";
+            this.userLabel.Text = "Vendedor";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.comprasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(563, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 35);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -248,13 +285,13 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(90, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(133, 30);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click_1);
             // 
@@ -263,42 +300,83 @@
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modificarToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(178, 30);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.ModificarToolStripMenuItem_Click_1);
             // 
+            // gbGeneralInf
+            // 
+            this.gbGeneralInf.BackColor = System.Drawing.Color.White;
+            this.gbGeneralInf.Controls.Add(this.label1);
+            this.gbGeneralInf.Controls.Add(this.userLabelContent);
+            this.gbGeneralInf.Controls.Add(this.userLabel);
+            this.gbGeneralInf.Controls.Add(this.boletaRadioButton);
+            this.gbGeneralInf.Controls.Add(this.radioButton1);
+            this.gbGeneralInf.Controls.Add(this.ClientLabel);
+            this.gbGeneralInf.Controls.Add(this.txtRucDni);
+            this.gbGeneralInf.Controls.Add(this.PayMethodComboBox);
+            this.gbGeneralInf.Controls.Add(this.txtDescripcion);
+            this.gbGeneralInf.Controls.Add(this.label4);
+            this.gbGeneralInf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbGeneralInf.Location = new System.Drawing.Point(22, 58);
+            this.gbGeneralInf.Name = "gbGeneralInf";
+            this.gbGeneralInf.Size = new System.Drawing.Size(798, 186);
+            this.gbGeneralInf.TabIndex = 30;
+            this.gbGeneralInf.TabStop = false;
+            this.gbGeneralInf.Text = "Datos generales";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Comprobante de Pago";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.AddProductSale);
+            this.groupBox1.Controls.Add(this.dgvPurchaseDetails);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtTotal);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(22, 262);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(798, 394);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Detalle de Venta";
+            // 
             // PurchaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 450);
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.ClientSize = new System.Drawing.Size(844, 728);
+            this.Controls.Add(this.gbGeneralInf);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.AddProductSale);
-            this.Controls.Add(this.dgvPurchaseDetails);
-            this.Controls.Add(this.PayMethodComboBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtRucDni);
-            this.Controls.Add(this.ClientLabel);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.boletaRadioButton);
-            this.Controls.Add(this.userLabelContent);
-            this.Controls.Add(this.userLabel);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PurchaseForm";
             this.Text = "Gestionar compras";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbGeneralInf.ResumeLayout(false);
+            this.gbGeneralInf.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +408,8 @@
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gbGeneralInf;
+        public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

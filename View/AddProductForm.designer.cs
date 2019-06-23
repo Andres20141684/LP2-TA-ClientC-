@@ -65,7 +65,7 @@
             // lblCodeSKU
             // 
             this.lblCodeSKU.AutoSize = true;
-            this.lblCodeSKU.Location = new System.Drawing.Point(28, 42);
+            this.lblCodeSKU.Location = new System.Drawing.Point(23, 42);
             this.lblCodeSKU.Name = "lblCodeSKU";
             this.lblCodeSKU.Size = new System.Drawing.Size(106, 20);
             this.lblCodeSKU.TabIndex = 0;
@@ -74,6 +74,7 @@
             // txtSKUCode
             // 
             this.txtSKUCode.BackColor = System.Drawing.Color.White;
+            this.txtSKUCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSKUCode.Location = new System.Drawing.Point(226, 37);
             this.txtSKUCode.Name = "txtSKUCode";
             this.txtSKUCode.Size = new System.Drawing.Size(160, 26);
@@ -94,7 +95,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(27, 115);
+            this.lblDescription.Location = new System.Drawing.Point(22, 115);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(103, 20);
             this.lblDescription.TabIndex = 3;
@@ -103,7 +104,7 @@
             // lblDescriptionCare
             // 
             this.lblDescriptionCare.AutoSize = true;
-            this.lblDescriptionCare.Location = new System.Drawing.Point(28, 252);
+            this.lblDescriptionCare.Location = new System.Drawing.Point(22, 252);
             this.lblDescriptionCare.Name = "lblDescriptionCare";
             this.lblDescriptionCare.Size = new System.Drawing.Size(200, 20);
             this.lblDescriptionCare.TabIndex = 4;
@@ -121,7 +122,7 @@
             // lblSalePrice
             // 
             this.lblSalePrice.AutoSize = true;
-            this.lblSalePrice.Location = new System.Drawing.Point(28, 32);
+            this.lblSalePrice.Location = new System.Drawing.Point(23, 32);
             this.lblSalePrice.Name = "lblSalePrice";
             this.lblSalePrice.Size = new System.Drawing.Size(133, 20);
             this.lblSalePrice.TabIndex = 6;
@@ -139,7 +140,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(28, 117);
+            this.lblStock.Location = new System.Drawing.Point(22, 118);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(55, 20);
             this.lblStock.TabIndex = 8;
@@ -148,7 +149,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(32, 357);
+            this.lblState.Location = new System.Drawing.Point(26, 357);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(66, 20);
             this.lblState.TabIndex = 11;
@@ -157,7 +158,7 @@
             // lblFamilia
             // 
             this.lblFamilia.AutoSize = true;
-            this.lblFamilia.Location = new System.Drawing.Point(446, 83);
+            this.lblFamilia.Location = new System.Drawing.Point(440, 83);
             this.lblFamilia.Name = "lblFamilia";
             this.lblFamilia.Size = new System.Drawing.Size(66, 20);
             this.lblFamilia.TabIndex = 12;
@@ -166,7 +167,7 @@
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
-            this.lblBrand.Location = new System.Drawing.Point(446, 43);
+            this.lblBrand.Location = new System.Drawing.Point(440, 42);
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(58, 20);
             this.lblBrand.TabIndex = 13;
@@ -175,7 +176,7 @@
             // lblDiscount
             // 
             this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(27, 77);
+            this.lblDiscount.Location = new System.Drawing.Point(22, 77);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(96, 20);
             this.lblDiscount.TabIndex = 14;
@@ -210,6 +211,7 @@
             // 
             // cboFamily
             // 
+            this.cboFamily.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFamily.FormattingEnabled = true;
             this.cboFamily.Location = new System.Drawing.Point(510, 78);
             this.cboFamily.Name = "cboFamily";
@@ -219,6 +221,7 @@
             // 
             // cboBrand
             // 
+            this.cboBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(510, 38);
             this.cboBrand.Name = "cboBrand";
@@ -228,6 +231,7 @@
             // 
             // txtCareDescription
             // 
+            this.txtCareDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCareDescription.Location = new System.Drawing.Point(226, 249);
             this.txtCareDescription.Multiline = true;
             this.txtCareDescription.Name = "txtCareDescription";
@@ -237,6 +241,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(226, 118);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -246,6 +251,7 @@
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(226, 75);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(160, 26);
@@ -254,7 +260,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(28, 78);
+            this.lblName.Location = new System.Drawing.Point(23, 79);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(71, 20);
             this.lblName.TabIndex = 17;
@@ -264,9 +270,10 @@
             // 
             this.cbActive.AutoSize = true;
             this.cbActive.Enabled = false;
+            this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(226, 357);
             this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(84, 24);
+            this.cbActive.Size = new System.Drawing.Size(78, 24);
             this.cbActive.TabIndex = 16;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;
@@ -294,6 +301,7 @@
             // 
             // cboDiscount
             // 
+            this.cboDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDiscount.FormattingEnabled = true;
             this.cboDiscount.Location = new System.Drawing.Point(226, 72);
             this.cboDiscount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -304,6 +312,7 @@
             // 
             // txtIGV
             // 
+            this.txtIGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIGV.Location = new System.Drawing.Point(578, 71);
             this.txtIGV.Name = "txtIGV";
             this.txtIGV.Size = new System.Drawing.Size(160, 26);
@@ -311,6 +320,7 @@
             // 
             // txtStock
             // 
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(226, 112);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(160, 26);
@@ -318,6 +328,7 @@
             // 
             // txtPurchasePrice
             // 
+            this.txtPurchasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPurchasePrice.Location = new System.Drawing.Point(578, 29);
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Size = new System.Drawing.Size(160, 26);
@@ -325,6 +336,7 @@
             // 
             // txtSalePrice
             // 
+            this.txtSalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalePrice.Location = new System.Drawing.Point(226, 32);
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(160, 26);

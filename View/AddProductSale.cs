@@ -14,7 +14,8 @@ namespace WindowsFormsApp1
     public partial class AddProductSale : Form
     {
         private DBControllerWSClient serviceDA;
-        private product productos = new product();
+        private product producto = new product();
+        private warehouseDetail detalleProducto;
         SaleForm parent;
         public AddProductSale()
         {
@@ -27,10 +28,16 @@ namespace WindowsFormsApp1
             dgvProducts.Rows.Clear();
             serviceDA = new DBControllerWSClient();
             String skucodee = txtProductName.Text;
+            int idAlmacenn = int.Parse(txtWarehouseId.Text);
+            //detalleProducto = new BindingList<warehouseDetail>(serviceDA.queryWarehosedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+
+            /*
             productos = (serviceDA.queryProductBySKUCode(skucodee));
+            */
+            producto = serviceDA.queryProductBySKUCode(skucodee);
           
-                dgvProducts.Rows.Add(new String[] {
-                ""+productos.SKUcode, productos.name,""+productos.salePrice,""+productos.stock
+            dgvProducts.Rows.Add(new String[] {
+                ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
             
             Cursor.Current = Cursors.Arrow;
@@ -61,6 +68,11 @@ namespace WindowsFormsApp1
                 parent.RefreshTotal();
                 this.Close();
             }
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

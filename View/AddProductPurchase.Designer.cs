@@ -28,71 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtWarehouseId = new System.Windows.Forms.TextBox();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.skucode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvProducts
-            // 
-            this.dgvProducts.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductId,
-            this.Name,
-            this.Price,
-            this.Stock});
-            this.dgvProducts.Location = new System.Drawing.Point(37, 163);
-            this.dgvProducts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.Size = new System.Drawing.Size(743, 439);
-            this.dgvProducts.TabIndex = 11;
-            this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellContentClick);
-            // 
-            // ProductId
-            // 
-            this.ProductId.Frozen = true;
-            this.ProductId.HeaderText = "Cód.";
-            this.ProductId.Name = "ProductId";
-            this.ProductId.ReadOnly = true;
-            this.ProductId.Width = 30;
-            // 
-            // Name
-            // 
-            this.Name.Frozen = true;
-            this.Name.HeaderText = "Nombre";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 200;
-            // 
-            // Price
-            // 
-            this.Price.Frozen = true;
-            this.Price.HeaderText = "Precio";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            this.Stock.Frozen = true;
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
             // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(739, 34);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Location = new System.Drawing.Point(488, 26);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(41, 30);
+            this.btnSearch.Size = new System.Drawing.Size(32, 58);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -100,35 +55,90 @@
             // txtProductName
             // 
             this.txtProductName.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtProductName.Location = new System.Drawing.Point(147, 40);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtProductName.Location = new System.Drawing.Point(98, 26);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(584, 26);
+            this.txtProductName.Size = new System.Drawing.Size(375, 20);
             this.txtProductName.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(22, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Código SKU";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Id almacén";
+            // 
+            // txtWarehouseId
+            // 
+            this.txtWarehouseId.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtWarehouseId.Enabled = false;
+            this.txtWarehouseId.Location = new System.Drawing.Point(98, 64);
+            this.txtWarehouseId.Name = "txtWarehouseId";
+            this.txtWarehouseId.Size = new System.Drawing.Size(375, 20);
+            this.txtWarehouseId.TabIndex = 13;
+            this.txtWarehouseId.Text = "1";
+            // 
+            // dgvProducts
+            // 
+            this.dgvProducts.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.skucode,
+            this.name,
+            this.price,
+            this.stock});
+            this.dgvProducts.Location = new System.Drawing.Point(25, 106);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.Size = new System.Drawing.Size(495, 285);
+            this.dgvProducts.TabIndex = 14;
+            // 
+            // skucode
+            // 
+            this.skucode.HeaderText = "Cód.";
+            this.skucode.Name = "skucode";
+            this.skucode.Width = 30;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Nombre";
+            this.name.Name = "name";
+            this.name.Width = 200;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
+            // 
+            // stock
+            // 
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
+            // 
             // AddProductPurchase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(810, 648);
+            this.ClientSize = new System.Drawing.Size(540, 421);
             this.Controls.Add(this.dgvProducts);
+            this.Controls.Add(this.txtWarehouseId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name.DataPropertyName = "AddProductPurchase";
+            this.Name = "AddProductPurchase";
             this.Text = "Añadir Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
@@ -137,14 +147,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvProducts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtWarehouseId;
+        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skucode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
     }
 }

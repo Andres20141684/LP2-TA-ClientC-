@@ -149,7 +149,7 @@
             this.txtEmployeeFirstLastName.MaxLength = 50;
             this.txtEmployeeFirstLastName.Name = "txtEmployeeFirstLastName";
             this.txtEmployeeFirstLastName.Size = new System.Drawing.Size(337, 20);
-            this.txtEmployeeFirstLastName.TabIndex = 11;
+            this.txtEmployeeFirstLastName.TabIndex = 3;
             // 
             // txtEmployeeSecondLastName
             // 
@@ -159,7 +159,7 @@
             this.txtEmployeeSecondLastName.MaxLength = 50;
             this.txtEmployeeSecondLastName.Name = "txtEmployeeSecondLastName";
             this.txtEmployeeSecondLastName.Size = new System.Drawing.Size(337, 20);
-            this.txtEmployeeSecondLastName.TabIndex = 12;
+            this.txtEmployeeSecondLastName.TabIndex = 4;
             // 
             // txtEmployeeDNI
             // 
@@ -169,7 +169,7 @@
             this.txtEmployeeDNI.MaxLength = 8;
             this.txtEmployeeDNI.Name = "txtEmployeeDNI";
             this.txtEmployeeDNI.Size = new System.Drawing.Size(337, 20);
-            this.txtEmployeeDNI.TabIndex = 13;
+            this.txtEmployeeDNI.TabIndex = 1;
             // 
             // txtEmployeePhone
             // 
@@ -179,7 +179,7 @@
             this.txtEmployeePhone.MaxLength = 15;
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(337, 20);
-            this.txtEmployeePhone.TabIndex = 14;
+            this.txtEmployeePhone.TabIndex = 5;
             // 
             // txtEmployeeEmail
             // 
@@ -189,7 +189,7 @@
             this.txtEmployeeEmail.MaxLength = 100;
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(337, 20);
-            this.txtEmployeeEmail.TabIndex = 15;
+            this.txtEmployeeEmail.TabIndex = 6;
             // 
             // dtpEmployeeBorn
             // 
@@ -247,7 +247,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(511, 364);
-            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
             // 

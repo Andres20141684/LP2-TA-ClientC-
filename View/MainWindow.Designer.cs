@@ -50,6 +50,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbTesto = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -284,6 +285,15 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // lbTesto
+            // 
+            this.lbTesto.AutoSize = true;
+            this.lbTesto.Location = new System.Drawing.Point(53, 319);
+            this.lbTesto.Name = "lbTesto";
+            this.lbTesto.Size = new System.Drawing.Size(35, 13);
+            this.lbTesto.TabIndex = 11;
+            this.lbTesto.Text = "label1";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +301,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::View.Properties.Resources.whitebackground;
             this.ClientSize = new System.Drawing.Size(784, 355);
+            this.Controls.Add(this.lbTesto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
@@ -338,5 +349,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.Label lblNameUser;
+        private System.Windows.Forms.Label lbTesto;
     }
 }

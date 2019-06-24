@@ -55,6 +55,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.AcceptsReturn = true;
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(83, 162);
             this.txtPassword.MaxLength = 50;

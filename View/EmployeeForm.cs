@@ -15,7 +15,7 @@ namespace entregable
     {
         View.MainWindow refParent;
         private DBControllerWSClient serviceDA;
-        private BindingList<employee> employees;
+        private BindingList<employee> employees = new BindingList<employee>();
         public EmployeeForm()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace entregable
         {
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new DBControllerWSClient();
-            employees = new BindingList<employee>(serviceDA.queryAllEmployee());
+            //employees = new BindingList<employee>(serviceDA.queryAllEmployee());
             dgvEmployee.Rows.Clear();
             for (int i = 0; i < employees.Count; i++)
             {

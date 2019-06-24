@@ -63,34 +63,34 @@ namespace entregable
         }
         private bool filledValues()
         {
-            if (txtEmployeeDNI.Text == "")
+            if (txtEmployeeDNI.Text == "" || txtEmployeeDNI.Text.Length<8)
             {
-                MessageBox.Show("Ingrese el DNI del empleado");
+                MessageBox.Show("Ingrese un DNI válido");
                 return false;
             }
-            else if (txtEmployeeName.Text == "")
+            else if (txtEmployeeName.Text == "" || txtEmployeeName.Text.Length<2)
             {
-                MessageBox.Show("Ingrese el nombre del empleado");
+                MessageBox.Show("Ingrese un nombre válido");
                 return false;
             }
-            else if (txtEmployeeFirstLastName.Text == "")
+            else if (txtEmployeeFirstLastName.Text == "" || txtEmployeeFirstLastName.Text.Length<2)
             {
-                MessageBox.Show("Ingrese el apellido paterno del empleado");
+                MessageBox.Show("Ingrese un apellido paterno válido");
                 return false;
             }
-            else if (txtEmployeeSecondLastName.Text == "")
+            else if (txtEmployeeSecondLastName.Text == "" || txtEmployeeSecondLastName.Text.Length<2)
             {
-                MessageBox.Show("Ingrese el apellido materno del empleado");
+                MessageBox.Show("Ingrese un apellido materno válido");
                 return false;
             }
-            else if (txtEmployeePhone.Text == "")
+            else if (txtEmployeePhone.Text == "" || txtEmployeePhone.Text.Length<3)
             {
-                MessageBox.Show("Ingrese el teléfono del empleado");
+                MessageBox.Show("Ingrese un teléfono válido");
                 return false;
             }
-            else if (txtEmployeeEmail.Text == "")
+            else if (txtEmployeeEmail.Text == "" || !txtEmployeeEmail.Text.Contains("@"))
             {
-                MessageBox.Show("Ingrese el correo del empleado");
+                MessageBox.Show("Ingrese un correo válido");
                 return false;
             }
             else if (dtpEmployeeBorn.Value.Date > DateTime.Now)
@@ -103,12 +103,12 @@ namespace entregable
                 MessageBox.Show("Ingrese fechas de contratos válidas");
                 return false;
             }
-            else if (cbArea.Text == "--Seleccione--")
+            else if (cbArea.Text == "")
             {
                 MessageBox.Show("Ingrese el área del empleado");
                 return false;
             }
-            else if (cbRole.Text == "--Seleccione--") 
+            else if (cbRole.Text == "") 
             {
                 MessageBox.Show("Ingrese el cargo del empleado");
                 return false;
@@ -117,5 +117,6 @@ namespace entregable
 
             return true;
         }
+
     }
 }

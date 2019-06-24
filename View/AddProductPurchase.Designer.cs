@@ -103,6 +103,7 @@
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.Size = new System.Drawing.Size(495, 285);
             this.dgvProducts.TabIndex = 14;
+            this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellContentClick_1);
             // 
             // skucode
             // 

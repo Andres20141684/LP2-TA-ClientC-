@@ -72,41 +72,49 @@ namespace View
             else
             {
                 serviceDA = new DBControllerWSClient();
-                //getCustomerData
                 purchase p = new purchase();
+                p.state = 1;
+                p.serialCode = txtSerialCode.Text;
                 p.totalPurchase = float.Parse(txtTotal.Text);
+                //para el supplier
                 supplier c = new supplier();
-                c = serviceDA.querySupplierByCode(txtRucDni.Text);
+                c = serviceDA.querySupplierByCode(txtIdProv.Text);
                 p.supplier = c;
+                //para los purchase lanes
                 purchaseLane[] salelanes;
-                salelanes = new purchaseLane[dgvPurchaseDetails.RowCount];
+                salelanes = new purchaseLane[dgvPurchaseDetails.RowCount -1];
                 for (int i = 0; i < dgvPurchaseDetails.RowCount - 1; i++)
                 {
                     purchaseLane purchaselane = new purchaseLane();
                     purchaselane.subtotal = float.Parse(dgvPurchaseDetails.Rows[i].Cells[4].Value.ToString());
                     purchaselane.quantity = int.Parse(dgvPurchaseDetails.Rows[i].Cells[3].Value.ToString());
-                    purchaselane.purchase = p;
+                    //purchaselane.purchase = p;
                     product pr = new product();
                     pr = serviceDA.queryProductBySKUCode(dgvPurchaseDetails.Rows[i].Cells[0].Value.ToString());
                     purchaselane.product = pr;
                     salelanes[i] = purchaselane;
-                    //
                 }
-
+                p.currency = "Soles";
                 p.purchaseLanes = salelanes;
-
-                serviceDA = new DBControllerWSClient();
-                Cursor.Current = Cursors.WaitCursor;
-                //serviceDA.insertPurchase(p); 
-                Cursor.Current = Cursors.Arrow;
-                MessageBox.Show("Se guardó la compra correctamente");
+                //Cursor.Current = Cursors.WaitCursor;
+                int salio = serviceDA.insertPurchase(p); 
+                if (salio == 1)
+                {
+                    MessageBox.Show("Se guardó la compra correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("¡Hubo un problema!");
+                }
+                //Cursor.Current = Cursors.Arrow;
+                
                 this.Close();
             }
             
         }
         private bool filledValues()
         {
-            if (txtRucDni.Text == "")
+            if (txtIdProv.Text == "")
             {
                 MessageBox.Show("Complete el DNI o RUC del cliente");
                 return false;

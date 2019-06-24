@@ -14,7 +14,6 @@ namespace WindowsFormsApp1
     {
         int type;
         private DBControllerWSClient serviceDA;
-        private DBControllerWSClient serviceDA2;
         public int Type { get => type; set => type = value; }
 
         public SaleForm()
@@ -51,7 +50,7 @@ namespace WindowsFormsApp1
                 {
                     ""+row.Cells[0].Value.ToString(),""+row.Cells[1].Value.ToString(), ""+row.Cells[2].Value.ToString(), ""+1,""+(1*Double.Parse(row.Cells[2].Value.ToString()))
                 });
-                    }
+            }
         }
 
         internal void RefreshTotal()
@@ -90,24 +89,23 @@ namespace WindowsFormsApp1
 
                 //para los salelanes
                 saleLane[] salelanes;
-                salelanes = new saleLane[dgvSaleDetails.RowCount];
+                salelanes = new saleLane[dgvSaleDetails.RowCount -1];
                 for (int i = 0; i < dgvSaleDetails.RowCount - 1; i++)
                 {
                     saleLane salelane = new saleLane();
                     salelane.subtotal = float.Parse(dgvSaleDetails.Rows[i].Cells[4].Value.ToString());
                     salelane.quantity = int.Parse(dgvSaleDetails.Rows[i].Cells[3].Value.ToString());
-                    salelane.sale = s;
+                    //salelane.sale = s;
                     product p = new product();
                     p = serviceDA.queryProductBySKUCode(dgvSaleDetails.Rows[i].Cells[0].Value.ToString());
                     salelane.product = p;
                     salelanes[i] = salelane;
-                    //serviceDA.insertSaleLane();
+                    
                 }
                 s.saleLanes = salelanes ; 
-                serviceDA2 = new DBControllerWSClient();
-                Cursor.Current = Cursors.WaitCursor;
-                //int salio = serviceDA2.insertSale(s); 
-                Cursor.Current = Cursors.Arrow;
+                ////Cursor.Current = Cursors.WaitCursor;
+                int salio = serviceDA.insertSale(s); 
+                ////Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("Se ingresó la venta correctamente");
                 this.Close();
             }
@@ -161,5 +159,6 @@ namespace WindowsFormsApp1
             
 
         }
+
     }
 }

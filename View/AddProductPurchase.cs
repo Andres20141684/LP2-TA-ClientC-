@@ -13,7 +13,8 @@ namespace View
     public partial class AddProductPurchase : Form
     {
         private DBControllerWSClient serviceDA;
-        private product productos = new product();
+        private product producto = new product();
+        private warehouseDetail detalleProducto;
         PurchaseForm parent;
         public AddProductPurchase()
         {
@@ -26,13 +27,28 @@ namespace View
             dgvProducts.Rows.Clear();
             serviceDA = new DBControllerWSClient();
             String skucodee = txtProductName.Text;
+            int idAlmacenn = int.Parse(txtWarehouseId.Text);
+            detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+
+            producto = serviceDA.queryProductBySKUCode(skucodee);
+
+            dgvProducts.Rows.Add(new String[] {
+                ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
+                });
+
+            Cursor.Current = Cursors.Arrow;
+            /*
+            Cursor.Current = Cursors.WaitCursor;
+            dgvProducts.Rows.Clear();
+            serviceDA = new DBControllerWSClient();
+            String skucodee = txtProductName.Text;
             productos = (serviceDA.queryProductBySKUCode(skucodee));
 
             dgvProducts.Rows.Add(new String[] {
                 ""+productos.SKUcode, productos.name,""+productos.salePrice,""+productos.stock
                 });
 
-            Cursor.Current = Cursors.Arrow;
+            Cursor.Current = Cursors.Arrow;*/
 
         }
         public void SetParent(PurchaseForm form)
@@ -40,7 +56,7 @@ namespace View
             parent = form;
         }
 
-        private void DgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvProducts_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int selectedRow = e.RowIndex;
             if (selectedRow >= 0)

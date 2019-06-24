@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         private DBControllerWSClient serviceDA;
         private product producto = new product();
-        private warehouseDetail detalleProducto;
+        private warehouseDetail detalleProducto = new warehouseDetail();
         SaleForm parent;
         public AddProductSale()
         {
@@ -29,11 +29,7 @@ namespace WindowsFormsApp1
             serviceDA = new DBControllerWSClient();
             String skucodee = txtProductName.Text;
             int idAlmacenn = int.Parse(txtWarehouseId.Text);
-            //detalleProducto = new BindingList<warehouseDetail>(serviceDA.queryWarehosedetailBySKUandWarehouseID(skucodee, idAlmacenn));
-
-            /*
-            productos = (serviceDA.queryProductBySKUCode(skucodee));
-            */
+            detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
             producto = serviceDA.queryProductBySKUCode(skucodee);
           
             dgvProducts.Rows.Add(new String[] {
@@ -55,24 +51,25 @@ namespace WindowsFormsApp1
             parent = form;
         }
 
-        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DgvProducts_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int selectedRow = e.RowIndex;
             if (selectedRow >= 0)
             {
                 //int productId = Int32.Parse(dgvProducts.Rows[selectedRow]
-                                            //.Cells[0].Value.ToString());
+                //.Cells[0].Value.ToString());
                 //Product product = SalesController.QueryProductById(productId);
 
                 parent.AddProductToSale(dgvProducts.Rows[selectedRow]);
                 parent.RefreshTotal();
+
                 this.Close();
             }
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

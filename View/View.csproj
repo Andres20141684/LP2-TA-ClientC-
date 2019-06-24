@@ -520,6 +520,9 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryUserByUserNameResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.sale1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -566,6 +569,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.user1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.validateUserResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.warehouseDetail.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Resources\mate-logo-smaller.png" />

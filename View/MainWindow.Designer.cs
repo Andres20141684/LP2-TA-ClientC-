@@ -68,8 +68,8 @@
             this.gestiondeinformacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 160, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(233, 546);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 104, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 355);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +81,7 @@
             this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(214, 44);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -89,7 +89,7 @@
             this.salirToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.salirToolStripMenuItem.Text = "Cerrar sesión";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
@@ -102,7 +102,7 @@
             this.transaccionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
             this.transaccionesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(214, 44);
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
             this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             // 
             this.comprasToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
             this.comprasToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
@@ -119,13 +119,13 @@
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(249, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(119, 6);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.VentasToolStripMenuItem_Click);
             // 
@@ -143,14 +143,14 @@
             this.gestiondeinformacionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gestiondeinformacionToolStripMenuItem.Name = "gestiondeinformacionToolStripMenuItem";
             this.gestiondeinformacionToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
-            this.gestiondeinformacionToolStripMenuItem.Size = new System.Drawing.Size(214, 44);
+            this.gestiondeinformacionToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
             this.gestiondeinformacionToolStripMenuItem.Text = "Gestión de Información";
             // 
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(272, 30);
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.productosToolStripMenuItem1.Text = "Productos";
             this.productosToolStripMenuItem1.Click += new System.EventHandler(this.ProductosToolStripMenuItem1_Click);
             // 
@@ -158,7 +158,7 @@
             // 
             this.familiaDeProductosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.familiaDeProductosToolStripMenuItem.Name = "familiaDeProductosToolStripMenuItem";
-            this.familiaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.familiaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.familiaDeProductosToolStripMenuItem.Text = "Familia de Productos";
             this.familiaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.FamiliaDeProductosToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@
             // 
             this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
@@ -174,7 +174,7 @@
             // 
             this.empleadosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
             // 
@@ -182,7 +182,7 @@
             // 
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesToolStripMenuItem_Click);
             // 
@@ -190,7 +190,7 @@
             // 
             this.proovedoresToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.proovedoresToolStripMenuItem.Name = "proovedoresToolStripMenuItem";
-            this.proovedoresToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.proovedoresToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.proovedoresToolStripMenuItem.Text = "Proveedores";
             this.proovedoresToolStripMenuItem.Click += new System.EventHandler(this.ProovedoresToolStripMenuItem_Click);
             // 
@@ -198,7 +198,7 @@
             // 
             this.localesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.localesToolStripMenuItem.Name = "localesToolStripMenuItem";
-            this.localesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.localesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.localesToolStripMenuItem.Text = "Locales";
             this.localesToolStripMenuItem.Click += new System.EventHandler(this.LocalesToolStripMenuItem_Click);
             // 
@@ -206,21 +206,20 @@
             // 
             this.reportesToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(272, 30);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.pictureUser);
             this.panel1.Controls.Add(this.lblNameUser);
+            this.panel1.Controls.Add(this.pictureUser);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.username);
-            this.panel1.Location = new System.Drawing.Point(221, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(147, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 546);
+            this.panel1.Size = new System.Drawing.Size(636, 355);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -228,9 +227,10 @@
             // pictureUser
             // 
             this.pictureUser.Image = global::View.Properties.Resources.icono;
-            this.pictureUser.Location = new System.Drawing.Point(744, 0);
+            this.pictureUser.Location = new System.Drawing.Point(496, 0);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(52, 34);
+            this.pictureUser.Size = new System.Drawing.Size(35, 22);
             this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureUser.TabIndex = 10;
             this.pictureUser.TabStop = false;
@@ -241,20 +241,20 @@
             this.lblNameUser.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblNameUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNameUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNameUser.Location = new System.Drawing.Point(794, 0);
+            this.lblNameUser.Location = new System.Drawing.Point(529, 0);
+            this.lblNameUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameUser.Name = "lblNameUser";
-            this.lblNameUser.Padding = new System.Windows.Forms.Padding(6);
-            this.lblNameUser.Size = new System.Drawing.Size(160, 34);
+            this.lblNameUser.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblNameUser.Size = new System.Drawing.Size(108, 23);
             this.lblNameUser.TabIndex = 9;
             this.lblNameUser.Text = "Nombre de Usuario";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::View.Properties.Resources.icono;
-            this.pictureBox2.Location = new System.Drawing.Point(1114, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(743, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 52);
+            this.pictureBox2.Size = new System.Drawing.Size(52, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -265,11 +265,10 @@
             this.username.BackColor = System.Drawing.Color.PaleTurquoise;
             this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.username.Location = new System.Drawing.Point(1191, 0);
-            this.username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.username.Location = new System.Drawing.Point(794, 0);
             this.username.Name = "username";
-            this.username.Padding = new System.Windows.Forms.Padding(9);
-            this.username.Size = new System.Drawing.Size(166, 40);
+            this.username.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.username.Size = new System.Drawing.Size(112, 27);
             this.username.TabIndex = 0;
             this.username.Text = "Nombre de Usuario";
             this.username.Click += new System.EventHandler(this.username_Click);
@@ -277,27 +276,27 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::View.Properties.Resources.mate_logo_smaller;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::View.Properties.Resources.whitebackground;
-            this.ClientSize = new System.Drawing.Size(1176, 546);
+            this.ClientSize = new System.Drawing.Size(784, 355);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";

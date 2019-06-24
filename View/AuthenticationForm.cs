@@ -37,6 +37,7 @@ namespace View
                     if (u.userType == 1) menu.darPermiso(MainWindow.Permiso.Gerente);
                     else if (u.userType == 2) menu.darPermiso(MainWindow.Permiso.Supervisor);
                     else if (u.userType == 3) menu.darPermiso(MainWindow.Permiso.Vendedor);
+                    menu.currentUser = u;
                 }
                 else
                 {

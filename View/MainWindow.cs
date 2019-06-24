@@ -13,6 +13,7 @@ namespace View
 {
     public partial class MainWindow : Form
     {
+        public MateWSLocal.user currentUser;
         public MainWindow()
         {
             InitializeComponent();

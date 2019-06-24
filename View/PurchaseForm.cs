@@ -100,7 +100,7 @@ namespace View
                 int salio = serviceDA.insertPurchase(p); 
                 if (salio == 1)
                 {
-                    MessageBox.Show("Se guardó la compra correctamente");
+                    MessageBox.Show("Se ingresó la compra correctamente");
                 }
                 else
                 {

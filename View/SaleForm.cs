@@ -104,9 +104,16 @@ namespace WindowsFormsApp1
                 }
                 s.saleLanes = salelanes ; 
                 ////Cursor.Current = Cursors.WaitCursor;
-                int salio = serviceDA.insertSale(s); 
+                int salio = serviceDA.insertSale(s);
+                if (salio == 1)
+                {
+                    MessageBox.Show("Se ingresó la venta correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("¡Hubo un problema!");
+                }
                 ////Cursor.Current = Cursors.Arrow;
-                MessageBox.Show("Se ingresó la venta correctamente");
                 this.Close();
             }
         }

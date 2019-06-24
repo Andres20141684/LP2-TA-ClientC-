@@ -144,6 +144,12 @@
     <Compile Include="FamilyProductForm.designer.cs">
       <DependentUpon>FamilyProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoryPurchasesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryPurchasesForm.Designer.cs">
+      <DependentUpon>HistoryPurchasesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyProductForm.resx">
       <DependentUpon>FamilyProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryPurchasesForm.resx">
+      <DependentUpon>HistoryPurchasesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

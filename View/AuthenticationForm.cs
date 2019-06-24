@@ -115,5 +115,13 @@ namespace View
         {
             writePassword.SendToBack();
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender,e);
+            }
+        }
     }
 }

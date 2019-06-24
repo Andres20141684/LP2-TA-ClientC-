@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class SaleForm : Form
     {
+        public View.MateWSLocal.user currentUser;
         int type;
         private DBControllerWSClient serviceDA;
         public int Type { get => type; set => type = value; }
@@ -23,7 +24,7 @@ namespace WindowsFormsApp1
         
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            userLabelContent.Text = currentUser.user1; 
         }
         View.MainWindow refParent;
         public void SetParent(View.MainWindow form)
@@ -84,7 +85,7 @@ namespace WindowsFormsApp1
                 s.customer = c;
                 //getEmployeeData
                 employee empp = new employee();
-                empp = serviceDA.queryByIdEmployee(4);//test employee_id =4 PORQUE NO TENEMOS TODAVIA EL LOGIN XDXDDD :'v
+                empp = serviceDA.queryByIdEmployee(currentUser.id);
                 s.employee = empp;
 
                 //para los salelanes

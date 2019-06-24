@@ -17,6 +17,7 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
+            
             //Height = Screen.PrimaryScreen.Bounds.Height;
             //Width = Screen.PrimaryScreen.Bounds.Width;
         }
@@ -59,11 +60,12 @@ namespace View
 
         private void MainWindow_Shown(object sender, EventArgs e)
         {
+
         }
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-          
+            lbTesto.Text = currentUser.user1;
         }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,6 +125,7 @@ namespace View
         private void VentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaleForm saleForm = new SaleForm();
+            saleForm.currentUser = currentUser;
             saleForm.Show();
         }
 

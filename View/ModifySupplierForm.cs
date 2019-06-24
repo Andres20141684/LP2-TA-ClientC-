@@ -58,5 +58,10 @@ namespace WindowsFormsApp1
         {
             setSupplierInformation();
         }
+
+        private void TxtTerminoVenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

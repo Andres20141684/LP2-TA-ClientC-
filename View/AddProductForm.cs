@@ -114,12 +114,12 @@ namespace Producto
         }
         private bool filledValues()
         {
-            if (txtSKUCode.Text == "")
+            if (txtSKUCode.Text == "" || txtSKUCode.Text.Length!=8)
             {
-                MessageBox.Show("Ingrese el código SKU del producto");
+                MessageBox.Show("Ingrese un código válido. Los códigos SKU tienen 8 caracteres");
                 return false;
             }
-            else if (txtName.Text =="")
+            else if (txtName.Text =="" || txtName.Text.Length<2)
             {
                 MessageBox.Show("Ingrese el nombre del producto");
                 return false;
@@ -144,7 +144,7 @@ namespace Producto
                 MessageBox.Show("Ingrese el precio de compra");
                 return false;
             }
-            else if (txtIGV.Text == "")
+            else if (txtIGV.Text == "" )
             {
                 MessageBox.Show("Ingrese el IGV");
                 return false;

@@ -56,6 +56,7 @@
             // 
             this.txtProductName.BackColor = System.Drawing.Color.PaleTurquoise;
             this.txtProductName.Location = new System.Drawing.Point(98, 26);
+            this.txtProductName.MaxLength = 8;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(375, 20);
             this.txtProductName.TabIndex = 9;

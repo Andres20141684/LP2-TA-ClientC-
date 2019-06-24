@@ -46,27 +46,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 58);
+            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI / RUC";
             // 
             // textDniRuc
             // 
             this.textDniRuc.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.textDniRuc.Location = new System.Drawing.Point(217, 58);
+            this.textDniRuc.Location = new System.Drawing.Point(145, 38);
+            this.textDniRuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textDniRuc.MaxLength = 11;
             this.textDniRuc.Name = "textDniRuc";
-            this.textDniRuc.Size = new System.Drawing.Size(349, 26);
+            this.textDniRuc.Size = new System.Drawing.Size(234, 20);
             this.textDniRuc.TabIndex = 1;
             // 
             // btnAddClient
             // 
             this.btnAddClient.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClient.Location = new System.Drawing.Point(767, 178);
+            this.btnAddClient.Location = new System.Drawing.Point(511, 116);
+            this.btnAddClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(115, 31);
+            this.btnAddClient.Size = new System.Drawing.Size(77, 20);
             this.btnAddClient.TabIndex = 2;
             this.btnAddClient.Text = "Agregar Cliente";
             this.btnAddClient.UseVisualStyleBackColor = false;
@@ -76,9 +80,10 @@
             // 
             this.btnEditClient.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnEditClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditClient.Location = new System.Drawing.Point(882, 178);
+            this.btnEditClient.Location = new System.Drawing.Point(588, 116);
+            this.btnEditClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditClient.Name = "btnEditClient";
-            this.btnEditClient.Size = new System.Drawing.Size(115, 31);
+            this.btnEditClient.Size = new System.Drawing.Size(77, 20);
             this.btnEditClient.TabIndex = 3;
             this.btnEditClient.Text = "Modificar Cliente";
             this.btnEditClient.UseVisualStyleBackColor = false;
@@ -94,10 +99,11 @@
             this.dgvColEmail,
             this.dgvColTel,
             this.dvgColTypeClient});
-            this.dgvClients.Location = new System.Drawing.Point(54, 212);
+            this.dgvClients.Location = new System.Drawing.Point(36, 138);
+            this.dgvClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowTemplate.Height = 24;
-            this.dgvClients.Size = new System.Drawing.Size(944, 397);
+            this.dgvClients.Size = new System.Drawing.Size(629, 258);
             this.dgvClients.TabIndex = 5;
             // 
             // dgvColCod
@@ -131,19 +137,20 @@
             // 
             this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(586, 55);
+            this.btnSearch.Location = new System.Drawing.Point(391, 36);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(48, 40);
+            this.btnSearch.Size = new System.Drawing.Size(32, 26);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClientesForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1046, 639);
+            this.ClientSize = new System.Drawing.Size(697, 415);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvClients);
             this.Controls.Add(this.btnEditClient);
@@ -151,6 +158,7 @@
             this.Controls.Add(this.textDniRuc);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "ClientesForms";
             this.Text = "Clientes";

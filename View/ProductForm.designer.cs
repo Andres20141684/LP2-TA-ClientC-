@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.clmSKUCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,20 +59,21 @@
             this.clmStock,
             this.clmAvailability});
             this.dgvProducts.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvProducts.Location = new System.Drawing.Point(54, 212);
+            this.dgvProducts.Location = new System.Drawing.Point(36, 138);
+            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducts.RowTemplate.Height = 28;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducts.Size = new System.Drawing.Size(944, 389);
+            this.dgvProducts.Size = new System.Drawing.Size(629, 253);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellDoubleClick);
             // 
@@ -119,9 +120,11 @@
             // txtProduct
             // 
             this.txtProduct.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtProduct.Location = new System.Drawing.Point(217, 58);
+            this.txtProduct.Location = new System.Drawing.Point(145, 38);
+            this.txtProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProduct.MaxLength = 8;
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(349, 26);
+            this.txtProduct.Size = new System.Drawing.Size(234, 20);
             this.txtProduct.TabIndex = 2;
             // 
             // btnUpdateProduct
@@ -129,9 +132,10 @@
             this.btnUpdateProduct.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnUpdateProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.Location = new System.Drawing.Point(882, 178);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(588, 116);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
-            this.btnUpdateProduct.Size = new System.Drawing.Size(115, 31);
+            this.btnUpdateProduct.Size = new System.Drawing.Size(77, 20);
             this.btnUpdateProduct.TabIndex = 4;
             this.btnUpdateProduct.Text = "Modificar ";
             this.btnUpdateProduct.UseVisualStyleBackColor = false;
@@ -141,10 +145,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Código SKU";
             // 
@@ -154,9 +157,10 @@
             this.btnAddProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddProduct.Location = new System.Drawing.Point(750, 178);
+            this.btnAddProduct.Location = new System.Drawing.Point(500, 116);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(130, 31);
+            this.btnAddProduct.Size = new System.Drawing.Size(87, 20);
             this.btnAddProduct.TabIndex = 3;
             this.btnAddProduct.Text = "Agregar";
             this.btnAddProduct.UseVisualStyleBackColor = false;
@@ -169,19 +173,20 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnSearch.Image = global::View.Properties.Resources.icono_buscar;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(586, 55);
+            this.btnSearch.Location = new System.Drawing.Point(391, 36);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(48, 40);
+            this.btnSearch.Size = new System.Drawing.Size(32, 26);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // FrmProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1046, 639);
+            this.ClientSize = new System.Drawing.Size(697, 415);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.btnAddProduct);
@@ -189,6 +194,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvProducts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmProduct";
             this.Text = "Productos";

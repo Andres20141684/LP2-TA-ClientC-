@@ -45,8 +45,8 @@
             this.localesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureUser = new System.Windows.Forms.PictureBox();
             this.lblNameUser = new System.Windows.Forms.Label();
+            this.pictureUser = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -224,17 +224,6 @@
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureUser
-            // 
-            this.pictureUser.Image = global::View.Properties.Resources.icono;
-            this.pictureUser.Location = new System.Drawing.Point(496, 0);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(35, 22);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 10;
-            this.pictureUser.TabStop = false;
-            // 
             // lblNameUser
             // 
             this.lblNameUser.AutoSize = true;
@@ -244,10 +233,22 @@
             this.lblNameUser.Location = new System.Drawing.Point(529, 0);
             this.lblNameUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameUser.Name = "lblNameUser";
-            this.lblNameUser.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblNameUser.Padding = new System.Windows.Forms.Padding(4);
             this.lblNameUser.Size = new System.Drawing.Size(108, 23);
             this.lblNameUser.TabIndex = 9;
             this.lblNameUser.Text = "Nombre de Usuario";
+            this.lblNameUser.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureUser
+            // 
+            this.pictureUser.Image = global::View.Properties.Resources.icono;
+            this.pictureUser.Location = new System.Drawing.Point(496, 0);
+            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(35, 22);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 10;
+            this.pictureUser.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -267,7 +268,7 @@
             this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.username.Location = new System.Drawing.Point(794, 0);
             this.username.Name = "username";
-            this.username.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.username.Padding = new System.Windows.Forms.Padding(6);
             this.username.Size = new System.Drawing.Size(112, 27);
             this.username.TabIndex = 0;
             this.username.Text = "Nombre de Usuario";
@@ -277,7 +278,7 @@
             // 
             this.pictureBox1.Image = global::View.Properties.Resources.mate_logo_smaller;
             this.pictureBox1.Location = new System.Drawing.Point(30, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

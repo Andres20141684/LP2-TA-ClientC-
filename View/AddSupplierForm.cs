@@ -48,34 +48,34 @@ namespace WindowsFormsApp1
 
         private bool filledValues()
         {
-            if (txtRuc.Text == "")
+            if (txtRuc.Text == "" || (txtRuc.Text.Length!=8 && txtRuc.Text.Length!=11))
             {
-                MessageBox.Show("Complete la RUC del proveedor");
+                MessageBox.Show("Ingrese un RUC válido");
                 return false;
             }
-            else if (txtNombre.Text == "")
+            else if (txtNombre.Text == "" || txtNombre.Text.Length<2)
             {
-                MessageBox.Show("Complete el nombre del proveedor");
+                MessageBox.Show("Ingrese un nombre válido");
                 return false;
             }
-            else if (txtDireccion.Text == "")
+            else if (txtDireccion.Text == "" || txtDireccion.Text.Length<10)
             {
-                MessageBox.Show("Complete la dirección del proveedor");
+                MessageBox.Show("Ingrese una dirección válida");
                 return false;
             }
-            else if (txtCuenta.Text == "")
+            else if (txtCuenta.Text == "" || txtCuenta.Text.Length!=16)
             {
-                MessageBox.Show("Complete la cuenta bancaria del proveedor");
+                MessageBox.Show("Ingrese un número de cuenta válido");
                 return false;
             }
-            else if (txtTelefono.Text == "")
+            else if (txtTelefono.Text == "" || txtTelefono.Text.Length<6)
             {
-                MessageBox.Show("Complete el telefono del proveedor");
+                MessageBox.Show("Ingrese un número válido");
                 return false;
             }
-            else if (txtEmail.Text == "")
+            else if (txtEmail.Text == "" || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
-                MessageBox.Show("Complete el email del proveedor");
+                MessageBox.Show("Ingrese un email válido");
                 return false;
             }
             else if (txtPersonaContacto.Text == "")

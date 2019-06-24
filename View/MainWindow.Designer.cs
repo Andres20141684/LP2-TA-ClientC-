@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,17 +42,12 @@
             this.proovedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblNameUser = new System.Windows.Forms.Label();
-            this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.username = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTesto = new System.Windows.Forms.Label();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,35 +57,15 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
             this.transaccionesToolStripMenuItem,
-            this.gestiondeinformacionToolStripMenuItem});
+            this.gestiondeinformacionToolStripMenuItem,
+            this.cerrarSesiónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 104, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(156, 355);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
-            this.archivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.salirToolStripMenuItem.Text = "Cerrar sesión";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // transaccionesToolStripMenuItem
             // 
@@ -211,69 +184,21 @@
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.lblNameUser);
-            this.panel1.Controls.Add(this.pictureUser);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.username);
-            this.panel1.Location = new System.Drawing.Point(147, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 355);
-            this.panel1.TabIndex = 4;
-            this.panel1.Visible = false;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // lblNameUser
             // 
             this.lblNameUser.AutoSize = true;
-            this.lblNameUser.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.lblNameUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNameUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNameUser.Location = new System.Drawing.Point(529, 0);
+            this.lblNameUser.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.lblNameUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNameUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameUser.Location = new System.Drawing.Point(33, 262);
             this.lblNameUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameUser.Name = "lblNameUser";
             this.lblNameUser.Padding = new System.Windows.Forms.Padding(4);
-            this.lblNameUser.Size = new System.Drawing.Size(108, 23);
+            this.lblNameUser.Size = new System.Drawing.Size(123, 23);
             this.lblNameUser.TabIndex = 9;
             this.lblNameUser.Text = "Nombre de Usuario";
             this.lblNameUser.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // pictureUser
-            // 
-            this.pictureUser.Image = global::View.Properties.Resources.icono;
-            this.pictureUser.Location = new System.Drawing.Point(496, 0);
-            this.pictureUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(35, 22);
-            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureUser.TabIndex = 10;
-            this.pictureUser.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::View.Properties.Resources.icono;
-            this.pictureBox2.Location = new System.Drawing.Point(743, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // username
-            // 
-            this.username.AutoSize = true;
-            this.username.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.username.Location = new System.Drawing.Point(794, 0);
-            this.username.Name = "username";
-            this.username.Padding = new System.Windows.Forms.Padding(6);
-            this.username.Size = new System.Drawing.Size(112, 27);
-            this.username.TabIndex = 0;
-            this.username.Text = "Nombre de Usuario";
-            this.username.Click += new System.EventHandler(this.username_Click);
+            this.lblNameUser.Click += new System.EventHandler(this.lblNameUser_Click);
             // 
             // pictureBox1
             // 
@@ -289,11 +214,36 @@
             // lbTesto
             // 
             this.lbTesto.AutoSize = true;
+            this.lbTesto.BackColor = System.Drawing.Color.White;
             this.lbTesto.Location = new System.Drawing.Point(53, 319);
             this.lbTesto.Name = "lbTesto";
-            this.lbTesto.Size = new System.Drawing.Size(35, 13);
+            this.lbTesto.Size = new System.Drawing.Size(0, 13);
             this.lbTesto.TabIndex = 11;
-            this.lbTesto.Text = "label1";
+            this.lbTesto.Click += new System.EventHandler(this.lbTesto_Click);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 239);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(4);
+            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "¡Bienvenido!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // MainWindow
             // 
@@ -302,10 +252,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::View.Properties.Resources.whitebackground;
             this.ClientSize = new System.Drawing.Size(784, 355);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNameUser);
             this.Controls.Add(this.lbTesto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.IsMdiContainer = true;
@@ -316,10 +267,6 @@
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,8 +276,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiondeinformacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
@@ -344,12 +289,10 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem familiaDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label username;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureUser;
         private System.Windows.Forms.Label lblNameUser;
         private System.Windows.Forms.Label lbTesto;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

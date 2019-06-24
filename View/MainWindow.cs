@@ -65,7 +65,7 @@ namespace View
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            lbTesto.Text = currentUser.user1;
+            lblNameUser.Text = currentUser.user1;
         }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -177,6 +177,22 @@ namespace View
         private void username_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbTesto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNameUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     } 
 }

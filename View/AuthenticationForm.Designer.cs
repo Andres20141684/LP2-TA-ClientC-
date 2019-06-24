@@ -36,6 +36,8 @@
             this.pbIconPassword = new System.Windows.Forms.PictureBox();
             this.pbIconMate = new System.Windows.Forms.PictureBox();
             this.pbIconUser = new System.Windows.Forms.PictureBox();
+            this.writePassword = new System.Windows.Forms.Label();
+            this.writeUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconMate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconUser)).BeginInit();
@@ -45,23 +47,23 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(83, 120);
-            this.txtUsername.MaxLength = 100;
+            this.txtUsername.MaxLength = 50;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(255, 20);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.Text = "GER001";
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged_1);
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(83, 162);
-            this.txtPassword.MaxLength = 100;
+            this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(255, 20);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "gerente";
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnOK
             // 
@@ -123,12 +125,38 @@
             this.pbIconUser.TabIndex = 4;
             this.pbIconUser.TabStop = false;
             // 
+            // writePassword
+            // 
+            this.writePassword.AutoSize = true;
+            this.writePassword.BackColor = System.Drawing.Color.White;
+            this.writePassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.writePassword.Location = new System.Drawing.Point(89, 165);
+            this.writePassword.Name = "writePassword";
+            this.writePassword.Size = new System.Drawing.Size(99, 13);
+            this.writePassword.TabIndex = 8;
+            this.writePassword.Text = "Escriba Contraseña";
+            this.writePassword.Click += new System.EventHandler(this.writePassword_Click);
+            // 
+            // writeUser
+            // 
+            this.writeUser.AutoSize = true;
+            this.writeUser.BackColor = System.Drawing.Color.White;
+            this.writeUser.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.writeUser.Location = new System.Drawing.Point(89, 123);
+            this.writeUser.Name = "writeUser";
+            this.writeUser.Size = new System.Drawing.Size(81, 13);
+            this.writeUser.TabIndex = 9;
+            this.writeUser.Text = "Escriba Usuario";
+            this.writeUser.Click += new System.EventHandler(this.writeUser_Click);
+            // 
             // AuthenticationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(407, 265);
+            this.Controls.Add(this.writeUser);
+            this.Controls.Add(this.writePassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pbIconPassword);
@@ -158,5 +186,7 @@
         private System.Windows.Forms.PictureBox pbIconMate;
         private System.Windows.Forms.PictureBox pbIconPassword;
         private System.Windows.Forms.PictureBox pbIconUser;
+        private System.Windows.Forms.Label writePassword;
+        private System.Windows.Forms.Label writeUser;
     }
 }

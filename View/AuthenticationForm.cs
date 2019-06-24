@@ -41,9 +41,9 @@ namespace View
                 }
                 else
                 {
-                    txtUsername.Text = "";
-                    txtPassword.Text = "";
-                    MessageBox.Show("Usuario incorrecto");
+                    writePassword.Visible = true;
+                    writeUser.Visible = true;
+                    
                     return;
                 }
                 this.Hide();
@@ -78,17 +78,42 @@ namespace View
         }
         private bool filledValues()
         {
-            if (txtUsername.Text == "")
+            if (txtUsername.Text == "" && txtPassword.Text != "")
             {
-                MessageBox.Show("Ingrese un nombre de usuario","Error");
+                MessageBox.Show("Ingrese un nombre de usuario", "Error");
                 return false;
             }
-            else if (txtPassword.Text=="")
+            else if (txtPassword.Text == "" && txtUsername.Text != "")
             {
-                MessageBox.Show("Ingrese la contraseña","Error");
+                MessageBox.Show("Ingrese la contraseña", "Error");
                 return false;
             }
+            else if (txtPassword.Text == "" && txtUsername.Text == "")
+                MessageBox.Show("Ingrese Usuario y Contraseña");
             return true;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            writePassword.SendToBack();
+            writePassword.Visible = false;
+        }
+
+        private void txtUsername_TextChanged_1(object sender, EventArgs e)
+        {
+            writeUser.Visible = false;
+            writeUser.SendToBack();
+
+        }
+
+        private void writeUser_Click(object sender, EventArgs e)
+        {
+            writeUser.SendToBack();
+        }
+
+        private void writePassword_Click(object sender, EventArgs e)
+        {
+            writePassword.SendToBack();
         }
     }
 }

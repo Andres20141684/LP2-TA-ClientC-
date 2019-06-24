@@ -38,6 +38,7 @@ namespace SalesClient
         private void BtnSaveClient_Click(object sender, EventArgs e)
         {
             serviceDA = new DBControllerWSClient();
+            //currentCustomer.idCustomer = int.Parse(txtClienteID.Text);
             currentCustomer.id = txtClienteID.Text;
             currentCustomer.descriptionCustomer = txtDesc.Text;
             currentCustomer.address = txtAddress.Text;

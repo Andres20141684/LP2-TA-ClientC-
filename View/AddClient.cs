@@ -61,46 +61,107 @@ namespace SalesClient
         }
         private bool filledValues()
         {
-            if(txtClienteID.Text == "" || (txtClienteID.Text.Length!=8 && txtClienteID.Text.Length!=11))
-            {
-                MessageBox.Show("Ingrese un DNI o RUC válido");
-                return false;
-            }
-            else if (txtDesc.Text == "")
-            {
-                MessageBox.Show("Complete la razón social o nombre del cliente");
-                return false;
-            }
-            else if (txtAddress.Text == "")
-            {
-                MessageBox.Show("Complete la dirección del cliente");
-                return false;
-            }
-            else if (txtOccupation.Text == "")
-            {
-                MessageBox.Show("Complete la ocupación del cliente");
-                return false;
-            }
-            else if (txtEmail.Text == "" || !txtEmail.Text.Contains("@"))
-            {
-                MessageBox.Show("Ingrese un correo válido");
-                return false;
-            }
-            else if (txtPhone.Text == "" || txtPhone.Text.Length<3)
-            {
-                MessageBox.Show("Ingrese un teléfono válido");
-                return false;
-            }
-            else if (cbTipoCliente.Text == "")
+            
+            if (cbTipoCliente.Text == "")
             {
                 MessageBox.Show("Seleccione el tipo de cliente");
                 return false;
             }
+
+            else if (cbTipoCliente.Text == "Natural" && txtClienteID.Text.Length != 8 )
+            {
+                
+                MessageBox.Show("Ingrese un DNI valido de 8 dígitos númericos");
+                return false;
+            }
+            else if(cbTipoCliente.Text == "Natural" && txtClienteID.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(txtClienteID.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo DNI, ingrese 8 dígitos númericos ");
+                    return false;
+                }
+                
+            }
+
+            else if (cbTipoCliente.Text == "Jurídica" && txtClienteID.Text.Length != 11)
+            {
+                MessageBox.Show("Ingrese un RUC valido de 11 dígitos númericos");
+                return false;
+            }
+            else if (cbTipoCliente.Text == "Jurídica" && txtClienteID.Text.Length == 11)
+            {
+                int result = 0;
+                if (!int.TryParse(txtClienteID.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo del RUC, ingrese 11 dígitos númericos ");
+                    return false;
+                }
+                
+            }
+             if (txtDesc.Text == "" )
+            {
+                MessageBox.Show("Ingrese la razón social o nombre del cliente válida (Mayor a 0 y menor a 50 caracteres)");
+                return false;
+            }
+             if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Ingrese una dirección del cliente valida (Mayor a 0 y menor a 50 caracteres)");
+                return false;
+            }
+             if (txtOccupation.Text == "" )
+            {
+                MessageBox.Show("Ingrese una ocupación del cliente valida (Mayor a 0 y menor a 50 caracteres)");
+                return false;
+            }
+             if (txtEmail.Text == "" || !txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Ingrese un correo válido ");
+                return false;
+            }
+
+             if (txtPhone.Text == "" || txtPhone.Text.Length < 3 )
+            {
+                MessageBox.Show("Ingrese un teléfono válido (Mayor a 3 y menor a 15 digitos)");
+                return false;
+            }
+             if (txtPhone.Text.Length >= 3)
+            {
+                int result = 0;
+                if (!int.TryParse(txtPhone.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo del Telefono, ingrese de 3 a 15 dígitos ");
+                    return false;
+                }
+                
+            }
+            
             return true;
             
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClienteID_TextChanged(object sender, EventArgs e)
         {
 
         }

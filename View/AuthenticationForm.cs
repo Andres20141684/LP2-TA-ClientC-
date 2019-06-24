@@ -29,7 +29,7 @@ namespace View
             {
                 //user u = new user(serviceDA.validateUser());
                 Cursor.Current = Cursors.WaitCursor;
-                serviceDA = new DBControllerWSClient();
+                serviceDA = new DBControllerWSClient();//Error 00:14
                 user u = serviceDA.validateUser(txtUsername.Text,txtPassword.Text);
                 Cursor.Current = Cursors.Arrow;
                 if (u.password != null)

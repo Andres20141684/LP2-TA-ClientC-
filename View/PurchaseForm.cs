@@ -14,14 +14,10 @@ namespace View
     {
         public View.MateWSLocal.user currentUser;
         private DBControllerWSClient serviceDA;
+        private BindingList<purchase> purchases;
         public PurchaseForm()
         {
             InitializeComponent();
-        }
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void SalirToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -154,6 +150,10 @@ namespace View
             employee emp = new employee();
             emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
             userLabelContent.Text = emp.name + " " + emp.lastName + " " + emp.secondLastName;
+            purchases = new BindingList<purchase>(serviceDA.queryAllPurchase());
+            String ultimoSerialCode = purchases[purchases.Count() - 1].serialCode;
+            String nuevoSerialCode = "C" + (int.Parse(ultimoSerialCode.Substring(1)) + 1).ToString("000000");
+            txtSerialCode.Text = nuevoSerialCode;
         }
     }
 }

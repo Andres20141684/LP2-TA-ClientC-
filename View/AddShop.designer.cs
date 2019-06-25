@@ -66,7 +66,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(117, 58);
+            this.txtNombre.Location = new System.Drawing.Point(128, 53);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Name = "txtNombre";
@@ -77,11 +77,11 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(117, 128);
+            this.txtAddress.Location = new System.Drawing.Point(128, 128);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(278, 20);
+            this.txtAddress.Size = new System.Drawing.Size(369, 20);
             this.txtAddress.TabIndex = 3;
             this.txtAddress.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

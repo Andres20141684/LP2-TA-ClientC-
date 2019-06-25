@@ -19,6 +19,7 @@ namespace ShopsForm
         public Agregar_Local()
         {
             InitializeComponent();
+            cbActive.Checked = true;
         }
 
         private void btnSaveLocal_Click(object sender, EventArgs e)
@@ -44,6 +45,8 @@ namespace ShopsForm
                 //p.purchasePrice = float.Parse(txtPurchasePrice.Text);
                 //p.igv = float.Parse(txtIGV.Text);
                 //p.stock = int.Parse(txtStock.Text);
+                l.creationDate = DateTime.Today;
+                l.modificationDate = DateTime.Today;
 
                 serviceDA = new DBControllerWSClient();
                 Cursor.Current = Cursors.WaitCursor;

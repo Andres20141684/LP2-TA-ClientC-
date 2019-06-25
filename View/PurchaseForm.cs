@@ -143,7 +143,7 @@ namespace View
         private void historialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistoryPurchasesForm history = new HistoryPurchasesForm();
-            history.Show();
+            history.ShowDialog();
         }
     }
 }

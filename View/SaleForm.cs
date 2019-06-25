@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View;
 using View.MateWSLocal;
 namespace WindowsFormsApp1
 {
@@ -168,5 +169,10 @@ namespace WindowsFormsApp1
 
         }
 
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistorySaleForm history = new HistorySaleForm();
+            history.ShowDialog();
+        }
     }
 }

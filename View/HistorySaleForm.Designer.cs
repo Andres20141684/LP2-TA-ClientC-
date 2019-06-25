@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class HistoryPurchasesForm
+    partial class HistorySaleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.txtRUC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPurchases = new System.Windows.Forms.DataGridView();
-            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,26 +39,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(400, 22);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
+            this.btnSearchEmployee.TabIndex = 23;
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            // 
             // txtRUC
             // 
             this.txtRUC.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtRUC.Location = new System.Drawing.Point(146, 28);
+            this.txtRUC.Location = new System.Drawing.Point(154, 24);
             this.txtRUC.MaxLength = 11;
             this.txtRUC.Name = "txtRUC";
             this.txtRUC.Size = new System.Drawing.Size(234, 20);
-            this.txtRUC.TabIndex = 18;
-            this.txtRUC.TextChanged += new System.EventHandler(this.txtRUC_TextChanged);
+            this.txtRUC.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 28);
+            this.label1.Location = new System.Drawing.Point(44, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 21;
             this.label1.Text = "Código serial:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvPurchases
             // 
@@ -69,22 +77,10 @@
             this.dgvColumName,
             this.dgvColumFistLastName,
             this.dgvColumSecondLastName});
-            this.dgvPurchases.Location = new System.Drawing.Point(12, 81);
+            this.dgvPurchases.Location = new System.Drawing.Point(20, 77);
             this.dgvPurchases.Name = "dgvPurchases";
             this.dgvPurchases.Size = new System.Drawing.Size(629, 258);
-            this.dgvPurchases.TabIndex = 16;
-            this.dgvPurchases.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPurchases_CellContentClick);
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(392, 26);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
-            this.btnSearchEmployee.TabIndex = 19;
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
-            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
+            this.dgvPurchases.TabIndex = 20;
             // 
             // dgvColumId
             // 
@@ -97,7 +93,7 @@
             // dgvColumName
             // 
             this.dgvColumName.Frozen = true;
-            this.dgvColumName.HeaderText = "Total de compra";
+            this.dgvColumName.HeaderText = "Total de venta";
             this.dgvColumName.Name = "dgvColumName";
             this.dgvColumName.ReadOnly = true;
             this.dgvColumName.Width = 170;
@@ -105,7 +101,7 @@
             // dgvColumFistLastName
             // 
             this.dgvColumFistLastName.Frozen = true;
-            this.dgvColumFistLastName.HeaderText = "Proveedor";
+            this.dgvColumFistLastName.HeaderText = "Cliente";
             this.dgvColumFistLastName.Name = "dgvColumFistLastName";
             this.dgvColumFistLastName.ReadOnly = true;
             this.dgvColumFistLastName.Width = 180;
@@ -118,7 +114,7 @@
             this.dgvColumSecondLastName.ReadOnly = true;
             this.dgvColumSecondLastName.Width = 150;
             // 
-            // HistoryPurchasesForm
+            // HistorySaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,9 +124,8 @@
             this.Controls.Add(this.txtRUC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPurchases);
-            this.Name = "HistoryPurchasesForm";
-            this.Text = "Historial de compras";
-            this.Load += new System.EventHandler(this.HistoryPurchasesForm_Load);
+            this.Name = "HistorySaleForm";
+            this.Text = "Historial de ventas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

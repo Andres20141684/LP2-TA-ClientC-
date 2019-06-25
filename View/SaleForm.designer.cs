@@ -57,6 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -95,7 +96,8 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modificarToolStripMenuItem,
-            this.devolucionToolStripMenuItem});
+            this.devolucionToolStripMenuItem,
+            this.historialToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.archivoToolStripMenuItem.Text = "Ventas";
@@ -103,14 +105,14 @@
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // devolucionToolStripMenuItem
             // 
             this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
-            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionToolStripMenuItem.Text = "Devolucion";
             this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);
             // 
@@ -309,9 +311,9 @@
             this.gbGeneralInf.Controls.Add(this.txtDescripcion);
             this.gbGeneralInf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGeneralInf.Location = new System.Drawing.Point(15, 38);
-            this.gbGeneralInf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInf.Margin = new System.Windows.Forms.Padding(2);
             this.gbGeneralInf.Name = "gbGeneralInf";
-            this.gbGeneralInf.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInf.Padding = new System.Windows.Forms.Padding(2);
             this.gbGeneralInf.Size = new System.Drawing.Size(532, 121);
             this.gbGeneralInf.TabIndex = 31;
             this.gbGeneralInf.TabStop = false;
@@ -353,9 +355,9 @@
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 173);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(532, 252);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
@@ -370,6 +372,13 @@
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Total:";
+            // 
+            // historialToolStripMenuItem
+            // 
+            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historialToolStripMenuItem.Text = "Historial";
+            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // SaleForm
             // 
@@ -430,5 +439,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
     }
 }

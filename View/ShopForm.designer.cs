@@ -35,8 +35,7 @@
             this.dgvColCodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.cboLocal = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +46,9 @@
             this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Código del Local:";
+            this.label1.Text = "Local";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // btnAddLocal
@@ -112,26 +111,15 @@
             this.dgvColAdress.Name = "dgvColAdress";
             this.dgvColAdress.Width = 220;
             // 
-            // textBox1
+            // cboLocal
             // 
-            this.textBox1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.textBox1.Location = new System.Drawing.Point(145, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(391, 36);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 26);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.cboLocal.FormattingEnabled = true;
+            this.cboLocal.Location = new System.Drawing.Point(96, 38);
+            this.cboLocal.Name = "cboLocal";
+            this.cboLocal.Size = new System.Drawing.Size(234, 21);
+            this.cboLocal.TabIndex = 30;
+            this.cboLocal.Text = "--Seleccione--";
+            this.cboLocal.SelectedIndexChanged += new System.EventHandler(this.cboLocal_SelectedIndexChanged_1);
             // 
             // ShopForm
             // 
@@ -139,8 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(697, 415);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboLocal);
             this.Controls.Add(this.dgvLocal);
             this.Controls.Add(this.btnModLocal);
             this.Controls.Add(this.btnAddLocal);
@@ -162,11 +149,10 @@
         private System.Windows.Forms.Button btnAddLocal;
         private System.Windows.Forms.Button btnModLocal;
         private System.Windows.Forms.DataGridView dgvLocal;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCodi;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAdress;
+        private System.Windows.Forms.ComboBox cboLocal;
     }
 }
 

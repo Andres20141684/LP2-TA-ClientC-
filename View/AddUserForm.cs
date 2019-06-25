@@ -60,5 +60,10 @@ namespace User
             }
             return true;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

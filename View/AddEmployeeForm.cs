@@ -68,47 +68,65 @@ namespace entregable
                 MessageBox.Show("Ingrese un DNI válido");
                 return false;
             }
-            else if (txtEmployeeName.Text == "" || txtEmployeeName.Text.Length<2)
+            if (txtEmployeeDNI.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(txtEmployeeDNI.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo DNI, porfavor ingresar 8 dígitos ");
+                    return false;
+                }
+            }
+             if (txtEmployeeName.Text == "" || txtEmployeeName.Text.Length<2)
             {
                 MessageBox.Show("Ingrese un nombre válido");
                 return false;
             }
-            else if (txtEmployeeFirstLastName.Text == "" || txtEmployeeFirstLastName.Text.Length<2)
+             if (txtEmployeeFirstLastName.Text == "" || txtEmployeeFirstLastName.Text.Length<2)
             {
                 MessageBox.Show("Ingrese un apellido paterno válido");
                 return false;
             }
-            else if (txtEmployeeSecondLastName.Text == "" || txtEmployeeSecondLastName.Text.Length<2)
+             if (txtEmployeeSecondLastName.Text == "" || txtEmployeeSecondLastName.Text.Length<2)
             {
                 MessageBox.Show("Ingrese un apellido materno válido");
                 return false;
             }
-            else if (txtEmployeePhone.Text == "" || txtEmployeePhone.Text.Length<3)
+             if (txtEmployeePhone.Text == "" || txtEmployeePhone.Text.Length<3)
             {
                 MessageBox.Show("Ingrese un teléfono válido");
                 return false;
             }
-            else if (txtEmployeeEmail.Text == "" || !txtEmployeeEmail.Text.Contains("@"))
+             if (txtEmployeePhone.Text.Length >= 3)
+            {
+                int result = 0;
+                if (!int.TryParse(txtEmployeePhone.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo Telefono, ingrese de 3 a 15 digitos");
+                    return false;
+                }
+            }
+             if (txtEmployeeEmail.Text == "" || !txtEmployeeEmail.Text.Contains("@"))
             {
                 MessageBox.Show("Ingrese un correo válido");
                 return false;
             }
-            else if (dtpEmployeeBorn.Value.Date > DateTime.Now)
+             if (dtpEmployeeBorn.Value.Date > DateTime.Now)
             {
                 MessageBox.Show("Ingrese una fecha válida");
                 return false;
             }
-            else if (dtpEmployeeStartDate.Value.Date > dtpEmployeeEndDate.Value.Date)
+             if (dtpEmployeeStartDate.Value.Date > dtpEmployeeEndDate.Value.Date)
             {
                 MessageBox.Show("Ingrese fechas de contratos válidas");
                 return false;
             }
-            else if (cbArea.Text == "")
+             if (cbArea.Text == "")
             {
                 MessageBox.Show("Ingrese el área del empleado");
                 return false;
             }
-            else if (cbRole.Text == "") 
+             if (cbRole.Text == "") 
             {
                 MessageBox.Show("Ingrese el cargo del empleado");
                 return false;

@@ -21,9 +21,10 @@ namespace Producto
 
     {
         public class Product{}
-        private Product p;
+        private product p;
         private BindingList<View.MateWSLocal.product> productsData;
         private View.MateWSLocal.DBControllerWSClient serviceDA;
+        private DBControllerWSClient serviceDAA;
         public FrmProduct()
         {
             InitializeComponent();
@@ -97,7 +98,19 @@ namespace Producto
         {
             try
             {
-                String skucodeP = txtProduct.Text;
+                Cursor.Current = Cursors.WaitCursor;
+                dgvProducts.Rows.Clear();
+                serviceDAA = new DBControllerWSClient();
+                p = new product();
+                p = serviceDAA.queryProductBySKUCode(txtProduct.Text);
+
+                dgvProducts.Rows.Add(new String[] {
+                ""+p.SKUcode, p.name,p.brand.name,p.family.name,""+p.stock,"" + p.availability.ToString()
+                });
+
+                Cursor.Current = Cursors.Arrow;
+
+                
                 //Selecciona la fila del dgv donde se encuentra el producto
             }
             catch
@@ -121,7 +134,7 @@ namespace Producto
             if (dgv.CurrentRow.Selected)
             {
                 //componentsState(State.ProductSelected);
-                p = (Product)dgvProducts.CurrentRow.DataBoundItem;
+                p = (product)dgvProducts.CurrentRow.DataBoundItem;
             }
 
         }

@@ -21,7 +21,9 @@ namespace Producto
         public class Family { }
         private Family f;
         private View.MateWSLocal.DBControllerWSClient serviceDA;
+        private View.MateWSLocal.DBControllerWSClient serviceDAA;
         private BindingList<View.MateWSLocal.family> families;
+        private family familia = new family();
 
         public FamilyProductForm()
         {
@@ -104,15 +106,16 @@ namespace Producto
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                String familyCode = txtFamily.Text;
-                //Selecciona la fila del dgv donde se encuentra la familia
-            }
-            catch
-            {
-                MessageBox.Show("La información no es correcta");
-            }
+            Cursor.Current = Cursors.WaitCursor;
+            dgvFamilies.Rows.Clear();
+            serviceDAA = new DBControllerWSClient();
+            familia = (serviceDAA.queryFamilyByCode(txtFamily.Text));
+
+            dgvFamilies.Rows.Add(new String[] {
+                familia.idFamily, familia.name, ""+familia.description
+                });
+
+            Cursor.Current = Cursors.Arrow;
         }
 
         private void doubleClickDgvFamilies(object sender, EventArgs e)

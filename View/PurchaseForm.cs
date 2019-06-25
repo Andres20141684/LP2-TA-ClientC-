@@ -12,6 +12,7 @@ namespace View
 {
     public partial class PurchaseForm : Form
     {
+        public View.MateWSLocal.user currentUser;
         private DBControllerWSClient serviceDA;
         public PurchaseForm()
         {
@@ -71,7 +72,7 @@ namespace View
             }
             else
             {
-                serviceDA = new DBControllerWSClient();
+                //serviceDA = new DBControllerWSClient();
                 purchase p = new purchase();
                 p.state = 1;
                 p.serialCode = txtSerialCode.Text;
@@ -144,6 +145,14 @@ namespace View
         {
             HistoryPurchasesForm history = new HistoryPurchasesForm();
             history.ShowDialog();
+        }
+
+        private void PurchaseForm_Load(object sender, EventArgs e)
+        {
+            serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            employee emp = new employee();
+            emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
+            userLabelContent.Text = emp.name + " " + emp.lastName + " " + emp.secondLastName;
         }
     }
 }

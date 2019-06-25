@@ -187,6 +187,7 @@
             // gbGeneralInformation
             // 
             this.gbGeneralInformation.BackColor = System.Drawing.Color.White;
+            this.gbGeneralInformation.BackgroundImage = global::View.Properties.Resources.whitebackground;
             this.gbGeneralInformation.Controls.Add(this.cboFamily);
             this.gbGeneralInformation.Controls.Add(this.cboBrand);
             this.gbGeneralInformation.Controls.Add(this.txtCareDescription);

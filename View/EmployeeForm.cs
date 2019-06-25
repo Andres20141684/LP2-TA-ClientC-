@@ -73,7 +73,7 @@ namespace entregable
         {
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new DBControllerWSClient();
-            //employees = new BindingList<employee>(serviceDA.queryAllEmployee());
+            employees = new BindingList<employee>(serviceDA.queryAllEmployee());
             dgvEmployee.Rows.Clear();
             for (int i = 0; i < employees.Count; i++)
             {

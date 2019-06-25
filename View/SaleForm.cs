@@ -25,7 +25,10 @@ namespace WindowsFormsApp1
         
         private void Form2_Load(object sender, EventArgs e)
         {
-            userLabelContent.Text = currentUser.user1; 
+            serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            employee emp = new employee();
+            emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
+            userLabelContent.Text = emp.name + " "+ emp.lastName + " "+emp.secondLastName;
         }
         View.MainWindow refParent;
         public void SetParent(View.MainWindow form)
@@ -81,7 +84,7 @@ namespace WindowsFormsApp1
                 s.totalSale = float.Parse(txtTotal.Text);
                 //getCustomerData
                 customer c = new customer();
-                serviceDA = new DBControllerWSClient();
+                //serviceDA = new DBControllerWSClient();
                 c = serviceDA.queryByIdCustomer(txtDniRuc.Text);
                 s.customer = c;
                 //getEmployeeData

@@ -49,10 +49,6 @@ namespace View
                 this.Hide();
                 menu.Show();
             }
-            else
-            {
-                MessageBox.Show("Ingrese su usuario y contraseña");
-            }
             /*
             if (user == "gerente" || password == "gerente") usuarioPermiso = 1;
             else if (user == "supervisor" || password == "supervisor") usuarioPermiso = 2;
@@ -89,7 +85,10 @@ namespace View
                 return false;
             }
             else if (txtPassword.Text == "" && txtUsername.Text == "")
+            {
                 MessageBox.Show("Ingrese Usuario y Contraseña");
+                return false;
+            }                
             return true;
         }
 

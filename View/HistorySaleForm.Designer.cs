@@ -48,6 +48,7 @@
             this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
             this.btnSearchEmployee.TabIndex = 23;
             this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.BtnSearchEmployee_Click);
             // 
             // txtSerialCode
             // 

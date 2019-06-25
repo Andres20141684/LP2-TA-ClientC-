@@ -104,34 +104,10 @@ namespace WindowsFormsApp1
 
             Cursor.Current = Cursors.Arrow;
 
-            /*
-            string searchValue = txtRUC.Text;
-            dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
+            if (txtRUC.Text == "")
             {
-                foreach (DataGridViewRow row in dgvSupplier.Rows)
-                {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
-                    {
-
-                        string nombre, direccion, cuenta, telefono, email, estado;
-                        nombre = row.Cells[1].Value.ToString();
-                        direccion = row.Cells[2].Value.ToString();
-                        cuenta = row.Cells[3].Value.ToString();
-                        telefono = row.Cells[4].Value.ToString();
-                        email = row.Cells[5].Value.ToString();
-                        estado = row.Cells[6].Value.ToString();
-                        dgvSupplier.Rows.Clear();
-                        dgvSupplier.Rows.Add(searchValue, nombre, direccion, cuenta, telefono, email, estado);
-                        break;
-                    }
-                }
+                MessageBox.Show("Ingrese un RUC válido");
             }
-            catch (Exception exc)
-            {
-                MessageBox.Show("No se encontró el proveedor.\nEscriba un RUC apropiado.");
-            }   
-            */
         }
     }
 }

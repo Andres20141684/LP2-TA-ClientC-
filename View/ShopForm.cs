@@ -66,11 +66,11 @@ namespace ShopsForm
             int i = dgvLocal.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                UpdateShopForm updateShop = new View.UpdateShopForm();
+                /*UpdateShopForm updateShop = new View.UpdateShopForm();
                 updateShop.currentPremise = new premises();
                 updateShop.currentPremise = shopsData[i];
                 updateShop.ShowDialog();
-                updateDataGridView();
+                updateDataGridView();*/
 
             }
             else

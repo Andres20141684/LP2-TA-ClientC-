@@ -256,6 +256,7 @@
             this.Name = "MainWindow";
             this.Text = "Sistema de Bodega MATE";
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
+            //this.OnClosing += new System.Windows.Forms.()
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

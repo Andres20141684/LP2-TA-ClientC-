@@ -73,7 +73,9 @@ namespace Producto
             {
                 UpdateFamilyForm updateFamily = new UpdateFamilyForm();
                 updateFamily.currentFamily = new family();
-                updateFamily.currentFamily = families[i];
+                family e1 = new family();
+                e1 = serviceDAA.queryFamilyByCode(dgvFamilies.Rows[i].Cells[0].Value.ToString());
+                updateFamily.currentFamily = e1;
                 updateFamily.ShowDialog();
                 updateDataGridView();
             }
@@ -116,6 +118,11 @@ namespace Producto
                 });
 
             Cursor.Current = Cursors.Arrow;
+
+            if (txtFamily.Text == "")
+            {
+                MessageBox.Show("Ingrese un código de familia");
+            }
         }
 
         private void doubleClickDgvFamilies(object sender, EventArgs e)

@@ -52,7 +52,9 @@ namespace WindowsFormsApp1
                 
                 ModifySupplierForm modifySup = new ModifySupplierForm();
                 modifySup.currentSupplier = new supplier();
-                modifySup.currentSupplier = suppliers[i];
+                supplier e1 = new supplier();
+                e1 = serviceDAA.querySupplierByCode(dgvSupplier.Rows[i].Cells[0].Value.ToString());
+                modifySup.currentSupplier = e1;
                 modifySup.ShowDialog();
                 updateDataGridView();
             }

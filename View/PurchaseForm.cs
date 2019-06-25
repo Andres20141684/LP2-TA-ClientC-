@@ -18,6 +18,7 @@ namespace View
         public PurchaseForm()
         {
             InitializeComponent();
+            boletaRadioButton.Checked = true;
         }
 
         private void SalirToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -154,6 +155,29 @@ namespace View
             String ultimoSerialCode = purchases[purchases.Count() - 1].serialCode;
             String nuevoSerialCode = "C" + (int.Parse(ultimoSerialCode.Substring(1)) + 1).ToString("000000");
             txtSerialCode.Text = nuevoSerialCode;
+        }
+
+        private void pictureSearch_Click(object sender, EventArgs e)
+        {
+            if (txtIdProv.Text.Length < 8)
+            {
+                MessageBox.Show("Ingrese un ID de proveedor válido", "Aviso");
+            }
+            else
+            {
+                serviceDA = new DBControllerWSClient();
+                supplier sup = new supplier();
+                sup = serviceDA.querySupplierByCode(txtIdProv.Text);
+                if (sup.bankData != null)
+                {
+                    txtDescripcion.Text = sup.name;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un proveedor existente");
+                }
+
+            }
         }
     }
 }

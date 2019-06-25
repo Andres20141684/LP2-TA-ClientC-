@@ -14,7 +14,9 @@ namespace SalesClient
     public partial class ClientesForms : Form
     {
         private DBControllerWSClient serviceDA;
+        private View.MateWSLocal.DBControllerWSClient serviceDAA;
         private BindingList<customer> customers;
+        private customer cliente = new customer();
         public ClientesForms()
         {
             InitializeComponent();
@@ -47,7 +49,9 @@ namespace SalesClient
             {
                 ModificarClienteForm modClient = new ModificarClienteForm();
                 modClient.currentCustomer = new customer();
-                modClient.currentCustomer = customers[i];
+                customer e1 = new customer();
+                e1 = serviceDAA.queryByIdCustomer(dgvClients.Rows[i].Cells[0].Value.ToString());
+                modClient.currentCustomer = e1;
                 modClient.ShowDialog();
                 updateDataGridView();
             }
@@ -108,9 +112,21 @@ namespace SalesClient
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (textDniRuc.Text == "")
+            Cursor.Current = Cursors.WaitCursor;
+            dgvClients.Rows.Clear();
+            serviceDAA = new DBControllerWSClient();
+            cliente = (serviceDAA.queryByIdCustomer(txtDniRuc.Text));
+            dgvClients.Rows.Add(new String[] {
+                cliente.id, cliente.descriptionCustomer,cliente.email,cliente.phone
+                });
+
+            Cursor.Current = Cursors.Arrow;
+
+
+
+            if (txtDniRuc.Text == "")
             {
-                MessageBox.Show("Inserte un DNI / RUC válido");
+                MessageBox.Show("Ingrese un DNI / RUC válido");
             }
 
         }

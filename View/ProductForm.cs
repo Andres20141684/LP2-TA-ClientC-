@@ -23,19 +23,21 @@ namespace Producto
         public class Product{}
         private product p;
         private BindingList<View.MateWSLocal.product> productsData;
-        private View.MateWSLocal.DBControllerWSClient serviceDA;
-        private DBControllerWSClient serviceDAA;
+        private View.MateWSLocal.DBControllerWSClient serviceDA = new View.MateWSLocal.DBControllerWSClient();
+        private DBControllerWSClient serviceDAA = new DBControllerWSClient();
         public FrmProduct()
         {
             InitializeComponent();
             updateDataGridView();
+            
+            //serviceDAA = new DBControllerWSClient();
         }
 
         void updateDataGridView()
         {
             Cursor.Current = Cursors.WaitCursor;
             dgvProducts.Rows.Clear();
-            serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            //serviceDA = new View.MateWSLocal.DBControllerWSClient();
             productsData = new BindingList<View.MateWSLocal.product>(serviceDA.queryAllProducts());
             for (int i = 0; i < productsData.Count; i++)
             {
@@ -66,7 +68,9 @@ namespace Producto
             {
                 UpdateProductForm updateForm1 = new UpdateProductForm();
                 updateForm1.currentProduct = new product();
-                updateForm1.currentProduct = productsData[i];
+                product e1 = new product();
+                e1 = serviceDAA.queryProductBySKUCode(dgvProducts.Rows[i].Cells[0].Value.ToString());
+                updateForm1.currentProduct = e1;
                 updateForm1.ShowDialog();
                 updateDataGridView();
             }
@@ -100,7 +104,7 @@ namespace Producto
             {
                 Cursor.Current = Cursors.WaitCursor;
                 dgvProducts.Rows.Clear();
-                serviceDAA = new DBControllerWSClient();
+                
                 p = new product();
                 p = serviceDAA.queryProductBySKUCode(txtProduct.Text);
 

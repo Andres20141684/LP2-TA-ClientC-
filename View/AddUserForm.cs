@@ -61,7 +61,7 @@ namespace User
             }
             if(txtEmpDNI.Text.Length != 8)
             {
-                MessageBox.Show("Ingrese un DNI válido");
+                MessageBox.Show("Ingrese un DNI válido de 8 digitos numericos");
             }
             if (txtEmpDNI.Text.Length == 8)
             {

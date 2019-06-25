@@ -95,9 +95,9 @@ namespace SalesClient
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtDniRuc.Text == "")
+            if (!filledValues())
             {
-                MessageBox.Show("Ingrese un DNI / RUC válido");
+                //MessageBox.Show("Complete la información");
             }
             else
             {
@@ -118,6 +118,34 @@ namespace SalesClient
                 }
                 
             }
+
+        }
+        private bool filledValues()
+        {
+            if (txtDniRuc.Text.Length != 8 && txtDniRuc.Text.Length != 11)
+            {
+                MessageBox.Show("Ingrese 8 digitos numericos para DNI o 11 digitos numericos para RUC");
+                return false;
+            }
+            if (txtDniRuc.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(txtDniRuc.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo del DNI, ingrese 8 caracteres numericos para DNI");
+                    return false;
+                }
+            }
+            if (txtDniRuc.Text.Length == 11)
+            {
+                int result = 0;
+                if (!int.TryParse(txtDniRuc.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo del DNI, ingrese 11 caracteres numericos para RUC");
+                    return false;
+                }
+            }
+            return true;
 
         }
         private void updateDataGridView()

@@ -62,26 +62,50 @@ namespace entregable
 
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvEmployee.Rows.Clear();
-            serviceDAA = new DBControllerWSClient();
-            empleado = (serviceDAA.queryEmployeeByDNI(txtDNI.Text));
-            dgvEmployee.Rows.Add(new String[] {
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                dgvEmployee.Rows.Clear();
+                serviceDAA = new DBControllerWSClient();
+                empleado = (serviceDAA.queryEmployeeByDNI(txtDNI.Text));
+                dgvEmployee.Rows.Add(new String[] {
                 empleado.dni,empleado.name,empleado.lastName,empleado.phone,empleado.email,empleado.role
             });
 
-            Cursor.Current = Cursors.Arrow;
+                Cursor.Current = Cursors.Arrow;
 
-
-
-            if (txtDNI.Text == "")
-            {
-                MessageBox.Show("Ingrese un DNI");
             }
+            
+
+
+            
 
         }
+        private bool filledValues()
+        {
+            if (txtDNI.Text.Length != 8)
+            {
+                MessageBox.Show("Ingrese un DNI de 8 digitos numericos");
+                return false;
+            }
+            if (txtDNI.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(txtDNI.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo DNI, ingrese 8 digitos numericos");
+                    return false;
+                }
+            }
+            return true;
+        }
+        
 
-        private void EmployeeForm_Load(object sender, EventArgs e)
+            private void EmployeeForm_Load(object sender, EventArgs e)
         {
             updateDataGridView();
         }

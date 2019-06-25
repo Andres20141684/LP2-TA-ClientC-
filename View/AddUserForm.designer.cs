@@ -220,7 +220,9 @@
             // pictureSearch
             // 
             this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
             this.pictureSearch.Location = new System.Drawing.Point(458, 16);
             this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);

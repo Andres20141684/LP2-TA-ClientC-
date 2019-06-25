@@ -79,6 +79,7 @@ namespace View
                 p.totalPurchase = float.Parse(txtTotal.Text);
                 //para el supplier
                 supplier c = new supplier();
+                serviceDA = new DBControllerWSClient();
                 c = serviceDA.querySupplierByCode(txtIdProv.Text);
                 p.supplier = c;
                 //para los purchase lanes

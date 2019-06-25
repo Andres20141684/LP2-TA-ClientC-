@@ -16,8 +16,9 @@ namespace User
     {
         View.MainWindow refParent;
         private DBControllerWSClient serviceDA;
+        private DBControllerWSClient serviceDAA;
         private BindingList<user> users;
-        
+        private user usuario = new user();
         public UserForm()
         {
             InitializeComponent();
@@ -31,20 +32,29 @@ namespace User
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             AddUserForm addUserForm = new AddUserForm();
-            addUserForm.SetParent(this);
-            addUserForm.ShowDialog();
+            if (addUserForm.ShowDialog() == DialogResult.OK)
+            {
+                addUserForm.SetParent(this);
+                addUserForm.ShowDialog();
+            }
             updateDataGridView();
         }
 
         private void bntModifyUser_Click(object sender, EventArgs e)
         {
-            ModifyUserForm modifyUserForm = new ModifyUserForm();
-            modifyUserForm.SetParent(this);
-            modifyUserForm.ShowDialog();
-        }
-
-        private void btnDeleteUser_Click(object sender, EventArgs e)
-        {
+            int i = dgvUser.CurrentCell.RowIndex;
+            if (i >= 0)
+            {
+                ModifyUserForm modifyUserForm = new ModifyUserForm();
+                modifyUserForm.usuario1 = new user();
+                modifyUserForm.usuario1 = users[i];
+                modifyUserForm.SetParent(this);
+                modifyUserForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un usuario");
+            }
             
         }
 
@@ -67,6 +77,20 @@ namespace User
             }
             Cursor.Current = Cursors.Arrow;
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            dgvUser.Rows.Clear();
+            serviceDAA = new DBControllerWSClient();
+            usuario = (serviceDAA.queryUserByUserName(txtUsername.Text));
+
+            dgvUser.Rows.Add(new String[] {
+                ""+usuario.id, ""+usuario.user1, ""+usuario.expirationDate
+                });
+
+            Cursor.Current = Cursors.Arrow;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace User
         public AddUserForm()
         {
             InitializeComponent();
+            cbActive.Checked = true;
         }
 
         public void SetParent(UserForm form)

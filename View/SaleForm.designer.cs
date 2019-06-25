@@ -171,7 +171,7 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(297, 72);
+            this.txtDescripcion.Location = new System.Drawing.Point(297, 69);
             this.txtDescripcion.MaxLength = 100;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(225, 20);
@@ -309,9 +309,9 @@
             this.gbGeneralInf.Controls.Add(this.txtDescripcion);
             this.gbGeneralInf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGeneralInf.Location = new System.Drawing.Point(15, 38);
-            this.gbGeneralInf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInf.Margin = new System.Windows.Forms.Padding(2);
             this.gbGeneralInf.Name = "gbGeneralInf";
-            this.gbGeneralInf.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInf.Padding = new System.Windows.Forms.Padding(2);
             this.gbGeneralInf.Size = new System.Drawing.Size(532, 121);
             this.gbGeneralInf.TabIndex = 31;
             this.gbGeneralInf.TabStop = false;
@@ -353,9 +353,9 @@
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 173);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(532, 252);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;

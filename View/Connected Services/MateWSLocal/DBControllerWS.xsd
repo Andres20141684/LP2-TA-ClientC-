@@ -581,16 +581,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:premises" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryProductBySKUCode">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryProductBySKUCodeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:product" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertBrand">
     <xs:sequence>
       <xs:element minOccurs="0" name="brand" type="tns:brand" />
@@ -601,12 +591,14 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllCustomer">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllCustomerResponse">
+  <xs:complexType name="queryProductBySKUCode">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
+      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllUser">
@@ -615,6 +607,14 @@
   <xs:complexType name="queryAllUserResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllCustomer">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllCustomerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:customer" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryPurchaseBySerialCode">
@@ -771,6 +771,14 @@
       <xs:element minOccurs="0" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllEmployee">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllEmployeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryFamilyByCode">
     <xs:sequence>
       <xs:element minOccurs="0" name="familyID" type="xs:string" />
@@ -779,14 +787,6 @@
   <xs:complexType name="queryFamilyByCodeResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:family" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployee">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployeeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertProduct">
@@ -927,6 +927,14 @@
       <xs:element minOccurs="0" name="return" type="tns:customer" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllArea">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryRefundByIdSale">
     <xs:sequence>
       <xs:element minOccurs="0" name="saleId" type="xs:int" />
@@ -935,14 +943,6 @@
   <xs:complexType name="queryRefundByIdSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:refund" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllArea">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllAreaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryEmployee">

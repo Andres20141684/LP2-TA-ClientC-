@@ -18,11 +18,13 @@ namespace entregable
         private DBControllerWSClient serviceDAA;
         private BindingList<employee> employees = new BindingList<employee>();
         private employee empleado = new employee();
+        private int nEmployee;
         public EmployeeForm()
         {
             InitializeComponent();
             updateDataGridView();
             dgvEmployee.AutoGenerateColumns = false;
+            
         }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
@@ -69,12 +71,25 @@ namespace entregable
             else
             {
                 Cursor.Current = Cursors.WaitCursor;
-                dgvEmployee.Rows.Clear();
+                //dgvEmployee.Rows.Clear();   
                 serviceDAA = new DBControllerWSClient();
                 empleado = (serviceDAA.queryEmployeeByDNI(txtDNI.Text));
-                dgvEmployee.Rows.Add(new String[] {
-                empleado.dni,empleado.name,empleado.lastName,empleado.phone,empleado.email,empleado.role
-            });
+
+                ModifyEmployeeForm modifyEmployeeForm = new ModifyEmployeeForm();
+                modifyEmployeeForm.currentEmployee = new employee();
+                //employee e1 = new employee();
+                serviceDAA = new DBControllerWSClient();
+                //e1 = serviceDAA.queryEmployeeByDNI(dgvEmployee.Rows[i].Cells[0].Value.ToString());
+                modifyEmployeeForm.currentEmployee = empleado;
+                modifyEmployeeForm.SetParent(this);
+                modifyEmployeeForm.ShowDialog();
+                updateDataGridView();
+
+
+                //dgvEmployee.Rows.Add(new String[] {   
+                //empleado.dni,empleado.name,empleado.lastName,empleado.phone,empleado.email,empleado.role });
+
+
 
                 Cursor.Current = Cursors.Arrow;
 

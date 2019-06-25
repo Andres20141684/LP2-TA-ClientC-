@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.mateproyecto.inf.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DBControllerWS" targetNamespace="http://services.mateproyecto.inf.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.205.119:8080/MATEWeb/DBControllerWS?xsd=1" namespace="http://services.mateproyecto.inf.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="updateUser">
+    <part name="parameters" element="tns:updateUser" />
+  </message>
+  <message name="updateUserResponse">
+    <part name="parameters" element="tns:updateUserResponse" />
+  </message>
+  <message name="insertSupplier">
+    <part name="parameters" element="tns:insertSupplier" />
+  </message>
+  <message name="insertSupplierResponse">
+    <part name="parameters" element="tns:insertSupplierResponse" />
+  </message>
+  <message name="deleteCustomer">
+    <part name="parameters" element="tns:deleteCustomer" />
+  </message>
+  <message name="deleteCustomerResponse">
+    <part name="parameters" element="tns:deleteCustomerResponse" />
+  </message>
+  <message name="queryAllEmployee">
+    <part name="parameters" element="tns:queryAllEmployee" />
+  </message>
+  <message name="queryAllEmployeeResponse">
+    <part name="parameters" element="tns:queryAllEmployeeResponse" />
+  </message>
+  <message name="queryAllSupplier">
+    <part name="parameters" element="tns:queryAllSupplier" />
+  </message>
+  <message name="queryAllSupplierResponse">
+    <part name="parameters" element="tns:queryAllSupplierResponse" />
+  </message>
+  <message name="queryAllProducts">
+    <part name="parameters" element="tns:queryAllProducts" />
+  </message>
+  <message name="queryAllProductsResponse">
+    <part name="parameters" element="tns:queryAllProductsResponse" />
+  </message>
+  <message name="queryAllFamily">
+    <part name="parameters" element="tns:queryAllFamily" />
+  </message>
+  <message name="queryAllFamilyResponse">
+    <part name="parameters" element="tns:queryAllFamilyResponse" />
+  </message>
+  <message name="updateFamily">
+    <part name="parameters" element="tns:updateFamily" />
+  </message>
+  <message name="updateFamilyResponse">
+    <part name="parameters" element="tns:updateFamilyResponse" />
+  </message>
+  <message name="insertProduct">
+    <part name="parameters" element="tns:insertProduct" />
+  </message>
+  <message name="insertProductResponse">
+    <part name="parameters" element="tns:insertProductResponse" />
+  </message>
+  <message name="updateProduct">
+    <part name="parameters" element="tns:updateProduct" />
+  </message>
+  <message name="updateProductResponse">
+    <part name="parameters" element="tns:updateProductResponse" />
+  </message>
+  <message name="insertCustomer">
+    <part name="parameters" element="tns:insertCustomer" />
+  </message>
+  <message name="insertCustomerResponse">
+    <part name="parameters" element="tns:insertCustomerResponse" />
+  </message>
+  <message name="insertEmployee">
+    <part name="parameters" element="tns:insertEmployee" />
+  </message>
+  <message name="insertEmployeeResponse">
+    <part name="parameters" element="tns:insertEmployeeResponse" />
+  </message>
+  <message name="updateEmployee">
+    <part name="parameters" element="tns:updateEmployee" />
+  </message>
+  <message name="updateEmployeeResponse">
+    <part name="parameters" element="tns:updateEmployeeResponse" />
+  </message>
+  <message name="insertUser">
+    <part name="parameters" element="tns:insertUser" />
+  </message>
+  <message name="insertUserResponse">
+    <part name="parameters" element="tns:insertUserResponse" />
+  </message>
+  <message name="queryAllUser">
+    <part name="parameters" element="tns:queryAllUser" />
+  </message>
+  <message name="queryAllUserResponse">
+    <part name="parameters" element="tns:queryAllUserResponse" />
+  </message>
+  <message name="insertSale">
+    <part name="parameters" element="tns:insertSale" />
+  </message>
+  <message name="insertSaleResponse">
+    <part name="parameters" element="tns:insertSaleResponse" />
+  </message>
+  <message name="queryAllCustomer">
+    <part name="parameters" element="tns:queryAllCustomer" />
+  </message>
+  <message name="queryAllCustomerResponse">
+    <part name="parameters" element="tns:queryAllCustomerResponse" />
+  </message>
+  <message name="updateCustomer">
+    <part name="parameters" element="tns:updateCustomer" />
+  </message>
+  <message name="updateCustomerResponse">
+    <part name="parameters" element="tns:updateCustomerResponse" />
+  </message>
+  <message name="updateSupplier">
+    <part name="parameters" element="tns:updateSupplier" />
+  </message>
+  <message name="updateSupplierResponse">
+    <part name="parameters" element="tns:updateSupplierResponse" />
+  </message>
+  <message name="insertFamily">
+    <part name="parameters" element="tns:insertFamily" />
+  </message>
+  <message name="insertFamilyResponse">
+    <part name="parameters" element="tns:insertFamilyResponse" />
+  </message>
+  <message name="updateBrand">
+    <part name="parameters" element="tns:updateBrand" />
+  </message>
+  <message name="updateBrandResponse">
+    <part name="parameters" element="tns:updateBrandResponse" />
+  </message>
+  <message name="updatePremises">
+    <part name="parameters" element="tns:updatePremises" />
+  </message>
+  <message name="updatePremisesResponse">
+    <part name="parameters" element="tns:updatePremisesResponse" />
+  </message>
+  <message name="updatePurchase">
+    <part name="parameters" element="tns:updatePurchase" />
+  </message>
+  <message name="updatePurchaseResponse">
+    <part name="parameters" element="tns:updatePurchaseResponse" />
+  </message>
+  <message name="insertBrand">
+    <part name="parameters" element="tns:insertBrand" />
+  </message>
+  <message name="insertBrandResponse">
+    <part name="parameters" element="tns:insertBrandResponse" />
+  </message>
+  <message name="insertArea">
+    <part name="parameters" element="tns:insertArea" />
+  </message>
+  <message name="insertAreaResponse">
+    <part name="parameters" element="tns:insertAreaResponse" />
+  </message>
+  <message name="insertPurchase">
+    <part name="parameters" element="tns:insertPurchase" />
+  </message>
+  <message name="insertPurchaseResponse">
+    <part name="parameters" element="tns:insertPurchaseResponse" />
+  </message>
+  <message name="queryAllBrand">
+    <part name="parameters" element="tns:queryAllBrand" />
+  </message>
+  <message name="queryAllBrandResponse">
+    <part name="parameters" element="tns:queryAllBrandResponse" />
+  </message>
+  <message name="queryAllPremises">
+    <part name="parameters" element="tns:queryAllPremises" />
+  </message>
+  <message name="queryAllPremisesResponse">
+    <part name="parameters" element="tns:queryAllPremisesResponse" />
+  </message>
+  <message name="queryAllDiscount">
+    <part name="parameters" element="tns:queryAllDiscount" />
+  </message>
+  <message name="queryAllDiscountResponse">
+    <part name="parameters" element="tns:queryAllDiscountResponse" />
+  </message>
+  <message name="updateDiscount">
+    <part name="parameters" element="tns:updateDiscount" />
+  </message>
+  <message name="updateDiscountResponse">
+    <part name="parameters" element="tns:updateDiscountResponse" />
+  </message>
+  <message name="queryAllPurchase">
+    <part name="parameters" element="tns:queryAllPurchase" />
+  </message>
+  <message name="queryAllPurchaseResponse">
+    <part name="parameters" element="tns:queryAllPurchaseResponse" />
+  </message>
+  <message name="validateUser">
+    <part name="parameters" element="tns:validateUser" />
+  </message>
+  <message name="validateUserResponse">
+    <part name="parameters" element="tns:validateUserResponse" />
+  </message>
+  <message name="queryAllArea">
+    <part name="parameters" element="tns:queryAllArea" />
+  </message>
+  <message name="queryAllAreaResponse">
+    <part name="parameters" element="tns:queryAllAreaResponse" />
+  </message>
+  <message name="queryAllSale">
+    <part name="parameters" element="tns:queryAllSale" />
+  </message>
+  <message name="queryAllSaleResponse">
+    <part name="parameters" element="tns:queryAllSaleResponse" />
+  </message>
+  <message name="insertRefund">
+    <part name="parameters" element="tns:insertRefund" />
+  </message>
+  <message name="insertRefundResponse">
+    <part name="parameters" element="tns:insertRefundResponse" />
+  </message>
+  <message name="updateSale">
+    <part name="parameters" element="tns:updateSale" />
+  </message>
+  <message name="updateSaleResponse">
+    <part name="parameters" element="tns:updateSaleResponse" />
+  </message>
+  <message name="updateArea">
+    <part name="parameters" element="tns:updateArea" />
+  </message>
+  <message name="updateAreaResponse">
+    <part name="parameters" element="tns:updateAreaResponse" />
+  </message>
+  <message name="queryEmployee">
+    <part name="parameters" element="tns:queryEmployee" />
+  </message>
+  <message name="queryEmployeeResponse">
+    <part name="parameters" element="tns:queryEmployeeResponse" />
+  </message>
+  <message name="insertDiscount">
+    <part name="parameters" element="tns:insertDiscount" />
+  </message>
+  <message name="insertDiscountResponse">
+    <part name="parameters" element="tns:insertDiscountResponse" />
+  </message>
+  <message name="insertPremises">
+    <part name="parameters" element="tns:insertPremises" />
+  </message>
+  <message name="insertPremisesResponse">
+    <part name="parameters" element="tns:insertPremisesResponse" />
+  </message>
+  <message name="queryWarehousedetailBySKUandWarehouseID">
+    <part name="parameters" element="tns:queryWarehousedetailBySKUandWarehouseID" />
+  </message>
+  <message name="queryWarehousedetailBySKUandWarehouseIDResponse">
+    <part name="parameters" element="tns:queryWarehousedetailBySKUandWarehouseIDResponse" />
+  </message>
+  <message name="queryByIdCustomer">
+    <part name="parameters" element="tns:queryByIdCustomer" />
+  </message>
+  <message name="queryByIdCustomerResponse">
+    <part name="parameters" element="tns:queryByIdCustomerResponse" />
+  </message>
+  <message name="queryEmployeeByDNI">
+    <part name="parameters" element="tns:queryEmployeeByDNI" />
+  </message>
+  <message name="queryEmployeeByDNIResponse">
+    <part name="parameters" element="tns:queryEmployeeByDNIResponse" />
+  </message>
+  <message name="updateAristSupplier">
+    <part name="parameters" element="tns:updateAristSupplier" />
+  </message>
+  <message name="updateAristSupplierResponse">
+    <part name="parameters" element="tns:updateAristSupplierResponse" />
+  </message>
+  <message name="querySupplierByCode">
+    <part name="parameters" element="tns:querySupplierByCode" />
+  </message>
+  <message name="querySupplierByCodeResponse">
+    <part name="parameters" element="tns:querySupplierByCodeResponse" />
+  </message>
+  <message name="queryPurchaseBySerialCode">
+    <part name="parameters" element="tns:queryPurchaseBySerialCode" />
+  </message>
+  <message name="queryPurchaseBySerialCodeResponse">
+    <part name="parameters" element="tns:queryPurchaseBySerialCodeResponse" />
+  </message>
+  <message name="queryUserByUserName">
+    <part name="parameters" element="tns:queryUserByUserName" />
+  </message>
+  <message name="queryUserByUserNameResponse">
+    <part name="parameters" element="tns:queryUserByUserNameResponse" />
+  </message>
+  <message name="queryPremisesByDescription">
+    <part name="parameters" element="tns:queryPremisesByDescription" />
+  </message>
+  <message name="queryPremisesByDescriptionResponse">
+    <part name="parameters" element="tns:queryPremisesByDescriptionResponse" />
+  </message>
+  <message name="queryFamilyByCode">
+    <part name="parameters" element="tns:queryFamilyByCode" />
+  </message>
+  <message name="queryFamilyByCodeResponse">
+    <part name="parameters" element="tns:queryFamilyByCodeResponse" />
+  </message>
+  <message name="queryByIdEmployee">
+    <part name="parameters" element="tns:queryByIdEmployee" />
+  </message>
+  <message name="queryByIdEmployeeResponse">
+    <part name="parameters" element="tns:queryByIdEmployeeResponse" />
+  </message>
+  <message name="queryProductBySKUCode">
+    <part name="parameters" element="tns:queryProductBySKUCode" />
+  </message>
+  <message name="queryProductBySKUCodeResponse">
+    <part name="parameters" element="tns:queryProductBySKUCodeResponse" />
+  </message>
+  <message name="querySaleBySerialCode">
+    <part name="parameters" element="tns:querySaleBySerialCode" />
+  </message>
+  <message name="querySaleBySerialCodeResponse">
+    <part name="parameters" element="tns:querySaleBySerialCodeResponse" />
+  </message>
+  <message name="insertDiscountProduct">
+    <part name="parameters" element="tns:insertDiscountProduct" />
+  </message>
+  <message name="insertDiscountProductResponse">
+    <part name="parameters" element="tns:insertDiscountProductResponse" />
+  </message>
+  <message name="queryEmployeeByUsername">
+    <part name="parameters" element="tns:queryEmployeeByUsername" />
+  </message>
+  <message name="queryEmployeeByUsernameResponse">
+    <part name="parameters" element="tns:queryEmployeeByUsernameResponse" />
+  </message>
+  <message name="queryRefundByIdSale">
+    <part name="parameters" element="tns:queryRefundByIdSale" />
+  </message>
+  <message name="queryRefundByIdSaleResponse">
+    <part name="parameters" element="tns:queryRefundByIdSaleResponse" />
+  </message>
+  <portType name="DBControllerWS">
+    <operation name="updateUser">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest" message="tns:updateUser" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse" message="tns:updateUserResponse" />
+    </operation>
+    <operation name="insertSupplier">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" message="tns:insertSupplier" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierResponse" message="tns:insertSupplierResponse" />
+    </operation>
+    <operation name="deleteCustomer">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" message="tns:deleteCustomer" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerResponse" message="tns:deleteCustomerResponse" />
+    </operation>
+    <operation name="queryAllEmployee">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRequest" message="tns:queryAllEmployee" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeResponse" message="tns:queryAllEmployeeResponse" />
+    </operation>
+    <operation name="queryAllSupplier">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRequest" message="tns:queryAllSupplier" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierResponse" message="tns:queryAllSupplierResponse" />
+    </operation>
+    <operation name="queryAllProducts">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsRequest" message="tns:queryAllProducts" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsResponse" message="tns:queryAllProductsResponse" />
+    </operation>
+    <operation name="queryAllFamily">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" message="tns:queryAllFamily" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyResponse" message="tns:queryAllFamilyResponse" />
+    </operation>
+    <operation name="updateFamily">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest" message="tns:updateFamily" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse" message="tns:updateFamilyResponse" />
+    </operation>
+    <operation name="insertProduct">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest" message="tns:insertProduct" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" message="tns:insertProductResponse" />
+    </operation>
+    <operation name="updateProduct">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest" message="tns:updateProduct" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" message="tns:updateProductResponse" />
+    </operation>
+    <operation name="insertCustomer">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" message="tns:insertCustomer" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerResponse" message="tns:insertCustomerResponse" />
+    </operation>
+    <operation name="insertEmployee">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" message="tns:insertEmployee" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeResponse" message="tns:insertEmployeeResponse" />
+    </operation>
+    <operation name="updateEmployee">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" message="tns:updateEmployee" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeResponse" message="tns:updateEmployeeResponse" />
+    </operation>
+    <operation name="insertUser">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest" message="tns:insertUser" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse" message="tns:insertUserResponse" />
+    </operation>
+    <operation name="queryAllUser">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest" message="tns:queryAllUser" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse" message="tns:queryAllUserResponse" />
+    </operation>
+    <operation name="insertSale">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest" message="tns:insertSale" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse" message="tns:insertSaleResponse" />
+    </operation>
+    <operation name="queryAllCustomer">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllCustomerRequest" message="tns:queryAllCustomer" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllCustomerResponse" message="tns:queryAllCustomerResponse" />
+    </operation>
+    <operation name="updateCustomer">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" message="tns:updateCustomer" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerResponse" message="tns:updateCustomerResponse" />
+    </operation>
+    <operation name="updateSupplier">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" message="tns:updateSupplier" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierResponse" message="tns:updateSupplierResponse" />
+    </operation>
+    <operation name="insertFamily">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest" message="tns:insertFamily" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse" message="tns:insertFamilyResponse" />
+    </operation>
+    <operation name="updateBrand">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest" message="tns:updateBrand" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse" message="tns:updateBrandResponse" />
+    </operation>
+    <operation name="updatePremises">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" message="tns:updatePremises" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesResponse" message="tns:updatePremisesResponse" />
+    </operation>
+    <operation name="updatePurchase">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRequest" message="tns:updatePurchase" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseResponse" message="tns:updatePurchaseResponse" />
+    </operation>
+    <operation name="insertBrand">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest" message="tns:insertBrand" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse" message="tns:insertBrandResponse" />
+    </operation>
+    <operation name="insertArea">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest" message="tns:insertArea" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse" message="tns:insertAreaResponse" />
+    </operation>
+    <operation name="insertPurchase">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPurchaseRequest" message="tns:insertPurchase" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPurchaseResponse" message="tns:insertPurchaseResponse" />
+    </operation>
+    <operation name="queryAllBrand">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandRequest" message="tns:queryAllBrand" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" message="tns:queryAllBrandResponse" />
+    </operation>
+    <operation name="queryAllPremises">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRequest" message="tns:queryAllPremises" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesResponse" message="tns:queryAllPremisesResponse" />
+    </operation>
+    <operation name="queryAllDiscount">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountRequest" message="tns:queryAllDiscount" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountResponse" message="tns:queryAllDiscountResponse" />
+    </operation>
+    <operation name="updateDiscount">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" message="tns:updateDiscount" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountResponse" message="tns:updateDiscountResponse" />
+    </operation>
+    <operation name="queryAllPurchase">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseRequest" message="tns:queryAllPurchase" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseResponse" message="tns:queryAllPurchaseResponse" />
+    </operation>
+    <operation name="validateUser">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserRequest" message="tns:validateUser" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserResponse" message="tns:validateUserResponse" />
+    </operation>
+    <operation name="queryAllArea">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest" message="tns:queryAllArea" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse" message="tns:queryAllAreaResponse" />
+    </operation>
+    <operation name="queryAllSale">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest" message="tns:queryAllSale" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse" message="tns:queryAllSaleResponse" />
+    </operation>
+    <operation name="insertRefund">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest" message="tns:insertRefund" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse" message="tns:insertRefundResponse" />
+    </operation>
+    <operation name="updateSale">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleRequest" message="tns:updateSale" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleResponse" message="tns:updateSaleResponse" />
+    </operation>
+    <operation name="updateArea">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest" message="tns:updateArea" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse" message="tns:updateAreaResponse" />
+    </operation>
+    <operation name="queryEmployee">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest" message="tns:queryEmployee" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" message="tns:queryEmployeeResponse" />
+    </operation>
+    <operation name="insertDiscount">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" message="tns:insertDiscount" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountResponse" message="tns:insertDiscountResponse" />
+    </operation>
+    <operation name="insertPremises">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" message="tns:insertPremises" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesResponse" message="tns:insertPremisesResponse" />
+    </operation>
+    <operation name="queryWarehousedetailBySKUandWarehouseID">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailBySKUandWarehouseIDRequest" message="tns:queryWarehousedetailBySKUandWarehouseID" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailBySKUandWarehouseIDResponse" message="tns:queryWarehousedetailBySKUandWarehouseIDResponse" />
+    </operation>
+    <operation name="queryByIdCustomer">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequest" message="tns:queryByIdCustomer" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResponse" message="tns:queryByIdCustomerResponse" />
+    </operation>
+    <operation name="queryEmployeeByDNI">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIRequest" message="tns:queryEmployeeByDNI" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIResponse" message="tns:queryEmployeeByDNIResponse" />
+    </operation>
+    <operation name="updateAristSupplier">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAristSupplierRequest" message="tns:updateAristSupplier" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAristSupplierResponse" message="tns:updateAristSupplierResponse" />
+    </operation>
+    <operation name="querySupplierByCode">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeRequest" message="tns:querySupplierByCode" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySupplierByCodeResponse" message="tns:querySupplierByCodeResponse" />
+    </operation>
+    <operation name="queryPurchaseBySerialCode">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerialCodeRequest" message="tns:queryPurchaseBySerialCode" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerialCodeResponse" message="tns:queryPurchaseBySerialCodeResponse" />
+    </operation>
+    <operation name="queryUserByUserName">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRequest" message="tns:queryUserByUserName" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameResponse" message="tns:queryUserByUserNameResponse" />
+    </operation>
+    <operation name="queryPremisesByDescription">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescriptionRequest" message="tns:queryPremisesByDescription" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescriptionResponse" message="tns:queryPremisesByDescriptionResponse" />
+    </operation>
+    <operation name="queryFamilyByCode">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequest" message="tns:queryFamilyByCode" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResponse" message="tns:queryFamilyByCodeResponse" />
+    </operation>
+    <operation name="queryByIdEmployee">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequest" message="tns:queryByIdEmployee" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResponse" message="tns:queryByIdEmployeeResponse" />
+    </operation>
+    <operation name="queryProductBySKUCode">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCodeRequest" message="tns:queryProductBySKUCode" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCodeResponse" message="tns:queryProductBySKUCodeResponse" />
+    </operation>
+    <operation name="querySaleBySerialCode">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCodeRequest" message="tns:querySaleBySerialCode" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCodeResponse" message="tns:querySaleBySerialCodeResponse" />
+    </operation>
+    <operation name="insertDiscountProduct">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProductRequest" message="tns:insertDiscountProduct" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProductResponse" message="tns:insertDiscountProductResponse" />
+    </operation>
+    <operation name="queryEmployeeByUsername">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUsernameRequest" message="tns:queryEmployeeByUsername" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUsernameResponse" message="tns:queryEmployeeByUsernameResponse" />
+    </operation>
+    <operation name="queryRefundByIdSale">
+      <input wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRequest" message="tns:queryRefundByIdSale" />
+      <output wsam:Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleResponse" message="tns:queryRefundByIdSaleResponse" />
+    </operation>
+  </portType>
+  <binding name="DBControllerWSPortBinding" type="tns:DBControllerWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="updateUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllProducts">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertSale">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertFamily">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatePremises">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatePurchase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertPurchase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllBrand">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllPremises">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllDiscount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateDiscount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllPurchase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAllSale">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertRefund">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSale">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertDiscount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertPremises">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryWarehousedetailBySKUandWarehouseID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryByIdCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryEmployeeByDNI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateAristSupplier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="querySupplierByCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryPurchaseBySerialCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryUserByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryPremisesByDescription">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryFamilyByCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryByIdEmployee">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryProductBySKUCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="querySaleBySerialCode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertDiscountProduct">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryEmployeeByUsername">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryRefundByIdSale">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DBControllerWS">
+    <port name="DBControllerWSPort" binding="tns:DBControllerWSPortBinding">
+      <soap:address location="http://192.168.205.119:8080/MATEWeb/DBControllerWS" />
+    </port>
+  </service>
+</definitions>

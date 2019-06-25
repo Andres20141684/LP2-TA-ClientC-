@@ -39,5 +39,10 @@ namespace View
             }
             Cursor.Current = Cursors.Arrow;
         }
+
+        private void BtnSearchEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,11 +32,11 @@
             this.btnAddLocal = new System.Windows.Forms.Button();
             this.btnModLocal = new System.Windows.Forms.Button();
             this.dgvLocal = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvColCodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
@@ -94,6 +94,24 @@
             this.dgvLocal.Size = new System.Drawing.Size(629, 258);
             this.dgvLocal.TabIndex = 5;
             // 
+            // dgvColCodi
+            // 
+            this.dgvColCodi.HeaderText = "Codigo";
+            this.dgvColCodi.Name = "dgvColCodi";
+            this.dgvColCodi.Width = 160;
+            // 
+            // dgvColDesc
+            // 
+            this.dgvColDesc.HeaderText = "Descripcion";
+            this.dgvColDesc.Name = "dgvColDesc";
+            this.dgvColDesc.Width = 220;
+            // 
+            // dgvColAdress
+            // 
+            this.dgvColAdress.HeaderText = "Direccion";
+            this.dgvColAdress.Name = "dgvColAdress";
+            this.dgvColAdress.Width = 220;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -114,24 +132,6 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // dgvColCodi
-            // 
-            this.dgvColCodi.HeaderText = "Codigo";
-            this.dgvColCodi.Name = "dgvColCodi";
-            this.dgvColCodi.Width = 160;
-            // 
-            // dgvColDesc
-            // 
-            this.dgvColDesc.HeaderText = "Descripcion";
-            this.dgvColDesc.Name = "dgvColDesc";
-            this.dgvColDesc.Width = 220;
-            // 
-            // dgvColAdress
-            // 
-            this.dgvColAdress.HeaderText = "Direccion";
-            this.dgvColAdress.Name = "dgvColAdress";
-            this.dgvColAdress.Width = 220;
             // 
             // ShopForm
             // 

@@ -16,6 +16,7 @@ namespace ShopsForm
     {
         private BindingList<View.MateWSLocal.premises> shopsData;
         private View.MateWSLocal.DBControllerWSClient serviceDA;
+        private View.MateWSLocal.DBControllerWSClient serviceDAA;
         public ShopForm()
         {
             InitializeComponent();
@@ -100,6 +101,8 @@ namespace ShopsForm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            
+
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Inserte un código válido");
@@ -109,22 +112,6 @@ namespace ShopsForm
         private void ShopForm_Load(object sender, EventArgs e)
         {
             //Load, cargamos el grid
-            dgvLocal.Rows.Add(new String[]
-            {
-                "1","Local San Miguel","23-09-2014","Av. Riva Aguero #990"
-            });
-            dgvLocal.Rows.Add(new String[]
-            {
-                "2","Local Santa Anita","12-04-2012","Av. Ruiseñores #453"
-            });
-            dgvLocal.Rows.Add(new String[]
-            {
-                "3","Local Surco","23-05-2017","Av. Primavera #443"
-            });
-            dgvLocal.Rows.Add(new String[]
-            {
-                "4","Local La Molina","14-03-2018","Av. Rinconada del Lago #773"
-            });
         }
 
         private void Label1_Click(object sender, EventArgs e)

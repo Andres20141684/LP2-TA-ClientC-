@@ -61,6 +61,8 @@
   <xs:element name="queryEmployee" type="tns:queryEmployee" />
   <xs:element name="queryEmployeeByDNI" type="tns:queryEmployeeByDNI" />
   <xs:element name="queryEmployeeByDNIResponse" type="tns:queryEmployeeByDNIResponse" />
+  <xs:element name="queryEmployeeByUsername" type="tns:queryEmployeeByUsername" />
+  <xs:element name="queryEmployeeByUsernameResponse" type="tns:queryEmployeeByUsernameResponse" />
   <xs:element name="queryEmployeeResponse" type="tns:queryEmployeeResponse" />
   <xs:element name="queryFamilyByCode" type="tns:queryFamilyByCode" />
   <xs:element name="queryFamilyByCodeResponse" type="tns:queryFamilyByCodeResponse" />
@@ -492,12 +494,42 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryEmployeeByUsername">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryEmployeeByUsernameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:employee" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertUser">
     <xs:sequence>
       <xs:element minOccurs="0" name="user" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sale" type="tns:sale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertSaleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateFamily">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="family" type="tns:family" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateFamilyResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
@@ -513,42 +545,12 @@
       <xs:element minOccurs="0" name="return" type="tns:warehouseDetail" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="updateFamily">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="family" type="tns:family" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateFamilyResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertSale">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="sale" type="tns:sale" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertSaleResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryAllSale">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sale" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateSupplier">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="supplier" type="tns:supplier" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateSupplierResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="updateDiscount">
@@ -561,22 +563,22 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="updateSupplier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="supplier" type="tns:supplier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateSupplierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryAllPremises">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllPremisesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:premises" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryProductBySKUCode">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryProductBySKUCodeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertBrand">
@@ -587,6 +589,16 @@
   <xs:complexType name="insertBrandResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllCustomer">
@@ -759,6 +771,14 @@
       <xs:element minOccurs="0" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllEmployee">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllEmployeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryFamilyByCode">
     <xs:sequence>
       <xs:element minOccurs="0" name="familyID" type="xs:string" />
@@ -767,14 +787,6 @@
   <xs:complexType name="queryFamilyByCodeResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:family" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployee">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllEmployeeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:employee" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertProduct">
@@ -816,6 +828,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:purchase" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllBrand">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllBrandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="validateUser">
     <xs:sequence>
       <xs:element minOccurs="0" name="username" type="xs:string" />
@@ -825,14 +845,6 @@
   <xs:complexType name="validateUserResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:user" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllBrand">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllBrandResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertRefund">
@@ -915,6 +927,14 @@
       <xs:element minOccurs="0" name="return" type="tns:customer" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllArea">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryRefundByIdSale">
     <xs:sequence>
       <xs:element minOccurs="0" name="saleId" type="xs:int" />
@@ -923,14 +943,6 @@
   <xs:complexType name="queryRefundByIdSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:refund" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="queryAllArea">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllAreaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryEmployee">

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
-
+using View.MateWSLocal;
 namespace View
 {
     public partial class MainWindow : Form
     {
         public MateWSLocal.user currentUser;
+        private DBControllerWSClient serviceDA;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace View
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PurchaseForm purchaseForm = new PurchaseForm();
+            purchaseForm.currentUser = currentUser;
             purchaseForm.Show();
             
         }
@@ -65,7 +67,10 @@ namespace View
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            lblNameUser.Text = currentUser.user1;
+            serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            employee emp = new employee();
+            emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
+            lblNameUser.Text = emp.name + " " + emp.lastName + " " + emp.secondLastName;
         }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)

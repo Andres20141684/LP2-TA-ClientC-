@@ -76,9 +76,9 @@
             this.gbTransactionInformation.Controls.Add(this.lblStock);
             this.gbTransactionInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTransactionInformation.Location = new System.Drawing.Point(16, 277);
-            this.gbTransactionInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTransactionInformation.Margin = new System.Windows.Forms.Padding(2);
             this.gbTransactionInformation.Name = "gbTransactionInformation";
-            this.gbTransactionInformation.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTransactionInformation.Padding = new System.Windows.Forms.Padding(2);
             this.gbTransactionInformation.Size = new System.Drawing.Size(507, 102);
             this.gbTransactionInformation.TabIndex = 19;
             this.gbTransactionInformation.TabStop = false;
@@ -98,7 +98,7 @@
             // 
             this.txtIGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIGV.Location = new System.Drawing.Point(385, 46);
-            this.txtIGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIGV.Margin = new System.Windows.Forms.Padding(2);
             this.txtIGV.MaxLength = 10;
             this.txtIGV.Name = "txtIGV";
             this.txtIGV.Size = new System.Drawing.Size(108, 20);
@@ -108,7 +108,7 @@
             // 
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(151, 76);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.MaxLength = 10;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(108, 20);
@@ -118,7 +118,7 @@
             // 
             this.txtPurchasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPurchasePrice.Location = new System.Drawing.Point(385, 19);
-            this.txtPurchasePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurchasePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurchasePrice.MaxLength = 10;
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Size = new System.Drawing.Size(108, 20);
@@ -128,7 +128,7 @@
             // 
             this.txtSalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalePrice.Location = new System.Drawing.Point(151, 21);
-            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalePrice.MaxLength = 10;
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(108, 20);
@@ -187,6 +187,7 @@
             // gbGeneralInformation
             // 
             this.gbGeneralInformation.BackColor = System.Drawing.Color.White;
+            this.gbGeneralInformation.BackgroundImage = global::View.Properties.Resources.whitebackground;
             this.gbGeneralInformation.Controls.Add(this.cboFamily);
             this.gbGeneralInformation.Controls.Add(this.cboBrand);
             this.gbGeneralInformation.Controls.Add(this.txtCareDescription);
@@ -203,9 +204,9 @@
             this.gbGeneralInformation.Controls.Add(this.lblDescriptionCare);
             this.gbGeneralInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGeneralInformation.Location = new System.Drawing.Point(16, 15);
-            this.gbGeneralInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
             this.gbGeneralInformation.Name = "gbGeneralInformation";
-            this.gbGeneralInformation.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
             this.gbGeneralInformation.Size = new System.Drawing.Size(507, 255);
             this.gbGeneralInformation.TabIndex = 18;
             this.gbGeneralInformation.TabStop = false;
@@ -216,7 +217,7 @@
             this.cboFamily.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFamily.FormattingEnabled = true;
             this.cboFamily.Location = new System.Drawing.Point(340, 51);
-            this.cboFamily.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboFamily.Margin = new System.Windows.Forms.Padding(2);
             this.cboFamily.Name = "cboFamily";
             this.cboFamily.Size = new System.Drawing.Size(153, 21);
             this.cboFamily.TabIndex = 4;
@@ -227,7 +228,7 @@
             this.cboBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(340, 25);
-            this.cboBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(153, 21);
             this.cboBrand.TabIndex = 2;
@@ -237,7 +238,7 @@
             // 
             this.txtCareDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCareDescription.Location = new System.Drawing.Point(151, 162);
-            this.txtCareDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCareDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtCareDescription.MaxLength = 500;
             this.txtCareDescription.Multiline = true;
             this.txtCareDescription.Name = "txtCareDescription";
@@ -249,7 +250,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(151, 77);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.MaxLength = 500;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -261,7 +262,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(151, 49);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.MaxLength = 100;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(108, 20);
@@ -282,7 +283,7 @@
             this.cbActive.AutoSize = true;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(151, 232);
-            this.cbActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
             this.cbActive.TabIndex = 16;
@@ -293,7 +294,7 @@
             // 
             this.txtSKUCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSKUCode.Location = new System.Drawing.Point(151, 24);
-            this.txtSKUCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSKUCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtSKUCode.MaxLength = 8;
             this.txtSKUCode.Name = "txtSKUCode";
             this.txtSKUCode.Size = new System.Drawing.Size(108, 20);
@@ -364,7 +365,7 @@
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(460, 383);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 23);
             this.btnSave.TabIndex = 17;
@@ -378,7 +379,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.Location = new System.Drawing.Point(429, 383);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.TabIndex = 20;
@@ -395,7 +396,7 @@
             this.Controls.Add(this.gbGeneralInformation);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "UpdateProductForm";
             this.Text = "Modificar Producto";

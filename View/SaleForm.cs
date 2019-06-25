@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
         public SaleForm()
         {
             InitializeComponent();
+            boletaRadioButton.Checked = true;
         }
 
 
@@ -203,7 +204,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese un empleado existente");
+                    MessageBox.Show("Ingrese un clinete existente");
                 }
 
             }

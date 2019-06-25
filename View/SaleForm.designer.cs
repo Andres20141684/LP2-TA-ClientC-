@@ -160,7 +160,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(297, 45);
+            this.radioButton1.Location = new System.Drawing.Point(218, 44);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(61, 17);
             this.radioButton1.TabIndex = 4;
@@ -182,10 +182,10 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(297, 69);
+            this.txtDescripcion.Location = new System.Drawing.Point(329, 69);
             this.txtDescripcion.MaxLength = 100;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(225, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(193, 20);
             this.txtDescripcion.TabIndex = 7;
             this.txtDescripcion.Text = "Descripción";
             // 
@@ -300,7 +300,7 @@
             // txtSerialCode
             // 
             this.txtSerialCode.Enabled = false;
-            this.txtSerialCode.Location = new System.Drawing.Point(291, 23);
+            this.txtSerialCode.Location = new System.Drawing.Point(329, 23);
             this.txtSerialCode.Name = "txtSerialCode";
             this.txtSerialCode.Size = new System.Drawing.Size(100, 20);
             this.txtSerialCode.TabIndex = 15;
@@ -391,10 +391,10 @@
             this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureSearch.Location = new System.Drawing.Point(119, 66);
+            this.pictureSearch.Location = new System.Drawing.Point(285, 69);
             this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pictureSearch.Name = "pictureSearch";
-            this.pictureSearch.Size = new System.Drawing.Size(27, 23);
+            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
             this.pictureSearch.TabIndex = 109;
             this.pictureSearch.TabStop = false;
             this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);

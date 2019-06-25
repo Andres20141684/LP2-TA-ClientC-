@@ -57,10 +57,12 @@
             this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gbGeneralInf.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -195,10 +197,10 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(297, 69);
+            this.txtDescripcion.Location = new System.Drawing.Point(329, 69);
             this.txtDescripcion.MaxLength = 100;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(209, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(177, 20);
             this.txtDescripcion.TabIndex = 21;
             this.txtDescripcion.Text = "Descripción";
             // 
@@ -225,7 +227,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(297, 45);
+            this.radioButton1.Location = new System.Drawing.Point(219, 47);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(61, 17);
             this.radioButton1.TabIndex = 18;
@@ -320,6 +322,7 @@
             // gbGeneralInf
             // 
             this.gbGeneralInf.BackColor = System.Drawing.Color.White;
+            this.gbGeneralInf.Controls.Add(this.pictureSearch);
             this.gbGeneralInf.Controls.Add(this.txtSerialCode);
             this.gbGeneralInf.Controls.Add(this.label1);
             this.gbGeneralInf.Controls.Add(this.userLabelContent);
@@ -344,7 +347,7 @@
             // txtSerialCode
             // 
             this.txtSerialCode.Enabled = false;
-            this.txtSerialCode.Location = new System.Drawing.Point(297, 18);
+            this.txtSerialCode.Location = new System.Drawing.Point(329, 23);
             this.txtSerialCode.Name = "txtSerialCode";
             this.txtSerialCode.Size = new System.Drawing.Size(100, 20);
             this.txtSerialCode.TabIndex = 25;
@@ -375,6 +378,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Venta";
             // 
+            // pictureSearch
+            // 
+            this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
+            this.pictureSearch.Location = new System.Drawing.Point(284, 69);
+            this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureSearch.Name = "pictureSearch";
+            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
+            this.pictureSearch.TabIndex = 110;
+            this.pictureSearch.TabStop = false;
+            this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);
+            // 
             // PurchaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +414,7 @@
             this.gbGeneralInf.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,5 +451,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtSerialCode;
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureSearch;
     }
 }

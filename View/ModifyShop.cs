@@ -34,23 +34,6 @@ namespace ShopsForm
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            if (!filledValues())
-            {
-                //MessageBox.Show("Complete la información");
-            }
-            else
-            {
-                MessageBox.Show("Los cambios han sido realizados satisfactoriamente");
-                this.Close();
-            }
-        }
-        private bool filledValues()
-        {
-
-
-            return true;
-=======
             serviceDA = new DBControllerWSClient();
             currentLocal.description = txtDesc.Text;
             currentLocal.address = txtDir.Text;
@@ -60,7 +43,6 @@ namespace ShopsForm
             serviceDA.updatePremises(currentLocal);
             MessageBox.Show("El local se modificó satisfactoriamente");
             this.Close();
->>>>>>> de6defe4dd5b18b98663758021d280a1d9061234
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

@@ -53,17 +53,17 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.gbGeneralInf = new System.Windows.Forms.GroupBox();
+            this.pictureSearch = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureSearch = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -220,6 +220,7 @@
             this.dgvSaleDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSaleDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvSaleDetails.TabIndex = 10;
+            this.dgvSaleDetails.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSaleDetails_CellValidating);
             // 
             // productId
             // 
@@ -330,6 +331,21 @@
             this.gbGeneralInf.TabStop = false;
             this.gbGeneralInf.Text = "Datos generales";
             // 
+            // pictureSearch
+            // 
+            this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
+            this.pictureSearch.Location = new System.Drawing.Point(285, 69);
+            this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureSearch.Name = "pictureSearch";
+            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
+            this.pictureSearch.TabIndex = 109;
+            this.pictureSearch.TabStop = false;
+            this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -384,21 +400,6 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Total:";
             // 
-            // pictureSearch
-            // 
-            this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureSearch.Location = new System.Drawing.Point(285, 69);
-            this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureSearch.Name = "pictureSearch";
-            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
-            this.pictureSearch.TabIndex = 109;
-            this.pictureSearch.TabStop = false;
-            this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);
-            // 
             // SaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,9 +421,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).EndInit();
             this.gbGeneralInf.ResumeLayout(false);
             this.gbGeneralInf.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -119,7 +119,8 @@ namespace Producto
             }
             catch
             {
-                MessageBox.Show("La información no es correcta");
+                MessageBox.Show("No existe producto con ese elemento SKU no es correcta");
+                updateDataGridView();
             }
 
         }
@@ -140,6 +141,11 @@ namespace Producto
                 //componentsState(State.ProductSelected);
                 p = (product)dgvProducts.CurrentRow.DataBoundItem;
             }
+
+        }
+
+        private void txtProduct_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

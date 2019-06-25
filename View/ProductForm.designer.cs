@@ -126,6 +126,7 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(234, 20);
             this.txtProduct.TabIndex = 2;
+            this.txtProduct.TextChanged += new System.EventHandler(this.txtProduct_TextChanged);
             // 
             // btnUpdateProduct
             // 

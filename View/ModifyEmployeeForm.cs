@@ -78,12 +78,12 @@ namespace entregable
                 currentEmployee.secondLastName = txtEmployeeSecondLastName.Text;
                 currentEmployee.phone = txtEmployeePhone.Text;
                 currentEmployee.email = txtEmployeeEmail.Text;
-                currentEmployee.birthdate = dtpEmployeeBorn.Value.Date;
-                currentEmployee.contractStarDate = dtpEmployeeStartDate.Value.Date;
-                currentEmployee.contractEndDate = dtpEmployeeEndDate.Value.Date;
+                currentEmployee.birthdate = (DateTime) dtpEmployeeBorn.Value.Date;
+                currentEmployee.contractStarDate = (DateTime) dtpEmployeeStartDate.Value.Date;
+                currentEmployee.contractEndDate = (DateTime)dtpEmployeeEndDate.Value.Date;
                 //emp.area = cbArea.Text
                 currentEmployee.role = cbRole.Text;
-                //serviceDA.updateEmployee(currentEmployee);
+                serviceDA.updateEmployee(currentEmployee);
                 Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("El empleado se modificó satisfactoriamente.");
                 this.Close();

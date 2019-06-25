@@ -41,10 +41,10 @@
             this.proovedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNameUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTesto = new System.Windows.Forms.Label();
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,13 +175,22 @@
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.ReportesToolStripMenuItem_Click);
             // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
             // lblNameUser
             // 
             this.lblNameUser.AutoSize = true;
             this.lblNameUser.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lblNameUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNameUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameUser.Location = new System.Drawing.Point(33, 262);
+            this.lblNameUser.Location = new System.Drawing.Point(11, 262);
             this.lblNameUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameUser.Name = "lblNameUser";
             this.lblNameUser.Padding = new System.Windows.Forms.Padding(4);
@@ -211,15 +220,6 @@
             this.lbTesto.Size = new System.Drawing.Size(0, 13);
             this.lbTesto.TabIndex = 11;
             this.lbTesto.Click += new System.EventHandler(this.lbTesto_Click);
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            this.cerrarSesiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 15, 4, 0);
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // label1
             // 

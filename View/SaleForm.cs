@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace WindowsFormsApp1
 {
     public partial class SaleForm : Form
     {
+        //public static int numero_estatico = 0;
+        private BindingList<sale> sales;
         public View.MateWSLocal.user currentUser;
         int type;
         private DBControllerWSClient serviceDA;
@@ -22,13 +25,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
             emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
             userLabelContent.Text = emp.name + " "+ emp.lastName + " "+emp.secondLastName;
+            sales = new BindingList<sale>(serviceDA.queryAllSale());
+            String ultimoSerialCode = sales[sales.Count() - 1].serialCode;
+            String nuevoSerialCode = "V"+(int.Parse(ultimoSerialCode.Substring(1))+1).ToString("000000");
+            txtSerialCode.Text = nuevoSerialCode;
         }
         View.MainWindow refParent;
         public void SetParent(View.MainWindow form)

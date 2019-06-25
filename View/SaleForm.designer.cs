@@ -34,6 +34,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userLabel = new System.Windows.Forms.Label();
             this.userLabelContent = new System.Windows.Forms.Label();
             this.boletaRadioButton = new System.Windows.Forms.RadioButton();
@@ -57,7 +58,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -105,16 +105,23 @@
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // devolucionToolStripMenuItem
             // 
             this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
-            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.devolucionToolStripMenuItem.Text = "Devolucion";
             this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);
+            // 
+            // historialToolStripMenuItem
+            // 
+            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.historialToolStripMenuItem.Text = "Historial";
+            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // userLabel
             // 
@@ -208,6 +215,7 @@
             this.dgvSaleDetails.Location = new System.Drawing.Point(17, 48);
             this.dgvSaleDetails.Name = "dgvSaleDetails";
             this.dgvSaleDetails.RowHeadersWidth = 49;
+            this.dgvSaleDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSaleDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvSaleDetails.TabIndex = 10;
             // 
@@ -372,13 +380,6 @@
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Total:";
-            // 
-            // historialToolStripMenuItem
-            // 
-            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.historialToolStripMenuItem.Text = "Historial";
-            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // SaleForm
             // 

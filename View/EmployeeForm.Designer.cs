@@ -83,6 +83,7 @@
             this.dgvColumRole});
             this.dgvEmployee.Location = new System.Drawing.Point(37, 131);
             this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(629, 263);
             this.dgvEmployee.TabIndex = 2;
             // 

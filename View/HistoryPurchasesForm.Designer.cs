@@ -71,6 +71,7 @@
             this.dgvColumSecondLastName});
             this.dgvPurchases.Location = new System.Drawing.Point(12, 81);
             this.dgvPurchases.Name = "dgvPurchases";
+            this.dgvPurchases.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPurchases.Size = new System.Drawing.Size(629, 258);
             this.dgvPurchases.TabIndex = 16;
             this.dgvPurchases.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPurchases_CellContentClick);

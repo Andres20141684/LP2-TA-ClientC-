@@ -120,6 +120,7 @@
             this.dgvPurchaseDetails.Location = new System.Drawing.Point(17, 47);
             this.dgvPurchaseDetails.Name = "dgvPurchaseDetails";
             this.dgvPurchaseDetails.RowHeadersWidth = 49;
+            this.dgvPurchaseDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPurchaseDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvPurchaseDetails.TabIndex = 24;
             // 

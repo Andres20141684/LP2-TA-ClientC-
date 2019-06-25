@@ -41,7 +41,8 @@ namespace entregable
                 ModifyEmployeeForm modifyEmployeeForm = new ModifyEmployeeForm();
                 modifyEmployeeForm.currentEmployee = new employee();
                 employee e1 = new employee();
-                e1=serviceDAA.queryEmployeeByDNI(dgvEmployee.Rows[i].Cells[0].Value.ToString());
+                serviceDAA = new DBControllerWSClient();
+                e1 =serviceDAA.queryEmployeeByDNI(dgvEmployee.Rows[i].Cells[0].Value.ToString());
                 modifyEmployeeForm.currentEmployee = e1;
                 modifyEmployeeForm.SetParent(this);
                 modifyEmployeeForm.ShowDialog();

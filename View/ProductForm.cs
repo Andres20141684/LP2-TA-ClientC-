@@ -23,21 +23,21 @@ namespace Producto
         public class Product{}
         private product p;
         private BindingList<View.MateWSLocal.product> productsData;
-        private View.MateWSLocal.DBControllerWSClient serviceDA;
-        private DBControllerWSClient serviceDAA;
+        private View.MateWSLocal.DBControllerWSClient serviceDA = new View.MateWSLocal.DBControllerWSClient();
+        private DBControllerWSClient serviceDAA = new DBControllerWSClient();
         public FrmProduct()
         {
             InitializeComponent();
             updateDataGridView();
-            serviceDA = new View.MateWSLocal.DBControllerWSClient();
-            serviceDAA = new DBControllerWSClient();
+            
+            //serviceDAA = new DBControllerWSClient();
         }
 
         void updateDataGridView()
         {
             Cursor.Current = Cursors.WaitCursor;
             dgvProducts.Rows.Clear();
-            
+            //serviceDA = new View.MateWSLocal.DBControllerWSClient();
             productsData = new BindingList<View.MateWSLocal.product>(serviceDA.queryAllProducts());
             for (int i = 0; i < productsData.Count; i++)
             {

@@ -139,6 +139,23 @@
             this.dgvColTel.HeaderText = "Telefono";
             this.dgvColTel.Name = "dgvColTel";
             // 
+            // dvgColTypeClient
+            // 
+            //this.dvgColTypeClient.HeaderText = "Tipo de Cliente";
+            //this.dvgColTypeClient.Name = "dvgColTypeClient";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(391, 36);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 26);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // ClientesForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

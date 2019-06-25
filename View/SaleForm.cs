@@ -185,5 +185,28 @@ namespace WindowsFormsApp1
             HistorySaleForm history = new HistorySaleForm();
             history.ShowDialog();
         }
+
+        private void pictureSearch_Click(object sender, EventArgs e)
+        {
+            if (txtDniRuc.Text.Length < 8)
+            {
+                MessageBox.Show("Ingrese un DNI o RUC válido", "Aviso");
+            }
+            else
+            {
+                serviceDA = new DBControllerWSClient();
+                customer cliente = new customer();
+                cliente = serviceDA.queryByIdCustomer(txtDniRuc.Text);
+                if (cliente.email != null)
+                {
+                    txtDescripcion.Text = cliente.descriptionCustomer;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un empleado existente");
+                }
+
+            }
+        }
     }
 }

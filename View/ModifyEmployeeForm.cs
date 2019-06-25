@@ -83,7 +83,7 @@ namespace entregable
                 currentEmployee.contractEndDate = dtpEmployeeEndDate.Value.Date;
                 //emp.area = cbArea.Text
                 currentEmployee.role = cbRole.Text;
-                //serviceDA.updateEmployee(currentEmployee);
+                serviceDA.updateEmployee(currentEmployee);
                 Cursor.Current = Cursors.Arrow;
                 MessageBox.Show("El empleado se modificó satisfactoriamente.");
                 this.Close();

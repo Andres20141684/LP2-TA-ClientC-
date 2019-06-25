@@ -17,6 +17,7 @@ namespace ShopsForm
         private BindingList<View.MateWSLocal.premises> shopsData;
         private View.MateWSLocal.DBControllerWSClient serviceDA;
         private View.MateWSLocal.DBControllerWSClient serviceDAA;
+        private BindingList<View.MateWSLocal.premises> locales;
         public ShopForm()
         {
             InitializeComponent();
@@ -29,11 +30,17 @@ namespace ShopsForm
             dgvLocal.Rows.Clear();
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             shopsData = new BindingList<View.MateWSLocal.premises>(serviceDA.queryAllPremises());
-            for (int i=0;i<shopsData.Count;i++)
+            for (int i = 0; i < shopsData.Count; i++)
             {
                 dgvLocal.Rows.Add(new String[]{
-                    shopsData[i].id.ToString(), shopsData[i].description, shopsData[i].creationDate.ToString(), shopsData[i].address
+                    shopsData[i].id.ToString(), shopsData[i].description, shopsData[i].address
                 });
+            }
+            locales = new BindingList<premises>(serviceDA.queryAllPremises());
+            cboLocal.Items.Clear();
+            for (int i = 0; i < locales.Count; i++)
+            {
+                cboLocal.Items.Add("" + locales[i].description);
             }
             Cursor.Current = Cursors.Arrow;
         }
@@ -54,69 +61,66 @@ namespace ShopsForm
             {
                 //addLocal.SetParent(this);
                 addLocal.ShowDialog();
-                updateDataGridView();
+                //updateDataGridView();
             }
             updateDataGridView();
+
         }
 
         private void btnModLocal_Click(object sender, EventArgs e)
         {
-            Modificar_Local modLocal = new Modificar_Local();
-            modLocal.SetParent(this);
-            modLocal.ShowDialog();
             int i = dgvLocal.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                /*UpdateShopForm updateShop = new View.UpdateShopForm();
-                updateShop.currentPremise = new premises();
-                updateShop.currentPremise = shopsData[i];
-                updateShop.ShowDialog();
-                updateDataGridView();*/
-
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un producto");
-            }
-        }
-
-        private void btnDelLocal_Click(object sender, EventArgs e)
-        {
-            int i = dgvLocal.CurrentCell.RowIndex;
-            if (i >= 0)
-            {
-                premises premise_aux = new premises();
-                premise_aux = shopsData[i];
-                premise_aux.state = 0;
-                serviceDA.updatePremises(premise_aux);
+                Modificar_Local modLocal = new Modificar_Local();
+                modLocal.currentLocal = new premises();
+                premises l1 = new premises();
+                serviceDAA = new View.MateWSLocal.DBControllerWSClient();
+                l1 = serviceDAA.queryPremisesByDescription(dgvLocal.Rows[i].Cells[1].Value.ToString());
+                modLocal.currentLocal = l1;
+                modLocal.ShowDialog();
                 updateDataGridView();
-                MessageBox.Show("Se ha eliminado el producto seleccionado");
             }
             else
             {
-                MessageBox.Show("Seleccione un producto");
-            }
-            //MessageBox.Show("Se ha eliminado al local seleccionado");
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Inserte un código válido");
+                MessageBox.Show("Seleccione un local");
             }
         }
+
 
         private void ShopForm_Load(object sender, EventArgs e)
         {
             //Load, cargamos el grid
+            /*
+            serviceDA = new DBControllerWSClient();
+            locales = new BindingList<premises>(serviceDA.queryAllPremises());
+            cboLocal.ResetText();
+            for (int i = 0; i < locales.Count; i++)
+            {
+                cboLocal.Items.Add("" + locales[i].description);
+            }*/
+
         }
 
         private void Label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboLocal_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            String desc = cboLocal.Text;
+            premises loc = new premises();
+            loc = serviceDA.queryPremisesByDescription(desc);
+
+            dgvLocal.Rows.Clear();
+
+            dgvLocal.Rows.Add(new String[] {
+                ""+loc.id,loc.description,loc.address
+                });
+
+            Cursor.Current = Cursors.Arrow;
         }
     }
 }

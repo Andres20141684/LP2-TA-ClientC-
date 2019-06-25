@@ -61,7 +61,7 @@ namespace ShopsForm
         }
         private bool filledValues()
         {
-            if (Regex.Match(txtNombre.Text, @"[0-9]").Success || txtNombre.Text.Length <3 )
+            if (Regex.Match(txtNombre.Text, @"[0-9]").Success || txtNombre.Text.Length < 3)
             {
                 MessageBox.Show("Ingrese un nombre válido mayor a 3 caracteres y sin numeros.");
                 return false;
@@ -77,15 +77,6 @@ namespace ShopsForm
                 return false;
             }*/
             return true;
-        }
-        public void SetParent(ShopForm form)
-        {
-            refParent = form;
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -108,9 +99,5 @@ namespace ShopsForm
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

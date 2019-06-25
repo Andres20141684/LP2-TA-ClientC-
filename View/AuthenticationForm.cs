@@ -43,7 +43,7 @@ namespace View
                 {
                     writePassword.Visible = true;
                     writeUser.Visible = true;
-                    
+                    MessageBox.Show("Usuario o contraseña incorrectos");
                     return;
                 }
                 this.Hide();

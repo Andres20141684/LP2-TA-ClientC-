@@ -506,7 +506,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdCustomerResponse.datasource">
-<<<<<<< HEAD
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdEmployeeResponse.datasource">
@@ -546,88 +545,8 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.refund.datasource">
-=======
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryByIdEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeByDNIResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryFamilyByCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPremisesByDescriptionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryProductBySKUCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryPurchaseBySerialCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryRefundByIdSaleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.querySaleBySerialCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.querySupplierByCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryUserByUserNameResponse.datasource">
->>>>>>> 45638d5de705398f6600bad85e89a17390258406
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.refund.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-<<<<<<< HEAD
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateAreaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateAristSupplierResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateBrandResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateCustomerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateDiscountResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateEmployeeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateFamilyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updatePremisesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateProductResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updatePurchaseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSaleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSupplierResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateUserResponse.datasource">
-=======
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.sale.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -665,21 +584,17 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSaleResponse.datasource">
->>>>>>> 45638d5de705398f6600bad85e89a17390258406
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateSupplierResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-<<<<<<< HEAD
-=======
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.updateUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.user.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
->>>>>>> 45638d5de705398f6600bad85e89a17390258406
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.validateUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

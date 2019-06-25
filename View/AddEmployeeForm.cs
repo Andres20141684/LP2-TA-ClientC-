@@ -114,7 +114,7 @@ namespace entregable
             }
              if (dtpEmployeeBorn.Value.Date > DateTime.Now)
             {
-                MessageBox.Show("Ingrese una fecha válida");
+                MessageBox.Show("Ingrese una fecha válida de nacimiento");
                 return false;
             }
              if (dtpEmployeeStartDate.Value.Date > dtpEmployeeEndDate.Value.Date)

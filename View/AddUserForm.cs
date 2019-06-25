@@ -14,12 +14,14 @@ namespace User
     public partial class AddUserForm : Form
     {
         private DBControllerWSClient serviceDA;
+        employee emplo = new employee();
         UserForm refParent;
 
         public AddUserForm()
         {
             InitializeComponent();
             cbActive.Checked = true;
+            userGroupBox.Enabled = false;
         }
 
         public void SetParent(UserForm form)
@@ -38,6 +40,10 @@ namespace User
                 u.user1 = txtUserName.Text;
                 u.password = txtUserPassword.Text;
                 u.state = 1;
+                u.employee = emplo;
+                if (emplo.role == "Vendedor") u.userType = 3;
+                else if (emplo.role == "Supervisor") u.userType = 2;
+                else u.userType = 1;
                 serviceDA.insertUser(u);
                 MessageBox.Show("El usuario se agregó satisfactoriamente");
                 this.Close();
@@ -50,10 +56,17 @@ namespace User
             {
                 MessageBox.Show("Ingrese el nombre del usuario");
                 return false;
-            }else if (txtUserPassword.Text==""){
+            } else if (txtUserPassword.Text == "")
+            {
                 MessageBox.Show("Ingrese una contraseña");
                 return false;
-            }else if (dtpUserExpirationDate.Value.Date < DateTime.Now)
+            }
+            else if (txtPasswordConfirm.Text != txtUserPassword.Text)
+            {
+                MessageBox.Show("Las contraseñas deben coincidir");
+                return false;
+            }
+            else if (dtpUserExpirationDate.Value.Date < DateTime.Now)
             {
                 MessageBox.Show("Ingrese una fecha válida");
                 return false;
@@ -61,9 +74,27 @@ namespace User
             return true;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void PictureSearch_Click(object sender, EventArgs e)
         {
-
+            if (txtEmpDNI.Text.Length != 8)
+            {
+                MessageBox.Show("Ingrese un DNI válido", "Aviso");
+            }
+            else
+            {
+                emplo = serviceDA.queryEmployee(txtEmpDNI.Text);
+                if (emplo != null)
+                {
+                    txtEmpName.Text = emplo.name + " " + emplo.lastName;
+                    cboEmpUserType.Text = emplo.role;
+                    userGroupBox.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un empleado existente");
+                }
+                
+            }
         }
     }
 }

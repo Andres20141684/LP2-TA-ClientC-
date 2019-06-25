@@ -33,15 +33,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.dgvSupplier = new System.Windows.Forms.DataGridView();
+            this.btnModifyEmployee = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumSecondLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModifyEmployee = new System.Windows.Forms.Button();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,69 +93,13 @@
             this.dgvColumName,
             this.dgvColumFistLastName,
             this.dgvColumSecondLastName,
-            this.dgvColumPhone,
-            this.dgvColumEmail,
-            this.Column1});
+            this.email,
+            this.dgvColumPhone});
             this.dgvSupplier.Location = new System.Drawing.Point(36, 138);
             this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSupplier.Size = new System.Drawing.Size(629, 258);
             this.dgvSupplier.TabIndex = 9;
-            // 
-            // dgvColumId
-            // 
-            this.dgvColumId.Frozen = true;
-            this.dgvColumId.HeaderText = "RUC";
-            this.dgvColumId.Name = "dgvColumId";
-            this.dgvColumId.ReadOnly = true;
-            this.dgvColumId.Width = 80;
-            // 
-            // dgvColumName
-            // 
-            this.dgvColumName.Frozen = true;
-            this.dgvColumName.HeaderText = "Nombre";
-            this.dgvColumName.Name = "dgvColumName";
-            this.dgvColumName.ReadOnly = true;
-            this.dgvColumName.Width = 170;
-            // 
-            // dgvColumFistLastName
-            // 
-            this.dgvColumFistLastName.Frozen = true;
-            this.dgvColumFistLastName.HeaderText = "Dirección";
-            this.dgvColumFistLastName.Name = "dgvColumFistLastName";
-            this.dgvColumFistLastName.ReadOnly = true;
-            this.dgvColumFistLastName.Width = 180;
-            // 
-            // dgvColumSecondLastName
-            // 
-            this.dgvColumSecondLastName.Frozen = true;
-            this.dgvColumSecondLastName.HeaderText = "Cuenta bancaria";
-            this.dgvColumSecondLastName.Name = "dgvColumSecondLastName";
-            this.dgvColumSecondLastName.ReadOnly = true;
-            this.dgvColumSecondLastName.Width = 150;
-            // 
-            // dgvColumPhone
-            // 
-            this.dgvColumPhone.Frozen = true;
-            this.dgvColumPhone.HeaderText = "Teléfono";
-            this.dgvColumPhone.Name = "dgvColumPhone";
-            this.dgvColumPhone.ReadOnly = true;
-            this.dgvColumPhone.Width = 80;
-            // 
-            // dgvColumEmail
-            // 
-            this.dgvColumEmail.Frozen = true;
-            this.dgvColumEmail.HeaderText = "Email";
-            this.dgvColumEmail.Name = "dgvColumEmail";
-            this.dgvColumEmail.ReadOnly = true;
-            this.dgvColumEmail.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Estado";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
             // 
             // btnModifyEmployee
             // 
@@ -181,6 +124,53 @@
             this.btnAddEmployee.Text = "Agregar Proveedor";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.BtnAddEmployee_Click);
+            // 
+            // dgvColumId
+            // 
+            this.dgvColumId.Frozen = true;
+            this.dgvColumId.HeaderText = "RUC";
+            this.dgvColumId.Name = "dgvColumId";
+            this.dgvColumId.ReadOnly = true;
+            this.dgvColumId.Width = 70;
+            // 
+            // dgvColumName
+            // 
+            this.dgvColumName.Frozen = true;
+            this.dgvColumName.HeaderText = "Nombre";
+            this.dgvColumName.Name = "dgvColumName";
+            this.dgvColumName.ReadOnly = true;
+            this.dgvColumName.Width = 120;
+            // 
+            // dgvColumFistLastName
+            // 
+            this.dgvColumFistLastName.Frozen = true;
+            this.dgvColumFistLastName.HeaderText = "Dirección";
+            this.dgvColumFistLastName.Name = "dgvColumFistLastName";
+            this.dgvColumFistLastName.ReadOnly = true;
+            this.dgvColumFistLastName.Width = 120;
+            // 
+            // dgvColumSecondLastName
+            // 
+            this.dgvColumSecondLastName.Frozen = true;
+            this.dgvColumSecondLastName.HeaderText = "Cuenta bancaria";
+            this.dgvColumSecondLastName.Name = "dgvColumSecondLastName";
+            this.dgvColumSecondLastName.ReadOnly = true;
+            this.dgvColumSecondLastName.Width = 120;
+            // 
+            // email
+            // 
+            this.email.Frozen = true;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.Width = 80;
+            // 
+            // dgvColumPhone
+            // 
+            this.dgvColumPhone.Frozen = true;
+            this.dgvColumPhone.HeaderText = "Teléfono";
+            this.dgvColumPhone.Name = "dgvColumPhone";
+            this.dgvColumPhone.ReadOnly = true;
+            this.dgvColumPhone.Width = 80;
             // 
             // SupplierForm
             // 
@@ -218,8 +208,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumFistLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumSecondLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

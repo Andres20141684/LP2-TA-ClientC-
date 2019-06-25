@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     public partial class SupplierForm : Form
     {
         private View.MateWSLocal.DBControllerWSClient serviceDA;
+        private View.MateWSLocal.DBControllerWSClient serviceDAA;
+        private supplier proveedor = new supplier();
         private BindingList<supplier> suppliers;
         public SupplierForm()
         {
@@ -89,6 +91,18 @@ namespace WindowsFormsApp1
 
         private void BtnSearchEmployee_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            dgvSupplier.Rows.Clear();
+            serviceDAA = new DBControllerWSClient();
+            proveedor = (serviceDAA.querySupplierByCode(txtRUC.Text));
+
+            dgvSupplier.Rows.Add(new String[] {
+                proveedor.RUC, proveedor.name,proveedor.address,proveedor.bankData,proveedor.contactEmail,""+proveedor.contactPhone
+                });
+
+            Cursor.Current = Cursors.Arrow;
+
+            /*
             string searchValue = txtRUC.Text;
             dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
@@ -114,7 +128,8 @@ namespace WindowsFormsApp1
             catch (Exception exc)
             {
                 MessageBox.Show("No se encontró el proveedor.\nEscriba un RUC apropiado.");
-            }        
+            }   
+            */
         }
     }
 }

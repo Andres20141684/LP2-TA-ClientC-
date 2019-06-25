@@ -119,6 +119,7 @@ namespace User
                     txtEmpName.Text = emplo.name + " " + emplo.lastName;
                     cboEmpUserType.Text = emplo.role;
                     userGroupBox.Enabled = true;
+                    //falta validar si el empleado ya tiene un usuario
                 }
                 else
                 {

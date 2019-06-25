@@ -56,9 +56,9 @@
             this.gbGeneralInformation.Controls.Add(this.lblName);
             this.gbGeneralInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGeneralInformation.Location = new System.Drawing.Point(19, 17);
-            this.gbGeneralInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
             this.gbGeneralInformation.Name = "gbGeneralInformation";
-            this.gbGeneralInformation.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
             this.gbGeneralInformation.Size = new System.Drawing.Size(492, 355);
             this.gbGeneralInformation.TabIndex = 0;
             this.gbGeneralInformation.TabStop = false;
@@ -68,9 +68,10 @@
             // 
             this.txtFamilyCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFamilyCode.Location = new System.Drawing.Point(116, 26);
-            this.txtFamilyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtFamilyCode.MaxLength = 20;
+            this.txtFamilyCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFamilyCode.MaxLength = 50;
             this.txtFamilyCode.Name = "txtFamilyCode";
+            this.txtFamilyCode.ReadOnly = true;
             this.txtFamilyCode.Size = new System.Drawing.Size(363, 20);
             this.txtFamilyCode.TabIndex = 1;
             // 
@@ -78,8 +79,8 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(116, 57);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtName.MaxLength = 100;
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(363, 20);
             this.txtName.TabIndex = 2;
@@ -88,8 +89,8 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(116, 92);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtDescription.MaxLength = 500;
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -102,7 +103,7 @@
             this.cbActive.Enabled = false;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(122, 304);
-            this.cbActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
             this.cbActive.TabIndex = 17;
@@ -154,7 +155,7 @@
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(448, 382);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 23);
             this.btnSave.TabIndex = 19;
@@ -168,7 +169,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.Location = new System.Drawing.Point(417, 382);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.TabIndex = 20;
@@ -184,7 +185,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.gbGeneralInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "AddFamilyForm";
             this.Text = "Agregar Familia";

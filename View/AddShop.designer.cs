@@ -107,13 +107,13 @@
 
             // txtDireccion
             // 
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(128, 196);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDireccion.MaxLength = 100;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(369, 20);
-            this.txtDireccion.TabIndex = 3;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(128, 196);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.MaxLength = 100;
+            this.txtAddress.Name = "txtDireccion";
+            this.txtAddress.Size = new System.Drawing.Size(369, 20);
+            this.txtAddress.TabIndex = 3;
             // 
 
             // groupBox1

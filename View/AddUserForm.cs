@@ -54,26 +54,26 @@ namespace User
         {
             //Los datos de empleados se llenan y validad?
             //Borrable, pa abajo
-            if(textBox3.Text == "")
+            if(txtEmpDNI.Text == "")
             {
                 MessageBox.Show("Ingrese el DNI ");
                 return false;
             }
-            if(textBox3.Text.Length != 8)
+            if(txtEmpDNI.Text.Length != 8)
             {
                 MessageBox.Show("Ingrese un DNI válido");
             }
-            if (textBox3.Text.Length == 8)
+            if (txtEmpDNI.Text.Length == 8)
             {
                 int result = 0;
-                if (!int.TryParse(textBox3.Text, out result))
+                if (!int.TryParse(txtEmpDNI.Text, out result))
                 {
                     MessageBox.Show("Ha ingresado caracteres no númericos en el campo DNI, ingrese 8 dígitos númericos ");
                     return false;
                 }
                 //MessageBox.Show("Ingrese un DNI válido");
             }
-            if(textBox2.Text =="")
+            if(txtEmpName.Text =="")
             {
                 MessageBox.Show("Ingrese un nombre válido");
             }

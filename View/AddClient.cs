@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -92,8 +93,8 @@ namespace SalesClient
             }
             else if (cbTipoCliente.Text == "Jurídica" && txtClienteID.Text.Length == 11)
             {
-                int result = 0;
-                if (!int.TryParse(txtClienteID.Text, out result))
+                //int result = 0;
+                if (!Regex.Match(txtPhone.Text, @"([0-9]{11})").Success)
                 {
                     MessageBox.Show("Ha ingresado caracteres no númericos en el campo del RUC, ingrese 11 dígitos númericos ");
                     return false;
@@ -128,42 +129,26 @@ namespace SalesClient
             }
              if (txtPhone.Text.Length >= 3)
             {
-                int result = 0;
-                if (!int.TryParse(txtPhone.Text, out result))
+                //int result = 0;
+                if (!Regex.Match(txtPhone.Text, @"([0-9]{3,})").Success)
                 {
                     MessageBox.Show("Ha ingresado caracteres no númericos en el campo del Telefono, ingrese de 3 a 15 dígitos ");
                     return false;
                 }
-                
+            }
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            customer c = serviceDA.queryByIdCustomer(txtClienteID.Text);
+            Cursor.Current = Cursors.Arrow;
+            if (c.descriptionCustomer != null)
+            {
+                MessageBox.Show("Ya existe un cliente con ese DNI/RUC");
+                return false;
             }
             
             return true;
             
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtClienteID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -14,7 +14,7 @@ namespace SalesClient
     public partial class ClientesForms : Form
     {
         private DBControllerWSClient serviceDA;
-        private View.MateWSLocal.DBControllerWSClient serviceDAA;
+        //private View.MateWSLocal.DBControllerWSClient serviceDAA;
         private BindingList<customer> customers;
         private customer cliente = new customer();
         public ClientesForms()
@@ -50,7 +50,8 @@ namespace SalesClient
                 ModificarClienteForm modClient = new ModificarClienteForm();
                 modClient.currentCustomer = new customer();
                 customer e1 = new customer();
-                e1 = serviceDAA.queryByIdCustomer(dgvClients.Rows[i].Cells[0].Value.ToString());
+                serviceDA = new DBControllerWSClient();
+                e1 = serviceDA.queryByIdCustomer(dgvClients.Rows[i].Cells[0].Value.ToString());
                 modClient.currentCustomer = e1;
                 modClient.ShowDialog();
                 updateDataGridView();
@@ -91,42 +92,32 @@ namespace SalesClient
         private void ClientesForms_Load(object sender, EventArgs e)
         {
             updateDataGridView();
-            //Load, cargamos el grid
-            /*dgvClients.Rows.Add(new String[]
-            {
-                "1","Grupo Shanooc","admin@gruposhanooc.com","233 1889","Empresa"
-            });
-            dgvClients.Rows.Add(new String[]
-            {
-                "2","Omar Correa Alva","ocoral@gmail.com","963 789 234","Persona"
-            });
-            dgvClients.Rows.Add(new String[]
-            {
-                "3","TelcomServ SRL","correo_ventas@telcomservsrl.com","234 9878","Empresa"
-            });
-            dgvClients.Rows.Add(new String[]
-            {
-                "4","Carlos Perez Sosa","cperez@hotmail.com","998 944 333","Persona"
-            });*/
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvClients.Rows.Clear();
-            serviceDAA = new DBControllerWSClient();
-            cliente = (serviceDAA.queryByIdCustomer(txtDniRuc.Text));
-            dgvClients.Rows.Add(new String[] {
-                cliente.id, cliente.descriptionCustomer,cliente.email,cliente.phone
-                });
-
-            Cursor.Current = Cursors.Arrow;
-
-
-
             if (txtDniRuc.Text == "")
             {
                 MessageBox.Show("Ingrese un DNI / RUC válido");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                dgvClients.Rows.Clear();
+                serviceDA = new DBControllerWSClient();
+                cliente = (serviceDA.queryByIdCustomer(txtDniRuc.Text));
+                Cursor.Current = Cursors.Arrow;
+                if (cliente.id != null)
+                {
+                    dgvClients.Rows.Add(new String[] {
+                    cliente.id, cliente.descriptionCustomer,cliente.email,cliente.phone
+                    });
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado");
+                }
+                
             }
 
         }

@@ -67,11 +67,11 @@ namespace ShopsForm
                 MessageBox.Show("Ingrese el nombre del local");
                 return false;
             }
-            if (txtDesc.Text == "")
+            /*if (txtDesc.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del local");
                 return false;
-            }
+            }*/
             return true;
         }
         public void SetParent(ShopForm form)

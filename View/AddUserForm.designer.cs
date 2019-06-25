@@ -232,9 +232,12 @@
             // 
             // cboEmpUserType
             // 
-            this.cboEmpUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpUserType.Enabled = false;
             this.cboEmpUserType.FormattingEnabled = true;
+            this.cboEmpUserType.Items.AddRange(new object[] {
+            "Vendedor",
+            "Supervisor",
+            "Gerente"});
             this.cboEmpUserType.Location = new System.Drawing.Point(135, 70);
             this.cboEmpUserType.Name = "cboEmpUserType";
             this.cboEmpUserType.Size = new System.Drawing.Size(121, 21);

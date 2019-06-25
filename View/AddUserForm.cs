@@ -112,8 +112,9 @@ namespace User
             }
             else
             {
+                serviceDA = new DBControllerWSClient();
                 emplo = serviceDA.queryEmployee(txtEmpDNI.Text);
-                if (emplo != null)
+                if (emplo.name != null)
                 {
                     txtEmpName.Text = emplo.name + " " + emplo.lastName;
                     cboEmpUserType.Text = emplo.role;

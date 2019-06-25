@@ -400,7 +400,6 @@
             this.MaximizeBox = false;
             this.Name = "UpdateProductForm";
             this.Text = "Modificar Producto";
-            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.UpdateProductForm_Load);
             this.Shown += new System.EventHandler(this.UpdateProductForm_Shown);
             this.gbTransactionInformation.ResumeLayout(false);

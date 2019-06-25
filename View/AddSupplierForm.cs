@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -48,12 +49,21 @@ namespace WindowsFormsApp1
 
         private bool filledValues()
         {
-            if (txtRuc.Text == "" || (txtRuc.Text.Length!=8 && txtRuc.Text.Length!=11))
+            if ( txtRuc.Text.Length!=11)
             {
                 MessageBox.Show("Ingrese un RUC válido");
                 return false;
             }
-             if (txtNombre.Text == "" || txtNombre.Text.Length<2)
+            if (txtRuc.Text.Length == 11)
+            {
+                int result = 0;
+                if (!Regex.Match(txtRuc.Text, @"([0-9]{3,})").Success)
+                {
+                    MessageBox.Show("Ha ingresado caracteres no numericos en el campo RUC, ingrese 11 caracteres numericos");
+                    return false;
+                }
+            }
+            if (txtNombre.Text == "" || txtNombre.Text.Length<2)
             {
                 MessageBox.Show("Ingrese un nombre válido");
                 return false;
@@ -76,7 +86,7 @@ namespace WindowsFormsApp1
              if (txtTelefono.Text.Length >= 6)
             {
                 int result = 0;
-                if (!int.TryParse(txtTelefono.Text, out result))
+                if (!Regex.Match(txtRuc.Text, @"([0-9]{3,})").Success)
                 {
                     MessageBox.Show("Ingrese un numero de telefono con solo caracteres númericos");
                     return false;

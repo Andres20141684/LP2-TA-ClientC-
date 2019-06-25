@@ -235,7 +235,7 @@
             // 
             this.txtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuenta.Location = new System.Drawing.Point(148, 125);
-            this.txtCuenta.MaxLength = 18;
+            this.txtCuenta.MaxLength = 16;
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(349, 20);
             this.txtCuenta.TabIndex = 4;

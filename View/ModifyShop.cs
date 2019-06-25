@@ -24,8 +24,21 @@ namespace ShopsForm
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Los cambios han sido realizados satisfactoriamente");
-            this.Close();
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                MessageBox.Show("Los cambios han sido realizados satisfactoriamente");
+                this.Close();
+            }
+        }
+        private bool filledValues()
+        {
+
+
+            return true;
         }
     }
 }

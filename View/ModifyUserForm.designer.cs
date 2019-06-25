@@ -34,9 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lblState = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.modifyConfirmLabel = new System.Windows.Forms.Label();
+            this.txtModifyConfirmPassword = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,9 +66,10 @@
             // txtModifyUserPassword
             // 
             this.txtModifyUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModifyUserPassword.Location = new System.Drawing.Point(152, 34);
-            this.txtModifyUserPassword.MaxLength = 100;
+            this.txtModifyUserPassword.Location = new System.Drawing.Point(140, 24);
+            this.txtModifyUserPassword.MaxLength = 50;
             this.txtModifyUserPassword.Name = "txtModifyUserPassword";
+            this.txtModifyUserPassword.PasswordChar = '*';
             this.txtModifyUserPassword.Size = new System.Drawing.Size(357, 20);
             this.txtModifyUserPassword.TabIndex = 15;
             // 
@@ -93,7 +96,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtModifyConfirmPassword);
+            this.groupBox1.Controls.Add(this.modifyConfirmLabel);
             this.groupBox1.Controls.Add(this.cbActive);
+            this.groupBox1.Controls.Add(this.txtModifyUserPassword);
             this.groupBox1.Controls.Add(this.lblState);
             this.groupBox1.Controls.Add(this.dtpModifyUserExpirationDate);
             this.groupBox1.Controls.Add(this.label3);
@@ -105,21 +111,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::View.Properties.Resources.guardar;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureBox1.Location = new System.Drawing.Point(429, 383);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 23);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
+            this.cbActive.Checked = true;
+            this.cbActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(140, 335);
             this.cbActive.Margin = new System.Windows.Forms.Padding(2);
@@ -139,6 +135,39 @@
             this.lblState.TabIndex = 17;
             this.lblState.Text = "Estado";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::View.Properties.Resources.guardar;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
+            this.pictureBox1.Location = new System.Drawing.Point(429, 383);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 23);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // modifyConfirmLabel
+            // 
+            this.modifyConfirmLabel.AutoSize = true;
+            this.modifyConfirmLabel.BackColor = System.Drawing.Color.White;
+            this.modifyConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyConfirmLabel.Location = new System.Drawing.Point(11, 57);
+            this.modifyConfirmLabel.Name = "modifyConfirmLabel";
+            this.modifyConfirmLabel.Size = new System.Drawing.Size(132, 13);
+            this.modifyConfirmLabel.TabIndex = 27;
+            this.modifyConfirmLabel.Text = "Confirmar Contraseña:";
+            // 
+            // txtModifyConfirmPassword
+            // 
+            this.txtModifyConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModifyConfirmPassword.Location = new System.Drawing.Point(140, 57);
+            this.txtModifyConfirmPassword.MaxLength = 50;
+            this.txtModifyConfirmPassword.Name = "txtModifyConfirmPassword";
+            this.txtModifyConfirmPassword.PasswordChar = '*';
+            this.txtModifyConfirmPassword.Size = new System.Drawing.Size(357, 20);
+            this.txtModifyConfirmPassword.TabIndex = 28;
+            // 
             // ModifyUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,7 +176,6 @@
             this.ClientSize = new System.Drawing.Size(540, 421);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnModifySaveUser);
-            this.Controls.Add(this.txtModifyUserPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -174,5 +202,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox cbActive;
         private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.TextBox txtModifyConfirmPassword;
+        private System.Windows.Forms.Label modifyConfirmLabel;
     }
 }

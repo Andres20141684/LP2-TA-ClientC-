@@ -27,12 +27,6 @@ namespace SalesClient
 
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSaveClient_Click(object sender, EventArgs e)
         {
             if (!filledValues())

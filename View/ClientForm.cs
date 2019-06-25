@@ -72,21 +72,20 @@ namespace SalesClient
                 if (dialog == DialogResult.Yes)
                 {
                     serviceDA = new DBControllerWSClient();
-                    //serviceDA.deleteCustomer(customers[i]);
+                    serviceDA.deleteCustomer(customers[i]);
                     MessageBox.Show("El cliente seleccionado fue eliminado satisfactoriamente");
                     updateDataGridView();
                 }
                 else
                 {
-                    //no eliminas ps sanaso
+                   
                 }
             }
             else
             {
                 MessageBox.Show("Seleccione el cliente a eliminar");
             }
-            
-            //Con base de datos, actualiza el grid
+            updateDataGridView();
         }
 
         private void ClientesForms_Load(object sender, EventArgs e)

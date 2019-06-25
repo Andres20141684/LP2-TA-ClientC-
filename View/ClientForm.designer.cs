@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textDniRuc = new System.Windows.Forms.TextBox();
+            this.txtDniRuc = new System.Windows.Forms.TextBox();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.btnEditClient = new System.Windows.Forms.Button();
             this.dgvClients = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgColTypeClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,22 +52,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI / RUC";
             // 
-            // textDniRuc
+            // txtDniRuc
             // 
-            this.textDniRuc.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.textDniRuc.Location = new System.Drawing.Point(145, 38);
-            this.textDniRuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textDniRuc.MaxLength = 11;
-            this.textDniRuc.Name = "textDniRuc";
-            this.textDniRuc.Size = new System.Drawing.Size(234, 20);
-            this.textDniRuc.TabIndex = 1;
+            this.txtDniRuc.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtDniRuc.Location = new System.Drawing.Point(145, 38);
+            this.txtDniRuc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDniRuc.MaxLength = 11;
+            this.txtDniRuc.Name = "txtDniRuc";
+            this.txtDniRuc.Size = new System.Drawing.Size(234, 20);
+            this.txtDniRuc.TabIndex = 1;
             // 
             // btnAddClient
             // 
             this.btnAddClient.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClient.Location = new System.Drawing.Point(511, 116);
-            this.btnAddClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(77, 20);
             this.btnAddClient.TabIndex = 2;
@@ -81,7 +80,7 @@
             this.btnEditClient.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnEditClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditClient.Location = new System.Drawing.Point(588, 116);
-            this.btnEditClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditClient.Name = "btnEditClient";
             this.btnEditClient.Size = new System.Drawing.Size(77, 20);
             this.btnEditClient.TabIndex = 3;
@@ -97,14 +96,26 @@
             this.dgvColCod,
             this.dgvColDesc,
             this.dgvColEmail,
-            this.dgvColTel,
-            this.dvgColTypeClient});
+            this.dgvColTel});
             this.dgvClients.Location = new System.Drawing.Point(36, 138);
-            this.dgvClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClients.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowTemplate.Height = 24;
+            this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(629, 258);
             this.dgvClients.TabIndex = 5;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(391, 36);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 26);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvColCod
             // 
@@ -115,35 +126,18 @@
             // 
             this.dgvColDesc.HeaderText = "Descripción";
             this.dgvColDesc.Name = "dgvColDesc";
-            this.dgvColDesc.Width = 200;
+            this.dgvColDesc.Width = 240;
             // 
             // dgvColEmail
             // 
             this.dgvColEmail.HeaderText = "Email";
             this.dgvColEmail.Name = "dgvColEmail";
-            this.dgvColEmail.Width = 210;
+            this.dgvColEmail.Width = 150;
             // 
             // dgvColTel
             // 
             this.dgvColTel.HeaderText = "Telefono";
             this.dgvColTel.Name = "dgvColTel";
-            // 
-            // dvgColTypeClient
-            // 
-            this.dvgColTypeClient.HeaderText = "Tipo de Cliente";
-            this.dvgColTypeClient.Name = "dvgColTypeClient";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(391, 36);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 26);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClientesForms
             // 
@@ -155,10 +149,10 @@
             this.Controls.Add(this.dgvClients);
             this.Controls.Add(this.btnEditClient);
             this.Controls.Add(this.btnAddClient);
-            this.Controls.Add(this.textDniRuc);
+            this.Controls.Add(this.txtDniRuc);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ClientesForms";
             this.Text = "Clientes";
@@ -172,7 +166,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textDniRuc;
+        private System.Windows.Forms.TextBox txtDniRuc;
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Button btnEditClient;
         private System.Windows.Forms.DataGridView dgvClients;
@@ -181,7 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgColTypeClient;
     }
 }
 

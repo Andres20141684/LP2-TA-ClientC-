@@ -31,17 +31,16 @@
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumSecondLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
+            this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,69 +76,14 @@
             this.dgvColumId,
             this.dgvColumName,
             this.dgvColumFistLastName,
-            this.dgvColumSecondLastName,
             this.dgvColumPhone,
             this.dgvColumEmail,
             this.dgvColumRole});
             this.dgvEmployee.Location = new System.Drawing.Point(37, 131);
             this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(629, 263);
             this.dgvEmployee.TabIndex = 2;
-            // 
-            // dgvColumId
-            // 
-            this.dgvColumId.Frozen = true;
-            this.dgvColumId.HeaderText = "DNI";
-            this.dgvColumId.Name = "dgvColumId";
-            this.dgvColumId.ReadOnly = true;
-            this.dgvColumId.Width = 80;
-            // 
-            // dgvColumName
-            // 
-            this.dgvColumName.Frozen = true;
-            this.dgvColumName.HeaderText = "Nombre";
-            this.dgvColumName.Name = "dgvColumName";
-            this.dgvColumName.ReadOnly = true;
-            this.dgvColumName.Width = 150;
-            // 
-            // dgvColumFistLastName
-            // 
-            this.dgvColumFistLastName.Frozen = true;
-            this.dgvColumFistLastName.HeaderText = "Ap. Paterno";
-            this.dgvColumFistLastName.Name = "dgvColumFistLastName";
-            this.dgvColumFistLastName.ReadOnly = true;
-            this.dgvColumFistLastName.Width = 150;
-            // 
-            // dgvColumSecondLastName
-            // 
-            this.dgvColumSecondLastName.Frozen = true;
-            this.dgvColumSecondLastName.HeaderText = "Ap. Materno";
-            this.dgvColumSecondLastName.Name = "dgvColumSecondLastName";
-            this.dgvColumSecondLastName.ReadOnly = true;
-            this.dgvColumSecondLastName.Width = 150;
-            // 
-            // dgvColumPhone
-            // 
-            this.dgvColumPhone.Frozen = true;
-            this.dgvColumPhone.HeaderText = "Teléfono";
-            this.dgvColumPhone.Name = "dgvColumPhone";
-            this.dgvColumPhone.ReadOnly = true;
-            this.dgvColumPhone.Width = 80;
-            // 
-            // dgvColumEmail
-            // 
-            this.dgvColumEmail.Frozen = true;
-            this.dgvColumEmail.HeaderText = "Correo";
-            this.dgvColumEmail.Name = "dgvColumEmail";
-            this.dgvColumEmail.ReadOnly = true;
-            this.dgvColumEmail.Width = 150;
-            // 
-            // dgvColumRole
-            // 
-            this.dgvColumRole.Frozen = true;
-            this.dgvColumRole.HeaderText = "Rol";
-            this.dgvColumRole.Name = "dgvColumRole";
-            this.dgvColumRole.ReadOnly = true;
             // 
             // btnDeleteEmployee
             // 
@@ -181,6 +125,53 @@
             this.btnSearchEmployee.UseVisualStyleBackColor = true;
             this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
             // 
+            // dgvColumId
+            // 
+            this.dgvColumId.Frozen = true;
+            this.dgvColumId.HeaderText = "DNI";
+            this.dgvColumId.Name = "dgvColumId";
+            this.dgvColumId.ReadOnly = true;
+            this.dgvColumId.Width = 80;
+            // 
+            // dgvColumName
+            // 
+            this.dgvColumName.Frozen = true;
+            this.dgvColumName.HeaderText = "Nombre";
+            this.dgvColumName.Name = "dgvColumName";
+            this.dgvColumName.ReadOnly = true;
+            this.dgvColumName.Width = 110;
+            // 
+            // dgvColumFistLastName
+            // 
+            this.dgvColumFistLastName.Frozen = true;
+            this.dgvColumFistLastName.HeaderText = "Ap. Paterno";
+            this.dgvColumFistLastName.Name = "dgvColumFistLastName";
+            this.dgvColumFistLastName.ReadOnly = true;
+            this.dgvColumFistLastName.Width = 110;
+            // 
+            // dgvColumPhone
+            // 
+            this.dgvColumPhone.Frozen = true;
+            this.dgvColumPhone.HeaderText = "Teléfono";
+            this.dgvColumPhone.Name = "dgvColumPhone";
+            this.dgvColumPhone.ReadOnly = true;
+            this.dgvColumPhone.Width = 80;
+            // 
+            // dgvColumEmail
+            // 
+            this.dgvColumEmail.Frozen = true;
+            this.dgvColumEmail.HeaderText = "Correo";
+            this.dgvColumEmail.Name = "dgvColumEmail";
+            this.dgvColumEmail.ReadOnly = true;
+            // 
+            // dgvColumRole
+            // 
+            this.dgvColumRole.Frozen = true;
+            this.dgvColumRole.HeaderText = "Rol";
+            this.dgvColumRole.Name = "dgvColumRole";
+            this.dgvColumRole.ReadOnly = true;
+            this.dgvColumRole.Width = 110;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,17 +201,16 @@
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button btnModifyEmployee;
         private System.Windows.Forms.DataGridView dgvEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumFistLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumSecondLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumRole;
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Button btnSearchEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumFistLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumRole;
     }
 }
 

@@ -46,6 +46,33 @@ namespace User
         }
         private bool filledValues()
         {
+            //Los datos de empleados se llenan y validad?
+            //Borrable, pa abajo
+            if(textBox3.Text == "")
+            {
+                MessageBox.Show("Ingrese el DNI ");
+                return false;
+            }
+            if(textBox3.Text.Length != 8)
+            {
+                MessageBox.Show("Ingrese un DNI válido");
+            }
+            if (textBox3.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(textBox3.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo DNI, ingrese 8 dígitos númericos ");
+                    return false;
+                }
+                //MessageBox.Show("Ingrese un DNI válido");
+            }
+            if(textBox2.Text =="")
+            {
+                MessageBox.Show("Ingrese un nombre válido");
+            }
+            //Falta verificar que el permiso me habilite agregar un usuario
+            //Hasta aquí, se puede borrar
             if (txtUserName.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del usuario");
@@ -58,6 +85,9 @@ namespace User
                 MessageBox.Show("Ingrese una fecha válida");
                 return false;
             }
+            //Falta validar que las dos contraseñas coincidan. Por verificar si funciona
+            //if (txtUserPassword.Text != textBox1.Text)
+            //    return false;
             return true;
         }
 

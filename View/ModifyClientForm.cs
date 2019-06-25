@@ -37,20 +37,111 @@ namespace SalesClient
 
         private void BtnSaveClient_Click(object sender, EventArgs e)
         {
-            serviceDA = new DBControllerWSClient();
-            //currentCustomer.idCustomer = int.Parse(txtClienteID.Text);
-            currentCustomer.id = txtClienteID.Text;
-            currentCustomer.descriptionCustomer = txtDesc.Text;
-            currentCustomer.address = txtAddress.Text;
-            currentCustomer.occupation = txtOccupation.Text;
-            currentCustomer.email = txtEmail.Text;
-            currentCustomer.phone = txtPhone.Text;
-            currentCustomer.kindOfCustomer = cbTipoCliente.Text;
-            currentCustomer.state = cbActive.Checked? 1: 0;
+            if (!filledValues())
+            {
+
+            }
+            else
+            {
+                serviceDA = new DBControllerWSClient();
+                //currentCustomer.idCustomer = int.Parse(txtClienteID.Text);
+                currentCustomer.id = txtClienteID.Text;
+                currentCustomer.descriptionCustomer = txtDesc.Text;
+                currentCustomer.address = txtAddress.Text;
+                currentCustomer.occupation = txtOccupation.Text;
+                currentCustomer.email = txtEmail.Text;
+                currentCustomer.phone = txtPhone.Text;
+                currentCustomer.kindOfCustomer = cbTipoCliente.Text;
+                currentCustomer.state = cbActive.Checked ? 1 : 0;
+
+                serviceDA.updateCustomer(currentCustomer);
+                MessageBox.Show("El cliente se modificó satisfactoriamente");
+                this.Close();
+            }
+        }
+        private bool filledValues()
+        {
+            if (txtClienteID.Text == "")
+            {
+                MessageBox.Show("Ingrese el DNI/RUC del cliente");
+                return false;
+            }
+            if (cbTipoCliente.Text == "")
+            {
+                MessageBox.Show("Seleccione el tipo de cliente");
+                return false;
+            }
+            if (cbTipoCliente.Text == "Natural" && txtClienteID.Text.Length != 8)
+            {
+
+                MessageBox.Show("Ingrese un DNI valido de 8 dígitos númericos");
+                return false;
+            }
+            if (cbTipoCliente.Text == "Jurídica" && txtClienteID.Text.Length != 11)
+            {
+
+                MessageBox.Show("Ingrese un DNI valido de 11 dígitos númericos");
+                return false;
+            }
+
+            if (cbTipoCliente.Text == "Natural" && txtClienteID.Text.Length == 8)
+            {
+                int result = 0;
+                if (!int.TryParse(txtClienteID.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo DNI, ingrese 8 dígitos númericos ");
+                    return false;
+                }
+
+            }
+            if (cbTipoCliente.Text == "Jurídica" && txtClienteID.Text.Length == 11)
+            {
+                int result = 0;
+                if (!int.TryParse(txtClienteID.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo RUC, ingrese 11 dígitos númericos ");
+                    return false;
+                }
+
+            }
             
-            serviceDA.updateCustomer(currentCustomer);
-            MessageBox.Show("El cliente se modificó satisfactoriamente");
-            this.Close();
+            if (txtDesc.Text == "")
+            {
+                MessageBox.Show("Ingrese la descripción del cliente");
+                return false;
+            }
+            if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Ingrese la dirección del cliente");
+                return false;
+            }
+            if (txtOccupation.Text == "")
+            {
+                MessageBox.Show("Ingrese la ocupación del cliente");
+                return false;
+            }
+            if (txtEmail.Text == "" || !txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Ingrese un correo válido ");
+                return false;
+            }
+
+            if (txtPhone.Text == "" || txtPhone.Text.Length < 3)
+            {
+                MessageBox.Show("Ingrese un teléfono válido (Mayor a 3 y menor a 15 digitos)");
+                return false;
+            }
+            if (txtPhone.Text.Length >= 3)
+            {
+                int result = 0;
+                if (!int.TryParse(txtPhone.Text, out result))
+                {
+                    MessageBox.Show("Ha ingresado caracteres no númericos en el campo del Telefono, ingrese de 3 a 15 dígitos ");
+                    return false;
+                }
+
+            }
+            return true;
         }
     }
 }

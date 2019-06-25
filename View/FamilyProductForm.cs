@@ -108,21 +108,43 @@ namespace Producto
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvFamilies.Rows.Clear();
-            serviceDAA = new DBControllerWSClient();
-            familia = (serviceDAA.queryFamilyByCode(txtFamily.Text));
-
-            dgvFamilies.Rows.Add(new String[] {
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                dgvFamilies.Rows.Clear();
+                serviceDAA = new DBControllerWSClient();
+                familia = (serviceDAA.queryFamilyByCode(txtFamily.Text));
+                if (familia.idFamily != null)
+                {
+                    dgvFamilies.Rows.Add(new String[] {
                 familia.idFamily, familia.name, ""+familia.description
                 });
 
-            Cursor.Current = Cursors.Arrow;
+                }
+                else
+                {
+                    MessageBox.Show("Familia de Producto no Encontrada");
+                }
+                
 
-            if (txtFamily.Text == "")
-            {
-                MessageBox.Show("Ingrese un código de familia");
+                Cursor.Current = Cursors.Arrow;
             }
+            
+        }
+        private bool filledValues()
+        {
+            if (txtFamily.Text.Length != 5)
+            {
+                MessageBox.Show("Ingrese un codigo de Familia de 5 caracteres");
+                return false;
+            }
+            
+
+            return true;
         }
 
         private void doubleClickDgvFamilies(object sender, EventArgs e)

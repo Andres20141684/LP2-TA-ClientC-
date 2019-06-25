@@ -132,7 +132,7 @@
             this.cbActive.AutoSize = true;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(185, 337);
-            this.cbActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
             this.cbActive.TabIndex = 23;
@@ -304,7 +304,7 @@
             // 
             this.txtEmployeeSecondLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeSecondLastName.Location = new System.Drawing.Point(185, 97);
-            this.txtEmployeeSecondLastName.MaxLength = 100;
+            this.txtEmployeeSecondLastName.MaxLength = 50;
             this.txtEmployeeSecondLastName.Name = "txtEmployeeSecondLastName";
             this.txtEmployeeSecondLastName.Size = new System.Drawing.Size(311, 20);
             this.txtEmployeeSecondLastName.TabIndex = 4;
@@ -322,7 +322,7 @@
             // 
             this.txtEmployeeFirstLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeFirstLastName.Location = new System.Drawing.Point(185, 68);
-            this.txtEmployeeFirstLastName.MaxLength = 100;
+            this.txtEmployeeFirstLastName.MaxLength = 50;
             this.txtEmployeeFirstLastName.Name = "txtEmployeeFirstLastName";
             this.txtEmployeeFirstLastName.Size = new System.Drawing.Size(311, 20);
             this.txtEmployeeFirstLastName.TabIndex = 3;
@@ -342,7 +342,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.Location = new System.Drawing.Point(429, 383);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.TabIndex = 24;

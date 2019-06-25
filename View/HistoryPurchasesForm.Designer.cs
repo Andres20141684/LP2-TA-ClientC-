@@ -43,7 +43,7 @@
             // 
             this.txtSerialCode.BackColor = System.Drawing.Color.PaleTurquoise;
             this.txtSerialCode.Location = new System.Drawing.Point(146, 28);
-            this.txtSerialCode.MaxLength = 11;
+            this.txtSerialCode.MaxLength = 15;
             this.txtSerialCode.Name = "txtSerialCode";
             this.txtSerialCode.Size = new System.Drawing.Size(234, 20);
             this.txtSerialCode.TabIndex = 18;

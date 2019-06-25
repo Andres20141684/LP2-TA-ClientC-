@@ -26,17 +26,31 @@ namespace View
         }
         private void updateDataGridView()
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvPurchases.Rows.Clear();
-            serviceDA = new DBControllerWSClient();
-            purchases = new BindingList<purchase>(serviceDA.queryAllPurchase());
-            for (int i = 0; i < purchases.Count; i++)
-            {
-                dgvPurchases.Rows.Add(new String[] {
+            
+                Cursor.Current = Cursors.WaitCursor;
+                dgvPurchases.Rows.Clear();
+                serviceDA = new DBControllerWSClient();
+                purchases = new BindingList<purchase>(serviceDA.queryAllPurchase());
+                for (int i = 0; i < purchases.Count; i++)
+                {
+                    dgvPurchases.Rows.Add(new String[] {
                 ""+purchases[i].serialCode,""+purchases[i].totalPurchase,""+purchases[i].supplier.name,""+purchases[i].creationDate
                 });
-            }
-            Cursor.Current = Cursors.Arrow;
+                }
+                Cursor.Current = Cursors.Arrow;
+            
+                
+        }
+        private bool filledValues()
+        {
+            if (txtSerialCode.Text == "")
+            {
+                MessageBox.Show("Ingrese el Codigo Serial de un Producto");
+                return false;
+            } 
+            
+
+            return true;
         }
 
         private void dgvPurchases_CellContentClick(object sender, DataGridViewCellEventArgs e)

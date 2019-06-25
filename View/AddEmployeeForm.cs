@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -100,7 +101,7 @@ namespace entregable
              if (txtEmployeePhone.Text.Length >= 3)
             {
                 int result = 0;
-                if (!int.TryParse(txtEmployeePhone.Text, out result))
+                if (!Regex.Match(txtEmployeePhone.Text, @"([0-9]{3,})").Success)
                 {
                     MessageBox.Show("Ha ingresado caracteres no numericos en el campo Telefono, ingrese de 3 a 15 digitos");
                     return false;
@@ -134,11 +135,6 @@ namespace entregable
             
 
             return true;
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

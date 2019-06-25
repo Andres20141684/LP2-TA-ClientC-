@@ -311,7 +311,6 @@
             this.label10.Size = new System.Drawing.Size(167, 13);
             this.label10.TabIndex = 25;
             this.label10.Text = "Fecha de inicio de contrato:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cbRole
             // 

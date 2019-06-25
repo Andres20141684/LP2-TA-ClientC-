@@ -514,6 +514,9 @@
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeByDNIResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeByUsernameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MateWSLocal\View.MateWSLocal.queryEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

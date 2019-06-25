@@ -33,7 +33,7 @@ namespace View
             for (int i = 0; i < purchases.Count; i++)
             {
                 dgvPurchases.Rows.Add(new String[] {
-                ""+purchases[i].serialCode,""+purchases[i].totalPurchase,""+purchases[i].supplier.name,""+purchases[i].creationDate
+                ""+purchases[i].serialCode,""+purchases[i].totalPurchase,""+purchases[i].supplier.name,""+purchases[i].creationDate.Date
                 });
             }
             Cursor.Current = Cursors.Arrow;

@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRUC = new System.Windows.Forms.TextBox();
+            this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPurchases = new System.Windows.Forms.DataGridView();
-            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumSecondLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtRUC
+            // txtSerialCode
             // 
-            this.txtRUC.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtRUC.Location = new System.Drawing.Point(146, 28);
-            this.txtRUC.MaxLength = 11;
-            this.txtRUC.Name = "txtRUC";
-            this.txtRUC.Size = new System.Drawing.Size(234, 20);
-            this.txtRUC.TabIndex = 18;
-            this.txtRUC.TextChanged += new System.EventHandler(this.txtRUC_TextChanged);
+            this.txtSerialCode.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtSerialCode.Location = new System.Drawing.Point(146, 28);
+            this.txtSerialCode.MaxLength = 11;
+            this.txtSerialCode.Name = "txtSerialCode";
+            this.txtSerialCode.Size = new System.Drawing.Size(234, 20);
+            this.txtSerialCode.TabIndex = 18;
+            this.txtSerialCode.TextChanged += new System.EventHandler(this.txtRUC_TextChanged);
             // 
             // label1
             // 
@@ -74,17 +74,6 @@
             this.dgvPurchases.Size = new System.Drawing.Size(629, 258);
             this.dgvPurchases.TabIndex = 16;
             this.dgvPurchases.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPurchases_CellContentClick);
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(392, 26);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
-            this.btnSearchEmployee.TabIndex = 19;
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
-            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
             // 
             // dgvColumId
             // 
@@ -118,6 +107,17 @@
             this.dgvColumSecondLastName.ReadOnly = true;
             this.dgvColumSecondLastName.Width = 150;
             // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(392, 26);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
+            this.btnSearchEmployee.TabIndex = 19;
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
+            // 
             // HistoryPurchasesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,7 +125,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(669, 356);
             this.Controls.Add(this.btnSearchEmployee);
-            this.Controls.Add(this.txtRUC);
+            this.Controls.Add(this.txtSerialCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPurchases);
             this.Name = "HistoryPurchasesForm";
@@ -140,7 +140,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearchEmployee;
-        private System.Windows.Forms.TextBox txtRUC;
+        private System.Windows.Forms.TextBox txtSerialCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPurchases;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;

@@ -16,18 +16,18 @@ namespace View.MateWSLocal {
     public interface DBControllerWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
+            "ySKUandWarehouseIDRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
+            "ySKUandWarehouseIDResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryRefundByIdSaleResponse queryRefundByIdSale(View.MateWSLocal.queryRefundByIdSaleRequest request);
+        View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse queryWarehousedetailBySKUandWarehouseID(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
-            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> queryRefundByIdSaleAsync(View.MateWSLocal.queryRefundByIdSaleRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
+            "ySKUandWarehouseIDRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
+            "ySKUandWarehouseIDResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> queryWarehousedetailBySKUandWarehouseIDAsync(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateUserResponse")]
@@ -40,130 +40,18 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.updateUserResponse> updateUserAsync(View.MateWSLocal.updateUserRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUserna" +
+            "meRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUserna" +
+            "meResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryByIdEmployeeResponse queryByIdEmployee(View.MateWSLocal.queryByIdEmployeeRequest request);
+        View.MateWSLocal.queryEmployeeByUsernameResponse queryEmployeeByUsername(View.MateWSLocal.queryEmployeeByUsernameRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResp" +
-            "onse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> queryByIdEmployeeAsync(View.MateWSLocal.queryByIdEmployeeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIReq" +
-            "uest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryEmployeeByDNIResponse queryEmployeeByDNI(View.MateWSLocal.queryEmployeeByDNIRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIReq" +
-            "uest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> queryEmployeeByDNIAsync(View.MateWSLocal.queryEmployeeByDNIRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertDiscountProductResponse insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
-            "Response")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryByIdCustomerResponse queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
-            "onse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryFamilyByCodeResponse queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
-            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
-            "onse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
-            "ptionRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
-            "ptionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryPremisesByDescriptionResponse queryPremisesByDescription(View.MateWSLocal.queryPremisesByDescriptionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
-            "ptionRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
-            "ptionResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> queryPremisesByDescriptionAsync(View.MateWSLocal.queryPremisesByDescriptionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryPurchaseBySerialCodeResponse queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
-            "CodeResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryProductBySKUCodeResponse queryProductBySKUCode(View.MateWSLocal.queryProductBySKUCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
-            "Response")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> queryProductBySKUCodeAsync(View.MateWSLocal.queryProductBySKUCodeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.querySaleBySerialCodeResponse querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
-            "Response")]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUserna" +
+            "meRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByUserna" +
+            "meResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByUsernameResponse> queryEmployeeByUsernameAsync(View.MateWSLocal.queryEmployeeByUsernameRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryUserByUserNameRe" +
@@ -194,6 +82,20 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.querySupplierByCodeResponse> querySupplierByCodeAsync(View.MateWSLocal.querySupplierByCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryRefundByIdSaleResponse queryRefundByIdSale(View.MateWSLocal.queryRefundByIdSaleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
+            "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryRefundByIdSaleRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> queryRefundByIdSaleAsync(View.MateWSLocal.queryRefundByIdSaleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAristSupplierRe" +
             "quest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAristSupplierRe" +
             "sponse")]
@@ -208,32 +110,18 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.updateAristSupplierResponse> updateAristSupplierAsync(View.MateWSLocal.updateAristSupplierRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
-            "ySKUandWarehouseIDRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
-            "ySKUandWarehouseIDResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Response")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse queryWarehousedetailBySKUandWarehouseID(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request);
+        View.MateWSLocal.querySaleBySerialCodeResponse querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
-            "ySKUandWarehouseIDRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryWarehousedetailB" +
-            "ySKUandWarehouseIDResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> queryWarehousedetailBySKUandWarehouseIDAsync(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllEmployeeResponse queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/querySaleBySerialCode" +
+            "Response")]
+        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllProductsReque" +
@@ -250,62 +138,6 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync(View.MateWSLocal.queryAllProductsRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.deleteCustomerResponse deleteCustomer(View.MateWSLocal.deleteCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> deleteCustomerAsync(View.MateWSLocal.deleteCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateCustomerResponse updateCustomer(View.MateWSLocal.updateCustomerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateEmployeeResponse updateEmployee(View.MateWSLocal.updateEmployeeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllSupplierResponse queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRequest" +
             "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
             "e")]
@@ -318,52 +150,6 @@ namespace View.MateWSLocal {
             "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertCustomerRespons" +
             "e")]
         System.Threading.Tasks.Task<View.MateWSLocal.insertCustomerResponse> insertCustomerAsync(View.MateWSLocal.insertCustomerRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertFamilyResponse insertFamily(View.MateWSLocal.insertFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllFamilyResponse queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateFamilyResponse updateFamily(View.MateWSLocal.updateFamilyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertProductResponse insertProduct(View.MateWSLocal.insertProductRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
-            "")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> insertProductAsync(View.MateWSLocal.insertProductRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllCustomerReque" +
@@ -380,224 +166,144 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
             "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateSupplierResponse updateSupplier(View.MateWSLocal.updateSupplierRequest request);
+        View.MateWSLocal.updateCustomerResponse updateCustomer(View.MateWSLocal.updateCustomerRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateCustomerRespons" +
             "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateProductResponse updateProduct(View.MateWSLocal.updateProductRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
-            "")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> updateProductAsync(View.MateWSLocal.updateProductRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRespons" +
             "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertEmployeeResponse insertEmployee(View.MateWSLocal.insertEmployeeRequest request);
+        View.MateWSLocal.deleteCustomerResponse deleteCustomer(View.MateWSLocal.deleteCustomerRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/deleteCustomerRespons" +
             "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse> insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request);
+        System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> deleteCustomerAsync(View.MateWSLocal.deleteCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIReq" +
+            "uest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIRes" +
+            "ponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertSupplierResponse insertSupplier(View.MateWSLocal.insertSupplierRequest request);
+        View.MateWSLocal.queryEmployeeByDNIResponse queryEmployeeByDNI(View.MateWSLocal.queryEmployeeByDNIRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIReq" +
+            "uest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeByDNIRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> queryEmployeeByDNIAsync(View.MateWSLocal.queryEmployeeByDNIRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
+            "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllAreaResponse queryAllArea(View.MateWSLocal.queryAllAreaRequest request);
+        View.MateWSLocal.queryFamilyByCodeResponse queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryFamilyByCodeResp" +
+            "onse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
+            "Response")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertBrandResponse insertBrand(View.MateWSLocal.insertBrandRequest request);
+        View.MateWSLocal.queryProductBySKUCodeResponse queryProductBySKUCode(View.MateWSLocal.queryProductBySKUCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> insertBrandAsync(View.MateWSLocal.insertBrandRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryProductBySKUCode" +
+            "Response")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> queryProductBySKUCodeAsync(View.MateWSLocal.queryProductBySKUCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
+            "ptionRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
+            "ptionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.validateUserResponse validateUser(View.MateWSLocal.validateUserRequest request);
+        View.MateWSLocal.queryPremisesByDescriptionResponse queryPremisesByDescription(View.MateWSLocal.queryPremisesByDescriptionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.validateUserResponse> validateUserAsync(View.MateWSLocal.validateUserRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
+            "ptionRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPremisesByDescri" +
+            "ptionResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> queryPremisesByDescriptionAsync(View.MateWSLocal.queryPremisesByDescriptionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Response")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertUserResponse insertUser(View.MateWSLocal.insertUserRequest request);
+        View.MateWSLocal.insertDiscountProductResponse insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> insertUserAsync(View.MateWSLocal.insertUserRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Request", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountProduct" +
+            "Response")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
-            "nse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllPremisesResponse queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request);
+        View.MateWSLocal.queryPurchaseBySerialCodeResponse queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
-            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryPurchaseBySerial" +
+            "CodeResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResp" +
+            "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryEmployeeResponse queryEmployee(View.MateWSLocal.queryEmployeeRequest request);
+        View.MateWSLocal.queryByIdEmployeeResponse queryByIdEmployee(View.MateWSLocal.queryByIdEmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
-            "")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> queryEmployeeAsync(View.MateWSLocal.queryEmployeeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdEmployeeResp" +
+            "onse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> queryByIdEmployeeAsync(View.MateWSLocal.queryByIdEmployeeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
+            "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updatePurchaseResponse updatePurchase(View.MateWSLocal.updatePurchaseRequest request);
+        View.MateWSLocal.queryByIdCustomerResponse queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> updatePurchaseAsync(View.MateWSLocal.updatePurchaseRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertAreaResponse insertArea(View.MateWSLocal.insertAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> insertAreaAsync(View.MateWSLocal.insertAreaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertRefundResponse insertRefund(View.MateWSLocal.insertRefundRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> insertRefundAsync(View.MateWSLocal.insertRefundRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateDiscountResponse updateDiscount(View.MateWSLocal.updateDiscountRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertDiscountResponse insertDiscount(View.MateWSLocal.insertDiscountRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> insertDiscountAsync(View.MateWSLocal.insertDiscountRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateSaleResponse updateSale(View.MateWSLocal.updateSaleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> updateSaleAsync(View.MateWSLocal.updateSaleRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updatePremisesResponse updatePremises(View.MateWSLocal.updatePremisesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> updatePremisesAsync(View.MateWSLocal.updatePremisesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertPremisesResponse insertPremises(View.MateWSLocal.insertPremisesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
-            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
-            "e")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerRequ" +
+            "est", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryByIdCustomerResp" +
+            "onse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPurchaseRequest" +
@@ -614,26 +320,14 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse> insertPurchaseAsync(View.MateWSLocal.insertPurchaseRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllBrandResponse queryAllBrand(View.MateWSLocal.queryAllBrandRequest request);
+        View.MateWSLocal.queryAllSaleResponse queryAllSale(View.MateWSLocal.queryAllSaleRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" +
-            "")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> queryAllBrandAsync(View.MateWSLocal.queryAllBrandRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateAreaResponse updateArea(View.MateWSLocal.updateAreaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> updateAreaAsync(View.MateWSLocal.updateAreaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> queryAllSaleAsync(View.MateWSLocal.queryAllSaleRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPurchaseReque" +
@@ -650,14 +344,208 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllSaleResponse queryAllSale(View.MateWSLocal.queryAllSaleRequest request);
+        View.MateWSLocal.queryAllFamilyResponse queryAllFamily(View.MateWSLocal.queryAllFamilyRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSaleResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> queryAllSaleAsync(View.MateWSLocal.queryAllSaleRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllFamilyRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllFamilyResponse> queryAllFamilyAsync(View.MateWSLocal.queryAllFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updatePurchaseResponse updatePurchase(View.MateWSLocal.updatePurchaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePurchaseRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> updatePurchaseAsync(View.MateWSLocal.updatePurchaseRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllBrandResponse queryAllBrand(View.MateWSLocal.queryAllBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllBrandResponse" +
+            "")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> queryAllBrandAsync(View.MateWSLocal.queryAllBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertUserResponse insertUser(View.MateWSLocal.insertUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> insertUserAsync(View.MateWSLocal.insertUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertAreaResponse insertArea(View.MateWSLocal.insertAreaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> insertAreaAsync(View.MateWSLocal.insertAreaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertEmployeeResponse insertEmployee(View.MateWSLocal.insertEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertEmployeeRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertEmployeeResponse> insertEmployeeAsync(View.MateWSLocal.insertEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertFamilyResponse insertFamily(View.MateWSLocal.insertFamilyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertFamilyResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllSupplierResponse queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllSupplierRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertRefundResponse insertRefund(View.MateWSLocal.insertRefundRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertRefundResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> insertRefundAsync(View.MateWSLocal.insertRefundRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateBrandResponse updateBrand(View.MateWSLocal.updateBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> updateBrandAsync(View.MateWSLocal.updateBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateSaleResponse updateSale(View.MateWSLocal.updateSaleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSaleResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> updateSaleAsync(View.MateWSLocal.updateSaleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.validateUserResponse validateUser(View.MateWSLocal.validateUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/validateUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.validateUserResponse> validateUserAsync(View.MateWSLocal.validateUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllUserResponse queryAllUser(View.MateWSLocal.queryAllUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertBrandResponse insertBrand(View.MateWSLocal.insertBrandRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertBrandResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> insertBrandAsync(View.MateWSLocal.insertBrandRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertProductResponse insertProduct(View.MateWSLocal.insertProductRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertProductResponse" +
+            "")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> insertProductAsync(View.MateWSLocal.insertProductRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateFamilyResponse updateFamily(View.MateWSLocal.updateFamilyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateFamilyResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertSaleResponse insertSale(View.MateWSLocal.insertSaleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse> insertSaleAsync(View.MateWSLocal.insertSaleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateSupplierResponse updateSupplier(View.MateWSLocal.updateSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateSupplierRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllDiscountReque" +
@@ -674,34 +562,160 @@ namespace View.MateWSLocal {
         System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.insertSaleResponse insertSale(View.MateWSLocal.insertSaleRequest request);
+        View.MateWSLocal.queryEmployeeResponse queryEmployee(View.MateWSLocal.queryEmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSaleResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSaleResponse> insertSaleAsync(View.MateWSLocal.insertSaleRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryEmployeeResponse" +
+            "")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> queryEmployeeAsync(View.MateWSLocal.queryEmployeeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
+            "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.updateBrandResponse updateBrand(View.MateWSLocal.updateBrandRequest request);
+        View.MateWSLocal.queryAllPremisesResponse queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateBrandResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> updateBrandAsync(View.MateWSLocal.updateBrandRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllPremisesRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+            "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        View.MateWSLocal.queryAllUserResponse queryAllUser(View.MateWSLocal.queryAllUserRequest request);
+        View.MateWSLocal.queryAllEmployeeResponse queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllUserResponse")]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeReque" +
+            "st", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllEmployeeRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateProductResponse updateProduct(View.MateWSLocal.updateProductRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateProductResponse" +
+            "")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> updateProductAsync(View.MateWSLocal.updateProductRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertSupplierResponse insertSupplier(View.MateWSLocal.insertSupplierRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertSupplierRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updatePremisesResponse updatePremises(View.MateWSLocal.updatePremisesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updatePremisesRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> updatePremisesAsync(View.MateWSLocal.updatePremisesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateAreaResponse updateArea(View.MateWSLocal.updateAreaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> updateAreaAsync(View.MateWSLocal.updateAreaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateDiscountResponse updateDiscount(View.MateWSLocal.updateDiscountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateDiscountRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.updateEmployeeResponse updateEmployee(View.MateWSLocal.updateEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/updateEmployeeRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertPremisesResponse insertPremises(View.MateWSLocal.insertPremisesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertPremisesRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.insertDiscountResponse insertDiscount(View.MateWSLocal.insertDiscountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRequest" +
+            "", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/insertDiscountRespons" +
+            "e")]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> insertDiscountAsync(View.MateWSLocal.insertDiscountRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(person))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        View.MateWSLocal.queryAllAreaResponse queryAllArea(View.MateWSLocal.queryAllAreaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaRequest", ReplyAction="http://services.mateproyecto.inf.pucp.edu.pe/DBControllerWS/queryAllAreaResponse")]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request);
     }
     
     /// <remarks/>
@@ -710,7 +724,7 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class refund : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class warehouseDetail : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime creationDateField;
         
@@ -718,25 +732,19 @@ namespace View.MateWSLocal {
         
         private user creatorUserField;
         
-        private customer customerField;
-        
-        private int idField;
-        
-        private string idRefoundField;
+        private int idWarehouseDetailField;
         
         private System.DateTime modificationDateField;
         
         private bool modificationDateFieldSpecified;
         
-        private refundLane[] refundLanesField;
+        private product productField;
         
-        private sale saleField;
-        
-        private int stateField;
-        
-        private float totalReturnedField;
+        private int quantityField;
         
         private user userModifierField;
+        
+        private warehouse warehouseField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -776,42 +784,18 @@ namespace View.MateWSLocal {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public customer customer {
+        public int idWarehouseDetail {
             get {
-                return this.customerField;
+                return this.idWarehouseDetailField;
             }
             set {
-                this.customerField = value;
-                this.RaisePropertyChanged("customer");
+                this.idWarehouseDetailField = value;
+                this.RaisePropertyChanged("idWarehouseDetail");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string idRefound {
-            get {
-                return this.idRefoundField;
-            }
-            set {
-                this.idRefoundField = value;
-                this.RaisePropertyChanged("idRefound");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public System.DateTime modificationDate {
             get {
                 return this.modificationDateField;
@@ -835,55 +819,31 @@ namespace View.MateWSLocal {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("refundLanes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public refundLane[] refundLanes {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public product product {
             get {
-                return this.refundLanesField;
+                return this.productField;
             }
             set {
-                this.refundLanesField = value;
-                this.RaisePropertyChanged("refundLanes");
+                this.productField = value;
+                this.RaisePropertyChanged("product");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public sale sale {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int quantity {
             get {
-                return this.saleField;
+                return this.quantityField;
             }
             set {
-                this.saleField = value;
-                this.RaisePropertyChanged("sale");
+                this.quantityField = value;
+                this.RaisePropertyChanged("quantity");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public float totalReturned {
-            get {
-                return this.totalReturnedField;
-            }
-            set {
-                this.totalReturnedField = value;
-                this.RaisePropertyChanged("totalReturned");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public user userModifier {
             get {
                 return this.userModifierField;
@@ -891,6 +851,18 @@ namespace View.MateWSLocal {
             set {
                 this.userModifierField = value;
                 this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public warehouse warehouse {
+            get {
+                return this.warehouseField;
+            }
+            set {
+                this.warehouseField = value;
+                this.RaisePropertyChanged("warehouse");
             }
         }
         
@@ -3280,736 +3252,6 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class warehouseDetail : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private int idWarehouseDetailField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private product productField;
-        
-        private int quantityField;
-        
-        private user userModifierField;
-        
-        private warehouse warehouseField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idWarehouseDetail {
-            get {
-                return this.idWarehouseDetailField;
-            }
-            set {
-                this.idWarehouseDetailField = value;
-                this.RaisePropertyChanged("idWarehouseDetail");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public product product {
-            get {
-                return this.productField;
-            }
-            set {
-                this.productField = value;
-                this.RaisePropertyChanged("product");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
-                this.RaisePropertyChanged("quantity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public warehouse warehouse {
-            get {
-                return this.warehouseField;
-            }
-            set {
-                this.warehouseField = value;
-                this.RaisePropertyChanged("warehouse");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class warehouse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private string descriptionField;
-        
-        private int idField;
-        
-        private string idWarehouseField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private premises premisesField;
-        
-        private int stateField;
-        
-        private user userModifierField;
-        
-        private string warehouseCodeField;
-        
-        private warehouseDetail[] warehouseDetailsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string idWarehouse {
-            get {
-                return this.idWarehouseField;
-            }
-            set {
-                this.idWarehouseField = value;
-                this.RaisePropertyChanged("idWarehouse");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public premises premises {
-            get {
-                return this.premisesField;
-            }
-            set {
-                this.premisesField = value;
-                this.RaisePropertyChanged("premises");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string warehouseCode {
-            get {
-                return this.warehouseCodeField;
-            }
-            set {
-                this.warehouseCodeField = value;
-                this.RaisePropertyChanged("warehouseCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("warehouseDetails", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public warehouseDetail[] warehouseDetails {
-            get {
-                return this.warehouseDetailsField;
-            }
-            set {
-                this.warehouseDetailsField = value;
-                this.RaisePropertyChanged("warehouseDetails");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class premises : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string addressField;
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private string descriptionField;
-        
-        private int idField;
-        
-        private string idPremisesField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private space[] spacesField;
-        
-        private int stateField;
-        
-        private user userModifierField;
-        
-        private warehouse[] warehousesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string address {
-            get {
-                return this.addressField;
-            }
-            set {
-                this.addressField = value;
-                this.RaisePropertyChanged("address");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string idPremises {
-            get {
-                return this.idPremisesField;
-            }
-            set {
-                this.idPremisesField = value;
-                this.RaisePropertyChanged("idPremises");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("spaces", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
-        public space[] spaces {
-            get {
-                return this.spacesField;
-            }
-            set {
-                this.spacesField = value;
-                this.RaisePropertyChanged("spaces");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("warehouses", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public warehouse[] warehouses {
-            get {
-                return this.warehousesField;
-            }
-            set {
-                this.warehousesField = value;
-                this.RaisePropertyChanged("warehouses");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class space : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private string descriptionField;
-        
-        private int idField;
-        
-        private string idSpaceField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private premises premisesField;
-        
-        private int stateField;
-        
-        private user userModifierField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string idSpace {
-            get {
-                return this.idSpaceField;
-            }
-            set {
-                this.idSpaceField = value;
-                this.RaisePropertyChanged("idSpace");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public premises premises {
-            get {
-                return this.premisesField;
-            }
-            set {
-                this.premisesField = value;
-                this.RaisePropertyChanged("premises");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
     public partial class refundLane : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime creationDateField;
@@ -4210,179 +3452,7 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class saleLane : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime creationDateField;
-        
-        private bool creationDateFieldSpecified;
-        
-        private user creatorUserField;
-        
-        private int idSaleLaneField;
-        
-        private System.DateTime modificationDateField;
-        
-        private bool modificationDateFieldSpecified;
-        
-        private product productField;
-        
-        private int quantityField;
-        
-        private sale saleField;
-        
-        private float subtotalField;
-        
-        private user userModifierField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-                this.RaisePropertyChanged("creationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationDateSpecified {
-            get {
-                return this.creationDateFieldSpecified;
-            }
-            set {
-                this.creationDateFieldSpecified = value;
-                this.RaisePropertyChanged("creationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public user creatorUser {
-            get {
-                return this.creatorUserField;
-            }
-            set {
-                this.creatorUserField = value;
-                this.RaisePropertyChanged("creatorUser");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idSaleLane {
-            get {
-                return this.idSaleLaneField;
-            }
-            set {
-                this.idSaleLaneField = value;
-                this.RaisePropertyChanged("idSaleLane");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime modificationDate {
-            get {
-                return this.modificationDateField;
-            }
-            set {
-                this.modificationDateField = value;
-                this.RaisePropertyChanged("modificationDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modificationDateSpecified {
-            get {
-                return this.modificationDateFieldSpecified;
-            }
-            set {
-                this.modificationDateFieldSpecified = value;
-                this.RaisePropertyChanged("modificationDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public product product {
-            get {
-                return this.productField;
-            }
-            set {
-                this.productField = value;
-                this.RaisePropertyChanged("product");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
-                this.RaisePropertyChanged("quantity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public sale sale {
-            get {
-                return this.saleField;
-            }
-            set {
-                this.saleField = value;
-                this.RaisePropertyChanged("sale");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public float subtotal {
-            get {
-                return this.subtotalField;
-            }
-            set {
-                this.subtotalField = value;
-                this.RaisePropertyChanged("subtotal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public user userModifier {
-            get {
-                return this.userModifierField;
-            }
-            set {
-                this.userModifierField = value;
-                this.RaisePropertyChanged("userModifier");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
-    public partial class sale : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class refund : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime creationDateField;
         
@@ -4392,21 +3462,21 @@ namespace View.MateWSLocal {
         
         private customer customerField;
         
-        private employee employeeField;
-        
         private int idField;
+        
+        private string idRefoundField;
         
         private System.DateTime modificationDateField;
         
         private bool modificationDateFieldSpecified;
         
-        private saleLane[] saleLanesField;
+        private refundLane[] refundLanesField;
         
-        private string serialCodeField;
+        private sale saleField;
         
         private int stateField;
         
-        private float totalSaleField;
+        private float totalReturnedField;
         
         private user userModifierField;
         
@@ -4460,18 +3530,6 @@ namespace View.MateWSLocal {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public employee employee {
-            get {
-                return this.employeeField;
-            }
-            set {
-                this.employeeField = value;
-                this.RaisePropertyChanged("employee");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int id {
             get {
                 return this.idField;
@@ -4479,6 +3537,18 @@ namespace View.MateWSLocal {
             set {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string idRefound {
+            get {
+                return this.idRefoundField;
+            }
+            set {
+                this.idRefoundField = value;
+                this.RaisePropertyChanged("idRefound");
             }
         }
         
@@ -4507,26 +3577,26 @@ namespace View.MateWSLocal {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("saleLanes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public saleLane[] saleLanes {
+        [System.Xml.Serialization.XmlElementAttribute("refundLanes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+        public refundLane[] refundLanes {
             get {
-                return this.saleLanesField;
+                return this.refundLanesField;
             }
             set {
-                this.saleLanesField = value;
-                this.RaisePropertyChanged("saleLanes");
+                this.refundLanesField = value;
+                this.RaisePropertyChanged("refundLanes");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string serialCode {
+        public sale sale {
             get {
-                return this.serialCodeField;
+                return this.saleField;
             }
             set {
-                this.serialCodeField = value;
-                this.RaisePropertyChanged("serialCode");
+                this.saleField = value;
+                this.RaisePropertyChanged("sale");
             }
         }
         
@@ -4544,13 +3614,13 @@ namespace View.MateWSLocal {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public float totalSale {
+        public float totalReturned {
             get {
-                return this.totalSaleField;
+                return this.totalReturnedField;
             }
             set {
-                this.totalSaleField = value;
-                this.RaisePropertyChanged("totalSale");
+                this.totalReturnedField = value;
+                this.RaisePropertyChanged("totalReturned");
             }
         }
         
@@ -4804,38 +3874,987 @@ namespace View.MateWSLocal {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRefundByIdSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryRefundByIdSaleRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class sale : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int saleId;
+        private System.DateTime creationDateField;
         
-        public queryRefundByIdSaleRequest() {
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private customer customerField;
+        
+        private employee employeeField;
+        
+        private int idField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private saleLane[] saleLanesField;
+        
+        private string serialCodeField;
+        
+        private int stateField;
+        
+        private float totalSaleField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
         }
         
-        public queryRefundByIdSaleRequest(int saleId) {
-            this.saleId = saleId;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public customer customer {
+            get {
+                return this.customerField;
+            }
+            set {
+                this.customerField = value;
+                this.RaisePropertyChanged("customer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public employee employee {
+            get {
+                return this.employeeField;
+            }
+            set {
+                this.employeeField = value;
+                this.RaisePropertyChanged("employee");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("saleLanes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+        public saleLane[] saleLanes {
+            get {
+                return this.saleLanesField;
+            }
+            set {
+                this.saleLanesField = value;
+                this.RaisePropertyChanged("saleLanes");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string serialCode {
+            get {
+                return this.serialCodeField;
+            }
+            set {
+                this.serialCodeField = value;
+                this.RaisePropertyChanged("serialCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public float totalSale {
+            get {
+                return this.totalSaleField;
+            }
+            set {
+                this.totalSaleField = value;
+                this.RaisePropertyChanged("totalSale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class saleLane : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private int idSaleLaneField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private product productField;
+        
+        private int quantityField;
+        
+        private sale saleField;
+        
+        private float subtotalField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idSaleLane {
+            get {
+                return this.idSaleLaneField;
+            }
+            set {
+                this.idSaleLaneField = value;
+                this.RaisePropertyChanged("idSaleLane");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public product product {
+            get {
+                return this.productField;
+            }
+            set {
+                this.productField = value;
+                this.RaisePropertyChanged("product");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+                this.RaisePropertyChanged("quantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public sale sale {
+            get {
+                return this.saleField;
+            }
+            set {
+                this.saleField = value;
+                this.RaisePropertyChanged("sale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public float subtotal {
+            get {
+                return this.subtotalField;
+            }
+            set {
+                this.subtotalField = value;
+                this.RaisePropertyChanged("subtotal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class space : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private string descriptionField;
+        
+        private int idField;
+        
+        private string idSpaceField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private premises premisesField;
+        
+        private int stateField;
+        
+        private user userModifierField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string idSpace {
+            get {
+                return this.idSpaceField;
+            }
+            set {
+                this.idSpaceField = value;
+                this.RaisePropertyChanged("idSpace");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public premises premises {
+            get {
+                return this.premisesField;
+            }
+            set {
+                this.premisesField = value;
+                this.RaisePropertyChanged("premises");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class premises : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string addressField;
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private string descriptionField;
+        
+        private int idField;
+        
+        private string idPremisesField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private space[] spacesField;
+        
+        private int stateField;
+        
+        private user userModifierField;
+        
+        private warehouse[] warehousesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string idPremises {
+            get {
+                return this.idPremisesField;
+            }
+            set {
+                this.idPremisesField = value;
+                this.RaisePropertyChanged("idPremises");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("spaces", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
+        public space[] spaces {
+            get {
+                return this.spacesField;
+            }
+            set {
+                this.spacesField = value;
+                this.RaisePropertyChanged("spaces");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("warehouses", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public warehouse[] warehouses {
+            get {
+                return this.warehousesField;
+            }
+            set {
+                this.warehousesField = value;
+                this.RaisePropertyChanged("warehouses");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/")]
+    public partial class warehouse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime creationDateField;
+        
+        private bool creationDateFieldSpecified;
+        
+        private user creatorUserField;
+        
+        private string descriptionField;
+        
+        private int idField;
+        
+        private string idWarehouseField;
+        
+        private System.DateTime modificationDateField;
+        
+        private bool modificationDateFieldSpecified;
+        
+        private premises premisesField;
+        
+        private int stateField;
+        
+        private user userModifierField;
+        
+        private string warehouseCodeField;
+        
+        private warehouseDetail[] warehouseDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                this.creationDateField = value;
+                this.RaisePropertyChanged("creationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool creationDateSpecified {
+            get {
+                return this.creationDateFieldSpecified;
+            }
+            set {
+                this.creationDateFieldSpecified = value;
+                this.RaisePropertyChanged("creationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public user creatorUser {
+            get {
+                return this.creatorUserField;
+            }
+            set {
+                this.creatorUserField = value;
+                this.RaisePropertyChanged("creatorUser");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string idWarehouse {
+            get {
+                return this.idWarehouseField;
+            }
+            set {
+                this.idWarehouseField = value;
+                this.RaisePropertyChanged("idWarehouse");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public System.DateTime modificationDate {
+            get {
+                return this.modificationDateField;
+            }
+            set {
+                this.modificationDateField = value;
+                this.RaisePropertyChanged("modificationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool modificationDateSpecified {
+            get {
+                return this.modificationDateFieldSpecified;
+            }
+            set {
+                this.modificationDateFieldSpecified = value;
+                this.RaisePropertyChanged("modificationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public premises premises {
+            get {
+                return this.premisesField;
+            }
+            set {
+                this.premisesField = value;
+                this.RaisePropertyChanged("premises");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public user userModifier {
+            get {
+                return this.userModifierField;
+            }
+            set {
+                this.userModifierField = value;
+                this.RaisePropertyChanged("userModifier");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string warehouseCode {
+            get {
+                return this.warehouseCodeField;
+            }
+            set {
+                this.warehouseCodeField = value;
+                this.RaisePropertyChanged("warehouseCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("warehouseDetails", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public warehouseDetail[] warehouseDetails {
+            get {
+                return this.warehouseDetailsField;
+            }
+            set {
+                this.warehouseDetailsField = value;
+                this.RaisePropertyChanged("warehouseDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRefundByIdSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryRefundByIdSaleResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryWarehousedetailBySKUandWarehouseID", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryWarehousedetailBySKUandWarehouseIDRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.refund @return;
+        public string sku;
         
-        public queryRefundByIdSaleResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int warehouseId;
+        
+        public queryWarehousedetailBySKUandWarehouseIDRequest() {
         }
         
-        public queryRefundByIdSaleResponse(View.MateWSLocal.refund @return) {
+        public queryWarehousedetailBySKUandWarehouseIDRequest(string sku, int warehouseId) {
+            this.sku = sku;
+            this.warehouseId = warehouseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryWarehousedetailBySKUandWarehouseIDResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryWarehousedetailBySKUandWarehouseIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.warehouseDetail @return;
+        
+        public queryWarehousedetailBySKUandWarehouseIDResponse() {
+        }
+        
+        public queryWarehousedetailBySKUandWarehouseIDResponse(View.MateWSLocal.warehouseDetail @return) {
             this.@return = @return;
         }
     }
@@ -4879,328 +4898,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdEmployeeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByUsername", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeByUsernameRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEmployee;
+        public string username;
         
-        public queryByIdEmployeeRequest() {
+        public queryEmployeeByUsernameRequest() {
         }
         
-        public queryByIdEmployeeRequest(int idEmployee) {
-            this.idEmployee = idEmployee;
+        public queryEmployeeByUsernameRequest(string username) {
+            this.username = username;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdEmployeeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByUsernameResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeByUsernameResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public View.MateWSLocal.employee @return;
         
-        public queryByIdEmployeeResponse() {
+        public queryEmployeeByUsernameResponse() {
         }
         
-        public queryByIdEmployeeResponse(View.MateWSLocal.employee @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByDNI", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryEmployeeByDNIRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dni;
-        
-        public queryEmployeeByDNIRequest() {
-        }
-        
-        public queryEmployeeByDNIRequest(string dni) {
-            this.dni = dni;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByDNIResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryEmployeeByDNIResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee @return;
-        
-        public queryEmployeeByDNIResponse() {
-        }
-        
-        public queryEmployeeByDNIResponse(View.MateWSLocal.employee @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountProductRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idDiscount;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProduct;
-        
-        public insertDiscountProductRequest() {
-        }
-        
-        public insertDiscountProductRequest(int idDiscount, int idProduct) {
-            this.idDiscount = idDiscount;
-            this.idProduct = idProduct;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountProductResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertDiscountProductResponse() {
-        }
-        
-        public insertDiscountProductResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdCustomerRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idCustomer;
-        
-        public queryByIdCustomerRequest() {
-        }
-        
-        public queryByIdCustomerRequest(string idCustomer) {
-            this.idCustomer = idCustomer;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryByIdCustomerResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer @return;
-        
-        public queryByIdCustomerResponse() {
-        }
-        
-        public queryByIdCustomerResponse(View.MateWSLocal.customer @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryFamilyByCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string familyID;
-        
-        public queryFamilyByCodeRequest() {
-        }
-        
-        public queryFamilyByCodeRequest(string familyID) {
-            this.familyID = familyID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryFamilyByCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family @return;
-        
-        public queryFamilyByCodeResponse() {
-        }
-        
-        public queryFamilyByCodeResponse(View.MateWSLocal.family @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPremisesByDescription", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPremisesByDescriptionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string description;
-        
-        public queryPremisesByDescriptionRequest() {
-        }
-        
-        public queryPremisesByDescriptionRequest(string description) {
-            this.description = description;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPremisesByDescriptionResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPremisesByDescriptionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises @return;
-        
-        public queryPremisesByDescriptionResponse() {
-        }
-        
-        public queryPremisesByDescriptionResponse(View.MateWSLocal.premises @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPurchaseBySerialCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serialCode;
-        
-        public queryPurchaseBySerialCodeRequest() {
-        }
-        
-        public queryPurchaseBySerialCodeRequest(string serialCode) {
-            this.serialCode = serialCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryPurchaseBySerialCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.purchase @return;
-        
-        public queryPurchaseBySerialCodeResponse() {
-        }
-        
-        public queryPurchaseBySerialCodeResponse(View.MateWSLocal.purchase @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductBySKUCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryProductBySKUCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string skuCode;
-        
-        public queryProductBySKUCodeRequest() {
-        }
-        
-        public queryProductBySKUCodeRequest(string skuCode) {
-            this.skuCode = skuCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductBySKUCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryProductBySKUCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.product @return;
-        
-        public queryProductBySKUCodeResponse() {
-        }
-        
-        public queryProductBySKUCodeResponse(View.MateWSLocal.product @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySaleBySerialCodeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serialCode;
-        
-        public querySaleBySerialCodeRequest() {
-        }
-        
-        public querySaleBySerialCodeRequest(string serialCode) {
-            this.serialCode = serialCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class querySaleBySerialCodeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.sale @return;
-        
-        public querySaleBySerialCodeResponse() {
-        }
-        
-        public querySaleBySerialCodeResponse(View.MateWSLocal.sale @return) {
+        public queryEmployeeByUsernameResponse(View.MateWSLocal.employee @return) {
             this.@return = @return;
         }
     }
@@ -5280,6 +5006,42 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRefundByIdSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryRefundByIdSaleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int saleId;
+        
+        public queryRefundByIdSaleRequest() {
+        }
+        
+        public queryRefundByIdSaleRequest(int saleId) {
+            this.saleId = saleId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRefundByIdSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryRefundByIdSaleResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.refund @return;
+        
+        public queryRefundByIdSaleResponse() {
+        }
+        
+        public queryRefundByIdSaleResponse(View.MateWSLocal.refund @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="updateAristSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
     public partial class updateAristSupplierRequest {
         
@@ -5321,68 +5083,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryWarehousedetailBySKUandWarehouseID", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryWarehousedetailBySKUandWarehouseIDRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySaleBySerialCodeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string sku;
+        public string serialCode;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int warehouseId;
-        
-        public queryWarehousedetailBySKUandWarehouseIDRequest() {
+        public querySaleBySerialCodeRequest() {
         }
         
-        public queryWarehousedetailBySKUandWarehouseIDRequest(string sku, int warehouseId) {
-            this.sku = sku;
-            this.warehouseId = warehouseId;
+        public querySaleBySerialCodeRequest(string serialCode) {
+            this.serialCode = serialCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryWarehousedetailBySKUandWarehouseIDResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryWarehousedetailBySKUandWarehouseIDResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySaleBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class querySaleBySerialCodeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.warehouseDetail @return;
+        public View.MateWSLocal.sale @return;
         
-        public queryWarehousedetailBySKUandWarehouseIDResponse() {
+        public querySaleBySerialCodeResponse() {
         }
         
-        public queryWarehousedetailBySKUandWarehouseIDResponse(View.MateWSLocal.warehouseDetail @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllEmployeeRequest {
-        
-        public queryAllEmployeeRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllEmployeeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee[] @return;
-        
-        public queryAllEmployeeResponse() {
-        }
-        
-        public queryAllEmployeeResponse(View.MateWSLocal.employee[] @return) {
+        public querySaleBySerialCodeResponse(View.MateWSLocal.sale @return) {
             this.@return = @return;
         }
     }
@@ -5411,142 +5140,6 @@ namespace View.MateWSLocal {
         }
         
         public queryAllProductsResponse(View.MateWSLocal.product[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class deleteCustomerRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer customer;
-        
-        public deleteCustomerRequest() {
-        }
-        
-        public deleteCustomerRequest(View.MateWSLocal.customer customer) {
-            this.customer = customer;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class deleteCustomerResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public deleteCustomerResponse() {
-        }
-        
-        public deleteCustomerResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateCustomerRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer customer;
-        
-        public updateCustomerRequest() {
-        }
-        
-        public updateCustomerRequest(View.MateWSLocal.customer customer) {
-            this.customer = customer;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateCustomerResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateCustomerResponse() {
-        }
-        
-        public updateCustomerResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateEmployeeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee employee;
-        
-        public updateEmployeeRequest() {
-        }
-        
-        public updateEmployeeRequest(View.MateWSLocal.employee employee) {
-            this.employee = employee;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateEmployeeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateEmployeeResponse() {
-        }
-        
-        public updateEmployeeResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierRequest {
-        
-        public queryAllSupplierRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSupplierResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier[] @return;
-        
-        public queryAllSupplierResponse() {
-        }
-        
-        public queryAllSupplierResponse(View.MateWSLocal.supplier[] @return) {
             this.@return = @return;
         }
     }
@@ -5590,35 +5183,484 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertFamilyRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family family;
-        
-        public insertFamilyRequest() {
-        }
-        
-        public insertFamilyRequest(View.MateWSLocal.family family) {
-            this.family = family;
+        public queryAllCustomerRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertFamilyResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer[] @return;
+        
+        public queryAllCustomerResponse() {
+        }
+        
+        public queryAllCustomerResponse(View.MateWSLocal.customer[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer customer;
+        
+        public updateCustomerRequest() {
+        }
+        
+        public updateCustomerRequest(View.MateWSLocal.customer customer) {
+            this.customer = customer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateCustomerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertFamilyResponse() {
+        public updateCustomerResponse() {
         }
         
-        public insertFamilyResponse(int @return) {
+        public updateCustomerResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class deleteCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer customer;
+        
+        public deleteCustomerRequest() {
+        }
+        
+        public deleteCustomerRequest(View.MateWSLocal.customer customer) {
+            this.customer = customer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class deleteCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public deleteCustomerResponse() {
+        }
+        
+        public deleteCustomerResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByDNI", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeByDNIRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dni;
+        
+        public queryEmployeeByDNIRequest() {
+        }
+        
+        public queryEmployeeByDNIRequest(string dni) {
+            this.dni = dni;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeByDNIResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeByDNIResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee @return;
+        
+        public queryEmployeeByDNIResponse() {
+        }
+        
+        public queryEmployeeByDNIResponse(View.MateWSLocal.employee @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryFamilyByCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string familyID;
+        
+        public queryFamilyByCodeRequest() {
+        }
+        
+        public queryFamilyByCodeRequest(string familyID) {
+            this.familyID = familyID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFamilyByCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryFamilyByCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.family @return;
+        
+        public queryFamilyByCodeResponse() {
+        }
+        
+        public queryFamilyByCodeResponse(View.MateWSLocal.family @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductBySKUCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryProductBySKUCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string skuCode;
+        
+        public queryProductBySKUCodeRequest() {
+        }
+        
+        public queryProductBySKUCodeRequest(string skuCode) {
+            this.skuCode = skuCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductBySKUCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryProductBySKUCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.product @return;
+        
+        public queryProductBySKUCodeResponse() {
+        }
+        
+        public queryProductBySKUCodeResponse(View.MateWSLocal.product @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPremisesByDescription", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPremisesByDescriptionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string description;
+        
+        public queryPremisesByDescriptionRequest() {
+        }
+        
+        public queryPremisesByDescriptionRequest(string description) {
+            this.description = description;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPremisesByDescriptionResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPremisesByDescriptionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.premises @return;
+        
+        public queryPremisesByDescriptionResponse() {
+        }
+        
+        public queryPremisesByDescriptionResponse(View.MateWSLocal.premises @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountProductRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idDiscount;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProduct;
+        
+        public insertDiscountProductRequest() {
+        }
+        
+        public insertDiscountProductRequest(int idDiscount, int idProduct) {
+            this.idDiscount = idDiscount;
+            this.idProduct = idProduct;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountProductResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertDiscountProductResponse() {
+        }
+        
+        public insertDiscountProductResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCode", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPurchaseBySerialCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string serialCode;
+        
+        public queryPurchaseBySerialCodeRequest() {
+        }
+        
+        public queryPurchaseBySerialCodeRequest(string serialCode) {
+            this.serialCode = serialCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPurchaseBySerialCodeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryPurchaseBySerialCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.purchase @return;
+        
+        public queryPurchaseBySerialCodeResponse() {
+        }
+        
+        public queryPurchaseBySerialCodeResponse(View.MateWSLocal.purchase @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEmployee;
+        
+        public queryByIdEmployeeRequest() {
+        }
+        
+        public queryByIdEmployeeRequest(int idEmployee) {
+            this.idEmployee = idEmployee;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee @return;
+        
+        public queryByIdEmployeeResponse() {
+        }
+        
+        public queryByIdEmployeeResponse(View.MateWSLocal.employee @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdCustomerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idCustomer;
+        
+        public queryByIdCustomerRequest() {
+        }
+        
+        public queryByIdCustomerRequest(string idCustomer) {
+            this.idCustomer = idCustomer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryByIdCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryByIdCustomerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.customer @return;
+        
+        public queryByIdCustomerResponse() {
+        }
+        
+        public queryByIdCustomerResponse(View.MateWSLocal.customer @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPurchaseRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.purchase purchase;
+        
+        public insertPurchaseRequest() {
+        }
+        
+        public insertPurchaseRequest(View.MateWSLocal.purchase purchase) {
+            this.purchase = purchase;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPurchaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertPurchaseResponse() {
+        }
+        
+        public insertPurchaseResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSaleRequest {
+        
+        public queryAllSaleRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSaleResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.sale[] @return;
+        
+        public queryAllSaleResponse() {
+        }
+        
+        public queryAllSaleResponse(View.MateWSLocal.sale[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPurchaseRequest {
+        
+        public queryAllPurchaseRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPurchaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.purchase[] @return;
+        
+        public queryAllPurchaseResponse() {
+        }
+        
+        public queryAllPurchaseResponse(View.MateWSLocal.purchase[] @return) {
             this.@return = @return;
         }
     }
@@ -5654,35 +5696,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateFamilyRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePurchaseRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.family family;
+        public View.MateWSLocal.purchase purchase;
         
-        public updateFamilyRequest() {
+        public updatePurchaseRequest() {
         }
         
-        public updateFamilyRequest(View.MateWSLocal.family family) {
-            this.family = family;
+        public updatePurchaseRequest(View.MateWSLocal.purchase purchase) {
+            this.purchase = purchase;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateFamilyResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePurchaseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public updateFamilyResponse() {
+        public updatePurchaseResponse() {
         }
         
-        public updateFamilyResponse(int @return) {
+        public updatePurchaseResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5690,63 +5732,27 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertProductRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllBrandRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.product product;
-        
-        public insertProductRequest() {
-        }
-        
-        public insertProductRequest(View.MateWSLocal.product product) {
-            this.product = product;
+        public queryAllBrandRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertProductResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertProductResponse() {
-        }
-        
-        public insertProductResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomer", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerRequest {
-        
-        public queryAllCustomerRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllCustomerResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllCustomerResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllBrandResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.customer[] @return;
+        public View.MateWSLocal.brand[] @return;
         
-        public queryAllCustomerResponse() {
+        public queryAllBrandResponse() {
         }
         
-        public queryAllCustomerResponse(View.MateWSLocal.customer[] @return) {
+        public queryAllBrandResponse(View.MateWSLocal.brand[] @return) {
             this.@return = @return;
         }
     }
@@ -5754,35 +5760,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSupplierRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertUserRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier supplier;
+        public View.MateWSLocal.user user;
         
-        public updateSupplierRequest() {
+        public insertUserRequest() {
         }
         
-        public updateSupplierRequest(View.MateWSLocal.supplier supplier) {
-            this.supplier = supplier;
+        public insertUserRequest(View.MateWSLocal.user user) {
+            this.user = user;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSupplierResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertUserResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public updateSupplierResponse() {
+        public insertUserResponse() {
         }
         
-        public updateSupplierResponse(int @return) {
+        public insertUserResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5790,35 +5796,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateProductRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertAreaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.product product;
+        public View.MateWSLocal.area area;
         
-        public updateProductRequest() {
+        public insertAreaRequest() {
         }
         
-        public updateProductRequest(View.MateWSLocal.product product) {
-            this.product = product;
+        public insertAreaRequest(View.MateWSLocal.area area) {
+            this.area = area;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateProductResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertAreaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public updateProductResponse() {
+        public insertAreaResponse() {
         }
         
-        public updateProductResponse(int @return) {
+        public insertAreaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5862,35 +5868,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertSupplierRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertFamilyRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.supplier supplier;
+        public View.MateWSLocal.family family;
         
-        public insertSupplierRequest() {
+        public insertFamilyRequest() {
         }
         
-        public insertSupplierRequest(View.MateWSLocal.supplier supplier) {
-            this.supplier = supplier;
+        public insertFamilyRequest(View.MateWSLocal.family family) {
+            this.family = family;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertSupplierResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertFamilyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertSupplierResponse() {
+        public insertFamilyResponse() {
         }
         
-        public insertSupplierResponse(int @return) {
+        public insertFamilyResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5898,27 +5904,27 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllAreaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierRequest {
         
-        public queryAllAreaRequest() {
+        public queryAllSupplierRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllAreaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllSupplierResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area[] @return;
+        public View.MateWSLocal.supplier[] @return;
         
-        public queryAllAreaResponse() {
+        public queryAllSupplierResponse() {
         }
         
-        public queryAllAreaResponse(View.MateWSLocal.area[] @return) {
+        public queryAllSupplierResponse(View.MateWSLocal.supplier[] @return) {
             this.@return = @return;
         }
     }
@@ -5926,17 +5932,53 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefund", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertRefundRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.refund refund;
+        
+        public insertRefundRequest() {
+        }
+        
+        public insertRefundRequest(View.MateWSLocal.refund refund) {
+            this.refund = refund;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefundResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertRefundResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertRefundResponse() {
+        }
+        
+        public insertRefundResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public View.MateWSLocal.brand brand;
         
-        public insertBrandRequest() {
+        public updateBrandRequest() {
         }
         
-        public insertBrandRequest(View.MateWSLocal.brand brand) {
+        public updateBrandRequest(View.MateWSLocal.brand brand) {
             this.brand = brand;
         }
     }
@@ -5944,17 +5986,53 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertBrandResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateBrandResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertBrandResponse() {
+        public updateBrandResponse() {
         }
         
-        public insertBrandResponse(int @return) {
+        public updateBrandResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSaleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.sale sale;
+        
+        public updateSaleRequest() {
+        }
+        
+        public updateSaleRequest(View.MateWSLocal.sale sale) {
+            this.sale = sale;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSaleResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateSaleResponse() {
+        }
+        
+        public updateSaleResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6003,63 +6081,27 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertUserRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllUserRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user user;
-        
-        public insertUserRequest() {
-        }
-        
-        public insertUserRequest(View.MateWSLocal.user user) {
-            this.user = user;
+        public queryAllUserRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertUserResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertUserResponse() {
-        }
-        
-        public insertUserResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPremisesRequest {
-        
-        public queryAllPremisesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPremisesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllUserResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises[] @return;
+        public View.MateWSLocal.user[] @return;
         
-        public queryAllPremisesResponse() {
+        public queryAllUserResponse() {
         }
         
-        public queryAllPremisesResponse(View.MateWSLocal.premises[] @return) {
+        public queryAllUserResponse(View.MateWSLocal.user[] @return) {
             this.@return = @return;
         }
     }
@@ -6067,71 +6109,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryEmployeeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string infEmployee;
+        public View.MateWSLocal.brand brand;
         
-        public queryEmployeeRequest() {
+        public insertBrandRequest() {
         }
         
-        public queryEmployeeRequest(string infEmployee) {
-            this.infEmployee = infEmployee;
+        public insertBrandRequest(View.MateWSLocal.brand brand) {
+            this.brand = brand;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryEmployeeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.employee @return;
-        
-        public queryEmployeeResponse() {
-        }
-        
-        public queryEmployeeResponse(View.MateWSLocal.employee @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updatePurchaseRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.purchase purchase;
-        
-        public updatePurchaseRequest() {
-        }
-        
-        public updatePurchaseRequest(View.MateWSLocal.purchase purchase) {
-            this.purchase = purchase;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updatePurchaseResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertBrandResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public updatePurchaseResponse() {
+        public insertBrandResponse() {
         }
         
-        public updatePurchaseResponse(int @return) {
+        public insertBrandResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6139,35 +6145,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertAreaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertProductRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area area;
+        public View.MateWSLocal.product product;
         
-        public insertAreaRequest() {
+        public insertProductRequest() {
         }
         
-        public insertAreaRequest(View.MateWSLocal.area area) {
-            this.area = area;
+        public insertProductRequest(View.MateWSLocal.product product) {
+            this.product = product;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertAreaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertProductResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertAreaResponse() {
+        public insertProductResponse() {
         }
         
-        public insertAreaResponse(int @return) {
+        public insertProductResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6175,399 +6181,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefund", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertRefundRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamily", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateFamilyRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.refund refund;
+        public View.MateWSLocal.family family;
         
-        public insertRefundRequest() {
+        public updateFamilyRequest() {
         }
         
-        public insertRefundRequest(View.MateWSLocal.refund refund) {
-            this.refund = refund;
+        public updateFamilyRequest(View.MateWSLocal.family family) {
+            this.family = family;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertRefundResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertRefundResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateFamilyResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateFamilyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertRefundResponse() {
+        public updateFamilyResponse() {
         }
         
-        public insertRefundResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateDiscountRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.discount discount;
-        
-        public updateDiscountRequest() {
-        }
-        
-        public updateDiscountRequest(View.MateWSLocal.discount discount) {
-            this.discount = discount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateDiscountResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateDiscountResponse() {
-        }
-        
-        public updateDiscountResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.discount discount;
-        
-        public insertDiscountRequest() {
-        }
-        
-        public insertDiscountRequest(View.MateWSLocal.discount discount) {
-            this.discount = discount;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertDiscountResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertDiscountResponse() {
-        }
-        
-        public insertDiscountResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSaleRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.sale sale;
-        
-        public updateSaleRequest() {
-        }
-        
-        public updateSaleRequest(View.MateWSLocal.sale sale) {
-            this.sale = sale;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateSaleResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateSaleResponse() {
-        }
-        
-        public updateSaleResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updatePremisesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises premises;
-        
-        public updatePremisesRequest() {
-        }
-        
-        public updatePremisesRequest(View.MateWSLocal.premises premises) {
-            this.premises = premises;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updatePremisesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updatePremisesResponse() {
-        }
-        
-        public updatePremisesResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPremisesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.premises premises;
-        
-        public insertPremisesRequest() {
-        }
-        
-        public insertPremisesRequest(View.MateWSLocal.premises premises) {
-            this.premises = premises;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPremisesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertPremisesResponse() {
-        }
-        
-        public insertPremisesResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPurchaseRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.purchase purchase;
-        
-        public insertPurchaseRequest() {
-        }
-        
-        public insertPurchaseRequest(View.MateWSLocal.purchase purchase) {
-            this.purchase = purchase;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertPurchaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertPurchaseResponse() {
-        }
-        
-        public insertPurchaseResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllBrandRequest {
-        
-        public queryAllBrandRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllBrandResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.brand[] @return;
-        
-        public queryAllBrandResponse() {
-        }
-        
-        public queryAllBrandResponse(View.MateWSLocal.brand[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateAreaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.area area;
-        
-        public updateAreaRequest() {
-        }
-        
-        public updateAreaRequest(View.MateWSLocal.area area) {
-            this.area = area;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateAreaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public updateAreaResponse() {
-        }
-        
-        public updateAreaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchase", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPurchaseRequest {
-        
-        public queryAllPurchaseRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPurchaseResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllPurchaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.purchase[] @return;
-        
-        public queryAllPurchaseResponse() {
-        }
-        
-        public queryAllPurchaseResponse(View.MateWSLocal.purchase[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSale", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSaleRequest {
-        
-        public queryAllSaleRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllSaleResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllSaleResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.sale[] @return;
-        
-        public queryAllSaleResponse() {
-        }
-        
-        public queryAllSaleResponse(View.MateWSLocal.sale[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllDiscountRequest {
-        
-        public queryAllDiscountRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllDiscountResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.discount[] @return;
-        
-        public queryAllDiscountResponse() {
-        }
-        
-        public queryAllDiscountResponse(View.MateWSLocal.discount[] @return) {
+        public updateFamilyResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6611,35 +6253,35 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrand", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateBrandRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSupplierRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.brand brand;
+        public View.MateWSLocal.supplier supplier;
         
-        public updateBrandRequest() {
+        public updateSupplierRequest() {
         }
         
-        public updateBrandRequest(View.MateWSLocal.brand brand) {
-            this.brand = brand;
+        public updateSupplierRequest(View.MateWSLocal.supplier supplier) {
+            this.supplier = supplier;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBrandResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class updateBrandResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateSupplierResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public updateBrandResponse() {
+        public updateSupplierResponse() {
         }
         
-        public updateBrandResponse(int @return) {
+        public updateSupplierResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6647,27 +6289,435 @@ namespace View.MateWSLocal {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUser", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllUserRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllDiscountRequest {
         
-        public queryAllUserRequest() {
+        public queryAllDiscountRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllUserResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
-    public partial class queryAllUserResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllDiscountResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public View.MateWSLocal.user[] @return;
+        public View.MateWSLocal.discount[] @return;
         
-        public queryAllUserResponse() {
+        public queryAllDiscountResponse() {
         }
         
-        public queryAllUserResponse(View.MateWSLocal.user[] @return) {
+        public queryAllDiscountResponse(View.MateWSLocal.discount[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string infEmployee;
+        
+        public queryEmployeeRequest() {
+        }
+        
+        public queryEmployeeRequest(string infEmployee) {
+            this.infEmployee = infEmployee;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee @return;
+        
+        public queryEmployeeResponse() {
+        }
+        
+        public queryEmployeeResponse(View.MateWSLocal.employee @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPremisesRequest {
+        
+        public queryAllPremisesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllPremisesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.premises[] @return;
+        
+        public queryAllPremisesResponse() {
+        }
+        
+        public queryAllPremisesResponse(View.MateWSLocal.premises[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllEmployeeRequest {
+        
+        public queryAllEmployeeRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee[] @return;
+        
+        public queryAllEmployeeResponse() {
+        }
+        
+        public queryAllEmployeeResponse(View.MateWSLocal.employee[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateProduct", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateProductRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.product product;
+        
+        public updateProductRequest() {
+        }
+        
+        public updateProductRequest(View.MateWSLocal.product product) {
+            this.product = product;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateProductResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateProductResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateProductResponse() {
+        }
+        
+        public updateProductResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSupplier", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertSupplierRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.supplier supplier;
+        
+        public insertSupplierRequest() {
+        }
+        
+        public insertSupplierRequest(View.MateWSLocal.supplier supplier) {
+            this.supplier = supplier;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertSupplierResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertSupplierResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertSupplierResponse() {
+        }
+        
+        public insertSupplierResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePremisesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.premises premises;
+        
+        public updatePremisesRequest() {
+        }
+        
+        public updatePremisesRequest(View.MateWSLocal.premises premises) {
+            this.premises = premises;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updatePremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updatePremisesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updatePremisesResponse() {
+        }
+        
+        public updatePremisesResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateAreaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.area area;
+        
+        public updateAreaRequest() {
+        }
+        
+        public updateAreaRequest(View.MateWSLocal.area area) {
+            this.area = area;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateAreaResponse() {
+        }
+        
+        public updateAreaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateDiscountRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.discount discount;
+        
+        public updateDiscountRequest() {
+        }
+        
+        public updateDiscountRequest(View.MateWSLocal.discount discount) {
+            this.discount = discount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateDiscountResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateDiscountResponse() {
+        }
+        
+        public updateDiscountResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployee", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.employee employee;
+        
+        public updateEmployeeRequest() {
+        }
+        
+        public updateEmployeeRequest(View.MateWSLocal.employee employee) {
+            this.employee = employee;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateEmployeeResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class updateEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public updateEmployeeResponse() {
+        }
+        
+        public updateEmployeeResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremises", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPremisesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.premises premises;
+        
+        public insertPremisesRequest() {
+        }
+        
+        public insertPremisesRequest(View.MateWSLocal.premises premises) {
+            this.premises = premises;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertPremisesResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertPremisesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertPremisesResponse() {
+        }
+        
+        public insertPremisesResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscount", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.discount discount;
+        
+        public insertDiscountRequest() {
+        }
+        
+        public insertDiscountRequest(View.MateWSLocal.discount discount) {
+            this.discount = discount;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertDiscountResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertDiscountResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertDiscountResponse() {
+        }
+        
+        public insertDiscountResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllArea", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllAreaRequest {
+        
+        public queryAllAreaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAllAreaResponse", WrapperNamespace="http://services.mateproyecto.inf.pucp.edu.pe/", IsWrapped=true)]
+    public partial class queryAllAreaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.mateproyecto.inf.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public View.MateWSLocal.area[] @return;
+        
+        public queryAllAreaResponse() {
+        }
+        
+        public queryAllAreaResponse(View.MateWSLocal.area[] @return) {
             this.@return = @return;
         }
     }
@@ -6700,26 +6750,28 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryRefundByIdSaleResponse View.MateWSLocal.DBControllerWS.queryRefundByIdSale(View.MateWSLocal.queryRefundByIdSaleRequest request) {
-            return base.Channel.queryRefundByIdSale(request);
+        View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse View.MateWSLocal.DBControllerWS.queryWarehousedetailBySKUandWarehouseID(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request) {
+            return base.Channel.queryWarehousedetailBySKUandWarehouseID(request);
         }
         
-        public View.MateWSLocal.refund queryRefundByIdSale(int saleId) {
-            View.MateWSLocal.queryRefundByIdSaleRequest inValue = new View.MateWSLocal.queryRefundByIdSaleRequest();
-            inValue.saleId = saleId;
-            View.MateWSLocal.queryRefundByIdSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryRefundByIdSale(inValue);
+        public View.MateWSLocal.warehouseDetail queryWarehousedetailBySKUandWarehouseID(string sku, int warehouseId) {
+            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest inValue = new View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest();
+            inValue.sku = sku;
+            inValue.warehouseId = warehouseId;
+            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryWarehousedetailBySKUandWarehouseID(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> View.MateWSLocal.DBControllerWS.queryRefundByIdSaleAsync(View.MateWSLocal.queryRefundByIdSaleRequest request) {
-            return base.Channel.queryRefundByIdSaleAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> View.MateWSLocal.DBControllerWS.queryWarehousedetailBySKUandWarehouseIDAsync(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request) {
+            return base.Channel.queryWarehousedetailBySKUandWarehouseIDAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> queryRefundByIdSaleAsync(int saleId) {
-            View.MateWSLocal.queryRefundByIdSaleRequest inValue = new View.MateWSLocal.queryRefundByIdSaleRequest();
-            inValue.saleId = saleId;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryRefundByIdSaleAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> queryWarehousedetailBySKUandWarehouseIDAsync(string sku, int warehouseId) {
+            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest inValue = new View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest();
+            inValue.sku = sku;
+            inValue.warehouseId = warehouseId;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryWarehousedetailBySKUandWarehouseIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6746,212 +6798,26 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryByIdEmployeeResponse View.MateWSLocal.DBControllerWS.queryByIdEmployee(View.MateWSLocal.queryByIdEmployeeRequest request) {
-            return base.Channel.queryByIdEmployee(request);
+        View.MateWSLocal.queryEmployeeByUsernameResponse View.MateWSLocal.DBControllerWS.queryEmployeeByUsername(View.MateWSLocal.queryEmployeeByUsernameRequest request) {
+            return base.Channel.queryEmployeeByUsername(request);
         }
         
-        public View.MateWSLocal.employee queryByIdEmployee(int idEmployee) {
-            View.MateWSLocal.queryByIdEmployeeRequest inValue = new View.MateWSLocal.queryByIdEmployeeRequest();
-            inValue.idEmployee = idEmployee;
-            View.MateWSLocal.queryByIdEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdEmployee(inValue);
+        public View.MateWSLocal.employee queryEmployeeByUsername(string username) {
+            View.MateWSLocal.queryEmployeeByUsernameRequest inValue = new View.MateWSLocal.queryEmployeeByUsernameRequest();
+            inValue.username = username;
+            View.MateWSLocal.queryEmployeeByUsernameResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByUsername(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> View.MateWSLocal.DBControllerWS.queryByIdEmployeeAsync(View.MateWSLocal.queryByIdEmployeeRequest request) {
-            return base.Channel.queryByIdEmployeeAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByUsernameResponse> View.MateWSLocal.DBControllerWS.queryEmployeeByUsernameAsync(View.MateWSLocal.queryEmployeeByUsernameRequest request) {
+            return base.Channel.queryEmployeeByUsernameAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> queryByIdEmployeeAsync(int idEmployee) {
-            View.MateWSLocal.queryByIdEmployeeRequest inValue = new View.MateWSLocal.queryByIdEmployeeRequest();
-            inValue.idEmployee = idEmployee;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdEmployeeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryEmployeeByDNIResponse View.MateWSLocal.DBControllerWS.queryEmployeeByDNI(View.MateWSLocal.queryEmployeeByDNIRequest request) {
-            return base.Channel.queryEmployeeByDNI(request);
-        }
-        
-        public View.MateWSLocal.employee queryEmployeeByDNI(string dni) {
-            View.MateWSLocal.queryEmployeeByDNIRequest inValue = new View.MateWSLocal.queryEmployeeByDNIRequest();
-            inValue.dni = dni;
-            View.MateWSLocal.queryEmployeeByDNIResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByDNI(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> View.MateWSLocal.DBControllerWS.queryEmployeeByDNIAsync(View.MateWSLocal.queryEmployeeByDNIRequest request) {
-            return base.Channel.queryEmployeeByDNIAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> queryEmployeeByDNIAsync(string dni) {
-            View.MateWSLocal.queryEmployeeByDNIRequest inValue = new View.MateWSLocal.queryEmployeeByDNIRequest();
-            inValue.dni = dni;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByDNIAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertDiscountProductResponse View.MateWSLocal.DBControllerWS.insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request) {
-            return base.Channel.insertDiscountProduct(request);
-        }
-        
-        public int insertDiscountProduct(int idDiscount, int idProduct) {
-            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
-            inValue.idDiscount = idDiscount;
-            inValue.idProduct = idProduct;
-            View.MateWSLocal.insertDiscountProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProduct(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> View.MateWSLocal.DBControllerWS.insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request) {
-            return base.Channel.insertDiscountProductAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> insertDiscountProductAsync(int idDiscount, int idProduct) {
-            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
-            inValue.idDiscount = idDiscount;
-            inValue.idProduct = idProduct;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProductAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryByIdCustomerResponse View.MateWSLocal.DBControllerWS.queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request) {
-            return base.Channel.queryByIdCustomer(request);
-        }
-        
-        public View.MateWSLocal.customer queryByIdCustomer(string idCustomer) {
-            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
-            inValue.idCustomer = idCustomer;
-            View.MateWSLocal.queryByIdCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> View.MateWSLocal.DBControllerWS.queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request) {
-            return base.Channel.queryByIdCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> queryByIdCustomerAsync(string idCustomer) {
-            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
-            inValue.idCustomer = idCustomer;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomerAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryFamilyByCodeResponse View.MateWSLocal.DBControllerWS.queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request) {
-            return base.Channel.queryFamilyByCode(request);
-        }
-        
-        public View.MateWSLocal.family queryFamilyByCode(string familyID) {
-            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
-            inValue.familyID = familyID;
-            View.MateWSLocal.queryFamilyByCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> View.MateWSLocal.DBControllerWS.queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request) {
-            return base.Channel.queryFamilyByCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> queryFamilyByCodeAsync(string familyID) {
-            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
-            inValue.familyID = familyID;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryPremisesByDescriptionResponse View.MateWSLocal.DBControllerWS.queryPremisesByDescription(View.MateWSLocal.queryPremisesByDescriptionRequest request) {
-            return base.Channel.queryPremisesByDescription(request);
-        }
-        
-        public View.MateWSLocal.premises queryPremisesByDescription(string description) {
-            View.MateWSLocal.queryPremisesByDescriptionRequest inValue = new View.MateWSLocal.queryPremisesByDescriptionRequest();
-            inValue.description = description;
-            View.MateWSLocal.queryPremisesByDescriptionResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPremisesByDescription(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> View.MateWSLocal.DBControllerWS.queryPremisesByDescriptionAsync(View.MateWSLocal.queryPremisesByDescriptionRequest request) {
-            return base.Channel.queryPremisesByDescriptionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> queryPremisesByDescriptionAsync(string description) {
-            View.MateWSLocal.queryPremisesByDescriptionRequest inValue = new View.MateWSLocal.queryPremisesByDescriptionRequest();
-            inValue.description = description;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryPremisesByDescriptionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryPurchaseBySerialCodeResponse View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
-            return base.Channel.queryPurchaseBySerialCode(request);
-        }
-        
-        public View.MateWSLocal.purchase queryPurchaseBySerialCode(string serialCode) {
-            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            View.MateWSLocal.queryPurchaseBySerialCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
-            return base.Channel.queryPurchaseBySerialCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> queryPurchaseBySerialCodeAsync(string serialCode) {
-            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryProductBySKUCodeResponse View.MateWSLocal.DBControllerWS.queryProductBySKUCode(View.MateWSLocal.queryProductBySKUCodeRequest request) {
-            return base.Channel.queryProductBySKUCode(request);
-        }
-        
-        public View.MateWSLocal.product queryProductBySKUCode(string skuCode) {
-            View.MateWSLocal.queryProductBySKUCodeRequest inValue = new View.MateWSLocal.queryProductBySKUCodeRequest();
-            inValue.skuCode = skuCode;
-            View.MateWSLocal.queryProductBySKUCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryProductBySKUCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> View.MateWSLocal.DBControllerWS.queryProductBySKUCodeAsync(View.MateWSLocal.queryProductBySKUCodeRequest request) {
-            return base.Channel.queryProductBySKUCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> queryProductBySKUCodeAsync(string skuCode) {
-            View.MateWSLocal.queryProductBySKUCodeRequest inValue = new View.MateWSLocal.queryProductBySKUCodeRequest();
-            inValue.skuCode = skuCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryProductBySKUCodeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.querySaleBySerialCodeResponse View.MateWSLocal.DBControllerWS.querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request) {
-            return base.Channel.querySaleBySerialCode(request);
-        }
-        
-        public View.MateWSLocal.sale querySaleBySerialCode(string serialCode) {
-            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            View.MateWSLocal.querySaleBySerialCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCode(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> View.MateWSLocal.DBControllerWS.querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request) {
-            return base.Channel.querySaleBySerialCodeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> querySaleBySerialCodeAsync(string serialCode) {
-            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
-            inValue.serialCode = serialCode;
-            return ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCodeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByUsernameResponse> queryEmployeeByUsernameAsync(string username) {
+            View.MateWSLocal.queryEmployeeByUsernameRequest inValue = new View.MateWSLocal.queryEmployeeByUsernameRequest();
+            inValue.username = username;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByUsernameAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7001,6 +6867,29 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryRefundByIdSaleResponse View.MateWSLocal.DBControllerWS.queryRefundByIdSale(View.MateWSLocal.queryRefundByIdSaleRequest request) {
+            return base.Channel.queryRefundByIdSale(request);
+        }
+        
+        public View.MateWSLocal.refund queryRefundByIdSale(int saleId) {
+            View.MateWSLocal.queryRefundByIdSaleRequest inValue = new View.MateWSLocal.queryRefundByIdSaleRequest();
+            inValue.saleId = saleId;
+            View.MateWSLocal.queryRefundByIdSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryRefundByIdSale(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> View.MateWSLocal.DBControllerWS.queryRefundByIdSaleAsync(View.MateWSLocal.queryRefundByIdSaleRequest request) {
+            return base.Channel.queryRefundByIdSaleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryRefundByIdSaleResponse> queryRefundByIdSaleAsync(int saleId) {
+            View.MateWSLocal.queryRefundByIdSaleRequest inValue = new View.MateWSLocal.queryRefundByIdSaleRequest();
+            inValue.saleId = saleId;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryRefundByIdSaleAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         View.MateWSLocal.updateAristSupplierResponse View.MateWSLocal.DBControllerWS.updateAristSupplier(View.MateWSLocal.updateAristSupplierRequest request) {
             return base.Channel.updateAristSupplier(request);
         }
@@ -7026,49 +6915,26 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse View.MateWSLocal.DBControllerWS.queryWarehousedetailBySKUandWarehouseID(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request) {
-            return base.Channel.queryWarehousedetailBySKUandWarehouseID(request);
+        View.MateWSLocal.querySaleBySerialCodeResponse View.MateWSLocal.DBControllerWS.querySaleBySerialCode(View.MateWSLocal.querySaleBySerialCodeRequest request) {
+            return base.Channel.querySaleBySerialCode(request);
         }
         
-        public View.MateWSLocal.warehouseDetail queryWarehousedetailBySKUandWarehouseID(string sku, int warehouseId) {
-            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest inValue = new View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest();
-            inValue.sku = sku;
-            inValue.warehouseId = warehouseId;
-            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryWarehousedetailBySKUandWarehouseID(inValue);
+        public View.MateWSLocal.sale querySaleBySerialCode(string serialCode) {
+            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            View.MateWSLocal.querySaleBySerialCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCode(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> View.MateWSLocal.DBControllerWS.queryWarehousedetailBySKUandWarehouseIDAsync(View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest request) {
-            return base.Channel.queryWarehousedetailBySKUandWarehouseIDAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> View.MateWSLocal.DBControllerWS.querySaleBySerialCodeAsync(View.MateWSLocal.querySaleBySerialCodeRequest request) {
+            return base.Channel.querySaleBySerialCodeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDResponse> queryWarehousedetailBySKUandWarehouseIDAsync(string sku, int warehouseId) {
-            View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest inValue = new View.MateWSLocal.queryWarehousedetailBySKUandWarehouseIDRequest();
-            inValue.sku = sku;
-            inValue.warehouseId = warehouseId;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryWarehousedetailBySKUandWarehouseIDAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllEmployeeResponse View.MateWSLocal.DBControllerWS.queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request) {
-            return base.Channel.queryAllEmployee(request);
-        }
-        
-        public View.MateWSLocal.employee[] queryAllEmployee() {
-            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
-            View.MateWSLocal.queryAllEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployee(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> View.MateWSLocal.DBControllerWS.queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request) {
-            return base.Channel.queryAllEmployeeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync() {
-            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.querySaleBySerialCodeResponse> querySaleBySerialCodeAsync(string serialCode) {
+            View.MateWSLocal.querySaleBySerialCodeRequest inValue = new View.MateWSLocal.querySaleBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).querySaleBySerialCodeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7090,96 +6956,6 @@ namespace View.MateWSLocal {
         public System.Threading.Tasks.Task<View.MateWSLocal.queryAllProductsResponse> queryAllProductsAsync() {
             View.MateWSLocal.queryAllProductsRequest inValue = new View.MateWSLocal.queryAllProductsRequest();
             return ((View.MateWSLocal.DBControllerWS)(this)).queryAllProductsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.deleteCustomerResponse View.MateWSLocal.DBControllerWS.deleteCustomer(View.MateWSLocal.deleteCustomerRequest request) {
-            return base.Channel.deleteCustomer(request);
-        }
-        
-        public int deleteCustomer(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.deleteCustomerRequest inValue = new View.MateWSLocal.deleteCustomerRequest();
-            inValue.customer = customer;
-            View.MateWSLocal.deleteCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).deleteCustomer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> View.MateWSLocal.DBControllerWS.deleteCustomerAsync(View.MateWSLocal.deleteCustomerRequest request) {
-            return base.Channel.deleteCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> deleteCustomerAsync(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.deleteCustomerRequest inValue = new View.MateWSLocal.deleteCustomerRequest();
-            inValue.customer = customer;
-            return ((View.MateWSLocal.DBControllerWS)(this)).deleteCustomerAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateCustomerResponse View.MateWSLocal.DBControllerWS.updateCustomer(View.MateWSLocal.updateCustomerRequest request) {
-            return base.Channel.updateCustomer(request);
-        }
-        
-        public int updateCustomer(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.updateCustomerRequest inValue = new View.MateWSLocal.updateCustomerRequest();
-            inValue.customer = customer;
-            View.MateWSLocal.updateCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateCustomer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> View.MateWSLocal.DBControllerWS.updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request) {
-            return base.Channel.updateCustomerAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> updateCustomerAsync(View.MateWSLocal.customer customer) {
-            View.MateWSLocal.updateCustomerRequest inValue = new View.MateWSLocal.updateCustomerRequest();
-            inValue.customer = customer;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateCustomerAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateEmployeeResponse View.MateWSLocal.DBControllerWS.updateEmployee(View.MateWSLocal.updateEmployeeRequest request) {
-            return base.Channel.updateEmployee(request);
-        }
-        
-        public int updateEmployee(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
-            inValue.employee = employee;
-            View.MateWSLocal.updateEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateEmployee(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> View.MateWSLocal.DBControllerWS.updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request) {
-            return base.Channel.updateEmployeeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> updateEmployeeAsync(View.MateWSLocal.employee employee) {
-            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
-            inValue.employee = employee;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateEmployeeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllSupplierResponse View.MateWSLocal.DBControllerWS.queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplier(request);
-        }
-        
-        public View.MateWSLocal.supplier[] queryAllSupplier() {
-            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
-            View.MateWSLocal.queryAllSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplier(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> View.MateWSLocal.DBControllerWS.queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request) {
-            return base.Channel.queryAllSupplierAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync() {
-            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7206,26 +6982,321 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertFamilyResponse View.MateWSLocal.DBControllerWS.insertFamily(View.MateWSLocal.insertFamilyRequest request) {
-            return base.Channel.insertFamily(request);
+        View.MateWSLocal.queryAllCustomerResponse View.MateWSLocal.DBControllerWS.queryAllCustomer(View.MateWSLocal.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomer(request);
         }
         
-        public int insertFamily(View.MateWSLocal.family family) {
-            View.MateWSLocal.insertFamilyRequest inValue = new View.MateWSLocal.insertFamilyRequest();
-            inValue.family = family;
-            View.MateWSLocal.insertFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertFamily(inValue);
+        public View.MateWSLocal.customer[] queryAllCustomer() {
+            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
+            View.MateWSLocal.queryAllCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomer(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> View.MateWSLocal.DBControllerWS.insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request) {
-            return base.Channel.insertFamilyAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> View.MateWSLocal.DBControllerWS.queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request) {
+            return base.Channel.queryAllCustomerAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> insertFamilyAsync(View.MateWSLocal.family family) {
-            View.MateWSLocal.insertFamilyRequest inValue = new View.MateWSLocal.insertFamilyRequest();
-            inValue.family = family;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertFamilyAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync() {
+            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateCustomerResponse View.MateWSLocal.DBControllerWS.updateCustomer(View.MateWSLocal.updateCustomerRequest request) {
+            return base.Channel.updateCustomer(request);
+        }
+        
+        public int updateCustomer(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.updateCustomerRequest inValue = new View.MateWSLocal.updateCustomerRequest();
+            inValue.customer = customer;
+            View.MateWSLocal.updateCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> View.MateWSLocal.DBControllerWS.updateCustomerAsync(View.MateWSLocal.updateCustomerRequest request) {
+            return base.Channel.updateCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateCustomerResponse> updateCustomerAsync(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.updateCustomerRequest inValue = new View.MateWSLocal.updateCustomerRequest();
+            inValue.customer = customer;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.deleteCustomerResponse View.MateWSLocal.DBControllerWS.deleteCustomer(View.MateWSLocal.deleteCustomerRequest request) {
+            return base.Channel.deleteCustomer(request);
+        }
+        
+        public int deleteCustomer(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.deleteCustomerRequest inValue = new View.MateWSLocal.deleteCustomerRequest();
+            inValue.customer = customer;
+            View.MateWSLocal.deleteCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).deleteCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> View.MateWSLocal.DBControllerWS.deleteCustomerAsync(View.MateWSLocal.deleteCustomerRequest request) {
+            return base.Channel.deleteCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.deleteCustomerResponse> deleteCustomerAsync(View.MateWSLocal.customer customer) {
+            View.MateWSLocal.deleteCustomerRequest inValue = new View.MateWSLocal.deleteCustomerRequest();
+            inValue.customer = customer;
+            return ((View.MateWSLocal.DBControllerWS)(this)).deleteCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryEmployeeByDNIResponse View.MateWSLocal.DBControllerWS.queryEmployeeByDNI(View.MateWSLocal.queryEmployeeByDNIRequest request) {
+            return base.Channel.queryEmployeeByDNI(request);
+        }
+        
+        public View.MateWSLocal.employee queryEmployeeByDNI(string dni) {
+            View.MateWSLocal.queryEmployeeByDNIRequest inValue = new View.MateWSLocal.queryEmployeeByDNIRequest();
+            inValue.dni = dni;
+            View.MateWSLocal.queryEmployeeByDNIResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByDNI(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> View.MateWSLocal.DBControllerWS.queryEmployeeByDNIAsync(View.MateWSLocal.queryEmployeeByDNIRequest request) {
+            return base.Channel.queryEmployeeByDNIAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeByDNIResponse> queryEmployeeByDNIAsync(string dni) {
+            View.MateWSLocal.queryEmployeeByDNIRequest inValue = new View.MateWSLocal.queryEmployeeByDNIRequest();
+            inValue.dni = dni;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeByDNIAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryFamilyByCodeResponse View.MateWSLocal.DBControllerWS.queryFamilyByCode(View.MateWSLocal.queryFamilyByCodeRequest request) {
+            return base.Channel.queryFamilyByCode(request);
+        }
+        
+        public View.MateWSLocal.family queryFamilyByCode(string familyID) {
+            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
+            inValue.familyID = familyID;
+            View.MateWSLocal.queryFamilyByCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> View.MateWSLocal.DBControllerWS.queryFamilyByCodeAsync(View.MateWSLocal.queryFamilyByCodeRequest request) {
+            return base.Channel.queryFamilyByCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryFamilyByCodeResponse> queryFamilyByCodeAsync(string familyID) {
+            View.MateWSLocal.queryFamilyByCodeRequest inValue = new View.MateWSLocal.queryFamilyByCodeRequest();
+            inValue.familyID = familyID;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryFamilyByCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryProductBySKUCodeResponse View.MateWSLocal.DBControllerWS.queryProductBySKUCode(View.MateWSLocal.queryProductBySKUCodeRequest request) {
+            return base.Channel.queryProductBySKUCode(request);
+        }
+        
+        public View.MateWSLocal.product queryProductBySKUCode(string skuCode) {
+            View.MateWSLocal.queryProductBySKUCodeRequest inValue = new View.MateWSLocal.queryProductBySKUCodeRequest();
+            inValue.skuCode = skuCode;
+            View.MateWSLocal.queryProductBySKUCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryProductBySKUCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> View.MateWSLocal.DBControllerWS.queryProductBySKUCodeAsync(View.MateWSLocal.queryProductBySKUCodeRequest request) {
+            return base.Channel.queryProductBySKUCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryProductBySKUCodeResponse> queryProductBySKUCodeAsync(string skuCode) {
+            View.MateWSLocal.queryProductBySKUCodeRequest inValue = new View.MateWSLocal.queryProductBySKUCodeRequest();
+            inValue.skuCode = skuCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryProductBySKUCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryPremisesByDescriptionResponse View.MateWSLocal.DBControllerWS.queryPremisesByDescription(View.MateWSLocal.queryPremisesByDescriptionRequest request) {
+            return base.Channel.queryPremisesByDescription(request);
+        }
+        
+        public View.MateWSLocal.premises queryPremisesByDescription(string description) {
+            View.MateWSLocal.queryPremisesByDescriptionRequest inValue = new View.MateWSLocal.queryPremisesByDescriptionRequest();
+            inValue.description = description;
+            View.MateWSLocal.queryPremisesByDescriptionResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPremisesByDescription(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> View.MateWSLocal.DBControllerWS.queryPremisesByDescriptionAsync(View.MateWSLocal.queryPremisesByDescriptionRequest request) {
+            return base.Channel.queryPremisesByDescriptionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryPremisesByDescriptionResponse> queryPremisesByDescriptionAsync(string description) {
+            View.MateWSLocal.queryPremisesByDescriptionRequest inValue = new View.MateWSLocal.queryPremisesByDescriptionRequest();
+            inValue.description = description;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryPremisesByDescriptionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertDiscountProductResponse View.MateWSLocal.DBControllerWS.insertDiscountProduct(View.MateWSLocal.insertDiscountProductRequest request) {
+            return base.Channel.insertDiscountProduct(request);
+        }
+        
+        public int insertDiscountProduct(int idDiscount, int idProduct) {
+            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
+            inValue.idDiscount = idDiscount;
+            inValue.idProduct = idProduct;
+            View.MateWSLocal.insertDiscountProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProduct(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> View.MateWSLocal.DBControllerWS.insertDiscountProductAsync(View.MateWSLocal.insertDiscountProductRequest request) {
+            return base.Channel.insertDiscountProductAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountProductResponse> insertDiscountProductAsync(int idDiscount, int idProduct) {
+            View.MateWSLocal.insertDiscountProductRequest inValue = new View.MateWSLocal.insertDiscountProductRequest();
+            inValue.idDiscount = idDiscount;
+            inValue.idProduct = idProduct;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountProductAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryPurchaseBySerialCodeResponse View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCode(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
+            return base.Channel.queryPurchaseBySerialCode(request);
+        }
+        
+        public View.MateWSLocal.purchase queryPurchaseBySerialCode(string serialCode) {
+            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            View.MateWSLocal.queryPurchaseBySerialCodeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> View.MateWSLocal.DBControllerWS.queryPurchaseBySerialCodeAsync(View.MateWSLocal.queryPurchaseBySerialCodeRequest request) {
+            return base.Channel.queryPurchaseBySerialCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryPurchaseBySerialCodeResponse> queryPurchaseBySerialCodeAsync(string serialCode) {
+            View.MateWSLocal.queryPurchaseBySerialCodeRequest inValue = new View.MateWSLocal.queryPurchaseBySerialCodeRequest();
+            inValue.serialCode = serialCode;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryPurchaseBySerialCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryByIdEmployeeResponse View.MateWSLocal.DBControllerWS.queryByIdEmployee(View.MateWSLocal.queryByIdEmployeeRequest request) {
+            return base.Channel.queryByIdEmployee(request);
+        }
+        
+        public View.MateWSLocal.employee queryByIdEmployee(int idEmployee) {
+            View.MateWSLocal.queryByIdEmployeeRequest inValue = new View.MateWSLocal.queryByIdEmployeeRequest();
+            inValue.idEmployee = idEmployee;
+            View.MateWSLocal.queryByIdEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> View.MateWSLocal.DBControllerWS.queryByIdEmployeeAsync(View.MateWSLocal.queryByIdEmployeeRequest request) {
+            return base.Channel.queryByIdEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdEmployeeResponse> queryByIdEmployeeAsync(int idEmployee) {
+            View.MateWSLocal.queryByIdEmployeeRequest inValue = new View.MateWSLocal.queryByIdEmployeeRequest();
+            inValue.idEmployee = idEmployee;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryByIdCustomerResponse View.MateWSLocal.DBControllerWS.queryByIdCustomer(View.MateWSLocal.queryByIdCustomerRequest request) {
+            return base.Channel.queryByIdCustomer(request);
+        }
+        
+        public View.MateWSLocal.customer queryByIdCustomer(string idCustomer) {
+            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
+            inValue.idCustomer = idCustomer;
+            View.MateWSLocal.queryByIdCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> View.MateWSLocal.DBControllerWS.queryByIdCustomerAsync(View.MateWSLocal.queryByIdCustomerRequest request) {
+            return base.Channel.queryByIdCustomerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryByIdCustomerResponse> queryByIdCustomerAsync(string idCustomer) {
+            View.MateWSLocal.queryByIdCustomerRequest inValue = new View.MateWSLocal.queryByIdCustomerRequest();
+            inValue.idCustomer = idCustomer;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryByIdCustomerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertPurchaseResponse View.MateWSLocal.DBControllerWS.insertPurchase(View.MateWSLocal.insertPurchaseRequest request) {
+            return base.Channel.insertPurchase(request);
+        }
+        
+        public int insertPurchase(View.MateWSLocal.purchase purchase) {
+            View.MateWSLocal.insertPurchaseRequest inValue = new View.MateWSLocal.insertPurchaseRequest();
+            inValue.purchase = purchase;
+            View.MateWSLocal.insertPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPurchase(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse> View.MateWSLocal.DBControllerWS.insertPurchaseAsync(View.MateWSLocal.insertPurchaseRequest request) {
+            return base.Channel.insertPurchaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse> insertPurchaseAsync(View.MateWSLocal.purchase purchase) {
+            View.MateWSLocal.insertPurchaseRequest inValue = new View.MateWSLocal.insertPurchaseRequest();
+            inValue.purchase = purchase;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertPurchaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllSaleResponse View.MateWSLocal.DBControllerWS.queryAllSale(View.MateWSLocal.queryAllSaleRequest request) {
+            return base.Channel.queryAllSale(request);
+        }
+        
+        public View.MateWSLocal.sale[] queryAllSale() {
+            View.MateWSLocal.queryAllSaleRequest inValue = new View.MateWSLocal.queryAllSaleRequest();
+            View.MateWSLocal.queryAllSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSale(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> View.MateWSLocal.DBControllerWS.queryAllSaleAsync(View.MateWSLocal.queryAllSaleRequest request) {
+            return base.Channel.queryAllSaleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> queryAllSaleAsync() {
+            View.MateWSLocal.queryAllSaleRequest inValue = new View.MateWSLocal.queryAllSaleRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSaleAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllPurchaseResponse View.MateWSLocal.DBControllerWS.queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request) {
+            return base.Channel.queryAllPurchase(request);
+        }
+        
+        public View.MateWSLocal.purchase[] queryAllPurchase() {
+            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
+            View.MateWSLocal.queryAllPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchase(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> View.MateWSLocal.DBControllerWS.queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request) {
+            return base.Channel.queryAllPurchaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync() {
+            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchaseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7250,116 +7321,93 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateFamilyResponse View.MateWSLocal.DBControllerWS.updateFamily(View.MateWSLocal.updateFamilyRequest request) {
-            return base.Channel.updateFamily(request);
+        View.MateWSLocal.updatePurchaseResponse View.MateWSLocal.DBControllerWS.updatePurchase(View.MateWSLocal.updatePurchaseRequest request) {
+            return base.Channel.updatePurchase(request);
         }
         
-        public int updateFamily(View.MateWSLocal.family family) {
-            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
-            inValue.family = family;
-            View.MateWSLocal.updateFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateFamily(inValue);
+        public int updatePurchase(View.MateWSLocal.purchase purchase) {
+            View.MateWSLocal.updatePurchaseRequest inValue = new View.MateWSLocal.updatePurchaseRequest();
+            inValue.purchase = purchase;
+            View.MateWSLocal.updatePurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updatePurchase(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> View.MateWSLocal.DBControllerWS.updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request) {
-            return base.Channel.updateFamilyAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> View.MateWSLocal.DBControllerWS.updatePurchaseAsync(View.MateWSLocal.updatePurchaseRequest request) {
+            return base.Channel.updatePurchaseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> updateFamilyAsync(View.MateWSLocal.family family) {
-            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
-            inValue.family = family;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateFamilyAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> updatePurchaseAsync(View.MateWSLocal.purchase purchase) {
+            View.MateWSLocal.updatePurchaseRequest inValue = new View.MateWSLocal.updatePurchaseRequest();
+            inValue.purchase = purchase;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updatePurchaseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertProductResponse View.MateWSLocal.DBControllerWS.insertProduct(View.MateWSLocal.insertProductRequest request) {
-            return base.Channel.insertProduct(request);
+        View.MateWSLocal.queryAllBrandResponse View.MateWSLocal.DBControllerWS.queryAllBrand(View.MateWSLocal.queryAllBrandRequest request) {
+            return base.Channel.queryAllBrand(request);
         }
         
-        public int insertProduct(View.MateWSLocal.product product) {
-            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
-            inValue.product = product;
-            View.MateWSLocal.insertProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertProduct(inValue);
+        public View.MateWSLocal.brand[] queryAllBrand() {
+            View.MateWSLocal.queryAllBrandRequest inValue = new View.MateWSLocal.queryAllBrandRequest();
+            View.MateWSLocal.queryAllBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllBrand(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> View.MateWSLocal.DBControllerWS.insertProductAsync(View.MateWSLocal.insertProductRequest request) {
-            return base.Channel.insertProductAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> View.MateWSLocal.DBControllerWS.queryAllBrandAsync(View.MateWSLocal.queryAllBrandRequest request) {
+            return base.Channel.queryAllBrandAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> insertProductAsync(View.MateWSLocal.product product) {
-            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
-            inValue.product = product;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertProductAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> queryAllBrandAsync() {
+            View.MateWSLocal.queryAllBrandRequest inValue = new View.MateWSLocal.queryAllBrandRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllBrandAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllCustomerResponse View.MateWSLocal.DBControllerWS.queryAllCustomer(View.MateWSLocal.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomer(request);
+        View.MateWSLocal.insertUserResponse View.MateWSLocal.DBControllerWS.insertUser(View.MateWSLocal.insertUserRequest request) {
+            return base.Channel.insertUser(request);
         }
         
-        public View.MateWSLocal.customer[] queryAllCustomer() {
-            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
-            View.MateWSLocal.queryAllCustomerResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomer(inValue);
+        public int insertUser(View.MateWSLocal.user user) {
+            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
+            inValue.user = user;
+            View.MateWSLocal.insertUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertUser(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> View.MateWSLocal.DBControllerWS.queryAllCustomerAsync(View.MateWSLocal.queryAllCustomerRequest request) {
-            return base.Channel.queryAllCustomerAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> View.MateWSLocal.DBControllerWS.insertUserAsync(View.MateWSLocal.insertUserRequest request) {
+            return base.Channel.insertUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllCustomerResponse> queryAllCustomerAsync() {
-            View.MateWSLocal.queryAllCustomerRequest inValue = new View.MateWSLocal.queryAllCustomerRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllCustomerAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> insertUserAsync(View.MateWSLocal.user user) {
+            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
+            inValue.user = user;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateSupplierResponse View.MateWSLocal.DBControllerWS.updateSupplier(View.MateWSLocal.updateSupplierRequest request) {
-            return base.Channel.updateSupplier(request);
+        View.MateWSLocal.insertAreaResponse View.MateWSLocal.DBControllerWS.insertArea(View.MateWSLocal.insertAreaRequest request) {
+            return base.Channel.insertArea(request);
         }
         
-        public int updateSupplier(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
-            inValue.supplier = supplier;
-            View.MateWSLocal.updateSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSupplier(inValue);
+        public int insertArea(View.MateWSLocal.area area) {
+            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
+            inValue.area = area;
+            View.MateWSLocal.insertAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertArea(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> View.MateWSLocal.DBControllerWS.updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request) {
-            return base.Channel.updateSupplierAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> View.MateWSLocal.DBControllerWS.insertAreaAsync(View.MateWSLocal.insertAreaRequest request) {
+            return base.Channel.insertAreaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> updateSupplierAsync(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
-            inValue.supplier = supplier;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateSupplierAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateProductResponse View.MateWSLocal.DBControllerWS.updateProduct(View.MateWSLocal.updateProductRequest request) {
-            return base.Channel.updateProduct(request);
-        }
-        
-        public int updateProduct(View.MateWSLocal.product product) {
-            View.MateWSLocal.updateProductRequest inValue = new View.MateWSLocal.updateProductRequest();
-            inValue.product = product;
-            View.MateWSLocal.updateProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateProduct(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> View.MateWSLocal.DBControllerWS.updateProductAsync(View.MateWSLocal.updateProductRequest request) {
-            return base.Channel.updateProductAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> updateProductAsync(View.MateWSLocal.product product) {
-            View.MateWSLocal.updateProductRequest inValue = new View.MateWSLocal.updateProductRequest();
-            inValue.product = product;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateProductAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> insertAreaAsync(View.MateWSLocal.area area) {
+            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
+            inValue.area = area;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertAreaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7386,70 +7434,116 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertSupplierResponse View.MateWSLocal.DBControllerWS.insertSupplier(View.MateWSLocal.insertSupplierRequest request) {
-            return base.Channel.insertSupplier(request);
+        View.MateWSLocal.insertFamilyResponse View.MateWSLocal.DBControllerWS.insertFamily(View.MateWSLocal.insertFamilyRequest request) {
+            return base.Channel.insertFamily(request);
         }
         
-        public int insertSupplier(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.insertSupplierRequest inValue = new View.MateWSLocal.insertSupplierRequest();
-            inValue.supplier = supplier;
-            View.MateWSLocal.insertSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertSupplier(inValue);
+        public int insertFamily(View.MateWSLocal.family family) {
+            View.MateWSLocal.insertFamilyRequest inValue = new View.MateWSLocal.insertFamilyRequest();
+            inValue.family = family;
+            View.MateWSLocal.insertFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertFamily(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> View.MateWSLocal.DBControllerWS.insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request) {
-            return base.Channel.insertSupplierAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> View.MateWSLocal.DBControllerWS.insertFamilyAsync(View.MateWSLocal.insertFamilyRequest request) {
+            return base.Channel.insertFamilyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> insertSupplierAsync(View.MateWSLocal.supplier supplier) {
-            View.MateWSLocal.insertSupplierRequest inValue = new View.MateWSLocal.insertSupplierRequest();
-            inValue.supplier = supplier;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertSupplierAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertFamilyResponse> insertFamilyAsync(View.MateWSLocal.family family) {
+            View.MateWSLocal.insertFamilyRequest inValue = new View.MateWSLocal.insertFamilyRequest();
+            inValue.family = family;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertFamilyAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllAreaResponse View.MateWSLocal.DBControllerWS.queryAllArea(View.MateWSLocal.queryAllAreaRequest request) {
-            return base.Channel.queryAllArea(request);
+        View.MateWSLocal.queryAllSupplierResponse View.MateWSLocal.DBControllerWS.queryAllSupplier(View.MateWSLocal.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplier(request);
         }
         
-        public View.MateWSLocal.area[] queryAllArea() {
-            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
-            View.MateWSLocal.queryAllAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllArea(inValue);
+        public View.MateWSLocal.supplier[] queryAllSupplier() {
+            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
+            View.MateWSLocal.queryAllSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplier(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> View.MateWSLocal.DBControllerWS.queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request) {
-            return base.Channel.queryAllAreaAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> View.MateWSLocal.DBControllerWS.queryAllSupplierAsync(View.MateWSLocal.queryAllSupplierRequest request) {
+            return base.Channel.queryAllSupplierAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync() {
-            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllAreaAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSupplierResponse> queryAllSupplierAsync() {
+            View.MateWSLocal.queryAllSupplierRequest inValue = new View.MateWSLocal.queryAllSupplierRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSupplierAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertBrandResponse View.MateWSLocal.DBControllerWS.insertBrand(View.MateWSLocal.insertBrandRequest request) {
-            return base.Channel.insertBrand(request);
+        View.MateWSLocal.insertRefundResponse View.MateWSLocal.DBControllerWS.insertRefund(View.MateWSLocal.insertRefundRequest request) {
+            return base.Channel.insertRefund(request);
         }
         
-        public int insertBrand(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+        public int insertRefund(View.MateWSLocal.refund refund) {
+            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
+            inValue.refund = refund;
+            View.MateWSLocal.insertRefundResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertRefund(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> View.MateWSLocal.DBControllerWS.insertRefundAsync(View.MateWSLocal.insertRefundRequest request) {
+            return base.Channel.insertRefundAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> insertRefundAsync(View.MateWSLocal.refund refund) {
+            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
+            inValue.refund = refund;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertRefundAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateBrandResponse View.MateWSLocal.DBControllerWS.updateBrand(View.MateWSLocal.updateBrandRequest request) {
+            return base.Channel.updateBrand(request);
+        }
+        
+        public int updateBrand(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
             inValue.brand = brand;
-            View.MateWSLocal.insertBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertBrand(inValue);
+            View.MateWSLocal.updateBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateBrand(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> View.MateWSLocal.DBControllerWS.insertBrandAsync(View.MateWSLocal.insertBrandRequest request) {
-            return base.Channel.insertBrandAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> View.MateWSLocal.DBControllerWS.updateBrandAsync(View.MateWSLocal.updateBrandRequest request) {
+            return base.Channel.updateBrandAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> insertBrandAsync(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> updateBrandAsync(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
             inValue.brand = brand;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertBrandAsync(inValue);
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateBrandAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateSaleResponse View.MateWSLocal.DBControllerWS.updateSale(View.MateWSLocal.updateSaleRequest request) {
+            return base.Channel.updateSale(request);
+        }
+        
+        public int updateSale(View.MateWSLocal.sale sale) {
+            View.MateWSLocal.updateSaleRequest inValue = new View.MateWSLocal.updateSaleRequest();
+            inValue.sale = sale;
+            View.MateWSLocal.updateSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSale(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> View.MateWSLocal.DBControllerWS.updateSaleAsync(View.MateWSLocal.updateSaleRequest request) {
+            return base.Channel.updateSaleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> updateSaleAsync(View.MateWSLocal.sale sale) {
+            View.MateWSLocal.updateSaleRequest inValue = new View.MateWSLocal.updateSaleRequest();
+            inValue.sale = sale;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateSaleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7478,384 +7572,93 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertUserResponse View.MateWSLocal.DBControllerWS.insertUser(View.MateWSLocal.insertUserRequest request) {
-            return base.Channel.insertUser(request);
+        View.MateWSLocal.queryAllUserResponse View.MateWSLocal.DBControllerWS.queryAllUser(View.MateWSLocal.queryAllUserRequest request) {
+            return base.Channel.queryAllUser(request);
         }
         
-        public int insertUser(View.MateWSLocal.user user) {
-            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
-            inValue.user = user;
-            View.MateWSLocal.insertUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertUser(inValue);
+        public View.MateWSLocal.user[] queryAllUser() {
+            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
+            View.MateWSLocal.queryAllUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllUser(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> View.MateWSLocal.DBControllerWS.insertUserAsync(View.MateWSLocal.insertUserRequest request) {
-            return base.Channel.insertUserAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> View.MateWSLocal.DBControllerWS.queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request) {
+            return base.Channel.queryAllUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertUserResponse> insertUserAsync(View.MateWSLocal.user user) {
-            View.MateWSLocal.insertUserRequest inValue = new View.MateWSLocal.insertUserRequest();
-            inValue.user = user;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertUserAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync() {
+            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllPremisesResponse View.MateWSLocal.DBControllerWS.queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request) {
-            return base.Channel.queryAllPremises(request);
+        View.MateWSLocal.insertBrandResponse View.MateWSLocal.DBControllerWS.insertBrand(View.MateWSLocal.insertBrandRequest request) {
+            return base.Channel.insertBrand(request);
         }
         
-        public View.MateWSLocal.premises[] queryAllPremises() {
-            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
-            View.MateWSLocal.queryAllPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremises(inValue);
+        public int insertBrand(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+            inValue.brand = brand;
+            View.MateWSLocal.insertBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertBrand(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> View.MateWSLocal.DBControllerWS.queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request) {
-            return base.Channel.queryAllPremisesAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> View.MateWSLocal.DBControllerWS.insertBrandAsync(View.MateWSLocal.insertBrandRequest request) {
+            return base.Channel.insertBrandAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync() {
-            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremisesAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertBrandResponse> insertBrandAsync(View.MateWSLocal.brand brand) {
+            View.MateWSLocal.insertBrandRequest inValue = new View.MateWSLocal.insertBrandRequest();
+            inValue.brand = brand;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertBrandAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryEmployeeResponse View.MateWSLocal.DBControllerWS.queryEmployee(View.MateWSLocal.queryEmployeeRequest request) {
-            return base.Channel.queryEmployee(request);
+        View.MateWSLocal.insertProductResponse View.MateWSLocal.DBControllerWS.insertProduct(View.MateWSLocal.insertProductRequest request) {
+            return base.Channel.insertProduct(request);
         }
         
-        public View.MateWSLocal.employee queryEmployee(string infEmployee) {
-            View.MateWSLocal.queryEmployeeRequest inValue = new View.MateWSLocal.queryEmployeeRequest();
-            inValue.infEmployee = infEmployee;
-            View.MateWSLocal.queryEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryEmployee(inValue);
+        public int insertProduct(View.MateWSLocal.product product) {
+            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
+            inValue.product = product;
+            View.MateWSLocal.insertProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertProduct(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> View.MateWSLocal.DBControllerWS.queryEmployeeAsync(View.MateWSLocal.queryEmployeeRequest request) {
-            return base.Channel.queryEmployeeAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> View.MateWSLocal.DBControllerWS.insertProductAsync(View.MateWSLocal.insertProductRequest request) {
+            return base.Channel.insertProductAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> queryEmployeeAsync(string infEmployee) {
-            View.MateWSLocal.queryEmployeeRequest inValue = new View.MateWSLocal.queryEmployeeRequest();
-            inValue.infEmployee = infEmployee;
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertProductResponse> insertProductAsync(View.MateWSLocal.product product) {
+            View.MateWSLocal.insertProductRequest inValue = new View.MateWSLocal.insertProductRequest();
+            inValue.product = product;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertProductAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updatePurchaseResponse View.MateWSLocal.DBControllerWS.updatePurchase(View.MateWSLocal.updatePurchaseRequest request) {
-            return base.Channel.updatePurchase(request);
+        View.MateWSLocal.updateFamilyResponse View.MateWSLocal.DBControllerWS.updateFamily(View.MateWSLocal.updateFamilyRequest request) {
+            return base.Channel.updateFamily(request);
         }
         
-        public int updatePurchase(View.MateWSLocal.purchase purchase) {
-            View.MateWSLocal.updatePurchaseRequest inValue = new View.MateWSLocal.updatePurchaseRequest();
-            inValue.purchase = purchase;
-            View.MateWSLocal.updatePurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updatePurchase(inValue);
+        public int updateFamily(View.MateWSLocal.family family) {
+            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
+            inValue.family = family;
+            View.MateWSLocal.updateFamilyResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateFamily(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> View.MateWSLocal.DBControllerWS.updatePurchaseAsync(View.MateWSLocal.updatePurchaseRequest request) {
-            return base.Channel.updatePurchaseAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> View.MateWSLocal.DBControllerWS.updateFamilyAsync(View.MateWSLocal.updateFamilyRequest request) {
+            return base.Channel.updateFamilyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.updatePurchaseResponse> updatePurchaseAsync(View.MateWSLocal.purchase purchase) {
-            View.MateWSLocal.updatePurchaseRequest inValue = new View.MateWSLocal.updatePurchaseRequest();
-            inValue.purchase = purchase;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updatePurchaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertAreaResponse View.MateWSLocal.DBControllerWS.insertArea(View.MateWSLocal.insertAreaRequest request) {
-            return base.Channel.insertArea(request);
-        }
-        
-        public int insertArea(View.MateWSLocal.area area) {
-            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
-            inValue.area = area;
-            View.MateWSLocal.insertAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> View.MateWSLocal.DBControllerWS.insertAreaAsync(View.MateWSLocal.insertAreaRequest request) {
-            return base.Channel.insertAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertAreaResponse> insertAreaAsync(View.MateWSLocal.area area) {
-            View.MateWSLocal.insertAreaRequest inValue = new View.MateWSLocal.insertAreaRequest();
-            inValue.area = area;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertAreaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertRefundResponse View.MateWSLocal.DBControllerWS.insertRefund(View.MateWSLocal.insertRefundRequest request) {
-            return base.Channel.insertRefund(request);
-        }
-        
-        public int insertRefund(View.MateWSLocal.refund refund) {
-            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
-            inValue.refund = refund;
-            View.MateWSLocal.insertRefundResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertRefund(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> View.MateWSLocal.DBControllerWS.insertRefundAsync(View.MateWSLocal.insertRefundRequest request) {
-            return base.Channel.insertRefundAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertRefundResponse> insertRefundAsync(View.MateWSLocal.refund refund) {
-            View.MateWSLocal.insertRefundRequest inValue = new View.MateWSLocal.insertRefundRequest();
-            inValue.refund = refund;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertRefundAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateDiscountResponse View.MateWSLocal.DBControllerWS.updateDiscount(View.MateWSLocal.updateDiscountRequest request) {
-            return base.Channel.updateDiscount(request);
-        }
-        
-        public int updateDiscount(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
-            inValue.discount = discount;
-            View.MateWSLocal.updateDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateDiscount(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> View.MateWSLocal.DBControllerWS.updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request) {
-            return base.Channel.updateDiscountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> updateDiscountAsync(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
-            inValue.discount = discount;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateDiscountAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertDiscountResponse View.MateWSLocal.DBControllerWS.insertDiscount(View.MateWSLocal.insertDiscountRequest request) {
-            return base.Channel.insertDiscount(request);
-        }
-        
-        public int insertDiscount(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.insertDiscountRequest inValue = new View.MateWSLocal.insertDiscountRequest();
-            inValue.discount = discount;
-            View.MateWSLocal.insertDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscount(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> View.MateWSLocal.DBControllerWS.insertDiscountAsync(View.MateWSLocal.insertDiscountRequest request) {
-            return base.Channel.insertDiscountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> insertDiscountAsync(View.MateWSLocal.discount discount) {
-            View.MateWSLocal.insertDiscountRequest inValue = new View.MateWSLocal.insertDiscountRequest();
-            inValue.discount = discount;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateSaleResponse View.MateWSLocal.DBControllerWS.updateSale(View.MateWSLocal.updateSaleRequest request) {
-            return base.Channel.updateSale(request);
-        }
-        
-        public int updateSale(View.MateWSLocal.sale sale) {
-            View.MateWSLocal.updateSaleRequest inValue = new View.MateWSLocal.updateSaleRequest();
-            inValue.sale = sale;
-            View.MateWSLocal.updateSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSale(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> View.MateWSLocal.DBControllerWS.updateSaleAsync(View.MateWSLocal.updateSaleRequest request) {
-            return base.Channel.updateSaleAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateSaleResponse> updateSaleAsync(View.MateWSLocal.sale sale) {
-            View.MateWSLocal.updateSaleRequest inValue = new View.MateWSLocal.updateSaleRequest();
-            inValue.sale = sale;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateSaleAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updatePremisesResponse View.MateWSLocal.DBControllerWS.updatePremises(View.MateWSLocal.updatePremisesRequest request) {
-            return base.Channel.updatePremises(request);
-        }
-        
-        public int updatePremises(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.updatePremisesRequest inValue = new View.MateWSLocal.updatePremisesRequest();
-            inValue.premises = premises;
-            View.MateWSLocal.updatePremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updatePremises(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> View.MateWSLocal.DBControllerWS.updatePremisesAsync(View.MateWSLocal.updatePremisesRequest request) {
-            return base.Channel.updatePremisesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> updatePremisesAsync(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.updatePremisesRequest inValue = new View.MateWSLocal.updatePremisesRequest();
-            inValue.premises = premises;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updatePremisesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertPremisesResponse View.MateWSLocal.DBControllerWS.insertPremises(View.MateWSLocal.insertPremisesRequest request) {
-            return base.Channel.insertPremises(request);
-        }
-        
-        public int insertPremises(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
-            inValue.premises = premises;
-            View.MateWSLocal.insertPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPremises(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> View.MateWSLocal.DBControllerWS.insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request) {
-            return base.Channel.insertPremisesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> insertPremisesAsync(View.MateWSLocal.premises premises) {
-            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
-            inValue.premises = premises;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertPremisesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.insertPurchaseResponse View.MateWSLocal.DBControllerWS.insertPurchase(View.MateWSLocal.insertPurchaseRequest request) {
-            return base.Channel.insertPurchase(request);
-        }
-        
-        public int insertPurchase(View.MateWSLocal.purchase purchase) {
-            View.MateWSLocal.insertPurchaseRequest inValue = new View.MateWSLocal.insertPurchaseRequest();
-            inValue.purchase = purchase;
-            View.MateWSLocal.insertPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPurchase(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse> View.MateWSLocal.DBControllerWS.insertPurchaseAsync(View.MateWSLocal.insertPurchaseRequest request) {
-            return base.Channel.insertPurchaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.insertPurchaseResponse> insertPurchaseAsync(View.MateWSLocal.purchase purchase) {
-            View.MateWSLocal.insertPurchaseRequest inValue = new View.MateWSLocal.insertPurchaseRequest();
-            inValue.purchase = purchase;
-            return ((View.MateWSLocal.DBControllerWS)(this)).insertPurchaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllBrandResponse View.MateWSLocal.DBControllerWS.queryAllBrand(View.MateWSLocal.queryAllBrandRequest request) {
-            return base.Channel.queryAllBrand(request);
-        }
-        
-        public View.MateWSLocal.brand[] queryAllBrand() {
-            View.MateWSLocal.queryAllBrandRequest inValue = new View.MateWSLocal.queryAllBrandRequest();
-            View.MateWSLocal.queryAllBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllBrand(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> View.MateWSLocal.DBControllerWS.queryAllBrandAsync(View.MateWSLocal.queryAllBrandRequest request) {
-            return base.Channel.queryAllBrandAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllBrandResponse> queryAllBrandAsync() {
-            View.MateWSLocal.queryAllBrandRequest inValue = new View.MateWSLocal.queryAllBrandRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllBrandAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateAreaResponse View.MateWSLocal.DBControllerWS.updateArea(View.MateWSLocal.updateAreaRequest request) {
-            return base.Channel.updateArea(request);
-        }
-        
-        public int updateArea(View.MateWSLocal.area area) {
-            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
-            inValue.area = area;
-            View.MateWSLocal.updateAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateArea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> View.MateWSLocal.DBControllerWS.updateAreaAsync(View.MateWSLocal.updateAreaRequest request) {
-            return base.Channel.updateAreaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> updateAreaAsync(View.MateWSLocal.area area) {
-            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
-            inValue.area = area;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateAreaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllPurchaseResponse View.MateWSLocal.DBControllerWS.queryAllPurchase(View.MateWSLocal.queryAllPurchaseRequest request) {
-            return base.Channel.queryAllPurchase(request);
-        }
-        
-        public View.MateWSLocal.purchase[] queryAllPurchase() {
-            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
-            View.MateWSLocal.queryAllPurchaseResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchase(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> View.MateWSLocal.DBControllerWS.queryAllPurchaseAsync(View.MateWSLocal.queryAllPurchaseRequest request) {
-            return base.Channel.queryAllPurchaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPurchaseResponse> queryAllPurchaseAsync() {
-            View.MateWSLocal.queryAllPurchaseRequest inValue = new View.MateWSLocal.queryAllPurchaseRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPurchaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllSaleResponse View.MateWSLocal.DBControllerWS.queryAllSale(View.MateWSLocal.queryAllSaleRequest request) {
-            return base.Channel.queryAllSale(request);
-        }
-        
-        public View.MateWSLocal.sale[] queryAllSale() {
-            View.MateWSLocal.queryAllSaleRequest inValue = new View.MateWSLocal.queryAllSaleRequest();
-            View.MateWSLocal.queryAllSaleResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllSale(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> View.MateWSLocal.DBControllerWS.queryAllSaleAsync(View.MateWSLocal.queryAllSaleRequest request) {
-            return base.Channel.queryAllSaleAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllSaleResponse> queryAllSaleAsync() {
-            View.MateWSLocal.queryAllSaleRequest inValue = new View.MateWSLocal.queryAllSaleRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllSaleAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllDiscountResponse View.MateWSLocal.DBControllerWS.queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request) {
-            return base.Channel.queryAllDiscount(request);
-        }
-        
-        public View.MateWSLocal.discount[] queryAllDiscount() {
-            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
-            View.MateWSLocal.queryAllDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscount(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> View.MateWSLocal.DBControllerWS.queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request) {
-            return base.Channel.queryAllDiscountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync() {
-            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscountAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateFamilyResponse> updateFamilyAsync(View.MateWSLocal.family family) {
+            View.MateWSLocal.updateFamilyRequest inValue = new View.MateWSLocal.updateFamilyRequest();
+            inValue.family = family;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateFamilyAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7882,47 +7685,317 @@ namespace View.MateWSLocal {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.updateBrandResponse View.MateWSLocal.DBControllerWS.updateBrand(View.MateWSLocal.updateBrandRequest request) {
-            return base.Channel.updateBrand(request);
+        View.MateWSLocal.updateSupplierResponse View.MateWSLocal.DBControllerWS.updateSupplier(View.MateWSLocal.updateSupplierRequest request) {
+            return base.Channel.updateSupplier(request);
         }
         
-        public int updateBrand(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
-            inValue.brand = brand;
-            View.MateWSLocal.updateBrandResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateBrand(inValue);
+        public int updateSupplier(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
+            inValue.supplier = supplier;
+            View.MateWSLocal.updateSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateSupplier(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> View.MateWSLocal.DBControllerWS.updateBrandAsync(View.MateWSLocal.updateBrandRequest request) {
-            return base.Channel.updateBrandAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> View.MateWSLocal.DBControllerWS.updateSupplierAsync(View.MateWSLocal.updateSupplierRequest request) {
+            return base.Channel.updateSupplierAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.updateBrandResponse> updateBrandAsync(View.MateWSLocal.brand brand) {
-            View.MateWSLocal.updateBrandRequest inValue = new View.MateWSLocal.updateBrandRequest();
-            inValue.brand = brand;
-            return ((View.MateWSLocal.DBControllerWS)(this)).updateBrandAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateSupplierResponse> updateSupplierAsync(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.updateSupplierRequest inValue = new View.MateWSLocal.updateSupplierRequest();
+            inValue.supplier = supplier;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateSupplierAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        View.MateWSLocal.queryAllUserResponse View.MateWSLocal.DBControllerWS.queryAllUser(View.MateWSLocal.queryAllUserRequest request) {
-            return base.Channel.queryAllUser(request);
+        View.MateWSLocal.queryAllDiscountResponse View.MateWSLocal.DBControllerWS.queryAllDiscount(View.MateWSLocal.queryAllDiscountRequest request) {
+            return base.Channel.queryAllDiscount(request);
         }
         
-        public View.MateWSLocal.user[] queryAllUser() {
-            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
-            View.MateWSLocal.queryAllUserResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllUser(inValue);
+        public View.MateWSLocal.discount[] queryAllDiscount() {
+            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
+            View.MateWSLocal.queryAllDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscount(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> View.MateWSLocal.DBControllerWS.queryAllUserAsync(View.MateWSLocal.queryAllUserRequest request) {
-            return base.Channel.queryAllUserAsync(request);
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> View.MateWSLocal.DBControllerWS.queryAllDiscountAsync(View.MateWSLocal.queryAllDiscountRequest request) {
+            return base.Channel.queryAllDiscountAsync(request);
         }
         
-        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllUserResponse> queryAllUserAsync() {
-            View.MateWSLocal.queryAllUserRequest inValue = new View.MateWSLocal.queryAllUserRequest();
-            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllUserAsync(inValue);
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllDiscountResponse> queryAllDiscountAsync() {
+            View.MateWSLocal.queryAllDiscountRequest inValue = new View.MateWSLocal.queryAllDiscountRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllDiscountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryEmployeeResponse View.MateWSLocal.DBControllerWS.queryEmployee(View.MateWSLocal.queryEmployeeRequest request) {
+            return base.Channel.queryEmployee(request);
+        }
+        
+        public View.MateWSLocal.employee queryEmployee(string infEmployee) {
+            View.MateWSLocal.queryEmployeeRequest inValue = new View.MateWSLocal.queryEmployeeRequest();
+            inValue.infEmployee = infEmployee;
+            View.MateWSLocal.queryEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> View.MateWSLocal.DBControllerWS.queryEmployeeAsync(View.MateWSLocal.queryEmployeeRequest request) {
+            return base.Channel.queryEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryEmployeeResponse> queryEmployeeAsync(string infEmployee) {
+            View.MateWSLocal.queryEmployeeRequest inValue = new View.MateWSLocal.queryEmployeeRequest();
+            inValue.infEmployee = infEmployee;
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllPremisesResponse View.MateWSLocal.DBControllerWS.queryAllPremises(View.MateWSLocal.queryAllPremisesRequest request) {
+            return base.Channel.queryAllPremises(request);
+        }
+        
+        public View.MateWSLocal.premises[] queryAllPremises() {
+            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
+            View.MateWSLocal.queryAllPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremises(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> View.MateWSLocal.DBControllerWS.queryAllPremisesAsync(View.MateWSLocal.queryAllPremisesRequest request) {
+            return base.Channel.queryAllPremisesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllPremisesResponse> queryAllPremisesAsync() {
+            View.MateWSLocal.queryAllPremisesRequest inValue = new View.MateWSLocal.queryAllPremisesRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllPremisesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllEmployeeResponse View.MateWSLocal.DBControllerWS.queryAllEmployee(View.MateWSLocal.queryAllEmployeeRequest request) {
+            return base.Channel.queryAllEmployee(request);
+        }
+        
+        public View.MateWSLocal.employee[] queryAllEmployee() {
+            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
+            View.MateWSLocal.queryAllEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> View.MateWSLocal.DBControllerWS.queryAllEmployeeAsync(View.MateWSLocal.queryAllEmployeeRequest request) {
+            return base.Channel.queryAllEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllEmployeeResponse> queryAllEmployeeAsync() {
+            View.MateWSLocal.queryAllEmployeeRequest inValue = new View.MateWSLocal.queryAllEmployeeRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateProductResponse View.MateWSLocal.DBControllerWS.updateProduct(View.MateWSLocal.updateProductRequest request) {
+            return base.Channel.updateProduct(request);
+        }
+        
+        public int updateProduct(View.MateWSLocal.product product) {
+            View.MateWSLocal.updateProductRequest inValue = new View.MateWSLocal.updateProductRequest();
+            inValue.product = product;
+            View.MateWSLocal.updateProductResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateProduct(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> View.MateWSLocal.DBControllerWS.updateProductAsync(View.MateWSLocal.updateProductRequest request) {
+            return base.Channel.updateProductAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateProductResponse> updateProductAsync(View.MateWSLocal.product product) {
+            View.MateWSLocal.updateProductRequest inValue = new View.MateWSLocal.updateProductRequest();
+            inValue.product = product;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateProductAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertSupplierResponse View.MateWSLocal.DBControllerWS.insertSupplier(View.MateWSLocal.insertSupplierRequest request) {
+            return base.Channel.insertSupplier(request);
+        }
+        
+        public int insertSupplier(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.insertSupplierRequest inValue = new View.MateWSLocal.insertSupplierRequest();
+            inValue.supplier = supplier;
+            View.MateWSLocal.insertSupplierResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertSupplier(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> View.MateWSLocal.DBControllerWS.insertSupplierAsync(View.MateWSLocal.insertSupplierRequest request) {
+            return base.Channel.insertSupplierAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertSupplierResponse> insertSupplierAsync(View.MateWSLocal.supplier supplier) {
+            View.MateWSLocal.insertSupplierRequest inValue = new View.MateWSLocal.insertSupplierRequest();
+            inValue.supplier = supplier;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertSupplierAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updatePremisesResponse View.MateWSLocal.DBControllerWS.updatePremises(View.MateWSLocal.updatePremisesRequest request) {
+            return base.Channel.updatePremises(request);
+        }
+        
+        public int updatePremises(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.updatePremisesRequest inValue = new View.MateWSLocal.updatePremisesRequest();
+            inValue.premises = premises;
+            View.MateWSLocal.updatePremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updatePremises(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> View.MateWSLocal.DBControllerWS.updatePremisesAsync(View.MateWSLocal.updatePremisesRequest request) {
+            return base.Channel.updatePremisesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updatePremisesResponse> updatePremisesAsync(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.updatePremisesRequest inValue = new View.MateWSLocal.updatePremisesRequest();
+            inValue.premises = premises;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updatePremisesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateAreaResponse View.MateWSLocal.DBControllerWS.updateArea(View.MateWSLocal.updateAreaRequest request) {
+            return base.Channel.updateArea(request);
+        }
+        
+        public int updateArea(View.MateWSLocal.area area) {
+            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
+            inValue.area = area;
+            View.MateWSLocal.updateAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> View.MateWSLocal.DBControllerWS.updateAreaAsync(View.MateWSLocal.updateAreaRequest request) {
+            return base.Channel.updateAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateAreaResponse> updateAreaAsync(View.MateWSLocal.area area) {
+            View.MateWSLocal.updateAreaRequest inValue = new View.MateWSLocal.updateAreaRequest();
+            inValue.area = area;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateAreaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateDiscountResponse View.MateWSLocal.DBControllerWS.updateDiscount(View.MateWSLocal.updateDiscountRequest request) {
+            return base.Channel.updateDiscount(request);
+        }
+        
+        public int updateDiscount(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
+            inValue.discount = discount;
+            View.MateWSLocal.updateDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateDiscount(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> View.MateWSLocal.DBControllerWS.updateDiscountAsync(View.MateWSLocal.updateDiscountRequest request) {
+            return base.Channel.updateDiscountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateDiscountResponse> updateDiscountAsync(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.updateDiscountRequest inValue = new View.MateWSLocal.updateDiscountRequest();
+            inValue.discount = discount;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateDiscountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.updateEmployeeResponse View.MateWSLocal.DBControllerWS.updateEmployee(View.MateWSLocal.updateEmployeeRequest request) {
+            return base.Channel.updateEmployee(request);
+        }
+        
+        public int updateEmployee(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
+            inValue.employee = employee;
+            View.MateWSLocal.updateEmployeeResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).updateEmployee(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> View.MateWSLocal.DBControllerWS.updateEmployeeAsync(View.MateWSLocal.updateEmployeeRequest request) {
+            return base.Channel.updateEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.updateEmployeeResponse> updateEmployeeAsync(View.MateWSLocal.employee employee) {
+            View.MateWSLocal.updateEmployeeRequest inValue = new View.MateWSLocal.updateEmployeeRequest();
+            inValue.employee = employee;
+            return ((View.MateWSLocal.DBControllerWS)(this)).updateEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertPremisesResponse View.MateWSLocal.DBControllerWS.insertPremises(View.MateWSLocal.insertPremisesRequest request) {
+            return base.Channel.insertPremises(request);
+        }
+        
+        public int insertPremises(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
+            inValue.premises = premises;
+            View.MateWSLocal.insertPremisesResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertPremises(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> View.MateWSLocal.DBControllerWS.insertPremisesAsync(View.MateWSLocal.insertPremisesRequest request) {
+            return base.Channel.insertPremisesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertPremisesResponse> insertPremisesAsync(View.MateWSLocal.premises premises) {
+            View.MateWSLocal.insertPremisesRequest inValue = new View.MateWSLocal.insertPremisesRequest();
+            inValue.premises = premises;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertPremisesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.insertDiscountResponse View.MateWSLocal.DBControllerWS.insertDiscount(View.MateWSLocal.insertDiscountRequest request) {
+            return base.Channel.insertDiscount(request);
+        }
+        
+        public int insertDiscount(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.insertDiscountRequest inValue = new View.MateWSLocal.insertDiscountRequest();
+            inValue.discount = discount;
+            View.MateWSLocal.insertDiscountResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).insertDiscount(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> View.MateWSLocal.DBControllerWS.insertDiscountAsync(View.MateWSLocal.insertDiscountRequest request) {
+            return base.Channel.insertDiscountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.insertDiscountResponse> insertDiscountAsync(View.MateWSLocal.discount discount) {
+            View.MateWSLocal.insertDiscountRequest inValue = new View.MateWSLocal.insertDiscountRequest();
+            inValue.discount = discount;
+            return ((View.MateWSLocal.DBControllerWS)(this)).insertDiscountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        View.MateWSLocal.queryAllAreaResponse View.MateWSLocal.DBControllerWS.queryAllArea(View.MateWSLocal.queryAllAreaRequest request) {
+            return base.Channel.queryAllArea(request);
+        }
+        
+        public View.MateWSLocal.area[] queryAllArea() {
+            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
+            View.MateWSLocal.queryAllAreaResponse retVal = ((View.MateWSLocal.DBControllerWS)(this)).queryAllArea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> View.MateWSLocal.DBControllerWS.queryAllAreaAsync(View.MateWSLocal.queryAllAreaRequest request) {
+            return base.Channel.queryAllAreaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<View.MateWSLocal.queryAllAreaResponse> queryAllAreaAsync() {
+            View.MateWSLocal.queryAllAreaRequest inValue = new View.MateWSLocal.queryAllAreaRequest();
+            return ((View.MateWSLocal.DBControllerWS)(this)).queryAllAreaAsync(inValue);
         }
     }
 }

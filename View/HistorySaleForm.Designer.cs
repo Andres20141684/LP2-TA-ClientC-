@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnSearchEmployee = new System.Windows.Forms.Button();
-            this.txtRUC = new System.Windows.Forms.TextBox();
+            this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPurchases = new System.Windows.Forms.DataGridView();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,14 +49,14 @@
             this.btnSearchEmployee.TabIndex = 23;
             this.btnSearchEmployee.UseVisualStyleBackColor = true;
             // 
-            // txtRUC
+            // txtSerialCode
             // 
-            this.txtRUC.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.txtRUC.Location = new System.Drawing.Point(154, 24);
-            this.txtRUC.MaxLength = 11;
-            this.txtRUC.Name = "txtRUC";
-            this.txtRUC.Size = new System.Drawing.Size(234, 20);
-            this.txtRUC.TabIndex = 22;
+            this.txtSerialCode.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtSerialCode.Location = new System.Drawing.Point(154, 24);
+            this.txtSerialCode.MaxLength = 11;
+            this.txtSerialCode.Name = "txtSerialCode";
+            this.txtSerialCode.Size = new System.Drawing.Size(234, 20);
+            this.txtSerialCode.TabIndex = 22;
             // 
             // label1
             // 
@@ -121,11 +121,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(669, 356);
             this.Controls.Add(this.btnSearchEmployee);
-            this.Controls.Add(this.txtRUC);
+            this.Controls.Add(this.txtSerialCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPurchases);
             this.Name = "HistorySaleForm";
             this.Text = "Historial de ventas";
+            this.Load += new System.EventHandler(this.HistorySaleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +136,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearchEmployee;
-        private System.Windows.Forms.TextBox txtRUC;
+        private System.Windows.Forms.TextBox txtSerialCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPurchases;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;

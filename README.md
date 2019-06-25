@@ -1,5 +1,6 @@
 # LP2-TA-ClientC-
 [INF282] Lenguajes de Programación 2
+
 Grupo 6 - Tarea Académica
 
 Integrantes:

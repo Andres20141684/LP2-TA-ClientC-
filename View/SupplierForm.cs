@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < suppliers.Count; i++)
             {
                 dgvSupplier.Rows.Add(new String[] {
-                ""+suppliers[i].RUC, suppliers[i].name,suppliers[i].address,suppliers[i].bankData,""+suppliers[i].contactPhone,"" + suppliers[i].contactEmail
+                ""+suppliers[i].RUC, suppliers[i].name,suppliers[i].address,suppliers[i].bankData,""+suppliers[i].contactEmail,"" + suppliers[i].contactPhone
                 });
             }
             Cursor.Current = Cursors.Arrow;
@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                 ModifySupplierForm modifySup = new ModifySupplierForm();
                 modifySup.currentSupplier = new supplier();
                 supplier e1 = new supplier();
+                serviceDAA = new DBControllerWSClient();
                 e1 = serviceDAA.querySupplierByCode(dgvSupplier.Rows[i].Cells[0].Value.ToString());
                 modifySup.currentSupplier = e1;
                 modifySup.ShowDialog();

@@ -53,42 +53,51 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Ingrese un RUC válido");
                 return false;
             }
-            else if (txtNombre.Text == "" || txtNombre.Text.Length<2)
+             if (txtNombre.Text == "" || txtNombre.Text.Length<2)
             {
                 MessageBox.Show("Ingrese un nombre válido");
                 return false;
             }
-            else if (txtDireccion.Text == "" || txtDireccion.Text.Length<10)
+             if (txtDireccion.Text == "" || txtDireccion.Text.Length<10)
             {
                 MessageBox.Show("Ingrese una dirección válida");
                 return false;
             }
-            else if (txtCuenta.Text == "" || txtCuenta.Text.Length!=16)
+             if (txtCuenta.Text == "" || txtCuenta.Text.Length!=16)
             {
-                MessageBox.Show("Ingrese un número de cuenta válido");
+                MessageBox.Show("Ingrese un número de cuenta válido de 16 caracteres");
                 return false;
             }
-            else if (txtTelefono.Text == "" || txtTelefono.Text.Length<6)
+             if (txtTelefono.Text == "" || txtTelefono.Text.Length<6)
             {
-                MessageBox.Show("Ingrese un número válido");
+                MessageBox.Show("Ingrese un numero de telefono válido mayor a 6 caracteres");
                 return false;
             }
-            else if (txtEmail.Text == "" || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+             if (txtTelefono.Text.Length >= 6)
+            {
+                int result = 0;
+                if (!int.TryParse(txtTelefono.Text, out result))
+                {
+                    MessageBox.Show("Ingrese un numero de telefono con solo caracteres númericos");
+                    return false;
+                }
+            }
+             if (txtEmail.Text == "" || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
                 MessageBox.Show("Ingrese un email válido");
                 return false;
             }
-            else if (txtPersonaContacto.Text == "")
+             if (txtPersonaContacto.Text == "")
             {
                 MessageBox.Show("Complete la persona contacto del proveedor");
                 return false;
             }
-            else if (txtCodProv.Text == "")
+             if (txtCodProv.Text == "")
             {
                 MessageBox.Show("Complete el código del proveedor");
                 return false;
             }
-            else if (txtTerminoVenta.Text == "")
+             if (txtTerminoVenta.Text == "")
             {
                 MessageBox.Show("Complete el término de venta del proveedor");
                 return false;

@@ -205,12 +205,13 @@
             this.cbActive.AutoSize = true;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActive.Location = new System.Drawing.Point(148, 324);
-            this.cbActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
             this.cbActive.TabIndex = 99;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;
+            this.cbActive.CheckedChanged += new System.EventHandler(this.cbActive_CheckedChanged);
             // 
             // label10
             // 
@@ -290,7 +291,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.Location = new System.Drawing.Point(429, 383);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.TabIndex = 102;

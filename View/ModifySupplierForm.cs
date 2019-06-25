@@ -32,6 +32,13 @@ namespace WindowsFormsApp1
             txtPersonaContacto.Text = currentSupplier.contactPerson;
             txtCodProv.Text = currentSupplier.supplierCode;
             txtTerminoVenta.Text = currentSupplier.termOfSale;
+            if (currentSupplier.state ==1)
+            {
+                cbActive.Checked = true;
+            }else
+            {
+                cbActive.Checked = false;
+            }
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
@@ -60,6 +67,11 @@ namespace WindowsFormsApp1
         }
 
         private void TxtTerminoVenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbActive_CheckedChanged(object sender, EventArgs e)
         {
 
         }

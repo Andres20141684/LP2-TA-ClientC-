@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -57,14 +58,14 @@ namespace ShopsForm
         }
         private bool filledValues()
         {
-            if (txtNombre.Text == "")
+            if (Regex.Match(txtNombre.Text, @"[0-9]").Success || txtNombre.Text.Length <3 )
             {
-                MessageBox.Show("Ingrese un código válido.");
+                MessageBox.Show("Ingrese un nombre válido mayor a 3 caracteres y sin numeros.");
                 return false;
             }
             if (txtAddress.Text == "")
             {
-                MessageBox.Show("Ingrese el nombre del local");
+                MessageBox.Show("Ingrese el direccion del local mayor a 0 caracteres");
                 return false;
             }
             /*if (txtDesc.Text == "")

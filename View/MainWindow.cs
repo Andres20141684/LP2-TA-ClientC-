@@ -161,19 +161,13 @@ namespace View
         {
             Application.Exit();
         }
-        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            //AuthenticationForm login = new AuthenticationForm();
-            //login.ShowDialog();
-         
-            Application.Exit();
-        }
-
         
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            AuthenticationForm login = new AuthenticationForm(this);
+            login.ShowDialog();
+            //Application.Exit();
         }
 
         private void logOutTimer_Tick(object sender, EventArgs e)

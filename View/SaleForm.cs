@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View;
@@ -69,7 +70,7 @@ namespace WindowsFormsApp1
             if (producto != null) {
                 lista_stock.Add(producto);
                 dgvSaleDetails.Rows.Add(new String[]
-                {producto.SKUcode,producto.productDescription, producto.salePrice.ToString(), ""+1,""+(1*producto.salePrice)});
+                {producto.SKUcode,producto.productDescription, producto.salePrice.ToString(), ""+1,""+(1*producto.salePrice),""+producto.stock});
             }
         }
 
@@ -252,7 +253,7 @@ namespace WindowsFormsApp1
             {
                 if (dgvSaleDetails.CurrentCell != null &&
                     dgvSaleDetails.CurrentCell.Value != null &&
-                    dgvSaleDetails.CurrentCell.Value.ToString().Trim() != "")
+                    Regex.Match(dgvSaleDetails.CurrentCell.Value.ToString(),@"[0-9]").Success)
                 {
                     
                      if (Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) > lista_stock[e.RowIndex].stock)
@@ -267,10 +268,12 @@ namespace WindowsFormsApp1
                         Double.Parse(dgvSaleDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
                         RefreshTotal();
                     }
-                     
-                    
 
-                    
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese una cantidad válida");
+                    dgvSaleDetails.CurrentCell.Value = "0";
                 }
             }
         }

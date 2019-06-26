@@ -31,6 +31,9 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            txtDniRuc.Text = "Ingrese DNI o RUC";
+            txtDniRuc.ForeColor = Color.Gray;
+
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
@@ -259,6 +262,13 @@ namespace WindowsFormsApp1
                     RefreshTotal();
                 }
             }
+        }
+
+        private void txtDniRuc_Enter(object sender, EventArgs e)
+        {
+            txtDniRuc.Text = "";
+            txtDniRuc.ForeColor = Color.Black;
+
         }
     }
 }

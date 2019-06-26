@@ -119,7 +119,8 @@ namespace Producto
                 }
                 else
                 {
-                    MessageBox.Show("No existe el producto");
+                    MessageBox.Show("No existe el producto con ese elemento SKU");
+                    updateDataGridView();
                 }
             }
             catch

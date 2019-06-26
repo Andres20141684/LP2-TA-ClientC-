@@ -147,6 +147,8 @@ namespace View
 
         private void PurchaseForm_Load(object sender, EventArgs e)
         {
+            txtIdProv.Text = "Ingrese ID Proovedor";
+            txtIdProv.ForeColor = Color.Gray;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
             emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
@@ -180,6 +182,21 @@ namespace View
             }
         }
 
+        private void txtSerialCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdProv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdProv_Enter(object sender, EventArgs e)
+        {
+            txtIdProv.Text = "";
+            txtIdProv.ForeColor = Color.Black;
+        }
         private void dgvPurchaseDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvPurchaseDetails.Columns[e.ColumnIndex].Name == "quantity")

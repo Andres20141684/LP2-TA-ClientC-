@@ -44,11 +44,25 @@ namespace User
                 usuario1.password = txtModifyUserPassword.Text;
                 usuario1.expirationDate = (DateTime) dtpModifyUserExpirationDate.Value.Date;
                 usuario1.modificationDate = DateTime.Now;
+                usuario1.user1 = txtUserName.Text;
+                
+                //usuario1.employee.role = "Vendedor";
                 if (cbActive.Checked == true) usuario1.state = 1;
                 else usuario1.state = 0;
 
-                serviceDA.updateUser(usuario1);
-                MessageBox.Show("El usuario se modificó satisfactoriamente");
+                try
+                {
+                    int salio = serviceDA.updateUser(usuario1);
+                    if (salio == 1)
+                    {
+                        MessageBox.Show("El usuario se modificó satisfactoriamente");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Sistema en mantenimiento :(");
+                }
+                
                 this.Close();
             }
         }

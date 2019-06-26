@@ -28,12 +28,6 @@ namespace entregable
         {
             refParent = form;
         }
-
-        private void btnSaveChanges_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("El empleado se modificó satisfactoriamente");
-            this.Close();
-        }
         private void setEmployeeInformation()
         {
             txtEmployeeDNI.Text = currentEmployee.dni;
@@ -78,14 +72,23 @@ namespace entregable
                 currentEmployee.secondLastName = txtEmployeeSecondLastName.Text;
                 currentEmployee.phone = txtEmployeePhone.Text;
                 currentEmployee.email = txtEmployeeEmail.Text;
-                currentEmployee.birthdate = (DateTime) dtpEmployeeBorn.Value.Date;
-                currentEmployee.contractStarDate = (DateTime) dtpEmployeeStartDate.Value.Date;
+                currentEmployee.birthdate = (DateTime)dtpEmployeeBorn.Value.Date;
+                currentEmployee.contractStarDate = (DateTime)dtpEmployeeStartDate.Value.Date;
                 currentEmployee.contractEndDate = (DateTime)dtpEmployeeEndDate.Value.Date;
                 //emp.area = cbArea.Text
                 currentEmployee.role = cbRole.Text;
-                serviceDA.updateEmployee(currentEmployee);
+                int salio = serviceDA.updateEmployee(currentEmployee);
+
                 Cursor.Current = Cursors.Arrow;
-                MessageBox.Show("El empleado se modificó satisfactoriamente.");
+                if (salio == 1)
+                {
+                    MessageBox.Show("El empleado se modificó satisfactoriamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error :(");
+                }
+                
                 this.Close();
             }
         }

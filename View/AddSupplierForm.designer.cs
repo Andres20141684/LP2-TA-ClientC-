@@ -84,7 +84,6 @@
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(359, 20);
             this.txtCuenta.TabIndex = 4;
-            this.txtCuenta.TextChanged += new System.EventHandler(this.txtCuentaAdd_TextChanged);
             // 
             // txtEmail
             // 
@@ -94,7 +93,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(359, 20);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmailAdd_TextChanged);
             // 
             // txtTelefono
             // 
@@ -104,7 +102,6 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(359, 20);
             this.txtTelefono.TabIndex = 5;
-            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefonoAdd_TextChanged);
             // 
             // txtNombre
             // 
@@ -205,7 +202,6 @@
             this.cbActive.TabIndex = 99;
             this.cbActive.Text = "Activo";
             this.cbActive.UseVisualStyleBackColor = true;
-            this.cbActive.CheckedChanged += new System.EventHandler(this.cbActive_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -247,6 +243,7 @@
             // 
             // txtCodProv
             // 
+            this.txtCodProv.Enabled = false;
             this.txtCodProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodProv.Location = new System.Drawing.Point(148, 264);
             this.txtCodProv.MaxLength = 100;

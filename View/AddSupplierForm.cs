@@ -17,6 +17,11 @@ namespace WindowsFormsApp1
         public AddSupplierForm()
         {
             InitializeComponent();
+            serviceDA = new DBControllerWSClient();
+            BindingList<supplier> supp = new BindingList<supplier>(serviceDA.queryAllSupplier());
+            int lastSupCode = supp[supp.Count() - 1].id;
+            String newSupCode = "SU" + (int.Parse(lastSupCode.ToString()) + 1).ToString("000");
+            txtCodProv.Text = newSupCode;
             cbActive.Checked = true;
         }
 
@@ -124,27 +129,6 @@ namespace WindowsFormsApp1
             }
 
             return true;
-
-        }
-
-
-        private void cbActive_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmailAdd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelefonoAdd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCuentaAdd_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

@@ -81,8 +81,8 @@ namespace Producto
 
         private void BtnSave_Click_1(object sender, EventArgs e)
         {         
-            if (cboDiscount.Text == "--Seleccione--"){
-                MessageBox.Show("Elija un descuento");
+            if (!filledValues()){
+                
             }
             else
             {
@@ -108,7 +108,66 @@ namespace Producto
            
             
         }
+        private bool filledValues()
+        {
+            if (txtSKUCode.Text == "" || txtSKUCode.Text.Length != 8)
+            {
+                MessageBox.Show("Ingrese un código válido. Los códigos SKU tienen 8 caracteres");
+                return false;
+            }
+            else if (txtName.Text == "" || txtName.Text.Length < 2)
+            {
+                MessageBox.Show("Ingrese el nombre del producto");
+                return false;
+            }
+            else if (txtDescription.Text == "")
+            {
+                MessageBox.Show("Ingrese la descripción del producto");
+                return false;
+            }
+            else if (txtCareDescription.Text == "")
+            {
+                MessageBox.Show("Ingrese la descripción del cuidado del producto");
+                return false;
+            }
+            else if (txtSalePrice.Text == "")
+            {
+                MessageBox.Show("Ingrese el precio de venta");
+                return false;
+            }
+            else if (txtPurchasePrice.Text == "")
+            {
+                MessageBox.Show("Ingrese el precio de compra");
+                return false;
+            }
+            else if (txtIGV.Text == "")
+            {
+                MessageBox.Show("Ingrese el IGV");
+                return false;
+            }
+            else if (txtStock.Text == "")
+            {
+                MessageBox.Show("Ingrese el stock");
+                return false;
+            }
+            else if (cboBrand.Text == "--Seleccione--")
+            {
+                MessageBox.Show("Seleccione la marca");
+                return false;
+            }
+            else if (cboFamily.Text == "--Seleccione--")
+            {
+                MessageBox.Show("Seleccione la familia");
+                return false;
+            }
+            else if (cboDiscount.Text == "--Seleccione--")
+            {
+                MessageBox.Show("Seleccione el descuento");
+                return false;
+            }
+            return true;
+        }
 
-        
+
     }
 }

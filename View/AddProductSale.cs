@@ -24,27 +24,26 @@ namespace WindowsFormsApp1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvProducts.Rows.Clear();
-            serviceDA = new DBControllerWSClient();
-            String skucodee = txtProductName.Text;
-            int idAlmacenn = int.Parse(txtWarehouseId.Text);
-            detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
-            producto = serviceDA.queryProductBySKUCode(skucodee);
-          
-            dgvProducts.Rows.Add(new String[] {
+            if (txtProductName.Text == "")
+            {
+                MessageBox.Show("Ingrese un código");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                dgvProducts.Rows.Clear();
+                serviceDA = new DBControllerWSClient();
+                String skucodee = txtProductName.Text;
+                int idAlmacenn = int.Parse(txtWarehouseId.Text);
+                detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+                producto = serviceDA.queryProductBySKUCode(skucodee);
+                dgvProducts.Rows.Add(new String[] {
                 ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
-            //parent._stock = detalleProducto.quantity;
-
-            Cursor.Current = Cursors.Arrow;
-            /*
-            for (int i = 0; i < 5; i++)
-            {
-                dgvProducts.Rows.Add(new String[] {
-                                    "" +(i+1), "Producto "+(i+1), ""+i*10, ""+i*5
-                                    });
-            }*/
+                //parent._stock = detalleProducto.quantity;
+                Cursor.Current = Cursors.Arrow;
+            }
+            
         }
 
         public void SetParent(SaleForm form)

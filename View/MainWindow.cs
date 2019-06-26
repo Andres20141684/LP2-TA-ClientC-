@@ -169,31 +169,6 @@ namespace View
             Application.Exit();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void username_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbTesto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNameUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {

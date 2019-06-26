@@ -264,6 +264,13 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void dgvSaleDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                MessageBox.Show("Hola");
+            }
+        }
         private void txtDniRuc_Enter(object sender, EventArgs e)
         {
             txtDniRuc.Text = "";

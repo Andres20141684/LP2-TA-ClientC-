@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
                 dgvProducts.Rows.Add(new String[] {
                 ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
-                //parent._stock = detalleProducto.quantity;
+                //parent.lista_stock.Add(producto.stock);
                 Cursor.Current = Cursors.Arrow;
             }
             
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                 //.Cells[0].Value.ToString());
                 //Product product = SalesController.QueryProductById(productId);
 
-                parent.AddProductToSale(dgvProducts.Rows[selectedRow]);
+                parent.AddProductToSale(producto);
                 parent.RefreshTotal();
 
                 this.Close();

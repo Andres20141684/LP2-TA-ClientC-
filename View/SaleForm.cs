@@ -64,13 +64,11 @@ namespace WindowsFormsApp1
             
         }
 
-        internal void AddProductToSale(DataGridViewRow row)
+        internal void AddProductToSale(product producto)
         {
-            if (row != null) {
+            if (producto != null) {
                 dgvSaleDetails.Rows.Add(new String[]
-                {
-                    ""+row.Cells[0].Value.ToString(),""+row.Cells[1].Value.ToString(), ""+row.Cells[2].Value.ToString(), ""+1,""+(1*Double.Parse(row.Cells[2].Value.ToString()))
-                });
+                {producto.SKUcode,producto.productDescription, producto.salePrice.ToString(), ""+1,""+(1*producto.salePrice)});
             }
         }
 
@@ -255,6 +253,9 @@ namespace WindowsFormsApp1
                     dgvSaleDetails.CurrentCell.Value != null &&
                     dgvSaleDetails.CurrentCell.Value.ToString().Trim() != "")
                 {
+                    /*
+                     if 
+                     */
                     dgvSaleDetails.Rows[e.RowIndex].Cells[4].Value =
                         Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) *
                         Double.Parse(dgvSaleDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
@@ -264,13 +265,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void dgvSaleDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 3)
-            {
-                MessageBox.Show("Hola");
-            }
-        }
+
         private void txtDniRuc_Enter(object sender, EventArgs e)
         {
             txtDniRuc.Text = "";

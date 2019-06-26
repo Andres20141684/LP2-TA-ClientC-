@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTesto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.logOutTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -234,6 +236,10 @@
             this.label1.Text = "¡Bienvenido!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // logOutTimer
+            // 
+            this.logOutTimer.Tick += new System.EventHandler(this.logOutTimer_Tick);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +260,7 @@
             this.Name = "MainWindow";
             this.Text = "Sistema de Bodega MATE";
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
-            //this.OnClosing += new System.Windows.Forms.()
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainWindow_MouseMove);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -283,5 +289,6 @@
         private System.Windows.Forms.Label lbTesto;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer logOutTimer;
     }
 }

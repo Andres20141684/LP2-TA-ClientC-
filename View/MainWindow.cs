@@ -63,7 +63,7 @@ namespace View
 
         private void MainWindow_Shown(object sender, EventArgs e)
         {
-
+            logOutTimer.Interval = 100;
         }
 
         private void MainWindow_Load_1(object sender, EventArgs e)

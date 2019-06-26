@@ -172,6 +172,7 @@
             this.Name = "AuthenticationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AuthenticationForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbIconPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconMate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconUser)).EndInit();

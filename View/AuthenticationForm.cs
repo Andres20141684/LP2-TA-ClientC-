@@ -60,18 +60,6 @@ namespace View
                 
                 
             }
-            /*
-            if (user == "gerente" || password == "gerente") usuarioPermiso = 1;
-            else if (user == "supervisor" || password == "supervisor") usuarioPermiso = 2;
-            else if (user == "vendedor" || password == "vendedor") usuarioPermiso = 3;
-            else
-            {
-                MessageBox.Show("Usuario incorrecto");
-                return;
-            }
-            */
-            
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -132,6 +120,11 @@ namespace View
             {
                 this.btnOK_Click(sender,e);
             }
+        }
+
+        private void AuthenticationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -50,19 +50,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbGeneralInf = new System.Windows.Forms.GroupBox();
+            this.pictureSearch = new System.Windows.Forms.PictureBox();
             this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureSearch = new System.Windows.Forms.PictureBox();
+            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gbGeneralInf.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -292,32 +291,9 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click_1);
-            // 
-            // comprasToolStripMenuItem
-            // 
-            this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarToolStripMenuItem,
-            this.historialToolStripMenuItem});
-            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.comprasToolStripMenuItem.Text = "Compras";
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.ModificarToolStripMenuItem_Click_1);
-            // 
-            // historialToolStripMenuItem
-            // 
-            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.historialToolStripMenuItem.Text = "Historial";
-            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // gbGeneralInf
             // 
@@ -343,6 +319,21 @@
             this.gbGeneralInf.TabIndex = 30;
             this.gbGeneralInf.TabStop = false;
             this.gbGeneralInf.Text = "Datos generales";
+            // 
+            // pictureSearch
+            // 
+            this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
+            this.pictureSearch.Location = new System.Drawing.Point(284, 69);
+            this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureSearch.Name = "pictureSearch";
+            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
+            this.pictureSearch.TabIndex = 110;
+            this.pictureSearch.TabStop = false;
+            this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);
             // 
             // txtSerialCode
             // 
@@ -378,20 +369,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Venta";
             // 
-            // pictureSearch
+            // historialToolStripMenuItem
             // 
-            this.pictureSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.pictureSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureSearch.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureSearch.Location = new System.Drawing.Point(284, 69);
-            this.pictureSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureSearch.Name = "pictureSearch";
-            this.pictureSearch.Size = new System.Drawing.Size(20, 20);
-            this.pictureSearch.TabIndex = 110;
-            this.pictureSearch.TabStop = false;
-            this.pictureSearch.Click += new System.EventHandler(this.pictureSearch_Click);
+            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historialToolStripMenuItem.Text = "Historial";
+            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
+            // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historialToolStripMenuItem});
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // PurchaseForm
             // 
@@ -412,9 +403,9 @@
             this.menuStrip1.PerformLayout();
             this.gbGeneralInf.ResumeLayout(false);
             this.gbGeneralInf.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,14 +434,13 @@
         public System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.GroupBox gbGeneralInf;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtSerialCode;
-        private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureSearch;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
     }
 }

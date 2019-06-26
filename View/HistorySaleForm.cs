@@ -15,6 +15,7 @@ namespace View
     {
         private DBControllerWSClient serviceDA;
         private BindingList<sale> sales;
+        private sale s;
 
         public HistorySaleForm()
         {
@@ -28,12 +29,12 @@ namespace View
         private void updateDataGridView()
         {
             Cursor.Current = Cursors.WaitCursor;
-            dgvPurchases.Rows.Clear();
+            dgvSales.Rows.Clear();
             serviceDA = new DBControllerWSClient();
             sales = new BindingList<sale>(serviceDA.queryAllSale());
             for (int i = 0; i < sales.Count; i++)
             {
-                dgvPurchases.Rows.Add(new String[] {
+                dgvSales.Rows.Add(new String[] {
             ""+sales[i].serialCode,""+sales[i].totalSale,""+sales[i].customer.descriptionCustomer,""+sales[i].creationDate
             });
             }
@@ -43,6 +44,21 @@ namespace View
         private void BtnSearchEmployee_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvSales_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null)
+                return;
+
+            if (dgv.CurrentRow.Selected)
+            {
+                //componentsState(State.ProductSelected);
+                RefundForm refund = new RefundForm();
+                refund.CurrentSale = sales[dgv.CurrentRow.Index];
+                refund.ShowDialog();
+            }
         }
     }
 }

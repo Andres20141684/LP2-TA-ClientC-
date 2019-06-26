@@ -34,10 +34,21 @@ namespace View
                 Cursor.Current = Cursors.Arrow;
                 if (u.password != null)
                 {
-                    if (u.userType == 1) menu.darPermiso(MainWindow.Permiso.Gerente);
-                    else if (u.userType == 2) menu.darPermiso(MainWindow.Permiso.Supervisor);
-                    else if (u.userType == 3) menu.darPermiso(MainWindow.Permiso.Vendedor);
-                    menu.currentUser = u;
+                    if (txtUsername.Text == u.user1)
+                    {
+                        if (u.userType == 1) menu.darPermiso(MainWindow.Permiso.Gerente);
+                        else if (u.userType == 2) menu.darPermiso(MainWindow.Permiso.Supervisor);
+                        else if (u.userType == 3) menu.darPermiso(MainWindow.Permiso.Vendedor);
+                        menu.currentUser = u;
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos");
+                    }
+
+                   
                 }
                 else
                 {
@@ -46,8 +57,8 @@ namespace View
                     MessageBox.Show("Usuario o contraseña incorrectos");
                     return;
                 }
-                this.Hide();
-                menu.Show();
+                
+                
             }
             /*
             if (user == "gerente" || password == "gerente") usuarioPermiso = 1;

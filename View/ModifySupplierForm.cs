@@ -13,14 +13,21 @@ namespace WindowsFormsApp1
 {
     public partial class ModifySupplierForm : Form
     {
+        SupplierForm refParent;
         private DBControllerWSClient serviceDA;
         public supplier currentSupplier;
+
         public ModifySupplierForm()
         {
             InitializeComponent();
             //cbActive.Checked = true;
         }
-      
+
+        public void SetParent(SupplierForm form)
+        {
+            refParent = form;
+        }
+
 
         private void setSupplierInformation()
         {

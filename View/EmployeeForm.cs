@@ -74,6 +74,9 @@ namespace entregable
                 //dgvEmployee.Rows.Clear();   
                 serviceDAA = new DBControllerWSClient();
                 empleado = (serviceDAA.queryEmployeeByDNI(txtDNI.Text));
+                Cursor.Current = Cursors.Arrow;
+                if (empleado.idEmployee != null)
+                {
 
                 ModifyEmployeeForm modifyEmployeeForm = new ModifyEmployeeForm();
                 modifyEmployeeForm.currentEmployee = new employee();
@@ -84,6 +87,11 @@ namespace entregable
                 modifyEmployeeForm.SetParent(this);
                 modifyEmployeeForm.ShowDialog();
                 updateDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("Empleado no encontrado");
+                }
 
 
                 //dgvEmployee.Rows.Add(new String[] {   
@@ -91,7 +99,7 @@ namespace entregable
 
 
 
-                Cursor.Current = Cursors.Arrow;
+                
 
             }
             

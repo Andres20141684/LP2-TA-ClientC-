@@ -36,7 +36,7 @@ namespace User
                 serviceDA = new DBControllerWSClient();
                 user u = new user();
                 u.creationDate = DateTime.Now;
-                u.expirationDate = dtpUserExpirationDate.Value.Date;
+                u.expirationDate = (DateTime) dtpUserExpirationDate.Value.Date;
                 u.user1 = txtUserName.Text;
                 u.password = txtUserPassword.Text;
                 u.state = 1;
@@ -101,6 +101,17 @@ namespace User
             //Falta validar que las dos contraseñas coincidan. Por verificar si funciona
             //if (txtUserPassword.Text != textBox1.Text)
             //    return false;
+
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            user c = serviceDA.queryUserByUserName(txtUserName.Text);
+            Cursor.Current = Cursors.Arrow;
+            if (c.password != null)
+            {
+                MessageBox.Show("Ya existe un usuario con ese Username");
+                return false;
+            }
+
             return true;
         }
 

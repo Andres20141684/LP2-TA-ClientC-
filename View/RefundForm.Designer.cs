@@ -49,6 +49,7 @@
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRefundDetail)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -65,7 +66,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(635, 219);
+            this.groupBox1.Size = new System.Drawing.Size(546, 316);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Venta";
@@ -74,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(471, 191);
+            this.label2.Location = new System.Drawing.Point(385, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
@@ -90,20 +91,23 @@
             this.productPrice,
             this.quantity,
             this.pu,
-            this.subtotal});
+            this.subtotal,
+            this.reason});
             this.dgvRefundDetail.GridColor = System.Drawing.Color.Black;
             this.dgvRefundDetail.Location = new System.Drawing.Point(20, 18);
             this.dgvRefundDetail.Name = "dgvRefundDetail";
             this.dgvRefundDetail.RowHeadersWidth = 49;
+            this.dgvRefundDetail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvRefundDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRefundDetail.Size = new System.Drawing.Size(602, 164);
+            this.dgvRefundDetail.Size = new System.Drawing.Size(516, 245);
             this.dgvRefundDetail.TabIndex = 10;
+            this.dgvRefundDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRefundDetail_CellValueChanged);
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(522, 188);
+            this.txtTotal.Location = new System.Drawing.Point(436, 281);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 12;
@@ -125,7 +129,7 @@
             this.gbGeneralInf.Margin = new System.Windows.Forms.Padding(2);
             this.gbGeneralInf.Name = "gbGeneralInf";
             this.gbGeneralInf.Padding = new System.Windows.Forms.Padding(2);
-            this.gbGeneralInf.Size = new System.Drawing.Size(635, 107);
+            this.gbGeneralInf.Size = new System.Drawing.Size(546, 107);
             this.gbGeneralInf.TabIndex = 34;
             this.gbGeneralInf.TabStop = false;
             this.gbGeneralInf.Text = "Datos generales";
@@ -233,6 +237,7 @@
             this.SaveButton.TabIndex = 33;
             this.SaveButton.Text = "Guardar ";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // productId
             // 
@@ -285,12 +290,18 @@
             this.subtotal.ReadOnly = true;
             this.subtotal.Width = 70;
             // 
+            // reason
+            // 
+            this.reason.HeaderText = "Razon";
+            this.reason.Name = "reason";
+            this.reason.Width = 150;
+            // 
             // RefundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.ClientSize = new System.Drawing.Size(661, 396);
+            this.ClientSize = new System.Drawing.Size(563, 473);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbGeneralInf);
             this.Controls.Add(this.SaveButton);
@@ -329,5 +340,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn pu;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reason;
     }
 }

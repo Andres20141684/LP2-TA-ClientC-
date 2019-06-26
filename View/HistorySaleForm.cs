@@ -55,9 +55,9 @@ namespace View
             if (dgv.CurrentRow.Selected)
             {
                 //componentsState(State.ProductSelected);
-                //RefundForm refund = new RefundForm();
-                //refund.CurrentSale = sales[dgv.CurrentRow.Index];
-                //refund.ShowDialog();
+                RefundForm refund = new RefundForm();
+                refund.CurrentSale = sales[dgv.CurrentRow.Index];
+                refund.ShowDialog();
             }
         }
     }

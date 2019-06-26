@@ -197,5 +197,21 @@ namespace View
             txtIdProv.Text = "";
             txtIdProv.ForeColor = Color.Black;
         }
+        private void dgvPurchaseDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPurchaseDetails.Columns[e.ColumnIndex].Name == "quantity")
+            {
+                if (dgvPurchaseDetails.CurrentCell != null &&
+                    dgvPurchaseDetails.CurrentCell.Value != null &&
+                    dgvPurchaseDetails.CurrentCell.Value.ToString().Trim() != "")
+                {
+                    dgvPurchaseDetails.Rows[e.RowIndex].Cells[4].Value =
+                        Int32.Parse(dgvPurchaseDetails.CurrentCell.Value.ToString()) *
+                        Double.Parse(dgvPurchaseDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+                    RefreshTotal();
+                }
+            }
+        }
     }
 }

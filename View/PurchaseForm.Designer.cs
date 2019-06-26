@@ -127,6 +127,7 @@
             this.dgvPurchaseDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPurchaseDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvPurchaseDetails.TabIndex = 24;
+            this.dgvPurchaseDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPurchaseDetails_CellValueChanged);
             // 
             // productId
             // 

@@ -220,7 +220,7 @@
             this.dgvSaleDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSaleDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvSaleDetails.TabIndex = 10;
-            this.dgvSaleDetails.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvSaleDetails_CellValidating);
+            this.dgvSaleDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetails_CellValueChanged);
             // 
             // productId
             // 

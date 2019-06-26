@@ -214,6 +214,9 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
+        /*
         private void dgvSaleDetails_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             if (_stock < int.Parse(dgvSaleDetails.Rows[0].Cells[3].Value.ToString()))
@@ -238,7 +241,24 @@ namespace WindowsFormsApp1
                 salelanes[i] = salelane;
 
             }
-             */
+             
+        }*/
+
+        private void dgvSaleDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSaleDetails.Columns[e.ColumnIndex].Name == "quantity")
+            {
+                if (dgvSaleDetails.CurrentCell != null &&
+                    dgvSaleDetails.CurrentCell.Value != null &&
+                    dgvSaleDetails.CurrentCell.Value.ToString().Trim() != "")
+                {
+                    dgvSaleDetails.Rows[e.RowIndex].Cells[4].Value =
+                        Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) *
+                        Double.Parse(dgvSaleDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+                    RefreshTotal();
+                }
+            }
         }
     }
 }

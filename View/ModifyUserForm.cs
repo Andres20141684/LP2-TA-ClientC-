@@ -15,6 +15,7 @@ namespace User
         private DBControllerWSClient serviceDA;
         public user usuario1;
         UserForm refParent;
+        public user currentUser;
         public ModifyUserForm()
         {
             InitializeComponent();

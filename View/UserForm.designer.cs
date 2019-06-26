@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.dgvUserColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bntModifyUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvColumUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColumCreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +44,6 @@
             this.dgvUser.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvUserColumId,
             this.dgvColumUserName,
             this.dgvColumCreationDate});
             this.dgvUser.Location = new System.Drawing.Point(36, 138);
@@ -53,29 +51,6 @@
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(629, 258);
             this.dgvUser.TabIndex = 7;
-            // 
-            // dgvUserColumId
-            // 
-            this.dgvUserColumId.Frozen = true;
-            this.dgvUserColumId.HeaderText = "Cód.";
-            this.dgvUserColumId.Name = "dgvUserColumId";
-            this.dgvUserColumId.ReadOnly = true;
-            // 
-            // dgvColumUserName
-            // 
-            this.dgvColumUserName.Frozen = true;
-            this.dgvColumUserName.HeaderText = "Usuario";
-            this.dgvColumUserName.Name = "dgvColumUserName";
-            this.dgvColumUserName.ReadOnly = true;
-            this.dgvColumUserName.Width = 300;
-            // 
-            // dgvColumCreationDate
-            // 
-            this.dgvColumCreationDate.Frozen = true;
-            this.dgvColumCreationDate.HeaderText = "Fecha de Expiración";
-            this.dgvColumCreationDate.Name = "dgvColumCreationDate";
-            this.dgvColumCreationDate.ReadOnly = true;
-            this.dgvColumCreationDate.Width = 200;
             // 
             // bntModifyUser
             // 
@@ -132,6 +107,22 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Código de Usuario:";
             // 
+            // dgvColumUserName
+            // 
+            this.dgvColumUserName.Frozen = true;
+            this.dgvColumUserName.HeaderText = "Usuario";
+            this.dgvColumUserName.Name = "dgvColumUserName";
+            this.dgvColumUserName.ReadOnly = true;
+            this.dgvColumUserName.Width = 300;
+            // 
+            // dgvColumCreationDate
+            // 
+            this.dgvColumCreationDate.Frozen = true;
+            this.dgvColumCreationDate.HeaderText = "Fecha de Expiración";
+            this.dgvColumCreationDate.Name = "dgvColumCreationDate";
+            this.dgvColumCreationDate.ReadOnly = true;
+            this.dgvColumCreationDate.Width = 285;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,7 +154,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUserColumId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumUserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumCreationDate;
     }

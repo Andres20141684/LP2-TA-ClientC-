@@ -17,6 +17,7 @@ namespace Producto
     public partial class AddFamilyForm : Form
     {
         private DBControllerWSClient serviceDA;
+        private BindingList<family> familias;
 
         public class Family
         {
@@ -30,7 +31,7 @@ namespace Producto
 
         public void cleanForm()
         {
-           
+            txtFamilyCode.Text = "";
             txtFamilyCode.Text = "";
             txtDescription.Text = "";
             txtName.Text = "";
@@ -41,6 +42,12 @@ namespace Producto
         {
             InitializeComponent();
             //f = new Family();
+            serviceDA = serviceDA = new View.MateWSLocal.DBControllerWSClient();
+            familias = new BindingList<family>(serviceDA.queryAllFamily());
+            String ultimoSerialCode = familias[familias.Count() - 1].idFamily;
+            String nuevoSerialCode = "F" + (int.Parse(ultimoSerialCode.Substring(1)) + 1).ToString("0000");
+            txtFamilyCode.Text = nuevoSerialCode;
+
             cbActive.Checked = true;
             //componentsState(StateP.Start);
         }

@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         //public static int numero_estatico = 0;
         private BindingList<sale> sales;
         public View.MateWSLocal.user currentUser;
-        public int _stock;
+        public BindingList<int> lista_stock;
         int type;
         private DBControllerWSClient serviceDA;
         public int Type { get => type; set => type = value; }
@@ -31,6 +31,9 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            txtDniRuc.Text = "Ingrese DNI o RUC";
+            txtDniRuc.ForeColor = Color.Gray;
+
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
@@ -267,6 +270,12 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Hola");
             }
+        }
+        private void txtDniRuc_Enter(object sender, EventArgs e)
+        {
+            txtDniRuc.Text = "";
+            txtDniRuc.ForeColor = Color.Black;
+
         }
     }
 }

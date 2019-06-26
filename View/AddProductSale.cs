@@ -24,9 +24,24 @@ namespace WindowsFormsApp1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (txtProductName.Text == "")
             {
                 MessageBox.Show("Ingrese un código");
+=======
+            Cursor.Current = Cursors.WaitCursor;
+            dgvProducts.Rows.Clear();
+            serviceDA = new DBControllerWSClient();
+            String skucodee = txtProductName.Text;
+            int idAlmacenn = int.Parse(txtWarehouseId.Text);
+            detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+            producto = serviceDA.queryProductBySKUCode(skucodee);
+          
+            dgvProducts.Rows.Add(new String[] {
+                ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
+                });
+            //parent._stock = detalleProducto.quantity;
+>>>>>>> 41e49c88108089832ead2ed603f8683e50c86187
 
             }
             else

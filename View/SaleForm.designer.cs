@@ -32,8 +32,6 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userLabel = new System.Windows.Forms.Label();
             this.userLabelContent = new System.Windows.Forms.Label();
@@ -97,8 +95,6 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarToolStripMenuItem,
-            this.devolucionToolStripMenuItem,
             this.historialToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
@@ -107,21 +103,21 @@
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // devolucionToolStripMenuItem
             // 
             this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
-            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionToolStripMenuItem.Text = "Devolucion";
             this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);
             // 
             // historialToolStripMenuItem
             // 
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
@@ -176,7 +172,7 @@
             this.txtDniRuc.Name = "txtDniRuc";
             this.txtDniRuc.Size = new System.Drawing.Size(129, 20);
             this.txtDniRuc.TabIndex = 6;
-            this.txtDniRuc.Text = "Ingrese DNI o RUC";
+            this.txtDniRuc.Enter += new System.EventHandler(this.txtDniRuc_Enter);
             // 
             // txtDescripcion
             // 
@@ -436,7 +432,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         public System.Windows.Forms.Label userLabel;
         public System.Windows.Forms.Label userLabelContent;
         private System.Windows.Forms.RadioButton boletaRadioButton;
@@ -453,7 +448,6 @@
         private System.Windows.Forms.Button AddProductSale;
         private System.Windows.Forms.TextBox txtTotal;
         public System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
         private System.Windows.Forms.TextBox txtSerialCode;
         private System.Windows.Forms.GroupBox gbGeneralInf;
         public System.Windows.Forms.Label label1;

@@ -14,10 +14,16 @@ namespace Producto
     {
         private DBControllerWSClient serviceDAA;
         public family currentFamily;
+        FamilyProductForm refParent;
 
         public UpdateFamilyForm()
         {
             InitializeComponent();
+        }
+
+        public void SetParent(FamilyProductForm form)
+        {
+            refParent = form;
         }
 
         private void UpdateFamilyForm_Shown(object sender, EventArgs e)

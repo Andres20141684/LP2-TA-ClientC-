@@ -115,14 +115,24 @@ namespace Producto
             else
             {
                 Cursor.Current = Cursors.WaitCursor;
-                dgvFamilies.Rows.Clear();
+               // dgvFamilies.Rows.Clear();
                 serviceDAA = new DBControllerWSClient();
                 familia = (serviceDAA.queryFamilyByCode(txtFamily.Text));
                 if (familia.idFamily != null)
                 {
-                    dgvFamilies.Rows.Add(new String[] {
-                familia.idFamily, familia.name, ""+familia.description
-                });
+                    //     dgvFamilies.Rows.Add(new String[] {
+                    // familia.idFamily, familia.name, ""+familia.description
+                    // });
+                    UpdateFamilyForm updateFamily = new UpdateFamilyForm();
+                    updateFamily.currentFamily = new family();
+                    //family e1 = new family();
+                    //e1 = serviceDAA.queryFamilyByCode(dgvFamilies.Rows[i].Cells[0].Value.ToString());
+                    updateFamily.currentFamily = familia;
+                    updateFamily.SetParent(this);
+                    updateFamily.ShowDialog();
+                    updateDataGridView();
+
+
 
                 }
                 else

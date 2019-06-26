@@ -28,27 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvPurchases = new System.Windows.Forms.DataGridView();
+            this.dgvSales = new System.Windows.Forms.DataGridView();
             this.dgvColumId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumFistLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColumSecondLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).BeginInit();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
-            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(400, 22);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
-            this.btnSearchEmployee.TabIndex = 23;
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
-            this.btnSearchEmployee.Click += new System.EventHandler(this.BtnSearchEmployee_Click);
             // 
             // txtSerialCode
             // 
@@ -69,20 +58,21 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Código serial:";
             // 
-            // dgvPurchases
+            // dgvSales
             // 
-            this.dgvPurchases.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.dgvPurchases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPurchases.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSales.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.dgvSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColumId,
             this.dgvColumName,
             this.dgvColumFistLastName,
             this.dgvColumSecondLastName});
-            this.dgvPurchases.Location = new System.Drawing.Point(20, 77);
-            this.dgvPurchases.Name = "dgvPurchases";
-            this.dgvPurchases.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPurchases.Size = new System.Drawing.Size(629, 258);
-            this.dgvPurchases.TabIndex = 20;
+            this.dgvSales.Location = new System.Drawing.Point(20, 77);
+            this.dgvSales.Name = "dgvSales";
+            this.dgvSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSales.Size = new System.Drawing.Size(629, 258);
+            this.dgvSales.TabIndex = 20;
+            this.dgvSales.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellDoubleClick);
             // 
             // dgvColumId
             // 
@@ -116,6 +106,17 @@
             this.dgvColumSecondLastName.ReadOnly = true;
             this.dgvColumSecondLastName.Width = 150;
             // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearchEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(400, 22);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(32, 26);
+            this.btnSearchEmployee.TabIndex = 23;
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.BtnSearchEmployee_Click);
+            // 
             // HistorySaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,11 +126,11 @@
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.txtSerialCode);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvPurchases);
+            this.Controls.Add(this.dgvSales);
             this.Name = "HistorySaleForm";
             this.Text = "Historial de ventas";
             this.Load += new System.EventHandler(this.HistorySaleForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPurchases)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +141,7 @@
         private System.Windows.Forms.Button btnSearchEmployee;
         private System.Windows.Forms.TextBox txtSerialCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvPurchases;
+        private System.Windows.Forms.DataGridView dgvSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColumFistLastName;

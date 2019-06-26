@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
             emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
@@ -39,6 +40,7 @@ namespace WindowsFormsApp1
             String ultimoSerialCode = sales[sales.Count() - 1].serialCode;
             String nuevoSerialCode = "V"+(int.Parse(ultimoSerialCode.Substring(1))+1).ToString("000000");
             txtSerialCode.Text = nuevoSerialCode;
+            Cursor.Current = Cursors.Arrow;
         }
         View.MainWindow refParent;
         public void SetParent(View.MainWindow form)

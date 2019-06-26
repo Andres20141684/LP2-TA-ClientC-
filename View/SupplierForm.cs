@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Seleccione un cliente");
+                MessageBox.Show("Seleccione un proveedor");
             }
 
             /*
@@ -94,20 +94,41 @@ namespace WindowsFormsApp1
 
         private void BtnSearchEmployee_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvSupplier.Rows.Clear();
-            serviceDAA = new DBControllerWSClient();
-            proveedor = (serviceDAA.querySupplierByCode(txtRUC.Text));
-
-            dgvSupplier.Rows.Add(new String[] {
-                proveedor.RUC, proveedor.name,proveedor.address,proveedor.bankData,proveedor.contactEmail,""+proveedor.contactPhone
-                });
-
-            Cursor.Current = Cursors.Arrow;
 
             if (txtRUC.Text == "")
             {
                 MessageBox.Show("Ingrese un RUC válido");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                //dgvSupplier.Rows.Clear();
+                serviceDAA = new DBControllerWSClient();
+                proveedor = (serviceDAA.querySupplierByCode(txtRUC.Text));
+                Cursor.Current = Cursors.Arrow;
+
+                if (proveedor.name != null)
+                {
+                    ModifySupplierForm modifySup = new ModifySupplierForm();
+                    modifySup.currentSupplier = new supplier();
+                    //supplier e1 = new supplier();
+                    serviceDAA = new DBControllerWSClient();
+                    //e1 = serviceDAA.querySupplierByCode(dgvSupplier.Rows[i].Cells[0].Value.ToString());
+                    modifySup.currentSupplier = proveedor;
+                    modifySup.SetParent(this);
+                    modifySup.ShowDialog();
+                    updateDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("Proveedor no encontrado");
+                }
+                //dgvSupplier.Rows.Add(new String[] {
+                //    proveedor.RUC, proveedor.name,proveedor.address,proveedor.bankData,proveedor.contactEmail,""+proveedor.contactPhone
+                //    });
+
+
+
             }
         }
     }

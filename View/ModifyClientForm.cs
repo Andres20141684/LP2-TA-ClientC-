@@ -15,10 +15,17 @@ namespace SalesClient
     {
         private DBControllerWSClient serviceDA;
         public customer currentCustomer;
+        ClientesForms refParent;
         public ModificarClienteForm()
         {
             InitializeComponent();
             cbActive.Checked = true;
+
+        }
+
+        public void SetParent(ClientesForms form)
+        {
+            refParent = form;
         }
         private void ModificarClienteForm_Shown(object sender, EventArgs e)
         {

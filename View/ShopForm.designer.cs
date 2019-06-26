@@ -31,11 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddLocal = new System.Windows.Forms.Button();
             this.btnModLocal = new System.Windows.Forms.Button();
-            this.dgvLocal = new System.Windows.Forms.DataGridView();
-            this.dgvColCodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboLocal = new System.Windows.Forms.ComboBox();
+            this.dgvColDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvLocal = new System.Windows.Forms.DataGridView();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,9 +47,9 @@
             this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Local";
+            this.label1.Text = "Nombre local";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // btnAddLocal
@@ -77,6 +78,24 @@
             this.btnModLocal.UseVisualStyleBackColor = false;
             this.btnModLocal.Click += new System.EventHandler(this.btnModLocal_Click);
             // 
+            // dgvColAdress
+            // 
+            this.dgvColAdress.HeaderText = "Direccion";
+            this.dgvColAdress.Name = "dgvColAdress";
+            this.dgvColAdress.Width = 220;
+            // 
+            // dgvColDesc
+            // 
+            this.dgvColDesc.HeaderText = "Descripcion";
+            this.dgvColDesc.Name = "dgvColDesc";
+            this.dgvColDesc.Width = 220;
+            // 
+            // dgvColCodi
+            // 
+            this.dgvColCodi.HeaderText = "Codigo";
+            this.dgvColCodi.Name = "dgvColCodi";
+            this.dgvColCodi.Width = 160;
+            // 
             // dgvLocal
             // 
             this.dgvLocal.BackgroundColor = System.Drawing.Color.DarkTurquoise;
@@ -93,33 +112,27 @@
             this.dgvLocal.Size = new System.Drawing.Size(629, 258);
             this.dgvLocal.TabIndex = 5;
             // 
-            // dgvColCodi
+            // txtDesc
             // 
-            this.dgvColCodi.HeaderText = "Codigo";
-            this.dgvColCodi.Name = "dgvColCodi";
-            this.dgvColCodi.Width = 160;
+            this.txtDesc.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.txtDesc.Location = new System.Drawing.Point(129, 38);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDesc.MaxLength = 50;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(234, 20);
+            this.txtDesc.TabIndex = 6;
             // 
-            // dgvColDesc
+            // btnSearch
             // 
-            this.dgvColDesc.HeaderText = "Descripcion";
-            this.dgvColDesc.Name = "dgvColDesc";
-            this.dgvColDesc.Width = 220;
-            // 
-            // dgvColAdress
-            // 
-            this.dgvColAdress.HeaderText = "Direccion";
-            this.dgvColAdress.Name = "dgvColAdress";
-            this.dgvColAdress.Width = 220;
-            // 
-            // cboLocal
-            // 
-            this.cboLocal.FormattingEnabled = true;
-            this.cboLocal.Location = new System.Drawing.Point(96, 38);
-            this.cboLocal.Name = "cboLocal";
-            this.cboLocal.Size = new System.Drawing.Size(234, 21);
-            this.cboLocal.TabIndex = 30;
-            this.cboLocal.Text = "--Seleccione--";
-            this.cboLocal.SelectedIndexChanged += new System.EventHandler(this.cboLocal_SelectedIndexChanged_1);
+            this.btnSearch.BackgroundImage = global::View.Properties.Resources.icono_buscar;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(377, 34);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 26);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ShopForm
             // 
@@ -127,7 +140,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(697, 415);
-            this.Controls.Add(this.cboLocal);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.dgvLocal);
             this.Controls.Add(this.btnModLocal);
             this.Controls.Add(this.btnAddLocal);
@@ -148,11 +162,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddLocal;
         private System.Windows.Forms.Button btnModLocal;
-        private System.Windows.Forms.DataGridView dgvLocal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCodi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAdress;
-        private System.Windows.Forms.ComboBox cboLocal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColDesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCodi;
+        private System.Windows.Forms.DataGridView dgvLocal;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

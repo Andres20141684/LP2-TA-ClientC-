@@ -36,12 +36,6 @@ namespace ShopsForm
                     shopsData[i].id.ToString(), shopsData[i].description, shopsData[i].address
                 });
             }
-            locales = new BindingList<premises>(serviceDA.queryAllPremises());
-            cboLocal.Items.Clear();
-            for (int i = 0; i < locales.Count; i++)
-            {
-                cboLocal.Items.Add("" + locales[i].description);
-            }
             Cursor.Current = Cursors.Arrow;
         }
         public void SetParent(View.MainWindow form)
@@ -107,20 +101,37 @@ namespace ShopsForm
 
         }
 
-        private void cboLocal_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            String desc = cboLocal.Text;
-            premises loc = new premises();
-            loc = serviceDA.queryPremisesByDescription(desc);
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDAA = new DBControllerWSClient();
+                premises local = serviceDAA.queryPremisesByDescription(txtDesc.Text);
 
-            dgvLocal.Rows.Clear();
+                if (local.address != null)
+                {
+                    Modificar_Local updateForm1 = new Modificar_Local();
+                    updateForm1.currentLocal = new premises();
 
-            dgvLocal.Rows.Add(new String[] {
-                ""+loc.id,loc.description,loc.address
-                });
 
-            Cursor.Current = Cursors.Arrow;
+                    updateForm1.currentLocal = local;
+                    updateForm1.SetParent(this);
+                    updateForm1.ShowDialog();
+                    updateDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("No existe el usuario con ese username");
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrió un problema");
+                updateDataGridView();
+            }
         }
     }
 }

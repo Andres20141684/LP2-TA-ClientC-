@@ -123,13 +123,14 @@ namespace ShopsForm
                 else
                 {
                     MessageBox.Show("No existe el usuario con ese username");
+                    updateDataGridView();
                 }
 
 
             }
             catch
             {
-                MessageBox.Show("Ocurrió un problema");
+                MessageBox.Show("No existe el usuario");
                 updateDataGridView();
             }
         }

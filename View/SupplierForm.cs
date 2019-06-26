@@ -95,12 +95,7 @@ namespace WindowsFormsApp1
         private void BtnSearchEmployee_Click(object sender, EventArgs e)
         {
 
-            if (txtRUC.Text == "")
-            {
-                MessageBox.Show("Ingrese un RUC válido");
-            }
-            else
-            {
+           
                 Cursor.Current = Cursors.WaitCursor;
                 //dgvSupplier.Rows.Clear();
                 serviceDAA = new DBControllerWSClient();
@@ -129,7 +124,7 @@ namespace WindowsFormsApp1
 
 
 
-            }
+            
         }
     }
 }

@@ -46,9 +46,7 @@ namespace View
                     else
                     {
                         MessageBox.Show("Usuario o contraseña incorrectos");
-                    }
-
-                   
+                    }                   
                 }
                 else
                 {

@@ -15,6 +15,7 @@ namespace View
     {
         private DBControllerWSClient serviceDA;
         private BindingList<purchase> purchases;
+        private DBControllerWSClient serviceDAA = new DBControllerWSClient();
         public HistoryPurchasesForm()
         {
             InitializeComponent();
@@ -70,7 +71,34 @@ namespace View
 
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
+            /*
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDAA = new DBControllerWSClient();
+                p = serviceDAA.queryProductBySKUCode(txtProduct.Text);
 
+                if (p.name != null)
+                {
+                    RefundForm updateForm1 = new RefundForm();
+                    updateForm1.currentProduct = new product();
+
+                    updateForm1.currentProduct = p;
+                    updateForm1.SetParent(this);
+                    updateForm1.ShowDialog();
+                    updateDataGridView();
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe el producto con ese elemento SKU");
+                    updateDataGridView();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No existe producto con ese elemento SKU no es correcta");
+            }*/
         }
     }
 }

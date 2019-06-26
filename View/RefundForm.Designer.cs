@@ -46,10 +46,10 @@
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRefundDetail)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -66,7 +66,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(546, 316);
+            this.groupBox1.Size = new System.Drawing.Size(546, 277);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Venta";
@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 284);
+            this.label2.Location = new System.Drawing.Point(385, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
@@ -89,17 +89,16 @@
             this.productId,
             this.productName,
             this.productPrice,
+            this.reason,
             this.quantity,
             this.pu,
-            this.subtotal,
-            this.reason});
+            this.subtotal});
             this.dgvRefundDetail.GridColor = System.Drawing.Color.Black;
             this.dgvRefundDetail.Location = new System.Drawing.Point(20, 18);
             this.dgvRefundDetail.Name = "dgvRefundDetail";
             this.dgvRefundDetail.RowHeadersWidth = 49;
-            this.dgvRefundDetail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvRefundDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRefundDetail.Size = new System.Drawing.Size(516, 245);
+            this.dgvRefundDetail.Size = new System.Drawing.Size(516, 212);
             this.dgvRefundDetail.TabIndex = 10;
             this.dgvRefundDetail.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRefundDetail_CellValueChanged);
             // 
@@ -107,7 +106,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(436, 281);
+            this.txtTotal.Location = new System.Drawing.Point(436, 249);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 12;
@@ -231,7 +230,7 @@
             // 
             this.SaveButton.BackColor = System.Drawing.Color.White;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(584, 370);
+            this.SaveButton.Location = new System.Drawing.Point(486, 441);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(65, 20);
             this.SaveButton.TabIndex = 33;
@@ -241,7 +240,6 @@
             // 
             // productId
             // 
-            this.productId.Frozen = true;
             this.productId.HeaderText = "Cód.";
             this.productId.MinimumWidth = 6;
             this.productId.Name = "productId";
@@ -250,25 +248,28 @@
             // 
             // productName
             // 
-            this.productName.Frozen = true;
             this.productName.HeaderText = "Nombre";
             this.productName.MinimumWidth = 6;
             this.productName.Name = "productName";
             this.productName.ReadOnly = true;
-            this.productName.Width = 250;
+            this.productName.Width = 300;
             // 
             // productPrice
             // 
-            this.productPrice.Frozen = true;
             this.productPrice.HeaderText = "Cantidad";
             this.productPrice.MinimumWidth = 6;
             this.productPrice.Name = "productPrice";
             this.productPrice.ReadOnly = true;
             this.productPrice.Width = 60;
             // 
+            // reason
+            // 
+            this.reason.HeaderText = "Razon";
+            this.reason.Name = "reason";
+            this.reason.Width = 150;
+            // 
             // quantity
             // 
-            this.quantity.Frozen = true;
             this.quantity.HeaderText = "Devueltos";
             this.quantity.MinimumWidth = 10;
             this.quantity.Name = "quantity";
@@ -276,7 +277,6 @@
             // 
             // pu
             // 
-            this.pu.Frozen = true;
             this.pu.HeaderText = "p.u.";
             this.pu.MinimumWidth = 6;
             this.pu.Name = "pu";
@@ -290,18 +290,12 @@
             this.subtotal.ReadOnly = true;
             this.subtotal.Width = 70;
             // 
-            // reason
-            // 
-            this.reason.HeaderText = "Razon";
-            this.reason.Name = "reason";
-            this.reason.Width = 150;
-            // 
             // RefundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.ClientSize = new System.Drawing.Size(563, 473);
+            this.ClientSize = new System.Drawing.Size(584, 473);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbGeneralInf);
             this.Controls.Add(this.SaveButton);
@@ -337,9 +331,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productId;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn pu;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reason;
     }
 }

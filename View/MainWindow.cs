@@ -132,6 +132,7 @@ namespace View
         {
             SaleForm saleForm = new SaleForm();
             saleForm.currentUser = currentUser;
+            saleForm.MdiParent = this;
             saleForm.Show();
         }
 
@@ -154,7 +155,7 @@ namespace View
             clientForm.SetParent(this);
             clientForm.MdiParent = this;
             //clientForm.ShowDialog();
-            clientForm.BringToFront();
+            //clientForm.BringToFront();
             clientForm.Show();
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

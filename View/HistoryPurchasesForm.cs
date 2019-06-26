@@ -16,6 +16,7 @@ namespace View
         private DBControllerWSClient serviceDA;
         private BindingList<purchase> purchases;
         private DBControllerWSClient serviceDAA = new DBControllerWSClient();
+        private sale sale = new sale();
         public HistoryPurchasesForm()
         {
             InitializeComponent();
@@ -72,32 +73,33 @@ namespace View
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
             /*
-            try
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
             {
                 Cursor.Current = Cursors.WaitCursor;
-                serviceDAA = new DBControllerWSClient();
-                p = serviceDAA.queryProductBySKUCode(txtProduct.Text);
-
-                if (p.name != null)
+                serviceDA = new DBControllerWSClient();
+                sale sale = (serviceDA.querySaleBySerialCode(txtSerialCode.Text));
+                Cursor.Current = Cursors.Arrow;
+                if (sale.totalSale != null)
                 {
-                    RefundForm updateForm1 = new RefundForm();
-                    updateForm1.currentProduct = new product();
-
-                    updateForm1.currentProduct = p;
-                    updateForm1.SetParent(this);
-                    updateForm1.ShowDialog();
+                    ModificarClienteForm modClient = new ModificarClienteForm();
+                    modClient.currentCustomer = new customer();
+                    serviceDA = new DBControllerWSClient();
+                    modClient.currentCustomer = cliente;
+                    modClient.SetParent(this);
+                    modClient.ShowDialog();
                     updateDataGridView();
+
 
                 }
                 else
                 {
-                    MessageBox.Show("No existe el producto con ese elemento SKU");
-                    updateDataGridView();
+                    MessageBox.Show("Cliente no encontrado");
                 }
-            }
-            catch
-            {
-                MessageBox.Show("No existe producto con ese elemento SKU no es correcta");
+
             }*/
         }
     }

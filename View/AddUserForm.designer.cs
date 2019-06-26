@@ -85,30 +85,30 @@
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(135, 19);
+            this.txtUserName.Location = new System.Drawing.Point(157, 19);
             this.txtUserName.MaxLength = 50;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(361, 20);
+            this.txtUserName.Size = new System.Drawing.Size(339, 20);
             this.txtUserName.TabIndex = 4;
             // 
             // txtUserPassword
             // 
             this.txtUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserPassword.Location = new System.Drawing.Point(135, 45);
-            this.txtUserPassword.MaxLength = 50;
+            this.txtUserPassword.Location = new System.Drawing.Point(157, 45);
+            this.txtUserPassword.MaxLength = 32;
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.PasswordChar = '*';
-            this.txtUserPassword.Size = new System.Drawing.Size(361, 20);
+            this.txtUserPassword.Size = new System.Drawing.Size(339, 20);
             this.txtUserPassword.TabIndex = 5;
             // 
             // dtpUserExpirationDate
             // 
             this.dtpUserExpirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpUserExpirationDate.Location = new System.Drawing.Point(135, 100);
+            this.dtpUserExpirationDate.Location = new System.Drawing.Point(157, 100);
             this.dtpUserExpirationDate.MaxDate = new System.DateTime(2200, 1, 1, 0, 0, 0, 0);
             this.dtpUserExpirationDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpUserExpirationDate.Name = "dtpUserExpirationDate";
-            this.dtpUserExpirationDate.Size = new System.Drawing.Size(361, 20);
+            this.dtpUserExpirationDate.Size = new System.Drawing.Size(339, 20);
             this.dtpUserExpirationDate.TabIndex = 7;
             this.dtpUserExpirationDate.Value = new System.DateTime(2019, 6, 24, 23, 59, 59, 0);
             // 
@@ -116,7 +116,7 @@
             // 
             this.btnSaveUser.BackColor = System.Drawing.Color.White;
             this.btnSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUser.Location = new System.Drawing.Point(460, 294);
+            this.btnSaveUser.Location = new System.Drawing.Point(460, 386);
             this.btnSaveUser.Name = "btnSaveUser";
             this.btnSaveUser.Size = new System.Drawing.Size(63, 23);
             this.btnSaveUser.TabIndex = 9;
@@ -140,7 +140,7 @@
             this.userGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userGroupBox.Location = new System.Drawing.Point(12, 122);
             this.userGroupBox.Name = "userGroupBox";
-            this.userGroupBox.Size = new System.Drawing.Size(511, 166);
+            this.userGroupBox.Size = new System.Drawing.Size(511, 258);
             this.userGroupBox.TabIndex = 10;
             this.userGroupBox.TabStop = false;
             this.userGroupBox.Text = "Datos generales";
@@ -148,11 +148,11 @@
             // txtPasswordConfirm
             // 
             this.txtPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordConfirm.Location = new System.Drawing.Point(135, 71);
-            this.txtPasswordConfirm.MaxLength = 50;
+            this.txtPasswordConfirm.Location = new System.Drawing.Point(157, 71);
+            this.txtPasswordConfirm.MaxLength = 32;
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.PasswordChar = '*';
-            this.txtPasswordConfirm.Size = new System.Drawing.Size(361, 20);
+            this.txtPasswordConfirm.Size = new System.Drawing.Size(339, 20);
             this.txtPasswordConfirm.TabIndex = 6;
             // 
             // label5
@@ -169,7 +169,7 @@
             this.cbActive.AutoSize = true;
             this.cbActive.Enabled = false;
             this.cbActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbActive.Location = new System.Drawing.Point(135, 137);
+            this.cbActive.Location = new System.Drawing.Point(157, 125);
             this.cbActive.Margin = new System.Windows.Forms.Padding(2);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(56, 17);
@@ -180,7 +180,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(15, 138);
+            this.lblState.Location = new System.Drawing.Point(15, 129);
             this.lblState.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(46, 13);
@@ -192,7 +192,7 @@
             this.pictureBox1.BackgroundImage = global::View.Properties.Resources.guardar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::View.Properties.Resources.guardar;
-            this.pictureBox1.Location = new System.Drawing.Point(429, 294);
+            this.pictureBox1.Location = new System.Drawing.Point(429, 386);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
@@ -240,7 +240,7 @@
             "Vendedor",
             "Supervisor",
             "Gerente"});
-            this.cboEmpUserType.Location = new System.Drawing.Point(135, 70);
+            this.cboEmpUserType.Location = new System.Drawing.Point(157, 70);
             this.cboEmpUserType.Name = "cboEmpUserType";
             this.cboEmpUserType.Size = new System.Drawing.Size(121, 21);
             this.cboEmpUserType.TabIndex = 3;
@@ -258,10 +258,10 @@
             // 
             this.txtEmpName.Enabled = false;
             this.txtEmpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpName.Location = new System.Drawing.Point(135, 45);
+            this.txtEmpName.Location = new System.Drawing.Point(157, 45);
             this.txtEmpName.MaxLength = 100;
             this.txtEmpName.Name = "txtEmpName";
-            this.txtEmpName.Size = new System.Drawing.Size(361, 20);
+            this.txtEmpName.Size = new System.Drawing.Size(339, 20);
             this.txtEmpName.TabIndex = 2;
             // 
             // label4
@@ -276,10 +276,10 @@
             // txtEmpDNI
             // 
             this.txtEmpDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpDNI.Location = new System.Drawing.Point(135, 19);
+            this.txtEmpDNI.Location = new System.Drawing.Point(157, 19);
             this.txtEmpDNI.MaxLength = 8;
             this.txtEmpDNI.Name = "txtEmpDNI";
-            this.txtEmpDNI.Size = new System.Drawing.Size(309, 20);
+            this.txtEmpDNI.Size = new System.Drawing.Size(287, 20);
             this.txtEmpDNI.TabIndex = 1;
             // 
             // label7
@@ -296,7 +296,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.ClientSize = new System.Drawing.Size(540, 324);
+            this.ClientSize = new System.Drawing.Size(540, 421);
             this.Controls.Add(this.empGroupBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSaveUser);

@@ -13,13 +13,12 @@ namespace User
     public partial class ModifyUserForm : Form
     {
         private DBControllerWSClient serviceDA;
-        public user usuario1;
+        //public user usuario1;
         UserForm refParent;
         public user currentUser;
         public ModifyUserForm(user u)
         {
             InitializeComponent();
-            txtUserName.Text = u.user1;
         }
 
         private void btnModifySearchUser_Click(object sender, EventArgs e)
@@ -41,18 +40,18 @@ namespace User
             else
             {
                 serviceDA = new DBControllerWSClient();
-                usuario1.password = txtModifyUserPassword.Text;
-                usuario1.expirationDate = (DateTime) dtpModifyUserExpirationDate.Value.Date;
-                usuario1.modificationDate = DateTime.Now;
-                usuario1.user1 = txtUserName.Text;
+                currentUser.password = txtModifyUserPassword.Text;
+                currentUser.expirationDate = (DateTime) dtpModifyUserExpirationDate.Value.Date;
+                currentUser.modificationDate = DateTime.Now;
+                currentUser.user1 = txtUserName.Text;
                 
                 //usuario1.employee.role = "Vendedor";
-                if (cbActive.Checked == true) usuario1.state = 1;
-                else usuario1.state = 0;
+                if (cbActive.Checked == true) currentUser.state = 1;
+                else currentUser.state = 0;
 
                 try
                 {
-                    int salio = serviceDA.updateUser(usuario1);
+                    int salio = serviceDA.updateUser(currentUser);
                     if (salio == 1)
                     {
                         MessageBox.Show("El usuario se modificó satisfactoriamente");
@@ -68,7 +67,12 @@ namespace User
         }
         private bool filledValues()
         {
-            if ( txtModifyUserPassword.Text != txtModifyConfirmPassword.Text)
+            if (txtModifyUserPassword.Text.Length < 8)
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres");
+                return false;
+            }
+            else if ( txtModifyUserPassword.Text != txtModifyConfirmPassword.Text)
             {
                 MessageBox.Show("La confirmación de contraseña no coincide");
                 return false;
@@ -83,7 +87,10 @@ namespace User
 
         private void ModifyUserForm_Load(object sender, EventArgs e)
         {
-
+            txtEmpDNI.Text = currentUser.employee.dni;
+            txtEmpName.Text = currentUser.employee.name;
+            cboEmpUserType.Text = currentUser.employee.role;
+            txtUserName.Text = currentUser.user1;
         }
     }
 }

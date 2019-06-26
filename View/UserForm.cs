@@ -46,8 +46,8 @@ namespace User
             if (i >= 0)
             {
                 ModifyUserForm modifyUserForm = new ModifyUserForm(users[i]);
-                modifyUserForm.usuario1 = new user();
-                modifyUserForm.usuario1 = users[i];
+                //modifyUserForm.usuario1 = new user();
+                modifyUserForm.currentUser = users[i];
                 modifyUserForm.SetParent(this);
                 modifyUserForm.ShowDialog();
             }
@@ -55,7 +55,6 @@ namespace User
             {
                 MessageBox.Show("Seleccione un usuario");
             }
-            
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -76,7 +75,6 @@ namespace User
                 });
             }
             Cursor.Current = Cursors.Arrow;
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -91,8 +89,6 @@ namespace User
                 {
                     ModifyUserForm updateForm1 = new ModifyUserForm(users[1]);
                     updateForm1.currentUser = new user();
-
-
                     updateForm1.currentUser = usuario;
                     updateForm1.SetParent(this);
                     updateForm1.ShowDialog();
@@ -102,17 +98,12 @@ namespace User
                 {
                     MessageBox.Show("No existe el usuario con ese username");
                 }
-
-                
             }
             catch
             {
                 MessageBox.Show("Ocurrió un problema");
                 updateDataGridView();
             }
-            
-
-
         }
     }
 }

@@ -19,8 +19,7 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
-            
-            
+            this.WindowState = FormWindowState.Maximized;           
             //Height = Screen.PrimaryScreen.Bounds.Height;
             //Width = Screen.PrimaryScreen.Bounds.Width;
         }
@@ -108,8 +107,6 @@ namespace View
             famProdForm.SetParent(this);
             famProdForm.MdiParent = this;
             famProdForm.Show();
-
-
         }
 
         private void ReportesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,8 +115,6 @@ namespace View
             repForm.SetParent(this);
             repForm.MdiParent = this;
             repForm.Show();
-
-
         }
 
         private void ProovedoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,10 +162,19 @@ namespace View
         
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            AuthenticationForm login = new AuthenticationForm(this);
-            login.ShowDialog();
-            //Application.Exit();
+            DialogResult result = MessageBox.Show("¿Seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                AuthenticationForm login = new AuthenticationForm(this);
+                login.ShowDialog();
+                //Application.Exit();
+            }
+            else
+            {
+                //nada
+            }
+
         }
 
         private void logOutTimer_Tick(object sender, EventArgs e)
@@ -178,7 +182,7 @@ namespace View
             logOutCounter--;
             if (logOutCounter == 0)
             {
-                Application.Exit();
+                this.cerrarSesiónToolStripMenuItem_Click(sender, e);
             }
         }
 

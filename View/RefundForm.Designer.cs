@@ -241,7 +241,6 @@
             // 
             // productId
             // 
-            this.productId.Frozen = true;
             this.productId.HeaderText = "Cód.";
             this.productId.MinimumWidth = 6;
             this.productId.Name = "productId";
@@ -250,7 +249,6 @@
             // 
             // productName
             // 
-            this.productName.Frozen = true;
             this.productName.HeaderText = "Nombre";
             this.productName.MinimumWidth = 6;
             this.productName.Name = "productName";
@@ -259,7 +257,6 @@
             // 
             // productPrice
             // 
-            this.productPrice.Frozen = true;
             this.productPrice.HeaderText = "Cantidad";
             this.productPrice.MinimumWidth = 6;
             this.productPrice.Name = "productPrice";
@@ -268,7 +265,6 @@
             // 
             // quantity
             // 
-            this.quantity.Frozen = true;
             this.quantity.HeaderText = "Devueltos";
             this.quantity.MinimumWidth = 10;
             this.quantity.Name = "quantity";
@@ -276,7 +272,6 @@
             // 
             // pu
             // 
-            this.pu.Frozen = true;
             this.pu.HeaderText = "p.u.";
             this.pu.MinimumWidth = 6;
             this.pu.Name = "pu";

@@ -109,7 +109,7 @@
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(151, 76);
             this.txtStock.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStock.MaxLength = 10;
+            this.txtStock.MaxLength = 11;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(108, 20);
             this.txtStock.TabIndex = 11;
@@ -239,7 +239,7 @@
             this.txtCareDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCareDescription.Location = new System.Drawing.Point(151, 162);
             this.txtCareDescription.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCareDescription.MaxLength = 500;
+            this.txtCareDescription.MaxLength = 200;
             this.txtCareDescription.Multiline = true;
             this.txtCareDescription.Name = "txtCareDescription";
             this.txtCareDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -251,7 +251,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(151, 77);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescription.MaxLength = 500;
+            this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -263,7 +263,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(151, 49);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtName.MaxLength = 100;
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(108, 20);
             this.txtName.TabIndex = 3;
@@ -295,7 +295,7 @@
             this.txtSKUCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSKUCode.Location = new System.Drawing.Point(151, 24);
             this.txtSKUCode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSKUCode.MaxLength = 8;
+            this.txtSKUCode.MaxLength = 10;
             this.txtSKUCode.Name = "txtSKUCode";
             this.txtSKUCode.Size = new System.Drawing.Size(108, 20);
             this.txtSKUCode.TabIndex = 1;

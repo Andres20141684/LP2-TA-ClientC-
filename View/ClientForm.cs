@@ -102,15 +102,26 @@ namespace SalesClient
             else
             {
                 Cursor.Current = Cursors.WaitCursor;
-                dgvClients.Rows.Clear();
+                //dgvClients.Rows.Clear();
                 serviceDA = new DBControllerWSClient();
                 cliente = (serviceDA.queryByIdCustomer(txtDniRuc.Text));
                 Cursor.Current = Cursors.Arrow;
                 if (cliente.id != null)
                 {
-                    dgvClients.Rows.Add(new String[] {
-                    cliente.id, cliente.descriptionCustomer,cliente.email,cliente.phone
-                    });
+                    // dgvClients.Rows.Add(new String[] {
+                    // cliente.id, cliente.descriptionCustomer,cliente.email,cliente.phone
+                    // });
+                    ModificarClienteForm modClient = new ModificarClienteForm();
+                    modClient.currentCustomer = new customer();
+                    //customer e1 = new customer();
+                    serviceDA = new DBControllerWSClient();
+                    //e1 = serviceDA.queryByIdCustomer(dgvClients.Rows[i].Cells[0].Value.ToString());
+                    modClient.currentCustomer = cliente;
+                    modClient.SetParent(this);
+                    modClient.ShowDialog();
+                    updateDataGridView();
+
+
                 }
                 else
                 {

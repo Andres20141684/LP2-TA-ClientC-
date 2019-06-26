@@ -258,6 +258,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sistema de Bodega MATE";
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainWindow_MouseMove);

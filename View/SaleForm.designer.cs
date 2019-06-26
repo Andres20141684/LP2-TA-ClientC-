@@ -57,6 +57,7 @@
             this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -194,7 +195,8 @@
             this.productName,
             this.productPrice,
             this.quantity,
-            this.subTotal});
+            this.subTotal,
+            this.Stock});
             this.dgvSaleDetails.GridColor = System.Drawing.Color.Black;
             this.dgvSaleDetails.Location = new System.Drawing.Point(17, 48);
             this.dgvSaleDetails.Name = "dgvSaleDetails";
@@ -377,6 +379,11 @@
             this.subTotal.ReadOnly = true;
             this.subTotal.Width = 50;
             // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            // 
             // SaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,5 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
     }
 }

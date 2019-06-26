@@ -21,7 +21,6 @@ namespace entregable
         public ModifyEmployeeForm()
         {
             InitializeComponent();
-            
         }
 
         public void SetParent(EmployeeForm form)
@@ -47,13 +46,13 @@ namespace entregable
 
         private void ModifyEmployeeForm_Load(object sender, EventArgs e)
         {
-            setEmployeeInformation();
             serviceDA = new DBControllerWSClient();
             areas = new BindingList<area>(serviceDA.queryAllArea());
             for (int i = 0; i < areas.Count; i++)
             {
                 cbArea.Items.Add(areas[i].description);
             }
+            setEmployeeInformation();
         }
 
         private void btnSaveEmployee_Click(object sender, EventArgs e)
@@ -78,7 +77,6 @@ namespace entregable
                 //emp.area = cbArea.Text
                 currentEmployee.role = cbRole.Text;
                 int salio = serviceDA.updateEmployee(currentEmployee);
-
                 Cursor.Current = Cursors.Arrow;
                 if (salio == 1)
                 {

@@ -98,10 +98,6 @@ namespace User
                 MessageBox.Show("Ingrese una fecha válida");
                 return false;
             }
-            //Falta validar que las dos contraseñas coincidan. Por verificar si funciona
-            //if (txtUserPassword.Text != textBox1.Text)
-            //    return false;
-
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new DBControllerWSClient();
             user c = serviceDA.queryUserByUserName(txtUserName.Text);

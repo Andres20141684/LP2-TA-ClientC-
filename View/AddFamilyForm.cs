@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -78,24 +79,17 @@ namespace Producto
         }
         private bool filledValues()
         {
-            if (txtFamilyCode.Text == "")
+            if (txtName.Text.Length<10 || !Regex.Match(txtName.Text,@"[a-zA-Z]").Success)
             {
-                MessageBox.Show("Complete el código de la familia");
+                MessageBox.Show("Ingrese un nombre de familia válido (10 caracteres )");
                 return false;
             }
-            else if (txtName.Text == "")
+            else if (txtDescription.Text.Length < 20)
             {
-                MessageBox.Show("Complete el nombre de la familia");
-                return false;
-            }
-            else if (txtDescription.Text == "")
-            {
-                MessageBox.Show("Complete la descripción de la familia");
+                MessageBox.Show("Ingrese una descripción válida (20 caracteres)");
                 return false;
             }
             else return true;
-            
-
         }
     }
 }

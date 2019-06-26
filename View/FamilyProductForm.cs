@@ -63,7 +63,6 @@ namespace Producto
             AddFamilyForm addFamily = new AddFamilyForm();
             addFamily.ShowDialog();
             updateDataGridView();
-
         }
 
         private void btnUpdateFamily_Click(object sender, EventArgs e)
@@ -132,19 +131,13 @@ namespace Producto
                     updateFamily.SetParent(this);
                     updateFamily.ShowDialog();
                     updateDataGridView();
-
-
-
                 }
                 else
                 {
                     MessageBox.Show("Familia de Producto no Encontrada");
                 }
-                
-
                 Cursor.Current = Cursors.Arrow;
             }
-            
         }
         private bool filledValues()
         {

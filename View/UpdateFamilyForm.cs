@@ -43,13 +43,21 @@ namespace Producto
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            int result;
             serviceDAA = new DBControllerWSClient();
             currentFamily.idFamily = txtFamilyCode.Text;
             currentFamily.name = txtName.Text;
             currentFamily.description = txtDescription.Text;
             currentFamily.state = cbActive.Checked ? 1 : 0;
-            serviceDAA.updateFamily(currentFamily);
-            MessageBox.Show("La familia se modificó satisfactoriamente");
+            result = serviceDAA.updateFamily(currentFamily);
+            if (result == 1)
+            {
+                MessageBox.Show("La familia se modificó satisfactoriamente");
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al modificar la familia");
+            }
             this.Close();
 
         }

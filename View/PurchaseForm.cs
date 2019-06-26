@@ -147,6 +147,8 @@ namespace View
 
         private void PurchaseForm_Load(object sender, EventArgs e)
         {
+            txtIdProv.Text = "Ingrese ID Proovedor";
+            txtIdProv.ForeColor = Color.Gray;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
             emp = serviceDA.queryEmployeeByUsername(currentUser.user1);
@@ -177,6 +179,38 @@ namespace View
                     MessageBox.Show("Ingrese un proveedor existente");
                 }
 
+            }
+        }
+
+        private void txtSerialCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdProv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdProv_Enter(object sender, EventArgs e)
+        {
+            txtIdProv.Text = "";
+            txtIdProv.ForeColor = Color.Black;
+        }
+        private void dgvPurchaseDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPurchaseDetails.Columns[e.ColumnIndex].Name == "quantity")
+            {
+                if (dgvPurchaseDetails.CurrentCell != null &&
+                    dgvPurchaseDetails.CurrentCell.Value != null &&
+                    dgvPurchaseDetails.CurrentCell.Value.ToString().Trim() != "")
+                {
+                    dgvPurchaseDetails.Rows[e.RowIndex].Cells[4].Value =
+                        Int32.Parse(dgvPurchaseDetails.CurrentCell.Value.ToString()) *
+                        Double.Parse(dgvPurchaseDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+                    RefreshTotal();
+                }
             }
         }
     }

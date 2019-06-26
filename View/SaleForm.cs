@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         //public static int numero_estatico = 0;
         private BindingList<sale> sales;
         public View.MateWSLocal.user currentUser;
-        public int _stock;
+        public BindingList<int> lista_stock;
         int type;
         private DBControllerWSClient serviceDA;
         public int Type { get => type; set => type = value; }
@@ -31,6 +31,9 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            txtDniRuc.Text = "Ingrese DNI o RUC";
+            txtDniRuc.ForeColor = Color.Gray;
+
             Cursor.Current = Cursors.WaitCursor;
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             employee emp = new employee();
@@ -214,6 +217,9 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
+        /*
         private void dgvSaleDetails_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             if (_stock < int.Parse(dgvSaleDetails.Rows[0].Cells[3].Value.ToString()))
@@ -238,7 +244,38 @@ namespace WindowsFormsApp1
                 salelanes[i] = salelane;
 
             }
-             */
+             
+        }*/
+
+        private void dgvSaleDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSaleDetails.Columns[e.ColumnIndex].Name == "quantity")
+            {
+                if (dgvSaleDetails.CurrentCell != null &&
+                    dgvSaleDetails.CurrentCell.Value != null &&
+                    dgvSaleDetails.CurrentCell.Value.ToString().Trim() != "")
+                {
+                    dgvSaleDetails.Rows[e.RowIndex].Cells[4].Value =
+                        Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) *
+                        Double.Parse(dgvSaleDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+                    RefreshTotal();
+                }
+            }
+        }
+
+        private void dgvSaleDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                MessageBox.Show("Hola");
+            }
+        }
+        private void txtDniRuc_Enter(object sender, EventArgs e)
+        {
+            txtDniRuc.Text = "";
+            txtDniRuc.ForeColor = Color.Black;
+
         }
     }
 }

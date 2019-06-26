@@ -129,7 +129,7 @@ namespace ShopsForm
             }
             catch
             {
-                MessageBox.Show("Ocurrió un problema");
+                MessageBox.Show("No existe el usuario");
                 updateDataGridView();
             }
         }

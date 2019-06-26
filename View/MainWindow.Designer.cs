@@ -198,7 +198,6 @@
             this.lblNameUser.TabIndex = 9;
             this.lblNameUser.Text = "Nombre de Usuario";
             this.lblNameUser.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblNameUser.Click += new System.EventHandler(this.lblNameUser_Click);
             // 
             // pictureBox1
             // 
@@ -219,7 +218,6 @@
             this.lbTesto.Name = "lbTesto";
             this.lbTesto.Size = new System.Drawing.Size(0, 13);
             this.lbTesto.TabIndex = 11;
-            this.lbTesto.Click += new System.EventHandler(this.lbTesto_Click);
             // 
             // label1
             // 

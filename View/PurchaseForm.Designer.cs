@@ -55,8 +55,11 @@
             this.txtSerialCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+
+
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseDetails)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gbGeneralInf.SuspendLayout();
@@ -124,6 +127,7 @@
             this.dgvPurchaseDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPurchaseDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvPurchaseDetails.TabIndex = 24;
+            this.dgvPurchaseDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPurchaseDetails_CellValueChanged);
             // 
             // productId
             // 
@@ -212,6 +216,8 @@
             this.txtIdProv.Size = new System.Drawing.Size(127, 20);
             this.txtIdProv.TabIndex = 20;
             this.txtIdProv.Text = "Ingrese ID proveedor";
+            this.txtIdProv.TextChanged += new System.EventHandler(this.txtIdProv_TextChanged);
+            this.txtIdProv.Enter += new System.EventHandler(this.txtIdProv_Enter);
             // 
             // ClientLabel
             // 
@@ -342,6 +348,7 @@
             this.txtSerialCode.Name = "txtSerialCode";
             this.txtSerialCode.Size = new System.Drawing.Size(100, 20);
             this.txtSerialCode.TabIndex = 25;
+            this.txtSerialCode.TextChanged += new System.EventHandler(this.txtSerialCode_TextChanged);
             // 
             // label1
             // 
@@ -369,6 +376,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Venta";
             // 
+
             // historialToolStripMenuItem
             // 
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
@@ -384,6 +392,7 @@
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
+
             // PurchaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

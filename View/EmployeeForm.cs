@@ -150,7 +150,7 @@ namespace entregable
             for (int i = 0; i < employees.Count; i++)
             {
                 dgvEmployee.Rows.Add(new String[] {
-                ""+employees[i].dni, employees[i].name,employees[i].lastName,employees[i].secondLastName,""+employees[i].phone, employees[i].email,employees[i].role
+                ""+employees[i].dni, employees[i].name,employees[i].lastName,employees[i].phone, employees[i].email,employees[i].role
                 });
             }
             Cursor.Current = Cursors.Arrow;

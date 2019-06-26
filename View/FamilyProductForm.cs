@@ -74,6 +74,7 @@ namespace Producto
                 UpdateFamilyForm updateFamily = new UpdateFamilyForm();
                 updateFamily.currentFamily = new family();
                 family e1 = new family();
+                serviceDAA = new DBControllerWSClient();
                 e1 = serviceDAA.queryFamilyByCode(dgvFamilies.Rows[i].Cells[0].Value.ToString());
                 updateFamily.currentFamily = e1;
                 updateFamily.ShowDialog();

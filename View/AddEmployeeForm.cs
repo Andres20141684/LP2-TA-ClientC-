@@ -132,7 +132,16 @@ namespace entregable
                 MessageBox.Show("Ingrese el cargo del empleado");
                 return false;
             }
-            
+
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            employee c = serviceDA.queryEmployeeByDNI(txtEmployeeDNI.Text);
+            Cursor.Current = Cursors.Arrow;
+            if (c.email != null)
+            {
+                MessageBox.Show("Ya existe un empleado con ese DNI");
+                return false;
+            }
 
             return true;
         }

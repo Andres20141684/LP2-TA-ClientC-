@@ -112,6 +112,17 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Complete el término de venta del proveedor");
                 return false;
             }
+
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            supplier c = serviceDA.querySupplierByCode(txtRuc.Text);
+            Cursor.Current = Cursors.Arrow;
+            if (c.address != null)
+            {
+                MessageBox.Show("Ya existe un proveedor con ese RUC");
+                return false;
+            }
+
             return true;
 
         }

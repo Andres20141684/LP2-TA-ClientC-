@@ -41,11 +41,6 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cbMetodoPago = new System.Windows.Forms.ComboBox();
             this.dgvSaleDetails = new System.Windows.Forms.DataGridView();
-            this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddProductSale = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
@@ -57,6 +52,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaleDetails)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -100,24 +100,10 @@
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.archivoToolStripMenuItem.Text = "Ventas";
             // 
-            // modificarToolStripMenuItem
-            // 
-            /*this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);*/
-            // 
-            // devolucionToolStripMenuItem
-            // 
-            /*this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
-            this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.devolucionToolStripMenuItem.Text = "Devolucion";
-            this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);*/
-            // 
             // historialToolStripMenuItem
             // 
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
@@ -216,52 +202,7 @@
             this.dgvSaleDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSaleDetails.Size = new System.Drawing.Size(496, 164);
             this.dgvSaleDetails.TabIndex = 10;
-            this.dgvSaleDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetails_CellContentClick);
             this.dgvSaleDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaleDetails_CellValueChanged);
-            // 
-            // productId
-            // 
-            this.productId.Frozen = true;
-            this.productId.HeaderText = "Cód.";
-            this.productId.MinimumWidth = 6;
-            this.productId.Name = "productId";
-            this.productId.ReadOnly = true;
-            this.productId.Width = 30;
-            // 
-            // productName
-            // 
-            this.productName.Frozen = true;
-            this.productName.HeaderText = "Nombre";
-            this.productName.MinimumWidth = 6;
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            this.productName.Width = 300;
-            // 
-            // productPrice
-            // 
-            this.productPrice.Frozen = true;
-            this.productPrice.HeaderText = "P.U.";
-            this.productPrice.MinimumWidth = 6;
-            this.productPrice.Name = "productPrice";
-            this.productPrice.ReadOnly = true;
-            this.productPrice.Width = 50;
-            // 
-            // quantity
-            // 
-            this.quantity.Frozen = true;
-            this.quantity.HeaderText = "Cantidad";
-            this.quantity.MinimumWidth = 6;
-            this.quantity.Name = "quantity";
-            this.quantity.Width = 30;
-            // 
-            // subTotal
-            // 
-            this.subTotal.Frozen = true;
-            this.subTotal.HeaderText = "Subtotal";
-            this.subTotal.MinimumWidth = 6;
-            this.subTotal.Name = "subTotal";
-            this.subTotal.ReadOnly = true;
-            this.subTotal.Width = 50;
             // 
             // AddProductSale
             // 
@@ -397,6 +338,45 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Total:";
             // 
+            // productId
+            // 
+            this.productId.HeaderText = "Cód.";
+            this.productId.MinimumWidth = 6;
+            this.productId.Name = "productId";
+            this.productId.ReadOnly = true;
+            this.productId.Width = 30;
+            // 
+            // productName
+            // 
+            this.productName.HeaderText = "Nombre";
+            this.productName.MinimumWidth = 6;
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            this.productName.Width = 300;
+            // 
+            // productPrice
+            // 
+            this.productPrice.HeaderText = "P.U.";
+            this.productPrice.MinimumWidth = 6;
+            this.productPrice.Name = "productPrice";
+            this.productPrice.ReadOnly = true;
+            this.productPrice.Width = 50;
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "Cantidad";
+            this.quantity.MinimumWidth = 6;
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 30;
+            // 
+            // subTotal
+            // 
+            this.subTotal.HeaderText = "Subtotal";
+            this.subTotal.MinimumWidth = 6;
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            this.subTotal.Width = 50;
+            // 
             // SaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,11 +420,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cbMetodoPago;
         private System.Windows.Forms.DataGridView dgvSaleDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.Button AddProductSale;
         private System.Windows.Forms.TextBox txtTotal;
         public System.Windows.Forms.Button SaveButton;
@@ -457,5 +432,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
     }
 }

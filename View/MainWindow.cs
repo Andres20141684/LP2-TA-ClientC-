@@ -15,6 +15,7 @@ namespace View
     {
         public MateWSLocal.user currentUser;
         private DBControllerWSClient serviceDA;
+        private int logOutCounter;
         public MainWindow()
         {
             InitializeComponent();
@@ -175,5 +176,18 @@ namespace View
             Application.Exit();
         }
 
+        private void logOutTimer_Tick(object sender, EventArgs e)
+        {
+            logOutCounter--;
+            if (logOutCounter == 0)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void MainWindow_MouseMove(object sender, MouseEventArgs e)
+        {
+            logOutCounter = 36000;
+        }
     } 
 }

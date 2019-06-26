@@ -37,8 +37,9 @@ namespace SalesClient
             AgregarClienteForm addClient = new AgregarClienteForm();
 
             //addClient.SetParent(this);
-
+            //addClient.MdiParent = refParent;
             addClient.ShowDialog();
+            //addClient.Show();
             updateDataGridView();
         }
 

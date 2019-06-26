@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             
+            
             //Height = Screen.PrimaryScreen.Bounds.Height;
             //Width = Screen.PrimaryScreen.Bounds.Width;
         }
@@ -33,6 +34,7 @@ namespace View
         {
             PurchaseForm purchaseForm = new PurchaseForm();
             purchaseForm.currentUser = currentUser;
+            purchaseForm.MdiParent = this;
             purchaseForm.Show();
             
         }

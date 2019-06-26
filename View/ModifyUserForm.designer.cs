@@ -34,11 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtModifyConfirmPassword = new System.Windows.Forms.TextBox();
+            this.modifyConfirmLabel = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lblState = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.modifyConfirmLabel = new System.Windows.Forms.Label();
-            this.txtModifyConfirmPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +68,7 @@
             // txtModifyUserPassword
             // 
             this.txtModifyUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModifyUserPassword.Location = new System.Drawing.Point(140, 24);
+            this.txtModifyUserPassword.Location = new System.Drawing.Point(144, 67);
             this.txtModifyUserPassword.MaxLength = 50;
             this.txtModifyUserPassword.Name = "txtModifyUserPassword";
             this.txtModifyUserPassword.PasswordChar = '*';
@@ -87,7 +89,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 36);
+            this.label2.Location = new System.Drawing.Point(20, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 11;
@@ -96,6 +98,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtUserName);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtModifyConfirmPassword);
             this.groupBox1.Controls.Add(this.modifyConfirmLabel);
             this.groupBox1.Controls.Add(this.cbActive);
@@ -110,6 +115,27 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
+            // 
+            // txtModifyConfirmPassword
+            // 
+            this.txtModifyConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModifyConfirmPassword.Location = new System.Drawing.Point(144, 109);
+            this.txtModifyConfirmPassword.MaxLength = 50;
+            this.txtModifyConfirmPassword.Name = "txtModifyConfirmPassword";
+            this.txtModifyConfirmPassword.PasswordChar = '*';
+            this.txtModifyConfirmPassword.Size = new System.Drawing.Size(357, 20);
+            this.txtModifyConfirmPassword.TabIndex = 28;
+            // 
+            // modifyConfirmLabel
+            // 
+            this.modifyConfirmLabel.AutoSize = true;
+            this.modifyConfirmLabel.BackColor = System.Drawing.Color.White;
+            this.modifyConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyConfirmLabel.Location = new System.Drawing.Point(6, 112);
+            this.modifyConfirmLabel.Name = "modifyConfirmLabel";
+            this.modifyConfirmLabel.Size = new System.Drawing.Size(132, 13);
+            this.modifyConfirmLabel.TabIndex = 27;
+            this.modifyConfirmLabel.Text = "Confirmar Contraseña:";
             // 
             // cbActive
             // 
@@ -147,26 +173,23 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
-            // modifyConfirmLabel
+            // txtUserName
             // 
-            this.modifyConfirmLabel.AutoSize = true;
-            this.modifyConfirmLabel.BackColor = System.Drawing.Color.White;
-            this.modifyConfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyConfirmLabel.Location = new System.Drawing.Point(11, 57);
-            this.modifyConfirmLabel.Name = "modifyConfirmLabel";
-            this.modifyConfirmLabel.Size = new System.Drawing.Size(132, 13);
-            this.modifyConfirmLabel.TabIndex = 27;
-            this.modifyConfirmLabel.Text = "Confirmar Contraseña:";
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(144, 27);
+            this.txtUserName.MaxLength = 50;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(357, 20);
+            this.txtUserName.TabIndex = 30;
             // 
-            // txtModifyConfirmPassword
+            // label1
             // 
-            this.txtModifyConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModifyConfirmPassword.Location = new System.Drawing.Point(140, 57);
-            this.txtModifyConfirmPassword.MaxLength = 50;
-            this.txtModifyConfirmPassword.Name = "txtModifyConfirmPassword";
-            this.txtModifyConfirmPassword.PasswordChar = '*';
-            this.txtModifyConfirmPassword.Size = new System.Drawing.Size(357, 20);
-            this.txtModifyConfirmPassword.TabIndex = 28;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Usuario:";
             // 
             // ModifyUserForm
             // 
@@ -176,7 +199,6 @@
             this.ClientSize = new System.Drawing.Size(540, 421);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnModifySaveUser);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -187,7 +209,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -204,5 +225,7 @@
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.TextBox txtModifyConfirmPassword;
         private System.Windows.Forms.Label modifyConfirmLabel;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label label1;
     }
 }

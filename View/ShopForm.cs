@@ -122,7 +122,7 @@ namespace ShopsForm
                 }
                 else
                 {
-                    MessageBox.Show("No existe el usuario con ese username");
+                    MessageBox.Show("No existe un local con ese nombre");
                 }
 
 

@@ -45,7 +45,7 @@ namespace User
             int i = dgvUser.CurrentCell.RowIndex;
             if (i >= 0)
             {
-                ModifyUserForm modifyUserForm = new ModifyUserForm();
+                ModifyUserForm modifyUserForm = new ModifyUserForm(users[i]);
                 modifyUserForm.usuario1 = new user();
                 modifyUserForm.usuario1 = users[i];
                 modifyUserForm.SetParent(this);
@@ -89,7 +89,7 @@ namespace User
 
                 if (usuario.password != null)
                 {
-                    ModifyUserForm updateForm1 = new ModifyUserForm();
+                    ModifyUserForm updateForm1 = new ModifyUserForm(users[1]);
                     updateForm1.currentUser = new user();
 
 

@@ -16,9 +16,10 @@ namespace User
         public user usuario1;
         UserForm refParent;
         public user currentUser;
-        public ModifyUserForm()
+        public ModifyUserForm(user u)
         {
             InitializeComponent();
+            txtUserName.Text = u.user1;
         }
 
         private void btnModifySearchUser_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace User
             {
                 serviceDA = new DBControllerWSClient();
                 usuario1.password = txtModifyUserPassword.Text;
-                usuario1.expirationDate = dtpModifyUserExpirationDate.Value.Date;
+                usuario1.expirationDate = (DateTime) dtpModifyUserExpirationDate.Value.Date;
                 usuario1.modificationDate = DateTime.Now;
                 if (cbActive.Checked == true) usuario1.state = 1;
                 else usuario1.state = 0;

@@ -103,24 +103,28 @@ namespace Producto
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                dgvProducts.Rows.Clear();
-                
-                p = new product();
+                serviceDAA = new DBControllerWSClient();
                 p = serviceDAA.queryProductBySKUCode(txtProduct.Text);
 
-                dgvProducts.Rows.Add(new String[] {
-                ""+p.SKUcode, p.name,p.brand.name,p.family.name,""+p.stock,"" + p.availability.ToString()
-                });
+                if (p.name != null)
+                {
+                    UpdateProductForm updateForm1 = new UpdateProductForm();
+                    updateForm1.currentProduct = new product();
 
-                Cursor.Current = Cursors.Arrow;
+                    updateForm1.currentProduct = p;
+                    updateForm1.SetParent(this);
+                    updateForm1.ShowDialog();
+                    updateDataGridView();
 
-                
-                //Selecciona la fila del dgv donde se encuentra el producto
+                }
+                else
+                {
+                    MessageBox.Show("No existe el producto");
+                }
             }
             catch
             {
                 MessageBox.Show("No existe producto con ese elemento SKU no es correcta");
-                updateDataGridView();
             }
 
         }

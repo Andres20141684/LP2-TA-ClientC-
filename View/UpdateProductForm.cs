@@ -13,6 +13,7 @@ namespace Producto
 {
     public partial class UpdateProductForm : Form
     {
+        FrmProduct refParent;
         private DBControllerWSClient serviceDA;
         private DBControllerWSClient serviceDAA;
         public product currentProduct;
@@ -24,6 +25,13 @@ namespace Producto
         {
             InitializeComponent();
         }
+
+        public void SetParent(FrmProduct form)
+        {
+            refParent = form;
+        }
+
+
 
         private void UpdateProductForm_Shown(object sender, EventArgs e)
         {

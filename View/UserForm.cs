@@ -72,7 +72,7 @@ namespace User
             for (int i = 0; i < users.Count; i++)
             {
                 dgvUser.Rows.Add(new String[] {
-                ""+users[i].id, users[i].user1 ,users[i].expirationDate.ToString()
+                users[i].user1 ,users[i].expirationDate.ToString()
                 });
             }
             Cursor.Current = Cursors.Arrow;
@@ -81,16 +81,38 @@ namespace User
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvUser.Rows.Clear();
-            serviceDAA = new DBControllerWSClient();
-            usuario = (serviceDAA.queryUserByUserName(txtUsername.Text));
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDAA = new DBControllerWSClient();
+                usuario = serviceDAA.queryUserByUserName(txtUsername.Text);
 
-            dgvUser.Rows.Add(new String[] {
-                ""+usuario.id, ""+usuario.user1, ""+usuario.expirationDate
-                });
+                if (usuario.password != null)
+                {
+                    ModifyUserForm updateForm1 = new ModifyUserForm();
+                    updateForm1.currentUser = new user();
 
-            Cursor.Current = Cursors.Arrow;
+
+                    updateForm1.currentUser = usuario;
+                    updateForm1.SetParent(this);
+                    updateForm1.ShowDialog();
+                    updateDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("No existe el usuario con ese username");
+                }
+
+                
+            }
+            catch
+            {
+                MessageBox.Show("Ocurrió un problema");
+                updateDataGridView();
+            }
+            
+
+
         }
     }
 }

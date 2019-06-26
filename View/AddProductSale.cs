@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             dgvProducts.Rows.Add(new String[] {
                 ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
-            parent._stock = detalleProducto.quantity;
+            //parent._stock = detalleProducto.quantity;
 
             Cursor.Current = Cursors.Arrow;
             /*

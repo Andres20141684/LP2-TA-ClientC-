@@ -32,7 +32,7 @@ namespace View
             txtDniRuc.Text = currentSale.customer.idCustomer.ToString();
             txtDescripcion.Text = currentSale.customer.descriptionCustomer;
             foreach (saleLane s in currentSale.saleLanes){
-                dgvRefundDetail.Rows.Add(new String[] { s.product.id.ToString(), s.product.name, s.quantity.ToString(), "0", s.subtotal.ToString() });
+                dgvRefundDetail.Rows.Add(new String[] { s.product.id.ToString(), s.product.name, s.quantity.ToString(), "0", s.product.salePrice.ToString() });
             }
         }
     }

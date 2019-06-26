@@ -47,7 +47,8 @@
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRefundDetail)).BeginInit();
             this.gbGeneralInf.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(482, 185);
+            this.label2.Location = new System.Drawing.Point(471, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 27;
@@ -88,7 +89,8 @@
             this.productName,
             this.productPrice,
             this.quantity,
-            this.subTotal});
+            this.pu,
+            this.subtotal});
             this.dgvRefundDetail.GridColor = System.Drawing.Color.Black;
             this.dgvRefundDetail.Location = new System.Drawing.Point(20, 18);
             this.dgvRefundDetail.Name = "dgvRefundDetail";
@@ -101,7 +103,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(530, 188);
+            this.txtTotal.Location = new System.Drawing.Point(522, 188);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 12;
@@ -248,7 +250,7 @@
             this.productName.MinimumWidth = 6;
             this.productName.Name = "productName";
             this.productName.ReadOnly = true;
-            this.productName.Width = 265;
+            this.productName.Width = 250;
             // 
             // productPrice
             // 
@@ -257,7 +259,7 @@
             this.productPrice.MinimumWidth = 6;
             this.productPrice.Name = "productPrice";
             this.productPrice.ReadOnly = true;
-            this.productPrice.Width = 70;
+            this.productPrice.Width = 60;
             // 
             // quantity
             // 
@@ -265,15 +267,23 @@
             this.quantity.HeaderText = "Devueltos";
             this.quantity.MinimumWidth = 10;
             this.quantity.Name = "quantity";
+            this.quantity.Width = 60;
             // 
-            // subTotal
+            // pu
             // 
-            this.subTotal.Frozen = true;
-            this.subTotal.HeaderText = "Subtotal";
-            this.subTotal.MinimumWidth = 6;
-            this.subTotal.Name = "subTotal";
-            this.subTotal.ReadOnly = true;
-            this.subTotal.Width = 50;
+            this.pu.Frozen = true;
+            this.pu.HeaderText = "p.u.";
+            this.pu.MinimumWidth = 6;
+            this.pu.Name = "pu";
+            this.pu.ReadOnly = true;
+            this.pu.Width = 50;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            this.subtotal.Width = 70;
             // 
             // RefundForm
             // 
@@ -317,6 +327,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
     }
 }

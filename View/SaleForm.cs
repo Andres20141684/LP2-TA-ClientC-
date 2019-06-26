@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         //public static int numero_estatico = 0;
         private BindingList<sale> sales;
         public View.MateWSLocal.user currentUser;
-        public int _stock;
+        public BindingList<int> lista_stock;
         int type;
         private DBControllerWSClient serviceDA;
         public int Type { get => type; set => type = value; }

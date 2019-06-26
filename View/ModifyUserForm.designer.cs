@@ -71,7 +71,7 @@
             this.dtpModifyUserExpirationDate.Location = new System.Drawing.Point(158, 102);
             this.dtpModifyUserExpirationDate.Name = "dtpModifyUserExpirationDate";
             this.dtpModifyUserExpirationDate.Size = new System.Drawing.Size(339, 20);
-            this.dtpModifyUserExpirationDate.TabIndex = 16;
+            this.dtpModifyUserExpirationDate.TabIndex = 7;
             // 
             // txtModifyUserPassword
             // 
@@ -81,7 +81,7 @@
             this.txtModifyUserPassword.Name = "txtModifyUserPassword";
             this.txtModifyUserPassword.PasswordChar = '*';
             this.txtModifyUserPassword.Size = new System.Drawing.Size(339, 20);
-            this.txtModifyUserPassword.TabIndex = 15;
+            this.txtModifyUserPassword.TabIndex = 5;
             // 
             // label3
             // 
@@ -131,7 +131,7 @@
             this.txtUserName.MaxLength = 32;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(339, 20);
-            this.txtUserName.TabIndex = 30;
+            this.txtUserName.TabIndex = 4;
             // 
             // label1
             // 
@@ -150,7 +150,7 @@
             this.txtModifyConfirmPassword.Name = "txtModifyConfirmPassword";
             this.txtModifyConfirmPassword.PasswordChar = '*';
             this.txtModifyConfirmPassword.Size = new System.Drawing.Size(339, 20);
-            this.txtModifyConfirmPassword.TabIndex = 28;
+            this.txtModifyConfirmPassword.TabIndex = 6;
             // 
             // modifyConfirmLabel
             // 

@@ -40,13 +40,14 @@ namespace View
         }
         private void setInformationForm()
         {
-            userLabelContent.Text = currentSale.employee.name +" "+ currentSale.employee.lastName;
+            userLabelContent.Text = currentSale.employee.name + " " + currentSale.employee.lastName;
             txtSerialCode.Text = currentSale.serialCode.ToString();
             boletaRadioButton.Checked = true;
             txtDniRuc.Text = currentSale.customer.idCustomer.ToString();
             txtDescripcion.Text = currentSale.customer.descriptionCustomer;
-            foreach (saleLane s in currentSale.saleLanes){
-                dgvRefundDetail.Rows.Add(new String[] { s.product.SKUcode.ToString(), s.product.name, s.quantity.ToString(), "", "0", s.product.salePrice.ToString(),"0"});
+            foreach (saleLane s in currentSale.saleLanes)
+            {
+                dgvRefundDetail.Rows.Add(new String[] { s.product.SKUcode.ToString(), s.product.name, s.quantity.ToString(), "", "0", s.product.salePrice.ToString(), "0" });
             }
         }
 
@@ -69,7 +70,7 @@ namespace View
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            
+
             View.MateWSLocal.refund r = new View.MateWSLocal.refund();
             serviceDA = new View.MateWSLocal.DBControllerWSClient();
             r.state = 1;
@@ -91,35 +92,57 @@ namespace View
             r.customer = c;
             //para los refoundlanes
             refundLane[] refundlanes;
-            refundlanes = new refundLane[dgvRefundDetail.RowCount - 1];
-            for (int i = 0; i < dgvRefundDetail.RowCount - 1; i++)
+            int cantDev = 0;
+            for (int j = 0; j < dgvRefundDetail.RowCount - 1; j++)
             {
-                refundLane refundlane = new refundLane();
-                refundlane.reason = dgvRefundDetail.Rows[i].Cells[3].Value.ToString();
-                refundlane.quantity = int.Parse(dgvRefundDetail.Rows[i].Cells[4].Value.ToString());
-                product p = new product();
-                p=serviceDA.queryProductBySKUCode(dgvRefundDetail.Rows[i].Cells[0].Value.ToString());
-                refundlane.product = p;
-                refundlane.creationDate = DateTime.Now;
-                refundlane.modificationDate = DateTime.Now;
-                refundlane.subtotal = float.Parse(dgvRefundDetail.Rows[i].Cells[6].Value.ToString());
-                //refundlane.refund = r;
-                refundlanes[i] = refundlane;
+                if (dgvRefundDetail.Rows[j].Cells[4].Value.ToString() == "0")
+                {
+                    continue;
+                }
+                else
+                {
+                    cantDev = cantDev + 1;
+                }
 
+                refundlanes = new refundLane[cantDev];
+                for (int i = 0; i < dgvRefundDetail.RowCount - 1; i++)
+                {
+                    if (dgvRefundDetail.Rows[i].Cells[4].Value.ToString() == "0")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        refundLane refundlane = new refundLane();
+                        refundlane.reason = dgvRefundDetail.Rows[i].Cells[3].Value.ToString();
+                        refundlane.quantity = int.Parse(dgvRefundDetail.Rows[i].Cells[4].Value.ToString());
+                        product p = new product();
+                        p = serviceDA.queryProductBySKUCode(dgvRefundDetail.Rows[i].Cells[0].Value.ToString());
+                        refundlane.product = p;
+                        refundlane.creationDate = DateTime.Now;
+                        refundlane.modificationDate = DateTime.Now;
+                        refundlane.subtotal = float.Parse(dgvRefundDetail.Rows[i].Cells[6].Value.ToString());
+                        //refundlane.refund = r;
+                        refundlanes[i] = refundlane;
+                    }
+
+
+
+                }
+                r.refundLanes = refundlanes;
+                ////Cursor.Current = Cursors.WaitCursor;
+                int salio = serviceDA.insertRefund(r);
+                if (salio == 1)
+                {
+                    MessageBox.Show("Se ingresó la devolución correctamentee");
+                }
+                else
+                {
+                    MessageBox.Show("Se ingresó la devolución correctamente");
+                }
+                ////Cursor.Current = Cursors.Arrow;
+                this.Close();
             }
-            r.refundLanes = refundlanes;
-            ////Cursor.Current = Cursors.WaitCursor;
-            int salio = serviceDA.insertRefund(r);
-            if (salio == 1)
-            {
-                MessageBox.Show("Se ingresó la devolución correctamente");
-            }
-            else
-            {
-                MessageBox.Show("¡Hubo un problema!");
-            }
-            ////Cursor.Current = Cursors.Arrow;
-            this.Close();
         }
     }
 }

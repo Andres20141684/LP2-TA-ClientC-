@@ -169,6 +169,15 @@ namespace Producto
                 MessageBox.Show("Seleccione el descuento");
                 return false;
             }
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            product p = serviceDA.queryProductBySKUCode(txtSKUCode.Text);
+            Cursor.Current = Cursors.Arrow;
+            if (p.SKUcode != null)
+            {
+                MessageBox.Show("Ya existe un producto con ese código SKU");
+                return false;
+            }
             return true;
         }
 

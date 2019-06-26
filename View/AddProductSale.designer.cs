@@ -112,6 +112,8 @@
             // 
             this.skucode.HeaderText = "Cód.";
             this.skucode.Name = "skucode";
+            this.skucode.ReadOnly = true;
+            this.skucode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.skucode.Width = 80;
             // 
             // name

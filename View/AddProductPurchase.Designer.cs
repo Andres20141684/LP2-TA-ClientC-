@@ -111,7 +111,7 @@
             // 
             this.skucode.HeaderText = "Cód.";
             this.skucode.Name = "skucode";
-            this.skucode.Width = 30;
+            this.skucode.Width = 80;
             // 
             // name
             // 
@@ -123,6 +123,7 @@
             // 
             this.price.HeaderText = "Precio";
             this.price.Name = "price";
+            this.price.Width = 75;
             // 
             // stock
             // 

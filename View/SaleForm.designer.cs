@@ -102,17 +102,17 @@
             // 
             // modificarToolStripMenuItem
             // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            /*this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);*/
             // 
             // devolucionToolStripMenuItem
             // 
-            this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
+            /*this.devolucionToolStripMenuItem.Name = "devolucionToolStripMenuItem";
             this.devolucionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionToolStripMenuItem.Text = "Devolucion";
-            this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);
+            this.devolucionToolStripMenuItem.Click += new System.EventHandler(this.DevolucionToolStripMenuItem_Click_1);*/
             // 
             // historialToolStripMenuItem
             // 

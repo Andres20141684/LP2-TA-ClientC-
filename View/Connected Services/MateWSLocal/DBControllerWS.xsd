@@ -48,6 +48,8 @@
   <xs:element name="queryAllProductsResponse" type="tns:queryAllProductsResponse" />
   <xs:element name="queryAllPurchase" type="tns:queryAllPurchase" />
   <xs:element name="queryAllPurchaseResponse" type="tns:queryAllPurchaseResponse" />
+  <xs:element name="queryAllRefunds" type="tns:queryAllRefunds" />
+  <xs:element name="queryAllRefundsResponse" type="tns:queryAllRefundsResponse" />
   <xs:element name="queryAllSale" type="tns:queryAllSale" />
   <xs:element name="queryAllSaleResponse" type="tns:queryAllSaleResponse" />
   <xs:element name="queryAllSupplier" type="tns:queryAllSupplier" />
@@ -524,16 +526,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertSale">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="sale" type="tns:sale" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertSaleResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryWarehousedetailBySKUandWarehouseID">
     <xs:sequence>
       <xs:element minOccurs="0" name="sku" type="xs:string" />
@@ -545,22 +537,22 @@
       <xs:element minOccurs="0" name="return" type="tns:warehouseDetail" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sale" type="tns:sale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertSaleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryAllSale">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sale" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateDiscount">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="discount" type="tns:discount" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateDiscountResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="updateSupplier">
@@ -573,12 +565,32 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="updateDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="discount" type="tns:discount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateDiscountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="queryAllPremises">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="queryAllPremisesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:premises" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryProductBySKUCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:product" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertBrand">
@@ -591,14 +603,42 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryProductBySKUCode">
+  <xs:complexType name="queryAllRefunds">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllRefundsResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="skuCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:refund" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryProductBySKUCodeResponse">
+  <xs:complexType name="refund">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:product" />
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="creatorUser" type="tns:user" />
+      <xs:element minOccurs="0" name="customer" type="tns:customer" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idRefound" type="xs:string" />
+      <xs:element minOccurs="0" name="modificationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="refundLanes" nillable="true" type="tns:refundLane" />
+      <xs:element minOccurs="0" name="sale" type="tns:sale" />
+      <xs:element name="state" type="xs:int" />
+      <xs:element name="totalReturned" type="xs:float" />
+      <xs:element minOccurs="0" name="userModifier" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refundLane">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="creatorUser" type="tns:user" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idRefundLane" type="xs:string" />
+      <xs:element minOccurs="0" name="modificationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="product" type="tns:product" />
+      <xs:element name="quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+      <xs:element minOccurs="0" name="refund" type="tns:refund" />
+      <xs:element name="subtotal" type="xs:float" />
+      <xs:element minOccurs="0" name="userModifier" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryAllCustomer">
@@ -675,22 +715,22 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertPurchase">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="purchase" type="tns:purchase" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertPurchaseResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertSupplier">
     <xs:sequence>
       <xs:element minOccurs="0" name="supplier" type="tns:supplier" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertSupplierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPurchase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="purchase" type="tns:purchase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertPurchaseResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
@@ -828,14 +868,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:purchase" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllBrand">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllBrandResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="validateUser">
     <xs:sequence>
       <xs:element minOccurs="0" name="username" type="xs:string" />
@@ -847,39 +879,17 @@
       <xs:element minOccurs="0" name="return" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="queryAllBrand">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllBrandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:brand" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertRefund">
     <xs:sequence>
       <xs:element minOccurs="0" name="refund" type="tns:refund" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="refund">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="creatorUser" type="tns:user" />
-      <xs:element minOccurs="0" name="customer" type="tns:customer" />
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="idRefound" type="xs:string" />
-      <xs:element minOccurs="0" name="modificationDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="refundLanes" nillable="true" type="tns:refundLane" />
-      <xs:element minOccurs="0" name="sale" type="tns:sale" />
-      <xs:element name="state" type="xs:int" />
-      <xs:element name="totalReturned" type="xs:float" />
-      <xs:element minOccurs="0" name="userModifier" type="tns:user" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="refundLane">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="creatorUser" type="tns:user" />
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="idRefundLane" type="xs:string" />
-      <xs:element minOccurs="0" name="modificationDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="product" type="tns:product" />
-      <xs:element name="quantity" type="xs:int" />
-      <xs:element minOccurs="0" name="reason" type="xs:string" />
-      <xs:element minOccurs="0" name="refund" type="tns:refund" />
-      <xs:element name="subtotal" type="xs:float" />
-      <xs:element minOccurs="0" name="userModifier" type="tns:user" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertRefundResponse">
@@ -927,14 +937,6 @@
       <xs:element minOccurs="0" name="return" type="tns:customer" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="queryAllArea">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="queryAllAreaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queryRefundByIdSale">
     <xs:sequence>
       <xs:element minOccurs="0" name="saleId" type="xs:int" />
@@ -943,6 +945,14 @@
   <xs:complexType name="queryRefundByIdSaleResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:refund" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryAllArea">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="queryAllAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="queryEmployee">

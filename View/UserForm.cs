@@ -50,6 +50,7 @@ namespace User
                 modifyUserForm.currentUser = users[i];
                 modifyUserForm.SetParent(this);
                 modifyUserForm.ShowDialog();
+                updateDataGridView();
             }
             else
             {

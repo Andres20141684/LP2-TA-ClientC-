@@ -16,6 +16,7 @@ namespace View
         private DBControllerWSClient serviceDA;
         private BindingList<sale> sales;
         private sale s;
+        private sale venta = new sale();
 
         public HistorySaleForm()
         {
@@ -43,8 +44,75 @@ namespace View
 
         private void BtnSearchEmployee_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            venta = (serviceDA.querySaleBySerialCode(txtSerialCode.Text));
+            Cursor.Current = Cursors.Arrow;
+            if (venta.serialCode != null)
+            {
+                RefundForm modClient = new RefundForm();
+                modClient.CurrentSale = new sale();
+                serviceDA = new DBControllerWSClient();
+                modClient.CurrentSale = venta;
+                modClient.SetParent(this);
+                modClient.ShowDialog();
+                updateDataGridView();
 
+            }
+            else
+            {
+                MessageBox.Show("Cliente no encontrado");
+            }
+
+
+
+            /*
+
+            if (!filledValues())
+            {
+                //MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDA = new DBControllerWSClient();
+                sale sale = (serviceDA.querySaleBySerialCode(txtSerialCode.Text));
+                Cursor.Current = Cursors.Arrow;
+                if (sale.totalSale != null)
+                {
+                    RefundForm refForm = new RefundForm();
+                    refForm.CurrentSale = new sale();
+                    serviceDA = new DBControllerWSClient();
+                    refForm.CurrentSale = sale;
+                    refForm.SetParent(this);
+                    refForm.ShowDialog();
+                    updateDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado");
+                }
+
+            }*/
         }
+
+        private bool filledValues()
+        {
+            if (txtSerialCode.Text == "")
+            {
+                MessageBox.Show("Ingrese el Codigo Serial de una venta");
+                return false;
+            }
+            else
+            {
+                if (txtSerialCode.TextLength != 7){
+                    MessageBox.Show("Ingrese el Codigo Serial de 7 digitos de longitud");
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
         private void dgvSales_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

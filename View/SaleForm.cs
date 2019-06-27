@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
         {
             AddProductSale agregarProducto = new AddProductSale();
             agregarProducto.SetParent(this);
-            agregarProducto.Show();
+            agregarProducto.ShowDialog();
             
         }
 
@@ -253,7 +253,7 @@ namespace WindowsFormsApp1
             {
                 if (dgvSaleDetails.CurrentCell != null &&
                     dgvSaleDetails.CurrentCell.Value != null &&
-                    Regex.Match(dgvSaleDetails.CurrentCell.Value.ToString(),@"[0-9]").Success)
+                    Regex.Match(dgvSaleDetails.CurrentCell.Value.ToString(), @"^((?![a-zA-Z]).)*$").Success)
                 {
                     
                      if (Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) > lista_stock[e.RowIndex].stock)

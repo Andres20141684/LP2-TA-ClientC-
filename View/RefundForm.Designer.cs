@@ -45,7 +45,7 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productSoldQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,7 +88,7 @@
             this.dgvRefundDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productId,
             this.productName,
-            this.productPrice,
+            this.productSoldQ,
             this.reason,
             this.quantity,
             this.pu,
@@ -254,13 +254,13 @@
             this.productName.ReadOnly = true;
             this.productName.Width = 300;
             // 
-            // productPrice
+            // productSoldQ
             // 
-            this.productPrice.HeaderText = "Cantidad";
-            this.productPrice.MinimumWidth = 6;
-            this.productPrice.Name = "productPrice";
-            this.productPrice.ReadOnly = true;
-            this.productPrice.Width = 60;
+            this.productSoldQ.HeaderText = "Cantidad";
+            this.productSoldQ.MinimumWidth = 6;
+            this.productSoldQ.Name = "productSoldQ";
+            this.productSoldQ.ReadOnly = true;
+            this.productSoldQ.Width = 60;
             // 
             // reason
             // 
@@ -300,7 +300,7 @@
             this.Controls.Add(this.gbGeneralInf);
             this.Controls.Add(this.SaveButton);
             this.Name = "RefundForm";
-            this.Text = "RefundForm";
+            this.Text = "Devolución";
             this.Load += new System.EventHandler(this.RefundForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -330,7 +330,7 @@
         public System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn productId;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productSoldQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn pu;

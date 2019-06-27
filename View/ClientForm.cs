@@ -64,31 +64,6 @@ namespace SalesClient
             
         }
 
-        private void btnDelClient_Click(object sender, EventArgs e)
-        {
-            int i = dgvClients.CurrentCell.RowIndex;
-            if (i >= 0)
-            {
-                DialogResult dialog = MessageBox.Show("¿Está seguro de eliminar a este cliente?", "Aviso", MessageBoxButtons.YesNo);
-                if (dialog == DialogResult.Yes)
-                {
-                    serviceDA = new DBControllerWSClient();
-                    serviceDA.deleteCustomer(customers[i]);
-                    MessageBox.Show("El cliente seleccionado fue eliminado satisfactoriamente");
-                    updateDataGridView();
-                }
-                else
-                {
-                   
-                }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione el cliente a eliminar");
-            }
-            updateDataGridView();
-        }
-
         private void ClientesForms_Load(object sender, EventArgs e)
         {
             updateDataGridView();

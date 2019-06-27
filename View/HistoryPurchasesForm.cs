@@ -16,7 +16,7 @@ namespace View
         private DBControllerWSClient serviceDA;
         private BindingList<purchase> purchases;
         private DBControllerWSClient serviceDAA = new DBControllerWSClient();
-        private sale sale = new sale();
+        private purchase compra = new purchase();
         public HistoryPurchasesForm()
         {
             InitializeComponent();
@@ -72,6 +72,23 @@ namespace View
 
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            serviceDA = new DBControllerWSClient();
+            compra = (serviceDA.queryPurchaseBySerialCode(txtSerialCode.Text));
+            Cursor.Current = Cursors.Arrow;
+            if (compra.serialCode != null)
+            {
+                dgvPurchases.Rows.Clear();
+                dgvPurchases.Rows.Add(new String[] {
+                ""+compra.serialCode,""+compra.totalPurchase,""+compra.supplier.name,""+compra.creationDate
+                });
+               
+            }
+            else
+            {
+                MessageBox.Show("Compra no encontrada");
+            }
+
             /*
             if (!filledValues())
             {

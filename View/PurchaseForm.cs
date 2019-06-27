@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.MateWSLocal;
@@ -19,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             boletaRadioButton.Checked = true;
+            txtTotal.Text = "0";
         }
 
         private void SalirToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -129,6 +131,11 @@ namespace View
                 MessageBox.Show("No hay productos suficientes");
                 return false;
             }
+            else if (txtTotal.Text == "0")
+            {
+                MessageBox.Show("No hay productos suficientes");
+                return false;
+            }
             else return true;
 
 
@@ -203,7 +210,7 @@ namespace View
             {
                 if (dgvPurchaseDetails.CurrentCell != null &&
                     dgvPurchaseDetails.CurrentCell.Value != null &&
-                    dgvPurchaseDetails.CurrentCell.Value.ToString().Trim() != "")
+                    Regex.Match(dgvPurchaseDetails.CurrentCell.Value.ToString(), @"^\d*$").Success)
                 {
                     dgvPurchaseDetails.Rows[e.RowIndex].Cells[4].Value =
                         Int32.Parse(dgvPurchaseDetails.CurrentCell.Value.ToString()) *
@@ -211,7 +218,13 @@ namespace View
 
                     RefreshTotal();
                 }
+                else
+                {
+                    MessageBox.Show("Ingrese una cantidad válida");
+                    dgvPurchaseDetails.CurrentCell.Value = "1";
+                }
             }
+            
         }
     }
 }

@@ -31,15 +31,25 @@ namespace WindowsFormsApp1
             else
             {
                 Cursor.Current = Cursors.WaitCursor;
-                dgvProducts.Rows.Clear();
+                
                 serviceDA = new DBControllerWSClient();
                 String skucodee = txtProductName.Text;
                 int idAlmacenn = int.Parse(txtWarehouseId.Text);
                 detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+
                 producto = serviceDA.queryProductBySKUCode(skucodee);
-                dgvProducts.Rows.Add(new String[] {
+                if (producto.name != null)
+                {
+                    dgvProducts.Rows.Clear();
+                    dgvProducts.Rows.Add(new String[] {
                 ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un código SKU válido");
+                }
+                
                 //parent.lista_stock.Add(producto.stock);
                 Cursor.Current = Cursors.Arrow;
             }

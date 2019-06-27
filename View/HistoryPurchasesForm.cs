@@ -72,22 +72,31 @@ namespace View
 
         private void btnSearchEmployee_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            serviceDA = new DBControllerWSClient();
-            compra = (serviceDA.queryPurchaseBySerialCode(txtSerialCode.Text));
-            Cursor.Current = Cursors.Arrow;
-            if (compra.serialCode != null)
+            if (!filledValues())
             {
-                dgvPurchases.Rows.Clear();
-                dgvPurchases.Rows.Add(new String[] {
-                ""+compra.serialCode,""+compra.totalPurchase,""+compra.supplier.name,""+compra.creationDate
-                });
-               
+                MessageBox.Show("Complete la información");
             }
             else
             {
-                MessageBox.Show("Compra no encontrada");
+                Cursor.Current = Cursors.WaitCursor;
+                serviceDA = new DBControllerWSClient();
+                compra = (serviceDA.queryPurchaseBySerialCode(txtSerialCode.Text));
+                Cursor.Current = Cursors.Arrow;
+                if (compra.serialCode != null)
+                {
+                    dgvPurchases.Rows.Clear();
+                    dgvPurchases.Rows.Add(new String[] {
+                ""+compra.serialCode,""+compra.totalPurchase,""+compra.supplier.name,""+compra.creationDate
+                });
+
+                }
+                else
+                {
+                    MessageBox.Show("Compra no encontrada");
+                }
             }
+
+            
 
             /*
             if (!filledValues())

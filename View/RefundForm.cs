@@ -20,6 +20,7 @@ namespace View
         public RefundForm()
         {
             InitializeComponent();
+            txtTotal.Text = "0";
         }
 
         internal void RefreshTotal()
@@ -63,7 +64,7 @@ namespace View
             {              
                 if (dgvRefundDetail.CurrentCell != null &&
                     dgvRefundDetail.CurrentCell.Value != null &&
-                    Regex.Match(dgvRefundDetail.CurrentCell.Value.ToString(), @"^((?![a-zA-Z]).)*$").Success)
+                    Regex.Match(dgvRefundDetail.CurrentCell.Value.ToString(), @"^\d*$").Success)
                 {
                     if (Int32.Parse(dgvRefundDetail.CurrentCell.Value.ToString()) > int.Parse(dgvRefundDetail.Rows[e.RowIndex].Cells[2].Value.ToString()))
                     {

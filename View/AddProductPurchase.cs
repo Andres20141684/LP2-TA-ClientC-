@@ -23,33 +23,35 @@ namespace View
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            dgvProducts.Rows.Clear();
-            serviceDA = new DBControllerWSClient();
-            String skucodee = txtProductName.Text;
-            int idAlmacenn = int.Parse(txtWarehouseId.Text);
-            detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
+            if (txtProductName.Text == "")
+            {
+                MessageBox.Show("Complete la información");
+            }
+            else
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                
+                serviceDA = new DBControllerWSClient();
+                String skucodee = txtProductName.Text;
+                int idAlmacenn = int.Parse(txtWarehouseId.Text);
+                detalleProducto = (serviceDA.queryWarehousedetailBySKUandWarehouseID(skucodee, idAlmacenn));
 
-            producto = serviceDA.queryProductBySKUCode(skucodee);
-
-            dgvProducts.Rows.Add(new String[] {
+                producto = serviceDA.queryProductBySKUCode(skucodee);
+                if (producto.name != null)
+                {
+                    dgvProducts.Rows.Clear();
+                    dgvProducts.Rows.Add(new String[] {
                 ""+producto.SKUcode, producto.name,""+producto.salePrice,""+detalleProducto.quantity
                 });
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un código SKU válido");
+                }
+                
 
-            Cursor.Current = Cursors.Arrow;
-            /*
-            Cursor.Current = Cursors.WaitCursor;
-            dgvProducts.Rows.Clear();
-            serviceDA = new DBControllerWSClient();
-            String skucodee = txtProductName.Text;
-            productos = (serviceDA.queryProductBySKUCode(skucodee));
-
-            dgvProducts.Rows.Add(new String[] {
-                ""+productos.SKUcode, productos.name,""+productos.salePrice,""+productos.stock
-                });
-
-            Cursor.Current = Cursors.Arrow;*/
-
+                Cursor.Current = Cursors.Arrow;
+            }
         }
         public void SetParent(PurchaseForm form)
         {

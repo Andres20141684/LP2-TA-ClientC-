@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             boletaRadioButton.Checked = true;
+            txtTotal.Text = "0";
         }
 
 
@@ -183,8 +184,13 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No hay productos suficientes");
                 return false;
             }
+            else if (txtTotal.Text == "0")
+            {
+                MessageBox.Show("No hay productos suficientes");
+                return false;
+            }
             else return true;
-            
+
 
         }
 
@@ -217,43 +223,13 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-        /*
-        private void dgvSaleDetails_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            if (_stock < int.Parse(dgvSaleDetails.Rows[0].Cells[3].Value.ToString()))
-            {
-                MessageBox.Show("No hay suficiente stock para ese producto");
-                e.Cancel = true;
-            }
-            /*
-             for (int i = 0; i < dgvSaleDetails.RowCount - 1; i++)
-            {
-                int cant = int.Parse(dgvSaleDetails.Rows[i].Cells[3].Value.ToString());
-                if (_stock >= )
-
-                int cant = int.Parse(dgvSaleDetails.Rows[i].Cells[3].Value.ToString());
-                float pu = float.Parse(dgvSaleDetails.Rows[i].Cells[2].Value.ToString());
-                dgvSaleDetails.Rows[i].Cells[4].Value.ToString() = cant * pu;
-                
-                //salelane.sale = s;
-                product p = new product();
-                p = serviceDA.queryProductBySKUCode(dgvSaleDetails.Rows[i].Cells[0].Value.ToString());
-                salelane.product = p;
-                salelanes[i] = salelane;
-
-            }
-             
-        }*/
-
         private void dgvSaleDetails_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvSaleDetails.Columns[e.ColumnIndex].Name == "quantity")
             {
                 if (dgvSaleDetails.CurrentCell != null &&
                     dgvSaleDetails.CurrentCell.Value != null &&
-                    Regex.Match(dgvSaleDetails.CurrentCell.Value.ToString(), @"^((?![a-zA-Z]).)*$").Success)
+                    Regex.Match(dgvSaleDetails.CurrentCell.Value.ToString(), @"^\d*$").Success)
                 {
                     
                      if (Int32.Parse(dgvSaleDetails.CurrentCell.Value.ToString()) > lista_stock[e.RowIndex].stock)
